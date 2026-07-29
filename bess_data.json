@@ -1540,7 +1540,7 @@
           "https://greenburghny.com/485/Watch-Live-Board-Meetings"
         ]
       ],
-      "dr": false,
+      "dr": true,
       "drReason": "Adopted a complete, balanced three-tier BESS code (small / medium / utility-scale) back in 2021, a full framework other towns can copy, now being refreshed.",
       "hosting": {
         "raw": "75% Yellow, 25% Orange",
@@ -4713,7 +4713,8 @@
         "ACTION FOR THE COALITION: if the 7/31/26 date is the operative one, Cortlandt's all-BESS pause lapses this Friday and applications could be filed into a code that prohibits Tier 3. Confirming the filed LL 7-2025 end date with the Town Clerk is the highest-value call this week.",
         "Daily reconciliation: no new Westchester moratoriums, bans, extensions, adopted laws, or hearing notices. Cortlandt's legal-notices page shows no 2026 BESS filing; the workgroup GIS sheet is unchanged (latest rows 6/15–6/18/26); Carina remains on its June 2026 refresh (Westchester actives: Bedford, New Castle, Cortlandt, Yonkers, Peekskill). All 45 municipality statuses re-confirmed.",
         "Bedford watch (large-scale moratorium expires 8/17/26, 19 days out): no hearing notice or extension found on the town's agenda center. Bedford has extended roughly every six months since August 2024, so an extension is likely but unconfirmed — re-check each run.",
-        "Calendar housekeeping: dropped the past 7/21/26 Cortlandt Town Board date; upcoming dates now run Aug 11 through Dec 8, 2026."
+        "Calendar housekeeping: dropped the past 7/21/26 Cortlandt Town Board date; upcoming dates now run Aug 11 through Dec 8, 2026.",
+        "Model-code flags: set Greenburgh to a “doing it right” model (dr) alongside Croton-on-Hudson and Port Chester — its 2021 three-tier code is the fullest framework in the county. North Castle is deliberately NOT flagged as a model despite appearing on the workgroup's shortlist: the GIS sheet and Westchester County Planning (referral NOC 24-008) both read LL 4-2024 as an effective ban on Type 1 and Type 2 systems, so it is carried as Restrictive. Raise with the workgroup if that shortlist entry was intended differently."
       ]
     },
     {
