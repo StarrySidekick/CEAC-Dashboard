@@ -440,7 +440,7 @@
       "status": "moratorium",
       "statusLabel": "MORATORIUM",
       "original": true,
-      "scope": "Active moratorium on all BESS through 12/31/26 (LL 7-2025); underlying code prohibits Tier 3",
+      "scope": "Active moratorium on all BESS (LL 7-2025) — end date 12/31/26 per the adopted law text, 7/31/26 per the workgroup sheet; code prohibits Tier 3",
       "window": "HIGH",
       "windowClass": "p-high",
       "subtitle": "Northwestern Westchester, Hudson River to the Putnam County line",
@@ -451,7 +451,7 @@
         ],
         [
           "Governing law",
-          "Moratorium on all BESS through December 31, 2026, under Local Law 7-2025 (adopted at the December 9, 2025 public hearing)."
+          "Moratorium on all BESS under Local Law 7-2025 (adopted December 9, 2025). The law text before the Board reads “through December 31, 2026”; the workgroup GIS sheet records 07/31/26. Treat 12/31/26 as the working date and 7/31/26 as a live risk until the filed copy is in hand."
         ],
         [
           "Why a Moratorium",
@@ -460,10 +460,10 @@
       ],
       "summary": [
         "Cortlandt has had a moratorium in place continuously since 2024. After strong developer interest, the Town Board enacted LL 2-2024, convened a committee to draft a permanent law, and extended the pause three times: LL 10-2024, LL 2-2025 (through December 31, 2025), and LL 7-2025, whose Section 3 (Duration) reads “The moratorium herein shall be extended through December 31, 2026 unless terminated earlier.” The extension was noticed on November 18, 2025, heard on December 9, 2025, and posted as LL 7-2025 the following day. Section 2 bars the Planning Board, ZBA, and code-enforcement officials from considering any application for a new BESS; Section 4 reserves a hardship-variance path to the Town Board itself, superseding Town Law § 267.",
-        "The end date is now settled at December 31, 2026 (the dashboard previously carried a July 31, 2026 reading of LL 7-2025, which was incorrect). That gives a full-autumn runway to shape the permanent ordinance rather than a two-day scramble. Because the town is openly drafting and its code otherwise prohibits Tier 3, this remains the single best chance in Westchester to influence an actual code: setbacks, fire and safety standards, tier thresholds, and permitted zones. Engage the Town Board through the fall meeting cycle."
+        "End date, best current reading: December 31, 2026. Section 3 of the law placed before the Town Board on December 9, 2025 says so verbatim, and the 11/18/2025 hearing notice matches (“through the end of 2026”). Against that, the workgroup GIS sheet records “expires 07/31/26,” and a 7/2/26 dashboard pass reported the filed copy as July 31, 2026 — a document this run could not re-open. Until the certified filed copy is obtained from the Town Clerk, treat 12/31/26 as the planning date but do not assume the window is safe past 7/31/26. Either way the town is actively drafting and its code otherwise prohibits Tier 3, so this remains the best chance in Westchester to shape a real code: setbacks, fire and safety standards, tier thresholds, and permitted zones. The Aug 11 Town Board meeting is the next engagement point."
       ],
       "flags": [
-        "RESOLVED 7/29/26: the December 31, 2026 end date is confirmed from Cortlandt's own local-law text — Section 3 (Duration) of the moratorium-extension law carried in the December 9, 2025 Town Board agenda packet, adopted that night and posted as “LOCAL LAW 7-2025: EXTENDING A MORATORIUM…” on 12/10/2025, and consistent with the 11/18/2025 hearing notice (“extension of the Moratorium through the end of 2026”). This supersedes both the earlier July 31, 2026 reading and the July 2026 second-hand report of a separate “third extension”: LL 7-2025 *is* the third extension. Remaining item: obtain the certified/filed copy from the Town Clerk for the record."
+        "OPEN CONFLICT — end date. Documentary evidence for December 31, 2026: Section 3 (Duration) of the moratorium-extension law carried in the December 9, 2025 Town Board agenda packet reads “extended through December 31, 2026 unless terminated earlier,” it was adopted that night, posted as “LOCAL LAW 7-2025” on 12/10/2025, and the 11/18/2025 hearing notice says “through the end of 2026.” Evidence for July 31, 2026: the workgroup GIS sheet (row 6/18/26) records “expires 07/31/26,” and the 7/2/26 dashboard pass reported the certified filed copy as July 31, 2026. This run could not re-open that filed copy to adjudicate. ACTION: get the certified/filed LL 7-2025 from Town Clerk Laroue Shatzkin — this has now flipped three times and only the filed copy settles it. Note the July 2026 second-hand report of a separate “third extension” appears to describe LL 7-2025 itself, not a new law; no 2026 BESS filing appears on the town's legal-notices page."
       ],
       "committees": [
         "<b>Green Team / Climate Smart Task Force</b>, sustainability body; natural ally.",
@@ -536,14 +536,14 @@
         "raw": "100% Yellow",
         "tier": "High capacity"
       },
-      "moratoriumReason": "The Town Board paused all BESS to study fire-safety and siting standards before adopting permanent zoning. The pause has been extended three times and now runs through December 31, 2026 under LL 7-2025; the default code otherwise prohibits Tier 3 (utility-scale).",
-      "localLaw": "Local Law 7-2025 (adopted December 9, 2025; posted 12/10/2025) extends the BESS moratorium through December 31, 2026 — the third extension of LL 2-2024, after LL 10-2024 and LL 2-2025. No application for a new BESS may be considered or approved in the meantime. The default code prohibits Tier 3 (utility-scale) systems. Verified against the local-law text in the December 9, 2025 Town Board agenda packet.",
+      "moratoriumReason": "The Town Board paused all BESS to study fire-safety and siting standards before adopting permanent zoning. Extended three times; LL 7-2025 runs through December 31, 2026 on the adopted text (7/31/26 per the workgroup sheet, unresolved). The default code otherwise prohibits Tier 3 (utility-scale).",
+      "localLaw": "Local Law 7-2025 (adopted December 9, 2025; posted 12/10/2025) is the third extension of the LL 2-2024 moratorium, after LL 10-2024 and LL 2-2025. No application for a new BESS may be considered or approved while it runs. Duration per the adopted text: through December 31, 2026; the workgroup sheet says 07/31/26 — unresolved, see the confidence flag. The default code prohibits Tier 3 (utility-scale) systems.",
       "meterAccess": "none",
       "tierSpec": [
         {
           "upToKwh": null,
           "status": "paused",
-          "label": "All sizes paused to 12/31/26 (LL 7-2025)"
+          "label": "All sizes paused — LL 7-2025 (to 12/31/26; 7/31/26 disputed)"
         }
       ],
       "priorityScore": 91,
@@ -4709,7 +4709,8 @@
     {
       "date": "2026-07-29",
       "items": [
-        "Cortlandt — moratorium end date VERIFIED and the standing conflict closed: the moratorium runs through December 31, 2026, not July 31, 2026. Section 3 (Duration) of the extension law in the December 9, 2025 Town Board agenda packet reads “extended through December 31, 2026 unless terminated earlier”; it was adopted that night and posted as LL 7-2025 on 12/10/2025, matching the 11/18/2025 hearing notice. The dashboard's earlier “expires 7/31/26” reading was wrong, and the July 2026 second-hand report of a separate “third extension” was really LL 7-2025 itself (the third extension of LL 2-2024, after LL 10-2024 and LL 2-2025). Updated scope, governing law, summary, local-law entry, tier bar, calendar deadline, priority entry, and links; resolved the open confidence flag.",
+        "Cortlandt — end-date conflict re-opened and documented rather than silently flipped. New primary evidence found this run: Section 3 (Duration) of the moratorium-extension law carried in the December 9, 2025 Town Board agenda packet reads “extended through December 31, 2026 unless terminated earlier”; it was adopted that night and posted as LL 7-2025 on 12/10/2025, matching the 11/18/2025 hearing notice. That supports 12/31/26. But the workgroup GIS sheet still says “expires 07/31/26,” and the 7/2/26 pass reported the certified filed copy as July 31, 2026 — a document this run could not re-open. The dashboard keeps 12/31/26 as the working date while flagging 7/31/26 as a live risk; the date has now flipped three times, so the certified filed copy from the Town Clerk is the only thing that settles it. Also corrected: the July 2026 report of a separate “third extension” describes LL 7-2025 itself (third extension of LL 2-2024, after LL 10-2024 and LL 2-2025), not a new 2026 law — no 2026 BESS filing appears on the town's legal-notices page.",
+        "ACTION FOR THE COALITION: if the 7/31/26 date is the operative one, Cortlandt's all-BESS pause lapses this Friday and applications could be filed into a code that prohibits Tier 3. Confirming the filed LL 7-2025 end date with the Town Clerk is the highest-value call this week.",
         "Daily reconciliation: no new Westchester moratoriums, bans, extensions, adopted laws, or hearing notices. Cortlandt's legal-notices page shows no 2026 BESS filing; the workgroup GIS sheet is unchanged (latest rows 6/15–6/18/26); Carina remains on its June 2026 refresh (Westchester actives: Bedford, New Castle, Cortlandt, Yonkers, Peekskill). All 45 municipality statuses re-confirmed.",
         "Bedford watch (large-scale moratorium expires 8/17/26, 19 days out): no hearing notice or extension found on the town's agenda center. Bedford has extended roughly every six months since August 2024, so an extension is likely but unconfirmed — re-check each run.",
         "Calendar housekeeping: dropped the past 7/21/26 Cortlandt Town Board date; upcoming dates now run Aug 11 through Dec 8, 2026."
@@ -5013,7 +5014,7 @@
     "deadlines": [
       {
         "date": "2026-12-31",
-        "label": "Cortlandt, BESS moratorium expires 12/31/26 under LL 7-2025 (verified); engage the Town Board through the fall drafting window",
+        "label": "Cortlandt, BESS moratorium expires under LL 7-2025 — 12/31/26 per the adopted text, 7/31/26 per the workgroup sheet (unresolved); engage through the drafting window",
         "town": "Town of Cortlandt (Cortlandt Manor)"
       },
       {
@@ -5036,9 +5037,9 @@
   "priority": [
     {
       "name": "Town of Cortlandt (Cortlandt Manor)",
-      "why": "Priority score 91/100. Active moratorium on ALL BESS, extended three times and now confirmed to run through 12/31/26 under LL 7-2025; large town; High grid capacity (100% yellow). The longest open drafting window of any Westchester target, and the town is actively writing the permanent law.",
-      "action": "Engage Town Board now, push a Croton-style tiered code so permanent rules allow Tier 2+ rather than defaulting to the current Tier 3 prohibition.",
-      "engage": "Town Board meets monthly on a Tuesday, 7:00 PM, Nyberg Room, Town Hall (1 Heady St); next dates Aug 11, Sep 15, Oct 20, Nov 17, Dec 8. Use the public-comment period. The permanent-law hearing must land before the 12/31/26 expiry (verified from the LL 7-2025 text); watch the town's Legal Notices / Public Hearings page and email the Town Clerk to be added to notifications.",
+      "why": "Priority score 91/100. Active moratorium on ALL BESS, extended three times under LL 7-2025; large town; High grid capacity (100% yellow). The adopted law text runs to 12/31/26 but the workgroup sheet says 7/31/26 — treat the window as possibly closing within days until the filed copy resolves it. Either way the town is actively writing the permanent law.",
+      "action": "Confirm the filed LL 7-2025 end date with the Town Clerk this week, then engage the Town Board and push a Croton-style tiered code so permanent rules allow Tier 2+ rather than defaulting to the current Tier 3 prohibition.",
+      "engage": "Town Board meets monthly on a Tuesday, 7:00 PM, Nyberg Room, Town Hall (1 Heady St); next dates Aug 11, Sep 15, Oct 20, Nov 17, Dec 8. Use the public-comment period. Call Town Clerk Laroue Shatzkin, (914) 734-1020, for the certified LL 7-2025 copy and to be added to BESS hearing notifications; watch the town's Legal Notices / Public Hearings page.",
       "notify": {
         "who": "Town Clerk Laroue Shatzkin",
         "email": "Laroues@townofcortlandt.com",
@@ -5140,7 +5141,7 @@
       "why": "Priority score 58/100."
     }
   ],
-  "hearingNote": "Specific public-hearing dates are not centrally published, towns post them as one-off legal notices (often via eCode360 or the town-clerk page). Recurring board meetings below are computed; confirm exact hearing dates per town. Gaps to research: the firm 2026 hearing date for Cortlandt's permanent BESS law (the moratorium window is now verified to 12/31/26), whether Bedford will notice a hearing or a further extension before its 8/17/26 expiry, and New Castle's current status after the 5/31/26 lapse.",
+  "hearingNote": "Specific public-hearing dates are not centrally published, towns post them as one-off legal notices (often via eCode360 or the town-clerk page). Recurring board meetings below are computed; confirm exact hearing dates per town. Gaps to research: the certified LL 7-2025 end date for Cortlandt (12/31/26 vs 7/31/26, unresolved) and the hearing date for its permanent BESS law; whether Bedford will notice a hearing or a further extension before its 8/17/26 expiry; and New Castle's current status after the 5/31/26 lapse.",
   "hostingNote": "Grid hosting capacity is a proxy read from the ConEd hosting-capacity map colors in the workgroup sheet: more green/yellow = more available capacity (better BESS siting value); orange = limited; red = constrained. NYSEG-territory towns aren't on that map. Confirm against the utility legend before relying on it.",
   "trackerVintage": "June 2026",
   "priorityIntro": "Ranked by the scored priority system (see How Priority Is Ranked in Verification & Confidence): urgency, restrictiveness, hosting capacity, population, and receptivity. NYSEG-territory municipalities are excluded (score 0). The top ten scores carry the ★ Priority label.",
