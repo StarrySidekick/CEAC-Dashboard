@@ -175,7 +175,7 @@
     return `<section class="cat"><h2 class="cat-h">${c.label}</h2><div class="doclist-grid">`+items.map(([d,i])=>cardHTML(d,i)).join("")+`</div></section>`;
   }).join("");
   el("footer").innerHTML =
-    "Prepared for the BCW / EarthKind Clean Energy Action Coalition. Documents open in your browser; use Download to save a copy.";
+    "Prepared for the BCW Clean Energy Action Coalition / EarthKind BESS Workgroup, with analysis provided by Sustainable Westchester. Documents open in your browser; use Download to save a copy.";
 
   // ---- Render every PDF page to an image, then build the flipbook ----
   async function openDoc(i){
