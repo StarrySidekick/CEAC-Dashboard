@@ -471,6 +471,16 @@
     .foot-srcwrap>summary{line-height:1;padding-block:2.3px 0}
     .or-sec>summary{padding-block:10.6px 9.4px}
   }
+  /* Hanging logo: once the page gutter is wide enough, lift the CEAC mark out
+     of the flow and into the left margin, so the title block sits back on the
+     site's centre column. Below that width it stays in flow, ahead of the
+     title, because the gutter is too narrow to hold it. */
+  @media(min-width:1340px){
+    header.top{position:relative}
+    .logo{position:absolute;left:24px;top:26px;max-width:none;
+      width:min(196px, calc((100vw - 1090px)/2 - 4px))}
+  }
+  }
 </style>
   <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.js"></script>
 </head>
