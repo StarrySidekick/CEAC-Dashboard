@@ -42,9 +42,9 @@
   .stat{position:relative;border:none;padding:14px 16px;min-height:96px;
     display:flex;flex-direction:column;text-align:left;cursor:pointer;font-family:inherit;width:100%;color:#fff;
     transition:opacity .16s ease,outline-color .16s ease;outline:3px solid transparent;outline-offset:-3px}
-  .stat[data-status="overstrict"],.stat[data-status="silent"]{color:var(--ink)}
-  .stat[data-status="overstrict"] .n,.stat[data-status="silent"] .n{color:var(--ink);text-shadow:none}
-  .stat[data-status="overstrict"] .l,.stat[data-status="silent"] .l{color:var(--ink)}
+  .stat[data-status="silent"]{color:var(--ink)}
+  .stat[data-status="silent"] .n{color:var(--ink);text-shadow:none}
+  .stat[data-status="silent"] .l{color:var(--ink)}
   .stat::after{content:"";position:absolute;right:-5px;top:50%;transform:translateY(-50%);width:5px;height:30px;
     background-color:inherit}
   .stat:hover{opacity:.88}
