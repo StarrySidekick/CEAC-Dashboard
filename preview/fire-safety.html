@@ -6,31 +6,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Energy Storage Fire &amp; Safety, Westchester BESS, BCW &amp; EarthKind</title>
 <meta name="description" content="An evidence-based look at battery energy storage (BESS) fire safety in Westchester County: real-world incident rates, how BESS compares to fossil fuel infrastructure, and the systems that prevent and contain fires.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2214%22 y=%2230%22 width=%2266%22 height=%2240%22 rx=%228%22 fill=%22none%22 stroke=%22%231F3864%22 stroke-width=%228%22/><rect x=%2282%22 y=%2242%22 width=%2210%22 height=%2216%22 rx=%223%22 fill=%22%231F3864%22/><rect x=%2226%22 y=%2242%22 width=%2236%22 height=%2216%22 rx=%223%22 fill=%22%231F8A4C%22/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2214%22 y=%2230%22 width=%2266%22 height=%2240%22 rx=%228%22 fill=%22none%22 stroke=%22%231A1818%22 stroke-width=%228%22/><rect x=%2282%22 y=%2242%22 width=%2210%22 height=%2216%22 rx=%223%22 fill=%22%231A1818%22/><rect x=%2226%22 y=%2242%22 width=%2236%22 height=%2216%22 rx=%223%22 fill=%22%23BE1E2D%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#1A2333;--muted:#5B6675;--line:#E4E8F0;--bg:#F5F7FB;--card:#fff;
-    --navy:#1F3864;--navy-900:#16294A;--navy-700:#264A7E;
-    --accent:#2F6FB2;--accent-soft:#EAF1F9;--green:#1F8A4C;
-    --green-soft:#E8F5EE;--warm:#B4472E;--warm-soft:#FBEDE9;--amber:#B07A16;
-    --radius:14px;--shadow:0 1px 2px rgba(20,40,80,.05), 0 6px 18px rgba(20,40,80,.06);
+    :root{
+    /* BCW brand — matches index.html */
+    --ink:#1A1818;--muted:#54565A;--line:#E2E1E7;--bg:#EDEAEE;--card:#fff;
+    --black:#000000;--g700:#54565A;--g500:#818386;--g400:#B9BABC;--g300:#C9CACC;
+    --g200:#E2E1E7;--g100:#EDEAEE;
+    --navy:#1A1818;--navy-900:#000000;--navy-700:#3F4145;
+    --red:#BE1E2D;--maroon:#1A1818;--amber:#B8791B;--green:#3E7D57;--accent:#BE1E2D;
+    --accent-soft:#EDEAEE;--green-soft:#E9F0EB;--amber-soft:#FAF1DF;--red-soft:#F7E4E6;
+    --green-brand:#59936A;--red-dark:#961826;
+    --warm:#BE1E2D;--warm-soft:#F7E4E6;
+    --radius:0;--shadow:none;
   }
   *{box-sizing:border-box}
-  body{margin:0;font-family:'Inter',system-ui,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+  body{margin:0;font-family:Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
   .wrap{max-width:1000px;margin:0 auto;padding:24px 20px 70px}
 
-  header.top{background:linear-gradient(135deg,var(--navy-900),var(--navy) 58%,var(--navy-700));border-radius:18px;box-shadow:var(--shadow);padding:26px 28px;margin-bottom:22px;position:relative;overflow:hidden}
-  header.top::after{content:"";position:absolute;right:-40px;top:-40px;width:210px;height:210px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.10),transparent 68%);pointer-events:none}
-  .eyebrow{font-size:12px;font-weight:700;color:#A9C6EA;letter-spacing:1.4px;text-transform:uppercase}
+  header.top{background:linear-gradient(135deg,#000000,#1A1818 58%,#3F4145);border-radius:0;box-shadow:var(--shadow);padding:26px 28px;margin-bottom:22px;position:relative;overflow:hidden}
+  header.top::after{content:"";position:absolute;right:-40px;top:-40px;width:210px;height:210px;border-radius:0;background:radial-gradient(circle,rgba(255,255,255,.10),transparent 68%);pointer-events:none}
+  .eyebrow{font-size:12px;font-weight:700;color:#B9BABC;letter-spacing:1.4px;text-transform:uppercase}
   header.top h1{font-size:30px;line-height:1.1;letter-spacing:-.6px;margin:8px 0 8px;color:#fff;font-weight:800;max-width:22ch}
-  header.top p{margin:0;color:#CFDCEF;font-size:15px;max-width:66ch}
-  .back{display:inline-block;margin-top:14px;font-size:13px;color:#DCE7F5;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:5px 13px}
-  .back:hover{text-decoration:none;background:rgba(255,255,255,.2)}
+  header.top p{margin:0;color:#C9CACC;font-size:15px;max-width:66ch}
 
   .lede{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:26px}
   .lede p{margin:0 0 11px;font-size:15.5px}
@@ -52,7 +55,7 @@
   .stat .l sup{color:var(--accent);font-weight:700}
   .stat.tot .n{color:var(--navy)}
 
-  .toll{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:14px;margin-top:14px;background:var(--warm-soft);border:1px solid #F0D6CE;border-radius:var(--radius);padding:18px}
+  .toll{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:14px;margin-top:14px;background:var(--warm-soft);border:1px solid #E8C9C3;border-radius:var(--radius);padding:18px}
   .toll .stat{background:transparent;border:none;box-shadow:none;padding:6px}
 
   .notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px;margin-top:16px}
@@ -64,10 +67,10 @@
   .chart{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-top:6px}
   .bar-row{display:flex;align-items:center;gap:14px;margin:16px 0}
   .bar-yr{flex:0 0 46px;font-weight:800;color:var(--navy);font-size:14.5px}
-  .bar-track{flex:1;background:#EEF2F8;border-radius:9px;height:34px;position:relative}
-  .bar-fill{height:100%;width:0;border-radius:9px;transition:width 1.15s cubic-bezier(.22,.9,.3,1);display:flex;align-items:center;justify-content:flex-end;padding-right:11px;position:relative}
-  .bar-fill.f18{background:linear-gradient(90deg,#C7583C,#B4472E)}
-  .bar-fill.f23{background:linear-gradient(90deg,#31A366,#1F8A4C)}
+  .bar-track{flex:1;background:var(--g200);border-radius:0;height:34px;position:relative}
+  .bar-fill{height:100%;width:0;border-radius:0;transition:width 1.15s cubic-bezier(.22,.9,.3,1);display:flex;align-items:center;justify-content:flex-end;padding-right:11px;position:relative}
+  .bar-fill.f18{background:linear-gradient(90deg,#BE1E2D,#961826)}
+  .bar-fill.f23{background:linear-gradient(90deg,#59936A,#3E7D57)}
   .bar-val{color:#fff;font-weight:800;font-size:13.5px;white-space:nowrap;opacity:0;transition:opacity .4s ease .55s}
   .bar-fill.on .bar-val{opacity:1}
   .bar-val-out{position:absolute;left:calc(100% + 10px);color:var(--green);white-space:nowrap;padding-right:0}
@@ -89,28 +92,28 @@
   .compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
   .inc{border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line);background:var(--card)}
   .inc-h{padding:15px 18px;color:#fff}
-  .inc.foss .inc-h{background:linear-gradient(135deg,#9E3B24,#B4472E)}
-  .inc.bess .inc-h{background:linear-gradient(135deg,#17703D,#1F8A4C)}
+  .inc.foss .inc-h{background:linear-gradient(135deg,#961826,#BE1E2D)}
+  .inc.bess .inc-h{background:linear-gradient(135deg,#2F6244,#3E7D57)}
   .inc-h .yr{font-size:12px;font-weight:700;letter-spacing:1.2px;opacity:.85;text-transform:uppercase}
   .inc-h h3{margin:4px 0 0;font-size:17px;font-weight:800;line-height:1.2}
   .inc ul{margin:0;padding:15px 18px 17px 34px}
   .inc li{font-size:13.8px;margin-bottom:9px}
   .inc li:last-child{margin-bottom:0}
-  .verdict{margin-top:16px;background:var(--accent-soft);border:1px solid #CFE0F1;border-radius:var(--radius);padding:16px 19px;font-size:14.5px}
+  .verdict{margin-top:16px;background:var(--g100);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--radius);padding:16px 19px;font-size:14.5px}
 
   /* systems */
   .sysgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:13px}
   .sys{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease}
-  .sys:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,40,80,.12)}
-  .sys .dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:8px;vertical-align:1px}
+  .sys:hover{transform:translateY(-2px);box-shadow:none}
+  .sys .dot{width:9px;height:9px;border-radius:0;display:inline-block;margin-right:8px;vertical-align:1px}
   .sys.prev .dot{background:var(--accent)}
   .sys.supp .dot{background:var(--green)}
   .sys h4{margin:0 0 5px;font-size:14.5px;color:var(--navy);font-weight:700}
   .sys p{margin:0;font-size:13px;color:var(--muted)}
 
-  .bottom{background:linear-gradient(135deg,var(--navy-900),var(--navy) 60%,var(--navy-700));color:#fff;border-radius:18px;padding:26px 28px;margin-top:40px;box-shadow:var(--shadow)}
+  .bottom{background:linear-gradient(135deg,#000000,#1A1818 60%,#3F4145);color:#fff;border-radius:0;padding:26px 28px;margin-top:40px;box-shadow:var(--shadow)}
   .bottom h2{margin:0 0 10px;font-size:21px;font-weight:800;letter-spacing:-.3px;color:#fff}
-  .bottom p{margin:0 0 10px;color:#D6E2F2;font-size:14.8px}
+  .bottom p{margin:0 0 10px;color:#C9CACC;font-size:14.8px}
   .bottom p:last-child{margin-bottom:0}
   .bottom .punch{font-size:17px;font-weight:700;color:#fff;margin-top:14px}
 
@@ -134,6 +137,17 @@
     .bar-val{opacity:1;transition:none}
     .sys:hover{transform:none}
   }
+
+  /* BCW header link row */
+  .headrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .headlink{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1;
+    min-height:44px;padding:0 14px;font-size:11.5px;font-weight:500;letter-spacing:1.3px;text-transform:uppercase;
+    color:#fff;background:var(--accent);border:1px solid var(--accent);transition:background .12s,border-color .12s}
+  .headlink:hover{text-decoration:none;background:var(--red-dark);border-color:var(--red-dark)}
+  .headlink.alt{background:transparent;border-color:#fff;color:#fff}
+  .headlink.alt:hover{background:rgba(255,255,255,.14);border-color:#fff}
+  .headlink .ar{margin-left:9px;flex:0 0 auto}
+  @media (max-width:620px){ .headrow{flex-direction:column} .headlink{width:100%} }
 </style>
 </head>
 <body><div style="background:#BE1E2D;color:#fff;font:700 13px/1.3 Roboto,Arial,sans-serif;letter-spacing:.6px;padding:11px 16px;text-align:center">PREVIEW BUILD &mdash; not the public site&nbsp;&middot;&nbsp;<a href="../" style="color:#fff;text-decoration:underline">open the live dashboard</a></div>
@@ -143,7 +157,11 @@
     <div class="eyebrow">BCW &amp; EarthKind &middot; Clean Energy Action Coalition</div>
     <h1>Energy Storage Fire &amp; Safety</h1>
     <p>As battery energy storage systems (BESS) and other clean technologies become more common, public concern over fire risk has grown, often fueled by misunderstanding or outdated data. Here is a clear, evidence-based look at the record.</p>
-    <a class="back" href="index.html">&larr; Back to the BESS Policy Dashboard</a>
+    <div class="headrow">
+        <a class="headlink alt" href="index.html">Policy Dashboard<svg class="ar" width="18" height="10" viewBox="0 0 18 10" aria-hidden="true" focusable="false"><path d="M0 5h15.4M11.7 1 15.9 5l-4.2 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <a class="headlink alt" href="resources.html">Resource Center<svg class="ar" width="18" height="10" viewBox="0 0 18 10" aria-hidden="true" focusable="false"><path d="M0 5h15.4M11.7 1 15.9 5l-4.2 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        <a class="headlink alt" href="economics.html">Your Electric Bill<svg class="ar" width="18" height="10" viewBox="0 0 18 10" aria-hidden="true" focusable="false"><path d="M0 5h15.4M11.7 1 15.9 5l-4.2 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
   </header>
 
   <div class="lede rv">
