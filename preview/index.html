@@ -104,7 +104,7 @@
   .s-undefined{background:var(--g100)}.s-undefined .tt-tag{color:var(--g500)}
   .w-allowed{color:var(--green)}.w-permit{color:var(--g700)}.w-banned{color:var(--red)}.w-paused{color:var(--red)}.w-onsite{color:var(--green)}.w-undefined{color:var(--g500)}
   .b-healthy{background:var(--green);color:#fff}
-  .b-overstrict{background:var(--g500);color:var(--ink)}
+  .b-overstrict{background:var(--amber);color:#fff}
   .p-strict{background:var(--g200);color:var(--g700)}
   .dr-badge{font-size:10.5px;font-weight:700;background:var(--ink);color:#fff;padding:1px 7px;margin-left:6px}
   .tt{font-size:10.5px;font-weight:700;padding:2px 8px;white-space:nowrap}
@@ -555,6 +555,16 @@
     .headtext{flex:1 1 100%;min-width:0}
   }
   }
+
+  .viewtab.viewlink{text-decoration:none;display:inline-block}
+  .viewtab.viewlink:hover{color:var(--navy);text-decoration:none}
+  .viewtab.viewlink .ar{display:none}
+  @media(max-width:640px){
+    .views{display:flex;justify-content:center;flex-wrap:wrap;gap:4px;border-bottom:none;margin:2px 0 10px}
+    .views .viewtab:not(.viewlink){display:none}
+    .viewtab.viewlink{font-size:13px;padding:9px 12px}
+    .viewtab.viewlink .vt-sub{display:none}
+  }
 </style>
   <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.js"></script>
 </head>
@@ -569,8 +579,6 @@
       <div class="hact">
         <button type="button" class="headlink find" onclick="setView('tracker')">Find your town<svg class="ar" width="18" height="10" viewBox="0 0 18 10" aria-hidden="true" focusable="false"><path d="M0 5h15.4M11.7 1 15.9 5l-4.2 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
         <a class="headlink alt" href="resources.html">Resource Center<svg class="ar" width="18" height="10" viewBox="0 0 18 10" aria-hidden="true" focusable="false"><path d="M0 5h15.4M11.7 1 15.9 5l-4.2 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-        <a class="headlink alt" href="economics.html">Your Electric Bill<svg class="ar" width="18" height="10" viewBox="0 0 18 10" aria-hidden="true" focusable="false"><path d="M0 5h15.4M11.7 1 15.9 5l-4.2 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-        <!--PREVIEW-ONLY--><a class="headlink alt" href="fire-safety.html">Fire &amp; Safety<svg class="ar" width="18" height="10" viewBox="0 0 18 10" aria-hidden="true" focusable="false"><path d="M0 5h15.4M11.7 1 15.9 5l-4.2 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a><!--/PREVIEW-ONLY-->
       </div>
     </div>
   </header>
@@ -581,6 +589,8 @@
     <button type="button" class="viewtab" data-view="modellaw" onclick="setView('modellaw')">Model Law<span class="vt-sub">A common-sense code, not a ban</span></button>
     <button type="button" class="viewtab" data-view="considerations" onclick="setView('considerations')">Key Considerations<span class="vt-sub">Nine things boards should weigh</span></button>
     <button type="button" class="viewtab" data-view="tracker" onclick="setView('tracker')">Live Policy Tracker<span class="vt-sub">Town-by-town status</span></button>
+    <a class="viewtab viewlink" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
+    <!--PREVIEW-ONLY--><a class="viewtab viewlink" href="fire-safety.html">Fire &amp; Safety<span class="vt-sub">The evidence on BESS risk</span></a><!--/PREVIEW-ONLY-->
   </div>
   <div class="views-m" id="viewsM">
     <button type="button" class="vm-arrow" aria-label="Previous section" onclick="cycleView(-1)">&#8249;</button>
