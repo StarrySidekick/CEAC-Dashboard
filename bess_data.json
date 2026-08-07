@@ -15,7 +15,7 @@
     },
     "overstrict": {
       "label": "Towns With Restrictive BESS Code",
-      "color": "#818386"
+      "color": "#B8791B"
     },
     "silent": {
       "label": "Towns With Silent BESS Code",
