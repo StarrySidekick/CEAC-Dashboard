@@ -343,6 +343,8 @@
   .projgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:14px 0}
   .proj{background:var(--card);border:1px solid var(--line);border-radius:0;padding:16px 18px;display:flex;flex-direction:column}
   .proj .logo-wrap{height:40px;margin-bottom:10px;display:flex;align-items:center}
+  .proj .projshot{margin:0 0 11px;height:150px;overflow:hidden;border:1px solid var(--line)}
+  .proj .projshot img{display:block;width:100%;height:100%;object-fit:cover}
   .proj .logo-wrap img{height:100%;width:auto;max-width:100%;object-fit:contain}
   .proj h3{margin:0 0 4px;font-size:17px;color:var(--navy)}
   .proj .projstat{font-size:13px;font-weight:700;color:var(--green);background:transparent;padding:0 0 9px;align-self:stretch;margin-bottom:10px;text-align:left;border-bottom:1px solid var(--line)}
@@ -724,11 +726,11 @@
     </div>
   </header>
 <div class="views" id="views">
-    <button type="button" class="viewtab" data-view="about" onclick="setView('about')">Overview<span class="vt-sub">Start here: what this site covers</span></button>
-    <button type="button" class="viewtab" data-view="projects" onclick="setView('projects')">Successful Projects<span class="vt-sub">Storage working in Westchester</span></button>
-    <button type="button" class="viewtab" data-view="modellaw" onclick="setView('modellaw')">Model Law<span class="vt-sub">A common-sense code, not a ban</span></button>
-    <button type="button" class="viewtab" data-view="considerations" onclick="setView('considerations')">Key Considerations<span class="vt-sub">Nine things boards should weigh</span></button>
-    <button type="button" class="viewtab" data-view="tracker" onclick="setView('tracker')">Live Policy Tracker<span class="vt-sub">Town-by-town status</span></button>
+    <a class="viewtab" href="index.html#about">Overview<span class="vt-sub">Start here: what this site covers</span></a>
+    <a class="viewtab" href="index.html#projects">Successful Projects<span class="vt-sub">Storage working in Westchester</span></a>
+    <a class="viewtab" href="index.html#modellaw">Model Law<span class="vt-sub">A common-sense code, not a ban</span></a>
+    <a class="viewtab" href="index.html#considerations">Key Considerations<span class="vt-sub">Nine things boards should weigh</span></a>
+    <a class="viewtab" href="index.html#tracker">Live Policy Tracker<span class="vt-sub">Town-by-town status</span></a>
     <a class="viewtab viewlink" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
     <!--PREVIEW-ONLY--><a class="viewtab viewlink sel" href="fire-safety.html">Fire &amp; Safety<span class="vt-sub">The evidence on BESS risk</span></a><!--/PREVIEW-ONLY-->
   </div>
@@ -904,6 +906,25 @@
 </section>
 </div>
 <script>
+
+/* mobile carousel for a standalone page: the arrows walk the same tab lane */
+(function(){
+  var tabs = [].slice.call(document.querySelectorAll(".views .viewtab"));
+  var cur  = document.querySelector(".viewtab.sel");
+  if (!tabs.length || !cur) return;
+  function label(el){ var c = el.cloneNode(true); var sub = c.querySelector(".vt-sub");
+                      if (sub) sub.remove(); return c.textContent.trim(); }
+  var tt = document.getElementById("vmTitle"), su = document.getElementById("vmSub");
+  if (tt) tt.textContent = label(cur);
+  if (su) su.textContent = (cur.querySelector(".vt-sub") || {textContent:""}).textContent;
+  window.cycleView = function(dir){
+    var i = tabs.indexOf(cur); if (i < 0) i = 0;
+    var t = tabs[(i + dir + tabs.length) % tabs.length];
+    var href = t.getAttribute("href");
+    if (href) location.href = href;
+  };
+})();
+
 
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
