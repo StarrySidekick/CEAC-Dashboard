@@ -908,7 +908,34 @@
     .headlink{padding:0 9px !important;font-size:10.5px !important}
     .dashtitle{font-size:22px !important}
   }
-  @media (max-width:880px){
+  /* keep the whole brand bar on ONE row down to the mobile stack point (760px):
+     logos, title and buttons shrink instead of the title/button group dropping
+     to a second line underneath the logos. */
+  @media (max-width:960px) and (min-width:761px){
+    .brandbar{flex-wrap:nowrap !important;padding-left:14px !important;gap:11px !important;
+      align-items:center !important}
+    .hgroup{margin-left:4px !important;min-width:0;gap:8px !important}
+    .hact{width:auto !important;flex-wrap:nowrap !important;gap:6px !important;
+      flex-direction:row !important;margin:0 !important}
+    .bcwlogo{width:148px !important;height:auto !important}
+    .ceacmark{height:66px !important;margin-left:0 !important}
+    .dashtitle{white-space:nowrap !important;font-size:18px !important;letter-spacing:.1px !important}
+    .headlink{min-height:44px !important;min-width:0 !important;width:auto !important;
+      padding:0 8px !important;font-size:10px !important;letter-spacing:.5px !important;
+      white-space:nowrap !important}
+    .themesw{margin-left:6px !important}
+    .themesw button{padding:6px 6px;font-size:9px;letter-spacing:.6px}
+  }
+  @media (max-width:860px) and (min-width:761px){
+    .brandbar{padding-left:10px !important;gap:9px !important}
+    .bcwlogo{width:128px !important}
+    .ceacmark{height:56px !important}
+    .dashtitle{font-size:16px !important}
+    .headlink{padding:0 6px !important;font-size:9.5px !important;letter-spacing:.3px !important;
+      min-height:40px !important}
+    .themesw button{padding:5px 5px;font-size:8.5px;letter-spacing:.4px}
+  }
+  @media (max-width:880px) and (max-width:760px){
     .hact{flex-wrap:wrap !important}
     .dashtitle{white-space:normal !important;font-size:20px !important}
   }
