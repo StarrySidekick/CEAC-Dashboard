@@ -673,6 +673,47 @@
     .bcwlogo{height:64px !important}.ceacmark{height:66px !important}
     .hact{flex-direction:column;gap:10px}.headlink{width:100%}
   }
+
+  /* ===== measured against thebcw.org (1439px viewport) ===== */
+  /* logo: 300x123, sits near the top of the white bar */
+  .bcwlogo{height:auto !important;width:300px !important;flex:0 0 auto}
+  .ceacmark{height:132px !important;width:auto;margin-left:auto;flex:0 0 auto}
+  .brandbar{align-items:flex-start !important;gap:30px}
+  header.top{padding:30px 24px 26px !important}
+
+  /* action buttons: 61px tall, sitting high in the lane like JOIN THE BCW */
+  .hact{margin-top:0 !important;gap:12px}
+  .headlink{min-height:61px !important;padding:0 26px !important;font-size:13px !important;
+    font-weight:500 !important;letter-spacing:1.3px !important;min-width:150px}
+
+  /* tabs: no hairline beneath */
+  .views{border-bottom:none !important}
+
+  /* grey band: 48px vertical padding, 44px/900 title */
+  .titlestrip{padding-top:48px !important;padding-bottom:48px !important;margin-top:10px !important}
+  .titlestrip h1{font-size:44px !important;font-weight:900 !important;line-height:1.05}
+
+  /* footer: full-bleed white band, content held to the BCW inner width */
+  footer{background:#fff;border-top:3px solid var(--red);
+    margin-left:calc(50% - 50vw + 5px) !important;margin-right:calc(50% - 50vw + 5px) !important;
+    padding:64px max(24px, calc(50vw - 50% - 5px)) 38px !important}
+
+  @media (max-width:1000px){
+    .titlestrip h1{font-size:30px !important}
+    .titlestrip{padding-top:32px !important;padding-bottom:32px !important}
+    .bcwlogo{width:220px !important}.ceacmark{height:96px !important}
+    footer{padding-top:44px !important}
+  }
+  @media (max-width:600px){
+    .bcwlogo{width:170px !important}.ceacmark{height:70px !important;margin-left:0}
+    .titlestrip h1{font-size:24px !important}
+    .headlink{min-width:0;width:100%}
+  }
+  .fbtn{min-height:61px !important;padding:0 26px !important;font-size:13px !important;letter-spacing:1.3px !important;min-width:150px}
+  .foot-logos{gap:26px}
+  .foot-bcw{width:300px;height:auto !important}
+  .foot-ceac{height:110px !important}
+  @media (max-width:600px){ .foot-bcw{width:200px}.foot-ceac{height:76px !important} }
 </style>
   <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.js"></script>
 <style>
