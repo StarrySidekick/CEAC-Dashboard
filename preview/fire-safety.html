@@ -875,7 +875,9 @@
   /* contents links a few notches up */
   .toc a{font-size:18.5px !important;line-height:1.3;margin-bottom:15px}
   .toc h4{font-size:13.5px !important}
-  @media (max-width:1400px){
+  /* full-size chrome needs ~1360px of run; start shrinking well before that so a
+     window parked in the old 1401-1420px band cannot push the title onto row two */
+  @media (max-width:1520px){
     .brandbar{padding-left:44px !important;gap:20px !important}
     .bcwlogo{width:240px !important}
     .ceacmark{height:112px !important}
