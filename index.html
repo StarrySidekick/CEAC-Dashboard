@@ -874,7 +874,9 @@
   /* contents links a few notches up */
   .toc a{font-size:18.5px !important;line-height:1.3;margin-bottom:15px}
   .toc h4{font-size:13.5px !important}
-  @media (max-width:1400px){
+  /* full-size chrome needs ~1360px of run; start shrinking well before that so a
+     window parked in the old 1401-1420px band cannot push the title onto row two */
+  @media (max-width:1520px){
     .brandbar{padding-left:44px !important;gap:20px !important}
     .bcwlogo{width:240px !important}
     .ceacmark{height:112px !important}
@@ -1479,15 +1481,6 @@ function renderAbout(){
     <h2 style="margin-top:6px">A Working Guide to Battery Storage Policy in Westchester</h2>
     <p class="lead">Battery energy storage systems, or BESS, help save electricity for when it is needed most. For local officials and community members, the key questions are how these projects may affect energy costs, grid reliability, safety, and local review.</p>
     <p>This site answers those questions in one place. Westchester&rsquo;s storage rules sit scattered across code books, board minutes, and one-off legal notices, with no single view of who allows what. The Clean Energy Action Coalition built this dashboard for the Business Council of Westchester and the EarthKind BESS Workgroup, with analysis provided by Sustainable Westchester, so that a board member, planner, or resident can see the current rule in each of the ${DATA.towns.length} municipalities in the county, understand what that rule actually permits, and find the model language and evidence needed to change it.</p>
-    <h3>What follows on this page</h3>
-    <ol class="roadmap">
-      <li><b>Why Westchester&rsquo;s leaders should care</b> &mdash; the revenue, ratepayer, and planning case in brief.</li>
-      <li><b>What battery storage is</b> &mdash; sizes and tiers, and the behind-the-meter versus front-of-the-meter distinction that most local codes turn on.</li>
-      <li><b>Why it matters now</b> &mdash; reliability, affordability, and New York&rsquo;s 2030 targets.</li>
-      <li><b>Addressing concerns</b> &mdash; the safety record, the standards that govern it, and risk in context.</li>
-    </ol>
-    <h3>Where to go next</h3>
-    ${wayfindHTML()}
 
     <div class="kicker">The Local Case</div>
     <h2 style="margin-top:6px">Why Westchester's Leaders Should Care</h2>
