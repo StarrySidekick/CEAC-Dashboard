@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-10",
+  "lastUpdated": "2026-08-17",
   "statusMeta": {
     "moratorium": {
       "label": "Towns With Active BESS Moratorium",
@@ -69,7 +69,7 @@
       "name": "Town of Bedford",
       "status": "moratorium",
       "statusLabel": "MORATORIUM",
-      "scope": "Tier 1 (<80 kWh) allowed; large-scale moratorium until 8/17/26",
+      "scope": "Tier 1 (<80 kWh) allowed; large-scale (Tier 2) moratorium reaches its 8/17/26 end date TODAY — no extension confirmed",
       "window": "HIGH",
       "windowClass": "p-high",
       "subtitle": "Northern Westchester, Bedford Hills, Katonah, Bedford Village",
@@ -80,7 +80,7 @@
         ],
         [
           "Governing law",
-          "LL 1 of 2026, large-scale (Tier 2) moratorium through Aug 17, 2026; Tier 1 allowed."
+          "LL 1 of 2026, large-scale (Tier 2) moratorium through <b>Aug 17, 2026 — today</b>; Tier 1 allowed. No extension law or hearing notice has been found, so on the face of the adopted text the large-scale pause lapses at the end of today."
         ],
         [
           "Why a Moratorium",
@@ -88,12 +88,14 @@
         ]
       ],
       "summary": [
-        "Bedford adopted a BESS moratorium on Aug 13, 2024 and has extended it since (an earlier extension ran through Jan 16, 2026). Under LL 1 of 2026, Tier 1 systems (<80 kWh) are allowed while large-scale BESS remain paused through Aug 17, 2026, while the Town studies safety and prepares regulations.",
-        "The moratorium supersedes the usual Town/Planning/Zoning Board application timelines. Engage during this drafting window, before the 8/17/26 expiry."
+        "Bedford adopted a BESS moratorium on Aug 13, 2024 and has extended it roughly every six months since (an earlier extension ran through Jan 16, 2026). Under LL 1 of 2026, Tier 1 systems (<80 kWh) are allowed while large-scale BESS have been paused through Aug 17, 2026, while the Town studies safety and prepares regulations.",
+        "<b>That end date is today.</b> No extension local law, public-hearing notice, or news report of either has been found in eight consecutive checks running back to late July. A moratorium extension in New York requires a noticed public hearing, and the Town Board's next regular meeting is tomorrow, Tuesday Aug 18 (1st &amp; 3rd Tuesdays) — after the expiry. On the plain text of LL 1-2026, the large-scale pause therefore lapses at the end of today and Bedford falls back on its underlying code, in which Tier 1 (≤80 kWh) is allowed and Tier 2 has no permitting pathway of its own.",
+        "This is the moment the coalition has been watching for. If the pause has in fact lapsed, Bedford moves from “paused” to “no framework,” and the Town Board has to choose between writing a real tiered law and re-imposing another freeze. A NYSERDA-model or Croton-style tiered code is the template to put in front of them now, before a fifth extension is drafted. Confirm the actual status with the Town Clerk, (914) 666-4534, and watch tomorrow night's agenda."
       ],
       "flags": [
-        "URGENT WATCH — the large-scale moratorium expires 8/17/26, seven days out, and no extension law or hearing notice has been found. Bedford's Agenda Center is JavaScript-rendered and could not be read this run, so absence of a notice is not proof of absence. Bedford has extended roughly every six months since Aug 13, 2024, and neighbouring Cortlandt just extended on 7/21/26, so a further extension is likely but unconfirmed. Confirm with the Town Clerk, (914) 666-4534.",
-        "The 8/17/26 expiration comes from LL 1-2026 per the workgroup GIS sheet and matches Carina's June 2026 listing (ACTIVE through ~Aug 2026); confirm the adopted LL 1-2026 text via the Town Clerk."
+        "EXPIRY DAY — the large-scale moratorium's 8/17/26 end date is <b>today</b>, and no extension law or hearing notice has been found. Bedford's Agenda Center is JavaScript-rendered and no browser session was available this run, so absence of a notice is not proof of absence; a hearing could have been noticed and heard on Aug 4 without leaving a trace we can read. Bedford has extended roughly every six months since Aug 13, 2024 and neighbouring Cortlandt extended on 7/21/26, so a further extension remains plausible. The status stays MORATORIUM today because the law is in force through today; it will be re-checked tomorrow. Confirm with the Town Clerk, (914) 666-4534.",
+        "The 8/17/26 expiration comes from LL 1-2026 per the workgroup GIS sheet and matches Carina's June 2026 listing (Bedford ACTIVE, utility-scale, through ~Aug 2026); confirm the adopted LL 1-2026 text and any successor law via the Town Clerk.",
+        "If the lapse is confirmed, reclassify Bedford from Moratorium to Restrictive (Tier 1 only, no Tier 2 pathway) rather than to Allowed — the underlying code gives large-scale systems no route to a permit."
       ],
       "committees": [
         "<b>Town Board</b>, adopted and extends the moratorium.",
@@ -101,7 +103,7 @@
         "<b>Conservation Board / sustainability committees</b>, likely allies (confirm names)."
       ],
       "meetings": [
-        "<b>Schedule:</b> Town Board meets the 1st & 3rd Tuesdays at the Town House (321 Bedford Road, Bedford Hills); public open sessions at the start and end; Zoom available."
+        "<b>Schedule:</b> Town Board meets the 1st &amp; 3rd Tuesdays at the Town House (321 Bedford Road, Bedford Hills); public open sessions at the start and end; Zoom available. <b>Next meeting: Tuesday, Aug 18, 2026</b> — the first board date after the moratorium's end date."
       ],
       "officials": [
         {
@@ -140,8 +142,8 @@
         "raw": "100% Red",
         "tier": "Low capacity"
       },
-      "moratoriumReason": "Large-scale systems are paused (to 8/17/26) while the Town studies utility-scale siting; Tier 1 (<80 kWh) is already allowed.",
-      "localLaw": "LL 1 of 2026: Tier 1 < 80 kWh allowed; Tier 2 > 80 kWh under a large-scale moratorium until 8/17/2026. (per the workgroup GIS sheet).",
+      "moratoriumReason": "Large-scale systems have been paused (to 8/17/26, today) while the Town studies utility-scale siting; Tier 1 (<80 kWh) is already allowed.",
+      "localLaw": "LL 1 of 2026: Tier 1 < 80 kWh allowed; Tier 2 > 80 kWh under a large-scale moratorium until 8/17/2026 — today (per the workgroup GIS sheet). No successor law found.",
       "meterAccess": "btm",
       "tierSpec": [
         {
@@ -153,7 +155,7 @@
         {
           "upToKwh": null,
           "status": "paused",
-          "label": "Tier 2 >80 kWh, paused to 8/17/26",
+          "label": "Tier 2 >80 kWh, paused — pause ends 8/17/26 (today)",
           "tier": "T2"
         }
       ],
@@ -462,7 +464,7 @@
       "summary": [
         "Cortlandt has had a BESS moratorium in place continuously since 2024, and on <b>July 21, 2026</b> the Town Board extended it again by adopting <b>Local Law No. 1 of 2026</b> (Resolution 168-26, noticed 7/9/26, heard and adopted 7/21/26, posted 7/28/26). Section 3 runs the pause “through December 31, 2026 unless terminated earlier.” This is the fourth extension of LL 2-2024, following LL 10-2024, LL 2-2025 and LL 7-2025. Section 2 bars the Planning Board, ZBA and code-enforcement officials from considering or approving any application for a new commercial BESS; Section 4 reserves a hardship-variance path to the Town Board itself, superseding Town Law § 267.",
         "<b>The end-date conflict is resolved.</b> For months this entry flagged a dispute between the adopted LL 7-2025 text (12/31/26) and the workgroup GIS sheet (7/31/26). LL 1-2026 settles it in practice: the town noticed a hearing on 7/9/26 and adopted a fresh extension on 7/21/26 — which is what a town does when the existing pause is about to run out, consistent with the sheet's 7/31/26 reading. Either way the moratorium <b>never lapsed</b> and no application window opened. The operative law going forward is LL 1-2026, expiring 12/31/26. The workgroup sheet's Cortlandt row (“expires 07/31/26”) is now stale and should be updated to LL 1-2026 / 12/31/26.",
-        "The Town's drafting committee is still working on the permanent law, and the Board has now said on the record that it is waiting on further State guidance. That makes Cortlandt the best remaining chance in Westchester to shape a real code — tier thresholds, setbacks, fire and safety standards, permitted zones — with a confirmed four-and-a-half-month window. The next Town Board meeting is Aug 11; the practical ask is that the permanent law allow Tier 2 and above rather than codifying the current Tier 3 prohibition. A NYSERDA-model or Croton-style tiered code is the obvious template to put in front of them."
+        "The Town's drafting committee is still working on the permanent law, and the Board has now said on the record that it is waiting on further State guidance. That makes Cortlandt the best remaining chance in Westchester to shape a real code — tier thresholds, setbacks, fire and safety standards, permitted zones — with a confirmed four-and-a-half-month window. The next Town Board meeting is Sept 15; the practical ask is that the permanent law allow Tier 2 and above rather than codifying the current Tier 3 prohibition. A NYSERDA-model or Croton-style tiered code is the obvious template to put in front of them."
       ],
       "flags": [
         "RESOLVED this run — the LL 7-2025 end-date conflict (7/31/26 vs 12/31/26) is closed. Local Law No. 1 of 2026, adopted 7/21/26 and posted 7/28/26, extends the moratorium through 12/31/26, so the pause is confirmed active and never lapsed. Verified in the town's own adoption resolution (168-26). The workgroup GIS sheet still reads “expires 07/31/26” and needs updating.",
@@ -4719,6 +4721,15 @@
   ],
   "changelog": [
     {
+      "date": "2026-08-17",
+      "items": [
+        "<b>BEDFORD REACHES ITS MORATORIUM END DATE TODAY (8/17/26) WITH NO EXTENSION FOUND.</b> Eight consecutive checks since late July have turned up no extension local law, no public-hearing notice, and no news report of either. An extension in New York requires a noticed public hearing, and Bedford's Town Board does not sit again until <b>tomorrow, Tuesday Aug 18</b> — after the expiry. On the plain text of LL 1-2026 the large-scale (Tier 2) pause therefore lapses at the end of today, leaving Tier 1 (≤80 kWh) allowed and Tier 2 with no permitting pathway. Status is held at MORATORIUM for today because the law is in force through today; it will be re-checked tomorrow.",
+        "Caveat kept on the record: Bedford's Agenda Center is JavaScript-rendered and no browser session was available this run, so a hearing could have been noticed and heard on Aug 4 without leaving a readable trace. Bedford has extended roughly every six months since Aug 2024 and Cortlandt extended on 7/21/26, so a fifth extension remains plausible. <b>The highest-value action this week is a call to the Bedford Town Clerk, (914) 666-4534.</b> If the lapse is confirmed, Bedford should be reclassified as Restrictive (Tier 1 only), not Allowed.",
+        "Daily reconciliation: all 45 municipality statuses re-checked against the workgroup GIS sheet (latest rows still 6/15–6/18/26, unchanged). No new Westchester moratoriums, bans, adopted codes or hearing notices found. New Castle's Tier-1-only permanent law is still proposed and unadopted; Cortlandt's permanent law is still unnoticed. Carina remains on its June 2026 refresh (Westchester actives: Bedford, New Castle, Cortlandt, Yonkers, Peekskill) and so still does not reflect Cortlandt's LL 1-2026. The sheet's Cortlandt row (“expires 07/31/26”) remains stale and should be updated to LL 1-2026 / 12/31/26.",
+        "S5506/A8378 unchanged — still in the Senate Energy &amp; Telecommunications Committee, no floor action; the Legislature adjourned in June, so nothing can move before January 2027. Calendar housekeeping: dropped the past 8/11/26 Cortlandt Town Board date (next is 9/15/26). Upcoming deadlines: Bedford 8/17/26 (today), Pound Ridge 9/24/26, Ossining Village ~12/22/26, Cortlandt 12/31/26."
+      ]
+    },
+    {
       "date": "2026-08-10",
       "items": [
         "<b>CORTLANDT EXTENDED AGAIN — and the end-date conflict is finally resolved.</b> The Town Board adopted <b>Local Law No. 1 of 2026</b> on July 21, 2026, posted 7/28/2026 as Resolution 168-26, extending the moratorium on new commercial BESS “through December 31, 2026 unless terminated earlier.” This is the fourth extension of LL 2-2024 (after LL 10-2024, LL 2-2025, LL 7-2025). Because the town noticed a hearing on 7/9/26 and adopted before 7/31, the pause <b>never lapsed</b> and no application window opened — closing the 7/31/26-vs-12/31/26 dispute that had flipped three times and been carried as an open flag since early July. The operative law is now LL 1-2026. Read directly from the town's adoption resolution, not an aggregator.",
@@ -5013,11 +5024,6 @@
     ],
     "explicit": [
       {
-        "date": "2026-08-11",
-        "town": "Cortlandt Town Board",
-        "time": "7:00 PM"
-      },
-      {
         "date": "2026-09-15",
         "town": "Cortlandt Town Board",
         "time": "7:00 PM"
@@ -5041,7 +5047,7 @@
     "deadlines": [
       {
         "date": "2026-08-17",
-        "label": "Bedford, large-scale BESS moratorium ends — 7 days out, no extension or hearing notice posted; confirm with the Town Clerk",
+        "label": "Bedford, large-scale BESS moratorium end date — TODAY; no extension or hearing notice found, confirm with the Town Clerk whether it lapsed or was extended",
         "town": "Town of Bedford"
       },
       {
@@ -5097,7 +5103,7 @@
     },
     {
       "name": "Town of Bedford",
-      "why": "Priority score 71/100. Large-scale moratorium until 8/17/26 (urgent deadline), but Low grid capacity (100% red) tempers payoff.",
+      "why": "Priority score 71/100. Large-scale moratorium reaches its end date TODAY (8/17/26) with no extension found — the most time-sensitive item on the board; Low grid capacity (100% red) tempers the payoff, but a lapse means the Town Board must choose between a real tiered law and a fifth freeze.",
       "action": "Engage before 8/17/26 to add a Tier 2 pathway; weigh effort vs. limited grid value.",
       "engage": "Town Board meets 1st & 3rd Tuesday at the Town House (321 Bedford Rd, Bedford Hills); public sessions at start/end, Zoom available. Agendas on the Agenda Center; watch for the large-scale BESS hearing before 8/17/26.",
       "notify": {
@@ -5168,7 +5174,7 @@
       "why": "Priority score 58/100."
     }
   ],
-  "hearingNote": "Specific public-hearing dates are not centrally published; towns post them as one-off legal notices (often via eCode360 or the town-clerk page). Recurring board meetings below are computed — confirm exact hearing dates per town. Gaps to research: whether Bedford will notice a hearing or a further extension before its 8/17/26 expiry (7 days out, nothing posted and the Agenda Center could not be read this run); the hearing date for Cortlandt's permanent BESS law, which is still unnoticed even though the moratorium now has a confirmed 12/31/26 end date; and New Castle's current posture after its 5/31/26 lapse, where a tiered law remains proposed but unadopted.",
+  "hearingNote": "Specific public-hearing dates are not centrally published; towns post them as one-off legal notices (often via eCode360 or the town-clerk page). Recurring board meetings below are computed — confirm exact hearing dates per town. Gaps to research: <b>Bedford, today</b> — whether the large-scale moratorium lapsed on its 8/17/26 end date or was extended at the Aug 4 meeting; nothing has been found either way and the Agenda Center is JavaScript-rendered, so this needs a call to the Town Clerk. Also open: the hearing date for Cortlandt's permanent BESS law, still unnoticed even though the moratorium now has a confirmed 12/31/26 end date; and New Castle's current posture after its 5/31/26 lapse, where a Tier-1-only law remains proposed but unadopted.",
   "hostingNote": "Grid hosting capacity is a proxy read from the ConEd hosting-capacity map colors in the workgroup sheet: more green/yellow = more available capacity (better BESS siting value); orange = limited; red = constrained. NYSEG-territory towns aren't on that map. Confirm against the utility legend before relying on it.",
   "trackerVintage": "June 2026",
   "priorityIntro": "Ranked by the scored priority system (see How Priority Is Ranked in Verification & Confidence): urgency, restrictiveness, hosting capacity, population, and receptivity. NYSEG-territory municipalities are excluded (score 0). The top ten scores carry the ★ Priority label.",
