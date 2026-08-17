@@ -937,6 +937,13 @@
       min-height:40px !important}
     .themesw button{padding:5px 5px;font-size:8.5px;letter-spacing:.4px}
   }
+  /* six tabs: keep the whole lane visible without horizontal scrolling
+     on the mid-size widths between the mobile arrow control and desktop */
+  @media (max-width:900px) and (min-width:641px){
+    .views{gap:5px !important}
+    .viewtab{font-size:14px !important;padding:10px 6px 12px !important;letter-spacing:0 !important}
+    .views .vt-sub{display:none !important}
+  }
   @media (max-width:880px) and (max-width:760px){
     .hact{flex-wrap:wrap !important}
     .dashtitle{white-space:normal !important;font-size:20px !important}
@@ -973,7 +980,7 @@
     <button type="button" class="viewtab" data-view="modellaw" onclick="setView('modellaw')">Model Law<span class="vt-sub">A common-sense code, not a ban</span></button>
     <button type="button" class="viewtab" data-view="considerations" onclick="setView('considerations')">Key Considerations<span class="vt-sub">Nine things boards should weigh</span></button>
     <a class="viewtab viewlink" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
-    <!--PREVIEW-ONLY--><a class="viewtab viewlink" href="fire-safety.html">Fire &amp; Safety<span class="vt-sub">The evidence on BESS risk</span></a><!--/PREVIEW-ONLY-->
+    <a class="viewtab viewlink" href="fire-safety.html">Fire &amp; Safety<span class="vt-sub">The evidence on BESS risk</span></a>
   </div>
   <div class="views-m" id="viewsM">
     <button type="button" class="vm-arrow" aria-label="Previous section" onclick="cycleView(-1)">&#8249;</button>

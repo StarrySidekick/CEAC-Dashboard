@@ -170,27 +170,27 @@
     {key:"conf", label:"CEAC Conference Material"},
   ];
   const DOCS = [
-    {id:"ceac-resource-roundup-summer2026", cat:"bess", title:"CEAC Resource Round-Up — Summer 2026", file:"../docs/ceac-resource-roundup-summer2026.pdf", pages:2,
+    {id:"ceac-resource-roundup-summer2026", cat:"bess", title:"CEAC Resource Round-Up — Summer 2026", file:"docs/ceac-resource-roundup-summer2026.pdf", pages:2,
       desc:"A coalition update summarizing the tools and resources CEAC has built for Westchester this season."},
-    {id:"ceac-bess-slide-deck", cat:"bess", title:"Battery Storage: A Guide for Local Leaders", file:"../docs/ceac-bess-slide-deck.pdf", pages:15,
+    {id:"ceac-bess-slide-deck", cat:"bess", title:"Battery Storage: A Guide for Local Leaders", file:"docs/ceac-bess-slide-deck.pdf", pages:15,
       desc:"The full CEAC briefing deck: what battery storage is, why it matters, safety, and model policy."},
-    {id:"fire-safety-fact-sheet", cat:"bess", title:"Energy Storage Fire & Safety Fact Sheet", file:"../docs/fire-safety-fact-sheet.pdf", pages:5,
+    {id:"fire-safety-fact-sheet", cat:"bess", title:"Energy Storage Fire & Safety Fact Sheet", file:"docs/fire-safety-fact-sheet.pdf", pages:5,
       desc:"How modern BESS installations are engineered and regulated for fire safety, with risk in perspective."},
-    {id:"economic-community-considerations", cat:"bess", title:"BESS Fact Sheet: Economic & Community Considerations", file:"../docs/economic-community-considerations.pdf", pages:3,
+    {id:"economic-community-considerations", cat:"bess", title:"BESS Fact Sheet: Economic & Community Considerations", file:"docs/economic-community-considerations.pdf", pages:3,
       desc:"The local economic and community benefits of battery storage for Westchester municipalities."},
-    {id:"westchester-bess-fact-sheet", cat:"bess", title:"Westchester BESS Fact Sheet", file:"../docs/westchester-bess-fact-sheet.pdf", pages:2,
+    {id:"westchester-bess-fact-sheet", cat:"bess", title:"Westchester BESS Fact Sheet", file:"docs/westchester-bess-fact-sheet.pdf", pages:2,
       desc:"A general fact sheet on battery energy storage for Westchester residents and officials."},
-    {id:"legal-moratorium-criteria-summary", cat:"bess", title:"Legal Moratorium Criteria Summary", file:"../docs/legal-moratorium-criteria-summary.pdf", pages:1,
+    {id:"legal-moratorium-criteria-summary", cat:"bess", title:"Legal Moratorium Criteria Summary", file:"docs/legal-moratorium-criteria-summary.pdf", pages:1,
       desc:"A concise summary of the legal criteria that apply to local BESS moratoriums."},
-    {id:"filed-decision", cat:"bess", title:"Filed Decision (Yorktown ESS v. ZBA)", file:"../docs/filed-decision.pdf", pages:6,
+    {id:"filed-decision", cat:"bess", title:"Filed Decision (Yorktown ESS v. ZBA)", file:"docs/filed-decision.pdf", pages:6,
       desc:"Full text of the filed Article 78 decision and order, provided for reference."},
-    {id:"clean-energy-workforce", cat:"conf", title:"Key Insights: Clean Energy Workforce", file:"../docs/clean-energy-workforce.pdf", pages:3,
+    {id:"clean-energy-workforce", cat:"conf", title:"Key Insights: Clean Energy Workforce", file:"docs/clean-energy-workforce.pdf", pages:3,
       desc:"Takeaways from the Clean Energy Workforce breakout session."},
-    {id:"climate-smart-communities", cat:"conf", title:"Key Insights: Climate Smart Communities", file:"../docs/climate-smart-communities.pdf", pages:4,
+    {id:"climate-smart-communities", cat:"conf", title:"Key Insights: Climate Smart Communities", file:"docs/climate-smart-communities.pdf", pages:4,
       desc:"Takeaways from the Climate Smart Communities breakout session."},
-    {id:"passivhaus-mixed-use-multifamily", cat:"conf", title:"Key Insights: Passive House for Mixed-Use & Multifamily", file:"../docs/passivhaus-mixed-use-multifamily.pdf", pages:3,
+    {id:"passivhaus-mixed-use-multifamily", cat:"conf", title:"Key Insights: Passive House for Mixed-Use & Multifamily", file:"docs/passivhaus-mixed-use-multifamily.pdf", pages:3,
       desc:"Takeaways on Passive House design for mixed-use and multifamily buildings."},
-    {id:"stormwater-resiliency-financing", cat:"conf", title:"Key Insights: Stormwater Resiliency & Financing", file:"../docs/stormwater-resiliency-financing.pdf", pages:3,
+    {id:"stormwater-resiliency-financing", cat:"conf", title:"Key Insights: Stormwater Resiliency & Financing", file:"docs/stormwater-resiliency-financing.pdf", pages:3,
       desc:"Takeaways on stormwater resiliency and financing approaches."},
   ];
 
@@ -205,7 +205,7 @@
   let pageFlip=null, pageImgs=[], pageImgEls=[], pageRatio=0.773, total=0, currentDoc=null, openToken=0;
 
   // ---- Document list (grouped by category, with first-page thumbnails) ----
-  const thumbOf=d=>"../docs/thumbs/"+d.file.split("/").pop().replace(/\.pdf$/,".jpg");
+  const thumbOf=d=>"docs/thumbs/"+d.file.split("/").pop().replace(/\.pdf$/,".jpg");
   const cardHTML=(d,i)=>`
     <button class="doc" onclick="openDoc(${i})">
       <img class="thumb" src="${thumbOf(d)}" alt="First page of ${d.title.replace(/"/g,'')}" loading="lazy">
