@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How Solar &amp; Storage Lower Your Electric Bill, Westchester BESS, BCW &amp; EarthKind</title>
-<meta name="description" content="What you are actually charged for on a Westchester electric bill, why those charges keep rising, and how local solar and battery energy storage push them back down.">
+<title>Energy Storage Fire &amp; Safety, Westchester BESS, BCW &amp; EarthKind</title>
+<meta name="description" content="An evidence-based look at battery energy storage (BESS) fire safety in Westchester County: real-world incident rates, how BESS compares to fossil fuel infrastructure, and the systems that prevent and contain fires.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2214%22 y=%2230%22 width=%2266%22 height=%2240%22 rx=%228%22 fill=%22none%22 stroke=%22%231F3864%22 stroke-width=%228%22/><rect x=%2282%22 y=%2242%22 width=%2210%22 height=%2216%22 rx=%223%22 fill=%22%231F3864%22/><rect x=%2226%22 y=%2242%22 width=%2236%22 height=%2216%22 rx=%223%22 fill=%22%231F8A4C%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -954,100 +954,117 @@
     
   *{box-sizing:border-box}
   body{margin:0;font-family:Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
-  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
   .pg-wrap{max-width:1000px;margin:0 auto;padding:24px 20px 70px}
 
   header.pg-top{background:linear-gradient(135deg,#000000,#1A1818 58%,#3F4145);border-radius:0;box-shadow:var(--shadow);padding:26px 28px;margin-bottom:22px;position:relative;overflow:hidden}
-  header.pg-top::after{content:"";position:absolute;right:-40px;top:-40px;width:210px;height:210px;border-radius:0;background:radial-gradient(circle,rgba(255,255,255,.10),transparent 68%)}
+  header.pg-top::after{content:"";position:absolute;right:-40px;top:-40px;width:210px;height:210px;border-radius:0;background:radial-gradient(circle,rgba(255,255,255,.10),transparent 68%);pointer-events:none}
   .pg-eyebrow{font-size:12px;font-weight:700;color:#B9BABC;letter-spacing:1.4px;text-transform:uppercase}
-  header.pg-top h1{font-size:30px;line-height:1.1;letter-spacing:-.6px;margin:8px 0;color:#fff;font-weight:800;max-width:24ch}
+  header.pg-top h1{font-size:30px;line-height:1.1;letter-spacing:-.6px;margin:8px 0 8px;color:#fff;font-weight:800;max-width:22ch}
   header.pg-top p{margin:0;color:#C9CACC;font-size:15px;max-width:66ch}
+
+  .pg-lede{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:26px}
+  .pg-lede p{margin:0 0 11px;font-size:15.5px}
+  .pg-lede p:last-child{margin-bottom:0}
 
   .pg-sec-h{font-size:13px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);margin:38px 0 16px;padding-bottom:7px;border-bottom:1px solid var(--line)}
   h2.pg-big{font-size:23px;font-weight:800;letter-spacing:-.3px;color:var(--navy);margin:0 0 6px}
   .pg-sub{color:var(--muted);font-size:14.5px;margin:0 0 18px;max-width:74ch}
 
+  /* animated reveal */
   .pg-rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
   .pg-rv.pg-in{opacity:1;transform:none}
 
-  /* bill composition */
-  .pg-billbar{display:flex;height:64px;border-radius:0;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
-  .pg-seg{height:100%;width:0;transition:width 1.2s cubic-bezier(.22,.9,.3,1);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px}
-  .pg-seg.pg-d{background:linear-gradient(135deg,#3F4145,#1A1818)}
-  .pg-seg.pg-s{background:linear-gradient(135deg,#BE1E2D,#961826)}
-  .pg-seg.pg-t{background:linear-gradient(135deg,#C9CACC,#B9BABC)}
-  .pg-billkey{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:13px;margin-top:14px}
-  .pg-bk{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;box-shadow:var(--shadow)}
-  .pg-bk .pg-sw{width:11px;height:11px;border-radius:0;display:inline-block;margin-right:8px}
-  .pg-bk h4{margin:0 0 4px;font-size:14.5px;color:var(--navy);font-weight:700}
-  .pg-bk p{margin:0;font-size:13px;color:var(--muted)}
+  /* stat tiles */
+  .pg-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:14px}
+  .pg-stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 16px;text-align:center}
+  .pg-stat .pg-n{font-size:30px;font-weight:800;letter-spacing:-1px;color:var(--warm);font-variant-numeric:tabular-nums;line-height:1.05}
+  .pg-stat .pg-l{font-size:12.5px;color:var(--muted);margin-top:7px;line-height:1.35}
+  .pg-stat .pg-l sup{color:var(--accent);font-weight:700}
+  .pg-stat.pg-tot .pg-n{color:var(--navy)}
 
-  /* fuel mix */
-  .pg-fuel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px}
-  .pg-frow{display:flex;align-items:center;gap:12px;margin:9px 0}
-  .pg-flabel{flex:0 0 132px;font-size:13.5px;font-weight:600;color:var(--navy)}
-  .pg-ftrack{flex:1;background:var(--g200);border-radius:0;height:22px;position:relative}
-  .pg-ffill{height:100%;width:0;border-radius:0;transition:width 1.1s cubic-bezier(.22,.9,.3,1);position:relative}
-  .pg-ffill.pg-gas{background:linear-gradient(90deg,#BE1E2D,#961826)}
-  .pg-ffill.pg-oth{background:var(--g400)}
-  .pg-ffill.pg-cln{background:linear-gradient(90deg,#59936A,#3E7D57)}
-  .pg-fval{position:absolute;left:calc(100% + 9px);top:0;line-height:22px;font-size:12.5px;font-weight:700;color:var(--muted);white-space:nowrap;opacity:0;transition:opacity .4s ease .6s}
-  .pg-ffill.on .pg-fval{opacity:1}
-  .pg-fnote{margin-top:16px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:13px}
+  .pg-toll{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:14px;margin-top:14px;background:var(--warm-soft);border:1px solid #E8C9C3;border-radius:var(--radius);padding:18px}
+  .pg-toll .pg-stat{background:transparent;border:none;box-shadow:none;padding:6px}
 
-  /* rate rise */
-  .pg-rate{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
-  .pg-rp{text-align:center}
-  .pg-rp .pg-yr{font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
-  .pg-rp .pg-v{font-size:38px;font-weight:800;letter-spacing:-1.4px;color:var(--navy);font-variant-numeric:tabular-nums;line-height:1.1}
-  .pg-rp.pg-up .pg-v{color:var(--warm)}
-  .pg-arrow{font-size:26px;color:var(--warm);font-weight:800}
-  .pg-ratefoot{text-align:center;margin-top:14px;font-size:14.5px;color:var(--muted)}
-  .pg-ratefoot b{color:var(--warm);font-size:19px;font-weight:800}
+  .pg-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px;margin-top:16px}
+  .pg-note{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;font-size:13.5px;box-shadow:var(--shadow)}
+  .pg-note b{color:var(--navy);display:block;font-size:19px;margin-bottom:3px;letter-spacing:-.3px}
+  .pg-note sup{color:var(--accent);font-weight:700}
 
-  .pg-alert{background:var(--amber-soft);border:1px solid #E6D5AE;border-left:5px solid var(--amber);border-radius:var(--radius);padding:18px 20px;margin-top:18px}
-  .pg-alert h4{margin:0 0 6px;color:#7A5410;font-size:15px;font-weight:800}
-  .pg-alert p{margin:0;font-size:14px;color:#5F4410}
-  .pg-alert .pg-mw{font-size:27px;font-weight:800;color:var(--amber);letter-spacing:-.6px;display:block;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+  /* fault-rate chart */
+  .pg-chart{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;margin-top:6px}
+  .pg-bar-row{display:flex;align-items:center;gap:14px;margin:16px 0}
+  .pg-bar-yr{flex:0 0 46px;font-weight:800;color:var(--navy);font-size:14.5px}
+  .pg-bar-track{flex:1;background:var(--g200);border-radius:0;height:34px;position:relative}
+  .pg-bar-fill{height:100%;width:0;border-radius:0;transition:width 1.15s cubic-bezier(.22,.9,.3,1);display:flex;align-items:center;justify-content:flex-end;padding-right:11px;position:relative}
+  .pg-bar-fill.pg-f18{background:linear-gradient(90deg,#BE1E2D,#961826)}
+  .pg-bar-fill.pg-f23{background:linear-gradient(90deg,#59936A,#3E7D57)}
+  .pg-bar-val{color:#fff;font-weight:800;font-size:13.5px;white-space:nowrap;opacity:0;transition:opacity .4s ease .55s}
+  .pg-bar-fill.on .pg-bar-val{opacity:1}
+  .pg-bar-val-out{position:absolute;left:calc(100% + 10px);color:var(--green);white-space:nowrap;padding-right:0}
+  .pg-drop{text-align:center;margin-top:6px;font-size:15px;color:var(--muted)}
+  .pg-drop b{color:var(--green);font-size:27px;font-weight:800;letter-spacing:-.6px}
 
-  /* mechanism cards */
-  .pg-mechs{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:14px}
-  .pg-mech{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;transition:transform .15s ease,box-shadow .15s ease}
-  .pg-mech:hover{transform:translateY(-2px);box-shadow:none}
-  .pg-mech .pg-num{width:29px;height:29px;border-radius:0;background:var(--accent-soft);color:var(--accent);font-weight:800;font-size:13.5px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
-  .pg-mech.pg-g .pg-num{background:var(--green-soft);color:var(--green)}
-  .pg-mech h4{margin:0 0 5px;font-size:15px;color:var(--navy);font-weight:700;line-height:1.25}
-  .pg-mech p{margin:0;font-size:13.3px;color:var(--muted)}
+  .pg-split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+  .pg-half{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:17px 18px;box-shadow:var(--shadow)}
+  .pg-half .pg-pct{font-size:27px;font-weight:800;color:var(--navy);letter-spacing:-.6px}
+  .pg-half p{margin:5px 0 0;font-size:13.5px;color:var(--muted)}
 
-  .pg-bignum{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:6px}
-  .pg-bn{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 16px;text-align:center}
-  .pg-bn .pg-n{font-size:31px;font-weight:800;letter-spacing:-1px;color:var(--green);font-variant-numeric:tabular-nums;line-height:1.05}
-  .pg-bn .pg-l{font-size:12.8px;color:var(--muted);margin-top:7px;line-height:1.35}
+  /* standards list */
+  .pg-stds{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:13px}
+  .pg-std{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:var(--radius);padding:15px 17px;font-size:14px;box-shadow:var(--shadow)}
+  .pg-std b{color:var(--navy)}
+  .pg-std sup{color:var(--accent);font-weight:700}
 
-  .pg-target{background:linear-gradient(135deg,#000000,#1A1818 60%,#3F4145);color:#fff;border-radius:0;padding:26px 28px;margin-top:22px;box-shadow:var(--shadow);text-align:center}
-  .pg-target .pg-lab{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#B9BABC}
-  .pg-target .pg-v{font-size:44px;font-weight:800;letter-spacing:-1.6px;margin:6px 0 2px}
-  .pg-target p{margin:6px auto 0;color:#C9CACC;font-size:14.8px;max-width:60ch}
+  /* incident comparison */
+  .pg-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+  .pg-inc{border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line);background:var(--card)}
+  .pg-inc-h{padding:15px 18px;color:#fff}
+  .pg-inc.pg-foss .pg-inc-h{background:linear-gradient(135deg,#961826,#BE1E2D)}
+  .pg-inc.pg-bess .pg-inc-h{background:linear-gradient(135deg,#2F6244,#3E7D57)}
+  .pg-inc-h .pg-yr{font-size:12px;font-weight:700;letter-spacing:1.2px;opacity:.85;text-transform:uppercase}
+  .pg-inc-h h3{margin:4px 0 0;font-size:17px;font-weight:800;line-height:1.2}
+  .pg-inc ul{margin:0;padding:15px 18px 17px 34px}
+  .pg-inc li{font-size:13.8px;margin-bottom:9px}
+  .pg-inc li:last-child{margin-bottom:0}
+  .pg-verdict{margin-top:16px;background:var(--g100);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--radius);padding:16px 19px;font-size:14.5px}
 
-  .pg-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-  .pg-cta a{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:15px 18px;font-weight:700;color:var(--navy);font-size:14.5px;flex:1;min-width:230px}
-  .pg-cta a:hover{text-decoration:none;border-color:var(--accent);background:var(--accent-soft)}
-  .pg-cta a span{display:block;font-weight:400;font-size:13px;color:var(--muted);margin-top:3px}
+  /* systems */
+  .pg-sysgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:13px}
+  .pg-sys{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease}
+  .pg-sys:hover{transform:translateY(-2px);box-shadow:none}
+  .pg-sys .pg-dot{width:9px;height:9px;border-radius:0;display:inline-block;margin-right:8px;vertical-align:1px}
+  .pg-sys.pg-prev .pg-dot{background:var(--accent)}
+  .pg-sys.pg-supp .pg-dot{background:var(--green)}
+  .pg-sys h4{margin:0 0 5px;font-size:14.5px;color:var(--navy);font-weight:700}
+  .pg-sys p{margin:0;font-size:13px;color:var(--muted)}
 
-  footer{color:var(--muted);font-size:12.5px;margin-top:34px;text-align:center}
-  .pg-srcs{font-size:12.5px;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+  .pg-bottom{background:linear-gradient(135deg,#000000,#1A1818 60%,#3F4145);color:#fff;border-radius:0;padding:26px 28px;margin-top:40px;box-shadow:var(--shadow)}
+  .pg-bottom h2{margin:0 0 10px;font-size:21px;font-weight:800;letter-spacing:-.3px;color:#fff}
+  .pg-bottom p{margin:0 0 10px;color:#C9CACC;font-size:14.8px}
+  .pg-bottom p:last-child{margin-bottom:0}
+  .pg-bottom .pg-punch{font-size:17px;font-weight:700;color:#fff;margin-top:14px}
+
+  details.pg-refs{margin-top:30px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:0 20px}
+  details.pg-refs summary{cursor:pointer;font-weight:700;color:var(--navy);padding:16px 0;font-size:14.5px;list-style:none}
+  details.pg-refs summary::-webkit-details-marker{display:none}
+  details.pg-refs summary::before{content:"▸";display:inline-block;margin-right:9px;color:var(--accent);transition:transform .2s ease}
+  details.pg-refs[open] summary::before{transform:rotate(90deg)}
+  details.pg-refs ol{margin:0;padding:0 0 18px 26px;font-size:12.8px;color:var(--muted);line-height:1.7}
+  details.pg-refs li{margin-bottom:5px;word-break:break-word}
+
+  footer{color:var(--muted);font-size:12.5px;margin-top:30px;text-align:center}
 
   @media (max-width:720px){
-    .pg-rate{grid-template-columns:1fr;gap:8px}
-    .pg-arrow{transform:rotate(90deg)}
+    .pg-compare,.pg-split{grid-template-columns:1fr}
     header.pg-top h1{font-size:25px}
-    .pg-flabel{flex:0 0 96px;font-size:12.5px}
   }
   @media (prefers-reduced-motion: reduce){
     .pg-rv{opacity:1;transform:none;transition:none}
-    .pg-seg,.pg-ffill{transition:none}
-    .pg-fval{opacity:1;transition:none}
-    .pg-mech:hover{transform:none}
+    .pg-bar-fill{transition:none}
+    .pg-bar-val{opacity:1;transition:none}
+    .pg-sys:hover{transform:none}
   }
 
   /* BCW header link row */
@@ -1095,15 +1112,15 @@
     <a class="viewtab" href="index.html#projects">Successful Projects<span class="vt-sub">Storage working in Westchester</span></a>
     <a class="viewtab" href="index.html#modellaw">Model Law<span class="vt-sub">A common-sense code, not a ban</span></a>
     <a class="viewtab" href="index.html#considerations">Key Considerations<span class="vt-sub">Nine things boards should weigh</span></a>
-    <a class="viewtab viewlink sel" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
-    <a class="viewtab viewlink" href="fire-safety.html">Fire &amp; Safety<span class="vt-sub">The evidence on BESS risk</span></a>
+    <a class="viewtab viewlink" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
+    <a class="viewtab viewlink sel" href="fire-safety.html">Fire &amp; Safety<span class="vt-sub">The evidence on BESS risk</span></a>
   </div>
   <div class="views-m" id="viewsM">
     <button type="button" class="vm-arrow" aria-label="Previous section" onclick="cycleView(-1)">&#8249;</button>
     <div class="vm-cur"><span class="vm-title" id="vmTitle">Overview</span><span class="vm-sub" id="vmSub">Start here: what this site covers</span></div>
     <button type="button" class="vm-arrow" aria-label="Next section" onclick="cycleView(1)">&#8250;</button>
   </div>
-<div class="titlestrip"><h1>How Solar &amp; Storage Lower Your Electric Bill</h1></div><div class="subline">What you are actually being charged for each month, why those charges keep climbing in Westchester, and the specific mechanisms by which local solar and battery storage push them back down.</div>
+<div class="titlestrip"><h1>Energy Storage Fire &amp; Safety</h1></div><div class="subline">As battery energy storage systems (BESS) and other clean technologies become more common, public concern over fire risk has grown, often fueled by misunderstanding or outdated data. Here is a clear, evidence-based look at the record.</div>
 <div class="mainrow">
 <nav id="toc" class="toc" aria-label="On this page"></nav>
 <div class="viewcol">
@@ -1112,111 +1129,163 @@
 
   
 
-  <div class="pg-sec-h">Start here</div>
-  <h2 class="pg-big">What are you being charged for?</h2>
-  <p class="pg-sub">A Westchester electric bill splits three ways. Most of it is not the electricity itself.</p>
+  <div class="pg-lede pg-rv">
+    <p>BESS and other renewable systems are significantly safer than our fossil fuel energy systems of pumps, pipelines, refineries, plants, and residential and commercial structures. The widespread adoption of BESS directly reduces the need to rely on those systems, and provides many additional practical benefits.</p>
+    <p>Clean energy systems require a source of generation (wind, solar, hydropower), a place to store that energy (BESS), and distribution infrastructure. Fossil fuel systems require a more complex and messy logistics pipeline of extraction, refinement, and transport, which leaves multiple vulnerabilities to fire and other accidents.</p>
+  </div>
 
-  <div class="pg-rv" id="billsec">
-    <div class="pg-billbar">
-      <div class="pg-seg pg-d" data-w="56">56%</div>
-      <div class="pg-seg pg-s" data-w="33">33%</div>
-      <div class="pg-seg pg-t" data-w="11">11%</div>
+  <div class="pg-sec-h">The fossil fuel baseline</div>
+  <h2 class="pg-big">What the United States experiences every year, on average</h2>
+  <p class="pg-sub">Annual averages drawn from federal incident databases and national fire statistics.</p>
+
+  <div class="pg-stats pg-rv">
+    <div class="pg-stat"><div class="pg-n" data-count="286">0</div><div class="pg-l">Oil pipeline incidents<sup>1</sup></div></div>
+    <div class="pg-stat"><div class="pg-n" data-count="150">0</div><div class="pg-l">Oil spills<sup>2</sup></div></div>
+    <div class="pg-stat"><div class="pg-n" data-count="11">0</div><div class="pg-l">Oil refinery incidents<sup>3</sup></div></div>
+    <div class="pg-stat"><div class="pg-n" data-count="125000">0</div><div class="pg-l">Gas leaks<sup>4</sup></div></div>
+    <div class="pg-stat"><div class="pg-n" data-count="27900">0</div><div class="pg-l">Home heating fires<sup>5</sup></div></div>
+    <div class="pg-stat"><div class="pg-n" data-count="167800">0</div><div class="pg-l">Home cooking fires<sup>5</sup></div></div>
+  </div>
+
+  <div class="pg-toll pg-rv">
+    <div class="pg-stat pg-tot"><div class="pg-n" data-count="254">0</div><div class="pg-l">Deaths</div></div>
+    <div class="pg-stat pg-tot"><div class="pg-n" data-count="3084">0</div><div class="pg-l">Injuries</div></div>
+    <div class="pg-stat pg-tot"><div class="pg-n" data-count="2.5" data-prefix="$" data-suffix="B+" data-dec="1">0</div><div class="pg-l">In damage</div></div>
+  </div>
+
+  <div class="pg-notes pg-rv">
+    <div class="pg-note"><b>10%</b>increased risk of cancer for those living next to an oil refinery, per a rigorous study.<sup>6</sup></div>
+    <div class="pg-note"><b>22,000</b>gas leaks occurred in New York City alone, often caused by poor or decaying infrastructure within buildings.<sup>7</sup></div>
+    <div class="pg-note"><b>1 in 5</b>deaths worldwide occur due to air pollution from fossil fuels, Harvard estimates.<sup>8</sup></div>
+    <div class="pg-note"><b>460,000+</b>deaths since 2003 attributed to particulate matter from coal power plants.<sup>9</sup></div>
+  </div>
+
+  <div class="pg-verdict pg-rv" style="margin-top:18px">Many fossil fuel incidents are large, explosive, and cause immediate tragic loss of life and property even in the best cases. BESS and clean energy incidents, in addition to being dramatically more rare, do not compare in devastation to property and people.</div>
+
+  <div class="pg-sec-h">How BESS compares</div>
+  <h2 class="pg-big">Battery storage failures dropped 97% in five years</h2>
+  <p class="pg-sub">BESS technology is rapidly evolving in its safety and stability. Single incidents often immediately trigger legislation, regulations, and adjustments that are quickly implemented in future energy storage applications.</p>
+
+  <div class="pg-chart pg-rv" id="chart">
+    <div class="pg-bar-row">
+      <div class="pg-bar-yr">2018</div>
+      <div class="pg-bar-track"><div class="pg-bar-fill pg-f18" data-w="100"><span class="pg-bar-val">9.2 faults per GW</span></div></div>
     </div>
-    <div class="pg-billkey">
-      <div class="pg-bk"><h4><span class="pg-sw" style="background:#1A1818"></span>Delivery charges &middot; 56%</h4><p>What your provider pays to transport electricity from the source to your house, over poles, wires, substations and transformers.</p></div>
-      <div class="pg-bk"><h4><span class="pg-sw" style="background:#BE1E2D"></span>Supply charges &middot; 33%</h4><p>What your provider pays to purchase the electricity itself from generating sources.</p></div>
-      <div class="pg-bk"><h4><span class="pg-sw" style="background:#B9BABC"></span>Taxes &amp; surcharges &middot; 11%</h4><p>The remainder of the monthly bill.</p></div>
+    <div class="pg-bar-row">
+      <div class="pg-bar-yr">2023</div>
+      <div class="pg-bar-track"><div class="pg-bar-fill pg-f23" data-w="2.2"><span class="pg-bar-val pg-bar-val-out">0.2 faults per GW</span></div></div>
+    </div>
+    <div class="pg-drop"><b>97%</b> decline in battery storage failure incident rate between 2018 and 2023.<sup style="color:var(--accent);font-weight:700">10</sup></div>
+  </div>
+
+  <div class="pg-split pg-rv">
+    <div class="pg-half"><div class="pg-pct">65%</div><p>of these faults were due to improper operation and integration, which emphasises the need for proper workforce training in BESS.<sup style="color:var(--accent);font-weight:700">10</sup></p></div>
+    <div class="pg-half"><div class="pg-pct">11%</div><p>were due to actual failures of the battery cell or module itself.<sup style="color:var(--accent);font-weight:700">10</sup></p></div>
+  </div>
+
+  <div class="pg-sec-h">The rules that changed</div>
+  <div class="pg-stds pg-rv">
+    <div class="pg-std"><b>UL 9540<sup>11</sup> and UL 9540A<sup>12</sup></b> — national energy storage safety standards that add rigorous protocols to new BESS systems.</div>
+    <div class="pg-std"><b>NFPA 855<sup>13</sup></b> — the standard for installation of stationary energy storage systems.</div>
+    <div class="pg-std"><b>Model Energy Storage Ordinance Framework<sup>14</sup></b> — released June 2025 by the American Clean Power Association, addressing issues present in older energy storage systems.</div>
+    <div class="pg-std"><b>Real-time Battery Management Systems<sup>15</sup></b> — catch thermal runaway events 50 to 80 cycles before they occur.</div>
+    <div class="pg-std"><b>NYSERDA Quality Assurance<sup>15</sup></b> — 57 in-field inspections of BESS facilities over 300 kW, leading to enhanced facility oversight, inspection process, and code recommendations.</div>
+  </div>
+
+  <div class="pg-sec-h">Anatomy of an incident</div>
+  <h2 class="pg-big">Two New York events, side by side</h2>
+  <p class="pg-sub">One caused by fossil fuels, the other by energy storage.</p>
+
+  <div class="pg-compare pg-rv">
+    <div class="pg-inc pg-foss">
+      <div class="pg-inc-h">
+        <div class="pg-yr">2014 &middot; Fossil fuel</div>
+        <h3>East Harlem Gas Explosion<sup>16</sup></h3>
+      </div>
+      <ul>
+        <li>Caused by a leaking natural gas pipeline under a residential street</li>
+        <li>Explosion destroyed two apartment buildings instantly</li>
+        <li>8 fatalities, 50+ injuries, many displaced</li>
+        <li>Fires raged for hours, with widespread debris and property damage</li>
+        <li>Actual steps to future prevention remain murky and currently unknown</li>
+      </ul>
+    </div>
+    <div class="pg-inc pg-bess">
+      <div class="pg-inc-h">
+        <div class="pg-yr">2023 &middot; Energy storage</div>
+        <h3>East Hampton BESS Failure<sup>17</sup></h3>
+      </div>
+      <ul>
+        <li>Triggered by an overheating module in a utility-scale lithium-ion battery system</li>
+        <li>Automatic safety systems detected the issue and initiated safe shutdown</li>
+        <li>No deaths or injuries, minimal damage</li>
+        <li>Contained to the storage unit, with no explosive fuel or fire spread</li>
+        <li>Prompted direct and effective legislation and regulation preventing recurrence</li>
+      </ul>
     </div>
   </div>
 
-  <div class="pg-sec-h">Why it keeps rising</div>
-  <h2 class="pg-big">Westchester runs on natural gas</h2>
-  <p class="pg-sub">The grid serving the metro New York area relies 99% on fossil fuel combustion, and 98% of that is natural gas. When gas prices move, your supply charge moves with them.</p>
+  <div class="pg-verdict pg-rv">This comparison underscores a critical point: while fossil fuel accidents often produce catastrophic explosions, fatalities, and widespread damage, modern BESS systems are designed with containment and fail-safes that minimize risk.</div>
 
-  <div class="pg-fuel pg-rv" id="fuelsec">
-    <div class="pg-frow"><div class="pg-flabel">Natural gas</div><div class="pg-ftrack"><div class="pg-ffill pg-gas" data-w="98.2"><span class="pg-fval">98.2%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Other fossil</div><div class="pg-ftrack"><div class="pg-ffill pg-oth" data-w="0.7"><span class="pg-fval">0.7%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Oil</div><div class="pg-ftrack"><div class="pg-ffill pg-oth" data-w="0.5"><span class="pg-fval">0.5%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Solar</div><div class="pg-ftrack"><div class="pg-ffill pg-cln" data-w="0.2"><span class="pg-fval">0.2%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Wind</div><div class="pg-ftrack"><div class="pg-ffill pg-cln" data-w="0.1"><span class="pg-fval">0.1%</span></div></div></div>
-    <div class="pg-fnote">Because utilities are allowed to pass through 100% of whatever electric supply costs each month, they have little incentive to hold supply rates down. They are always made whole by the consumer. <b>Source:</b> NYISO Gold Book 2025; EPA 2023 eGRID, New York Metro subregion.</div>
+  <div class="pg-sec-h">What stops fires in a BESS</div>
+  <h2 class="pg-big">Fire prevention systems<sup style="font-size:12px;color:var(--accent)">18</sup></h2>
+  <p class="pg-sub">Layers that detect a problem early and shut the affected equipment down before a fire can develop.</p>
+  <div class="pg-sysgrid pg-rv">
+    <div class="pg-sys pg-prev"><h4><span class="pg-dot"></span>Battery Management Systems</h4><p>Keep cells within safe temperature ranges.</p></div>
+    <div class="pg-sys pg-prev"><h4><span class="pg-dot"></span>Voltage &amp; temperature sensors</h4><p>Detect abnormal conditions early.</p></div>
+    <div class="pg-sys pg-prev"><h4><span class="pg-dot"></span>Automatic disconnects &amp; fuses</h4><p>Isolate failing cells or racks.</p></div>
+    <div class="pg-sys pg-prev"><h4><span class="pg-dot"></span>Metal separators &amp; flame-retardant cell fill</h4><p>Slow heat and fire spread.</p></div>
+    <div class="pg-sys pg-prev"><h4><span class="pg-dot"></span>Automated shutdown protocols</h4><p>Activate before a fire develops.</p></div>
+    <div class="pg-sys pg-prev"><h4><span class="pg-dot"></span>Remote monitoring &amp; control</h4><p>Allows human operators to depower or isolate the system.</p></div>
+    <div class="pg-sys pg-prev"><h4><span class="pg-dot"></span>Smoke, heat &amp; gas detectors</h4><p>Identify incipient thermal runaway.</p></div>
+    <div class="pg-sys pg-prev"><h4><span class="pg-dot"></span>Pre-planned emergency procedures</h4><p>Coordinated with local fire departments.</p></div>
   </div>
 
-  <h2 class="pg-big" style="margin-top:34px">Residential rates rose 30% in four years</h2>
-  <p class="pg-sub">What a typical Con Edison household paid per kilowatt-hour.</p>
-
-  <div class="pg-rv" id="ratesec">
-    <div class="pg-rate">
-      <div class="pg-rp"><div class="pg-yr">2021</div><div class="pg-v" data-count="30" data-suffix="&cent;">0</div></div>
-      <div class="pg-arrow">&rarr;</div>
-      <div class="pg-rp pg-up"><div class="pg-yr">2025</div><div class="pg-v" data-count="40" data-suffix="&cent;+">0</div></div>
-    </div>
-    <div class="pg-ratefoot">A <b>30%</b> rise in four years, and it continued through the first five months of 2026 after a colder-than-usual winter and a spike in natural gas prices.</div>
+  <h2 class="pg-big" style="margin-top:32px">Fire suppression systems<sup style="font-size:12px;color:var(--accent)">18</sup></h2>
+  <p class="pg-sub">If an event does begin, these contain it to the unit where it started.</p>
+  <div class="pg-sysgrid pg-rv">
+    <div class="pg-sys pg-supp"><h4><span class="pg-dot"></span>Steel &amp; fire-rated enclosures</h4><p>Surround the entire system.</p></div>
+    <div class="pg-sys pg-supp"><h4><span class="pg-dot"></span>Fire gaps &amp; firewalls</h4><p>Contain runaway events.</p></div>
+    <div class="pg-sys pg-supp"><h4><span class="pg-dot"></span>Clean-agent gas</h4><p>Releases inert gas to extinguish fires.</p></div>
+    <div class="pg-sys pg-supp"><h4><span class="pg-dot"></span>Water mist &amp; sprinkler deluge</h4><p>Releases water and mist.</p></div>
+    <div class="pg-sys pg-supp"><h4><span class="pg-dot"></span>Pressure relief vents</h4><p>Safely release any build-up of gases.</p></div>
+    <div class="pg-sys pg-supp"><h4><span class="pg-dot"></span>Aerosol or dry-chemical agents</h4><p>The material found in handheld fire extinguishers.</p></div>
   </div>
 
-  <div class="pg-alert pg-rv">
-    <h4>The reliability warning behind the rates</h4>
-    <p>In April 2026 the New York Independent System Operator issued its annual Summer Reliability Report. If the state sees a heatwave averaging 95&deg;F for three or more days, the forecast capacity margin is:</p>
-    <span class="pg-mw">&minus;1,679 MW</span>
-    <p>A negative margin means New York would not have enough electricity on those days, raising the prospect of rolling brownouts. <b>Source:</b> NYISO Short-Term Assessment of Reliability, 2026 Q1.</p>
+  <div class="pg-bottom pg-rv">
+    <h2>The bottom line</h2>
+    <p>Battery energy storage systems and other clean energy technologies operate under fundamentally different safety assumptions than fossil fuel systems. Despite being newer technology, modern BESS units are already rapidly growing safer year by year, and regulations with protocols are now in place to stop incidents.</p>
+    <p>Early detection, containment, and automated shutdowns that isolate incidents before they can escalate are now the standard.</p>
+    <p class="pg-punch">BESS is a safe, reliable, and lasting energy storage option.</p>
   </div>
 
-  <div class="pg-sec-h">The solar side</div>
-  <h2 class="pg-big">Four ways local solar lowers bills</h2>
-  <p class="pg-sub">Community solar projects benefit Westchester in ways that reach well past the subscriber.</p>
-
-  <div class="pg-mechs pg-rv">
-    <div class="pg-mech"><div class="pg-num">1</div><h4>Free grid infrastructure</h4><p>When a developer applies for interconnection, the utility specifies the transformers and connection equipment the developer must buy and install, which the utility then owns. Every project strengthens the local grid at no cost to ratepayers.</p></div>
-    <div class="pg-mech"><div class="pg-num">2</div><h4>Less imported power</h4><p>Electricity injected locally reduces the need to import power from far-away upstate sources, which saves the utility on supply costs.</p></div>
-    <div class="pg-mech"><div class="pg-num">3</div><h4>A direct subscriber discount</h4><p>The utility compensates the developer for injected electricity, and the developer must pass a discount to enrolled subscribers, typically 5% to 10% savings.</p></div>
-    <div class="pg-mech"><div class="pg-num">4</div><h4>Lease income for site owners</h4><p>Projects pay the site owner a lease for 20 to 25 years, income the owner would not otherwise earn from that roof or ground space.</p></div>
-  </div>
-
-  <div class="pg-alert pg-rv" style="background:var(--accent-soft);border-color:var(--line);border-left-color:var(--accent)">
-    <h4 style="color:var(--navy)">Behind-the-meter solar is prepaid electricity</h4>
-    <p style="color:var(--g700)">Installing solar or storage on your own property for your own consumption is effectively prepaying for 25 years of electricity. Once you recover the initial investment, the remaining years are free. Even a system covering only half your annual usage has cut your exposure to ever-escalating utility rates by half.</p>
-  </div>
-
-  <div class="pg-sec-h">The storage side</div>
-  <h2 class="pg-big">Three ways BESS lowers bills</h2>
-  <p class="pg-sub">Storage stabilizes the Con Edison grid by shaving peak demand, deferring expensive upgrades, and making renewables usable around the clock.</p>
-
-  <div class="pg-mechs pg-rv">
-    <div class="pg-mech pg-g"><div class="pg-num">1</div><h4>Peak shaving</h4><p>Systems charge overnight or midday when demand is low, then discharge in the late afternoon and evening when demand peaks. Shifting that load protects transformer substations from overloading and avoids local outages during extreme heat.</p></div>
-    <div class="pg-mech pg-g"><div class="pg-num">2</div><h4>Deferring costly upgrades</h4><p>Storage is a non-wires solution that removes the immediate need to build multi-million dollar substations, and relieves congestion where adding cable in dense underground conduit is physically very difficult.</p></div>
-    <div class="pg-mech pg-g"><div class="pg-num">3</div><h4>Integrating clean energy</h4><p>Storage harvests solar generated during the day and releases it when production drops, providing a reliable reserve that reduces reliance on older, high-polluting fossil fuel peaker plants sited in local neighborhoods.</p></div>
-  </div>
-
-  <p class="pg-sub" style="margin-top:16px">Utilities also pay customers directly for this flexibility. Con Edison demand-response programs such as Smart Usage and Grid Rewards&trade; pay customers to shed load during peak events and deliver those reductions reliably across the year.</p>
-
-  <div class="pg-sec-h">Westchester today</div>
-  <h2 class="pg-big">Don't we have enough solar already?</h2>
-  <p class="pg-sub">As of May 2026. The vast majority of systems are roof-mounted and serve behind the meter, reducing the owner's own bill.</p>
-
-  <div class="pg-bignum pg-rv">
-    <div class="pg-bn"><div class="pg-n" data-count="14300" data-suffix="+">0</div><div class="pg-l">Residential solar systems</div></div>
-    <div class="pg-bn"><div class="pg-n" data-count="550" data-suffix="+">0</div><div class="pg-l">Non-residential properties</div></div>
-    <div class="pg-bn"><div class="pg-n" data-count="150" data-suffix="+">0</div><div class="pg-l">Community solar projects online</div></div>
-    <div class="pg-bn"><div class="pg-n" data-count="262" data-suffix=" MW">0</div><div class="pg-l">Combined solar capacity</div></div>
-  </div>
-
-  <div class="pg-target pg-rv">
-    <div class="pg-lab">To meet Westchester's fair share of statewide clean energy targets</div>
-    <div class="pg-v"><span data-count="400" data-suffix="%">0</span></div>
-    <p>Installed solar capacity must increase roughly fourfold, from 262 MW today to <b style="color:#fff">1,000 MW</b>.</p>
-  </div>
-
-  <div class="pg-cta">
-    <a href="fire-safety.html">Aren't BESS dangerous?<span>Read the Energy Storage Fire &amp; Safety fact sheet</span></a>
-    <a href="index.html">Where does my town stand?<span>Open the BESS Policy Dashboard</span></a>
-  </div>
-
-  <div class="pg-srcs">
-    <b>Sources.</b> NYISO Gold Book 2025 &middot; NYISO Short-Term Assessment of Reliability, 2026 Q1 &middot; EPA 2023 eGRID, New York Metro subregion &middot; NY-Sun program data, May 2026 &middot; Con Edison rate filings. Adapted from the CEAC Solar/BESS economic considerations outline (D. Cooper, Zarin &amp; Steinmetz; L. Wiegman, Sustainable Westchester).
-  </div>
+  <details class="pg-refs">
+    <summary>References (18)</summary>
+    <ol>
+      <li><a href="https://portal.phmsa.dot.gov/phmsapub/faces/PHMSAHome" target="_blank" rel="noopener">PHMSA, Pipeline and Hazardous Materials Safety Administration incident data</a></li>
+      <li><a href="https://incidentnews.noaa.gov/raw/index" target="_blank" rel="noopener">NOAA IncidentNews, oil spill records</a></li>
+      <li><a href="https://www.csb.gov/investigations/completed-investigations/" target="_blank" rel="noopener">U.S. Chemical Safety Board, completed investigations</a></li>
+      <li><a href="https://www.nfpa.org/news-blogs-and-articles/nfpa-journal/2020/11/01/gas" target="_blank" rel="noopener">NFPA Journal, natural gas safety</a></li>
+      <li><a href="https://www.usfa.fema.gov/statistics/residential-fires/causes.html" target="_blank" rel="noopener">U.S. Fire Administration, residential fire causes</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7691047/" target="_blank" rel="noopener">National Library of Medicine, refinery proximity and cancer risk</a></li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0301421524002349" target="_blank" rel="noopener">Energy Policy, natural gas leaks in New York City buildings</a></li>
+      <li><a href="https://hsph.harvard.edu/climate-health-c-change/news/fossil-fuel-air-pollution-responsible-for-1-in-5-deaths-worldwide/" target="_blank" rel="noopener">Harvard T.H. Chan School of Public Health, fossil fuel air pollution mortality</a></li>
+      <li><a href="https://www.nih.gov/news-events/nih-research-matters/deaths-associated-pollution-coal-power-plants" target="_blank" rel="noopener">NIH Research Matters, deaths associated with coal power plant pollution</a></li>
+      <li><a href="https://www.energy-storage.news/battery-storage-failure-incident-rate-dropped-97-between-2018-and-2023/" target="_blank" rel="noopener">Energy-Storage.news, failure incident rate dropped 97% between 2018 and 2023</a></li>
+      <li><a href="https://www.mayfield.energy/technical-articles/ul-9540-and-9540a-explained/" target="_blank" rel="noopener">UL 9540 and 9540A explained</a></li>
+      <li><a href="https://www.ul.com/services/ul-9540a-test-method" target="_blank" rel="noopener">UL Solutions, UL 9540A test method</a></li>
+      <li><a href="https://www.nfpa.org/codes-and-standards/nfpa-855-standard-development/855" target="_blank" rel="noopener">NFPA 855, stationary energy storage systems</a></li>
+      <li><a href="https://cleanpower.org/wp-content/uploads/gateway/2024/06/BESS-Model-Ordinance.pdf" target="_blank" rel="noopener">American Clean Power Association, BESS Model Ordinance (PDF)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=yW1gmwB369A" target="_blank" rel="noopener">NYSERDA, energy storage quality assurance briefing</a></li>
+      <li><a href="https://www.ntsb.gov/investigations/AccidentReports/Reports/PAR1501.pdf" target="_blank" rel="noopener">NTSB, East Harlem pipeline rupture and fire accident report (PDF)</a></li>
+      <li><a href="https://www.easthamptonstar.com/government/202376/after-fire-substation-new-battery-worries" target="_blank" rel="noopener">The East Hampton Star, after fire at substation, new battery worries</a></li>
+      <li><a href="https://www.statx.com/whitepaper/fire-suppression-battery-energy-storage-systems/" target="_blank" rel="noopener">StatX, fire suppression for battery energy storage systems</a></li>
+    </ol>
+  </details>
 
   <footer>
-    BCW / EarthKind Clean Energy Action Coalition &middot; Westchester County, New York
+    Energy Storage Fire &amp; Safety Fact Sheet &middot; BCW / EarthKind Clean Energy Action Coalition &middot;
+    <a href="docs/fire-safety-fact-sheet.pdf" target="_blank" rel="noopener">download the printable PDF</a>
   </footer>
 
 </section>
@@ -1280,23 +1349,34 @@ window.setTheme = function(t){
 
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function fmt(v, dec){ return dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US'); }
+
+  function fmt(v, dec){
+    return dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US');
+  }
 
   function runCount(el){
     var target = parseFloat(el.getAttribute('data-count'));
-    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
-    var pre = el.getAttribute('data-prefix') || '';
-    var suf = el.getAttribute('data-suffix') || '';
-    function put(v){ el.innerHTML = pre + fmt(v, dec) + suf; }
-    if (reduce){ put(target); return; }
+    var dec    = parseInt(el.getAttribute('data-dec') || '0', 10);
+    var pre    = el.getAttribute('data-prefix') || '';
+    var suf    = el.getAttribute('data-suffix') || '';
+    if (reduce){ el.textContent = pre + fmt(target, dec) + suf; return; }
     var dur = 1100, t0 = null;
     function step(ts){
       if (t0 === null) t0 = ts;
       var p = Math.min((ts - t0) / dur, 1);
-      put(target * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) requestAnimationFrame(step); else put(target);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + fmt(target * eased, dec) + suf;
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = pre + fmt(target, dec) + suf;
     }
     requestAnimationFrame(step);
+  }
+
+  function fillBars(root){
+    root.querySelectorAll('.pg-bar-fill').forEach(function(b){
+      b.style.width = b.getAttribute('data-w') + '%';
+      b.classList.add('on');
+    });
   }
 
   var io = new IntersectionObserver(function(entries){
@@ -1305,11 +1385,7 @@ window.setTheme = function(t){
       var el = e.target;
       el.classList.add('pg-in');
       el.querySelectorAll('[data-count]').forEach(runCount);
-      el.querySelectorAll('.pg-seg').forEach(function(s){ s.style.width = s.getAttribute('data-w') + '%'; });
-      el.querySelectorAll('.pg-ffill').forEach(function(f){
-        f.style.width = f.getAttribute('data-w') + '%';
-        f.classList.add('on');
-      });
+      if (el.id === 'chart') fillBars(el);
       io.unobserve(el);
     });
   }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
