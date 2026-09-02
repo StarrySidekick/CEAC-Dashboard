@@ -992,6 +992,47 @@
     .hact{justify-content:center !important}
   }
 
+  /* the grey title strip stopped 1px short of the green rail: header.top gets a
+     +4px full-bleed offset on mobile but .titlestrip/footer kept the desktop +5px,
+     leaving a hairline of white between the rail and the band. Match the header. */
+  @media (max-width:640px){
+    .titlestrip{margin-left:calc(50% - 50vw + 4px) !important;
+      margin-right:calc(50% - 50vw + 4px) !important}
+    footer{margin-left:calc(50% - 50vw + 4px) !important;
+      margin-right:calc(50% - 50vw + 4px) !important}
+  }
+
+  /* ---- mobile section picker: the arrows step, the centre opens the full list ----
+     The old control showed only the current section, so nothing signalled that five
+     more existed. The centre is now a button carrying "Section n of 6" and a chevron,
+     and it opens every section as a tappable list. */
+  .vm-cur{appearance:none;-webkit-appearance:none;font-family:inherit;cursor:pointer;
+    background:transparent;border:0;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;gap:1px;padding:4px 2px}
+  .vm-cur:active{background:var(--g100)}
+  .vm-more{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:3px;
+    font-size:10px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;
+    color:var(--accent)}
+  .vm-chev{flex:0 0 auto;transition:transform .16s ease}
+  .vm-cur[aria-expanded="true"] .vm-chev{transform:rotate(180deg)}
+  .vm-menu{display:none}
+  .vm-menu[hidden]{display:none !important}
+  @media (max-width:640px){
+    .vm-menu{display:block;margin:-8px 0 12px;background:var(--card);
+      border:1px solid var(--line);border-top:0;box-shadow:var(--shadow)}
+    .vm-item{display:block;width:100%;text-align:left;appearance:none;
+      -webkit-appearance:none;font-family:inherit;cursor:pointer;background:transparent;
+      border:0;border-top:1px solid var(--line);border-left:3px solid transparent;
+      padding:12px 14px;color:var(--ink);text-decoration:none;min-height:48px}
+    .vm-item:first-child{border-top:0}
+    .vm-item:active{background:var(--accent-soft)}
+    .vm-item .vi-t{display:block;font-size:15px;font-weight:700;line-height:1.25}
+    .vm-item .vi-s{display:block;font-size:12px;color:var(--g700);margin-top:2px;
+      line-height:1.3}
+    .vm-item[aria-selected="true"]{border-left-color:var(--accent);background:var(--g100)}
+    .vm-item[aria-selected="true"] .vi-t{color:var(--accent)}
+  }
+
   /* the smallest phones (320px) leave only ~264px between the header's padding,
      and the logos need 276px at full size - shrink them just enough to hold one
      evenly spaced row instead of stacking. */
@@ -1148,7 +1189,8 @@
       
     </div>
   </header>
-<div class="views" id="views">
+<!--NAVBLOCK-->
+  <div class="views" id="views">
     <a class="viewtab" href="index.html#about">Overview<span class="vt-sub">Start here: what this site covers</span></a>
     <a class="viewtab" href="index.html#projects">Successful Projects<span class="vt-sub">Storage working in Westchester</span></a>
     <a class="viewtab" href="index.html#modellaw">Model Law<span class="vt-sub">A common-sense code, not a ban</span></a>
@@ -1158,9 +1200,64 @@
   </div>
   <div class="views-m" id="viewsM">
     <button type="button" class="vm-arrow" aria-label="Previous section" onclick="cycleView(-1)">&#8249;</button>
-    <div class="vm-cur"><span class="vm-title" id="vmTitle">Overview</span><span class="vm-sub" id="vmSub">Start here: what this site covers</span></div>
+    <button type="button" class="vm-cur" id="vmCur" aria-haspopup="listbox" aria-expanded="false" aria-controls="vmMenu"><span class="vm-title" id="vmTitle">Overview</span><span class="vm-sub" id="vmSub">Start here: what this site covers</span><span class="vm-more"><span id="vmPos">Section 1 of 6</span><svg class="vm-chev" width="11" height="7" viewBox="0 0 11 7" aria-hidden="true" focusable="false"><path d="M1 1l4.5 4.5L10 1" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span></button>
     <button type="button" class="vm-arrow" aria-label="Next section" onclick="cycleView(1)">&#8250;</button>
   </div>
+  <div class="vm-menu" id="vmMenu" role="listbox" aria-label="All sections" hidden></div>
+  <script>
+  /* Mobile section menu. Lives inside NAVBLOCK so build_pages.py lifts it into the
+     standalone pages verbatim - one implementation, no drift. Self-contained: it
+     reads the tab lane out of the DOM and works whether or not setView() exists. */
+  (function(){
+    function ready(fn){ if(document.readyState!=="loading") fn();
+                        else document.addEventListener("DOMContentLoaded",fn); }
+    ready(function(){
+      var lane=document.getElementById("views"), menu=document.getElementById("vmMenu"),
+          cur=document.getElementById("vmCur"), pos=document.getElementById("vmPos");
+      if(!lane||!menu||!cur||!pos) return;
+      var tabs=[].slice.call(lane.querySelectorAll(".viewtab"));
+      if(!tabs.length) return;
+      function label(t){ var c=t.cloneNode(true), s=c.querySelector(".vt-sub");
+                         if(s) s.remove(); return c.textContent.trim(); }
+      function subOf(t){ var s=t.querySelector(".vt-sub"); return s?s.textContent.trim():""; }
+      function close(){ menu.hidden=true;  cur.setAttribute("aria-expanded","false"); }
+      function open(){  menu.hidden=false; cur.setAttribute("aria-expanded","true"); }
+      tabs.forEach(function(t){
+        var b=document.createElement("button");
+        b.type="button"; b.className="vm-item"; b.setAttribute("role","option");
+        b.innerHTML='<span class="vi-t"></span><span class="vi-s"></span>';
+        b.querySelector(".vi-t").textContent=label(t);
+        b.querySelector(".vi-s").textContent=subOf(t);
+        b.addEventListener("click",function(){
+          close();
+          var href=t.getAttribute("href");
+          if(href){ location.href=href; return; }
+          var v=t.getAttribute("data-view");
+          if(typeof window.setView==="function") window.setView(v);
+          else location.href="index.html#"+v;
+        });
+        menu.appendChild(b);
+      });
+      var items=[].slice.call(menu.children);
+      close();
+      cur.addEventListener("click",function(e){ e.stopPropagation(); menu.hidden?open():close(); });
+      document.addEventListener("click",function(e){
+        if(!menu.hidden && !menu.contains(e.target) && !cur.contains(e.target)) close(); });
+      document.addEventListener("keydown",function(e){ if(e.key==="Escape") close(); });
+      function sync(){
+        var i=-1;
+        tabs.forEach(function(t,k){ if(t.classList.contains("sel")) i=k; });
+        items.forEach(function(b,k){ b.setAttribute("aria-selected", String(k===i)); });
+        /* the tracker has no tab of its own, so it has no position in the lane */
+        pos.textContent = i<0 ? "All sections" : "Section "+(i+1)+" of "+tabs.length;
+      }
+      sync();
+      new MutationObserver(sync).observe(lane,
+        {subtree:true, attributes:true, attributeFilter:["class"]});
+    });
+  })();
+  </script>
+  <!--/NAVBLOCK-->
 <div class="titlestrip"><h1>How Solar &amp; Storage Lower Your Electric Bill</h1></div><div class="subline">What you are actually being charged for each month, why those charges keep climbing in Westchester, and the specific mechanisms by which local solar and battery storage push them back down.</div>
 <div class="mainrow">
 <nav id="toc" class="toc" aria-label="On this page"></nav>
