@@ -968,11 +968,36 @@
       justify-content:center !important;min-height:44px !important}
     .headlink .ar{display:none !important}
 
-    /* 2. the dashboard title holds a single line at every phone width.
-          4.1vw is the widest setting that still clears the ~56px left offset
-          without pushing the 29-character wordmark into a horizontal scroll. */
+    /* 2. the dashboard title holds a single line at every phone width, centred,
+          sitting ~8% in from each edge of the white area. The header's content
+          box already centres on the white area (the green rail is outside it),
+          so the job is only to remove the left-only offsets below and let the
+          text centre inside it. 4.3vw is the widest setting that keeps ~8%
+          breathing room at 320px without risking a horizontal scroll. */
     .dashtitle{white-space:nowrap !important;letter-spacing:.1px !important;
-      max-width:100% !important;font-size:clamp(11px,4.1vw,21px) !important}
+      max-width:100% !important;font-size:clamp(11px,4.3vw,21px) !important;
+      text-align:center !important;width:100% !important}
+
+    /* 3. centre the header on the white area. The brand bar carried a 16px left
+          padding and the title/button group an 8px left margin, with no matching
+          space on the right - that asymmetry is what read as "off-centre" next
+          to the green rail. Zero both and centre every row instead. */
+    .brandbar{justify-content:space-evenly !important;align-items:center !important;
+      padding-left:0 !important;padding-right:0 !important;
+      row-gap:14px !important;width:100% !important}
+    /* the title + buttons take a full row of their own, so the two logos keep
+       row one to themselves and space out evenly across it */
+    .hgroup{flex:1 0 100% !important;margin-left:0 !important;width:100% !important;
+      align-items:center !important}
+    .hact{justify-content:center !important}
+  }
+
+  /* the smallest phones (320px) leave only ~264px between the header's padding,
+     and the logos need 276px at full size - shrink them just enough to hold one
+     evenly spaced row instead of stacking. */
+  @media (max-width:345px){
+    .bcwlogo{width:140px !important}
+    .ceacmark{height:66px !important}
   }
 
   /* 3. no second lane for the linked pages: below 640px the arrow picker already
