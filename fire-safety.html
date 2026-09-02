@@ -954,6 +954,34 @@
     .hact{flex-wrap:wrap !important}
     .dashtitle{white-space:normal !important;font-size:20px !important}
   }
+  /* ===== mobile chrome (Sep 2026): one button lane, one-line title, one picker =====
+     Deliberately the last block in the sheet so it wins over the earlier rules
+     that stacked .hact into a column and let the title wrap. */
+  @media (max-width:760px){
+    /* 1. the three header buttons stay side by side on a single row */
+    .hact{display:flex !important;flex-direction:row !important;flex-wrap:nowrap !important;
+      width:100% !important;gap:6px !important;align-items:stretch !important}
+    .headlink{flex:1 1 0 !important;width:auto !important;min-width:0 !important;
+      margin:0 !important;padding:6px 4px !important;
+      font-size:10.5px !important;letter-spacing:.2px !important;line-height:1.15 !important;
+      white-space:normal !important;text-align:center !important;
+      justify-content:center !important;min-height:44px !important}
+    .headlink .ar{display:none !important}
+
+    /* 2. the dashboard title holds a single line at every phone width.
+          4.1vw is the widest setting that still clears the ~56px left offset
+          without pushing the 29-character wordmark into a horizontal scroll. */
+    .dashtitle{white-space:nowrap !important;letter-spacing:.1px !important;
+      max-width:100% !important;font-size:clamp(11px,4.1vw,21px) !important}
+  }
+
+  /* 3. no second lane for the linked pages: below 640px the arrow picker already
+        walks the whole tab lane, Your Electric Bill and Fire & Safety included.
+        Scoped to 640px because .views-m only takes over there - above it the
+        tab lane is still the only section nav. */
+  @media (max-width:640px){
+    .views{display:none !important}
+  }
 </style>
   <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.js"></script>
 <style>
