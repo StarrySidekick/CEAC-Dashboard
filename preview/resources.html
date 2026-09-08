@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resources, Westchester BESS, BCW &amp; EarthKind</title>
-<meta name="description" content="Battery Energy Storage (BESS) documents, fact sheets, and legal summaries from the BCW / EarthKind Clean Energy Action Coalition. View each document as a page-turning book.">
+<meta name="description" content="Battery Energy Storage (BESS) documents, fact sheets, and legal summaries from the BCW / EarthKind Clean Energy Action Coalition. View each document as a page-turning book, plus official guidance, support, and training links from NYSERDA, Westchester County, Pace Law, EPRI, and PNNL.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2214%22 y=%2230%22 width=%2266%22 height=%2240%22 rx=%228%22 fill=%22none%22 stroke=%22%23BE1E2D%22 stroke-width=%228%22/><rect x=%2282%22 y=%2242%22 width=%2210%22 height=%2216%22 rx=%223%22 fill=%22%23BE1E2D%22/><rect x=%2226%22 y=%2242%22 width=%2236%22 height=%2216%22 rx=%223%22 fill=%22%233E7D57%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,6 +86,27 @@
   .vspin{position:absolute;color:#fff;font-size:14px;opacity:.9}
   @media (prefers-reduced-motion: reduce){ .doc:hover{transform:none} }
   @media (max-width:560px){ .navbtn{width:40px;height:40px} .flipwrap{max-width:calc(100% - 92px)} }
+  /* ---- External resource links (NYSERDA / County / academic / labs) ---- */
+  .sec-h{font-size:21px;font-weight:700;color:var(--ink);letter-spacing:.2px;
+    margin:44px 0 6px;padding-top:26px;border-top:2px solid var(--line)}
+  .sec-lead{font-size:14px;color:var(--muted);margin:0 0 4px;max-width:62ch}
+  .links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+  .lcard{display:flex;flex-direction:column;text-align:left;background:var(--card);
+    border:1px solid var(--line);padding:18px;color:inherit;text-decoration:none;
+    transition:transform .15s ease,border-color .15s ease;min-height:172px}
+  .lcard:hover{transform:translateY(-2px);border-color:var(--accent);text-decoration:none}
+  .lmeta{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;margin-bottom:7px}
+  .lkind{font-size:10.5px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;
+    color:#fff;background:var(--accent);padding:2px 7px}
+  .lkind.support{background:var(--green)}
+  .lkind.training{background:var(--navy-700)}
+  .lorg{font-size:11.5px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--muted)}
+  .lcard h3{margin:0 0 5px;font-size:16.5px;color:var(--ink);font-weight:700;line-height:1.25}
+  .lcard .desc{font-size:13px;color:var(--muted)}
+  .lfoot{margin-top:auto;padding-top:11px;display:flex;justify-content:space-between;
+    align-items:center;gap:10px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+  .lhost{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .lgo{flex:0 0 auto;font-weight:700;color:var(--accent);letter-spacing:.4px}
   footer{color:var(--muted);font-size:12.5px;margin-top:30px;text-align:center}
   @media(max-width:720px){
     header.top{padding:16px 18px;gap:14px;align-items:flex-start;
@@ -120,12 +141,13 @@
     <div class="headtext">
       <div class="eyebrow">BCW &amp; EarthKind &middot; Clean Energy Action Coalition</div>
       <h1>Resources</h1>
-      <p>Battery energy storage fact sheets, legal summaries, and filings. Click any document to read it as a page-turning book.</p>
+      <p>Battery energy storage fact sheets, legal summaries, and filings. Click any document to read it as a page-turning book, then browse official guidance, technical assistance, and training links below.</p>
       <a class="back" href="index.html"><svg class="ar" width="18" height="10" viewBox="0 0 18 10" aria-hidden="true" focusable="false"><path d="M18 5H2.6M6.3 1 2.1 5l4.2 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Back to the BESS Policy Dashboard</a>
     </div>
   </header>
 
   <div class="doclist" id="doclist"></div>
+  <div class="linklist" id="linklist"></div>
 
   <footer id="footer"></footer>
 </div>
@@ -220,6 +242,96 @@
     if(!items.length) return "";
     return `<section class="cat"><h2 class="cat-h">${c.label}</h2><div class="doclist-grid">`+items.map(([d,i])=>cardHTML(d,i)).join("")+`</div></section>`;
   }).join("");
+  // ---- External resource links -------------------------------------------
+  // Compiled by Ian Latimer (NYSERDA) for the Westchester Energy Storage
+  // Summit handout, 3 Sep 2026; group headings and descriptions are his.
+  // kind: resource | support | training. Type badge is derived from the URL.
+  const LINKGROUPS = [
+    {label:"General BESS Education & Information", items:[
+      {kind:"resource", org:"NYSERDA", title:"Battery Energy Storage System FAQ",
+       url:"https://www.nyserda.ny.gov/-/media/Project/Nyserda/Files/Programs/Clean-Energy-Siting/Battery-Energy-Storage-System-FAQ.pdf",
+       desc:"Introduces BESS equipment and terminology, as well as safety and siting considerations for BESS."},
+      {kind:"resource", org:"NYSERDA", title:"BESS: What New Yorkers Should Know",
+       url:"https://www.nyserda.ny.gov/-/media/Project/Nyserda/Files/Publications/Fact-Sheets/ES-constituents-fs-1-v1_acc.pdf",
+       desc:"Brief primer on the whys and hows of energy storage."},
+    ]},
+    {label:"Support for Updating Municipal Zoning Laws & Regulations", items:[
+      {kind:"support", org:"NYSERDA", title:"Clean Energy Siting Team",
+       url:"https://www.nyserda.ny.gov/siting",
+       desc:"Free one-to-one educational and technical assistance for municipalities. Reach the team at cleanenergyhelp@nyserda.ny.gov."},
+      {kind:"resource", org:"NYSERDA", title:"NYS BESS Guidebook for Local Governments",
+       url:"https://www.nyserda.ny.gov/storageguidebook",
+       desc:"Key tools to support local government action, including customizable Model Permit and Model Zoning Law templates."},
+      {kind:"resource", org:"NYSERDA", title:"BESS: Information for You and Your Constituents",
+       url:"https://www.nyserda.ny.gov/-/media/Project/Nyserda/Files/Publications/Fact-Sheets/battery-energy-storage-influencer.pdf",
+       desc:"Brief primer on BESS for local government officials."},
+      {kind:"resource", org:"Westchester County DES", title:"Lithium-Ion Battery Safety",
+       url:"https://emergencyservices.westchestercountyny.gov/bess-safety-notification-program",
+       desc:"Information for municipal compliance with the county's 2025 BESS Notification law."},
+      {kind:"resource", org:"Westchester County DES", title:"BESS Notification Form",
+       url:"https://emergencyservices.westchestercountyny.gov/images/pdfs/BESS_Notification_Form_Update.pdf",
+       desc:"Municipalities must complete and submit this form as required under the county's BESS Notification law."},
+      {kind:"support", org:"Pace Land Use Law Center", title:"Land Use Technical Assistance",
+       url:"https://www.pace.edu/law/centers-and-institutes/land-use-law-center/training-programs-and-technical-assistance/land-use",
+       desc:"Municipalities can request technical assistance on zoning, comprehensive planning, and other topics."},
+      {kind:"resource", org:"EPRI", title:"Community-Based Siting and Permitting for Grid-Scale Lithium Ion Battery Storage",
+       url:"https://www.epri.com/research/products/000000003002031624",
+       desc:"Community considerations for BESS planning and development."},
+      {kind:"resource", org:"PNNL", title:"Principles and Options for Designing Battery Energy Storage Zoning Ordinances",
+       url:"https://www.pnnl.gov/publications/principles-and-options-designing-battery-energy-storage-zoning-ordinances",
+       desc:"Key considerations for municipal regulation of BESS across the United States."},
+    ]},
+    {label:"Support for Code Enforcement, Fire Officials & Incident Responders", items:[
+      {kind:"training", org:"NYSERDA", title:"Energy Storage Trainings for Local Governments",
+       url:"https://www.nyserda.ny.gov/All-Programs/Clean-Energy-Siting-Resources/Webinar-Series",
+       desc:"Upcoming and previous trainings, including the Battery Energy Storage for Code Officials webinars."},
+      {kind:"resource", org:"NYSERDA", title:"New York's Inter-Agency Fire Safety Working Group",
+       url:"https://www.nyserda.ny.gov/All-Programs/Energy-Storage-Program/New-York-Inter-Agency-Fire-Safety-Working-Group",
+       desc:"Access multiple Working Group deliverables related to codes and fire safety."},
+      {kind:"training", org:"NYS DHSES", title:"Battery Emergencies and Electrical Storage Systems",
+       url:"https://www.dhses.ny.gov/battery-emergencies-and-electrical-storage-systems-training-course",
+       desc:"Fire safety and incident response training for first responders."},
+      {kind:"resource", org:"NYS DHSES", title:"BESS Fire Service Response Guide",
+       url:"https://www.dhses.ny.gov/system/files/documents/2023/11/bess.pdf",
+       desc:"Response guidance for fire services attending a battery energy storage incident."},
+      {kind:"resource", org:"ICC", title:"2025 Fire Code of New York State",
+       url:"https://codes.iccsafe.org/content/NYSFC2025P1",
+       desc:"The full 2025 Fire Code, including updated BESS regulations under Section 1207, Electrical Energy Storage Systems."},
+      {kind:"resource", org:"EPRI", title:"Guide to Battery Energy Storage System Safety",
+       url:"https://www.epri.com/research/programs/053125/results/3002033944",
+       desc:"Comprehensive introductory guide to fire safety considerations for BESS."},
+    ]},
+  ];
+
+  const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  const hostOf = u => {
+    try{
+      let h = new URL(u).hostname.replace(/^www\./,"");
+      // Long agency subdomains (emergencyservices.westchestercountyny.gov) get
+      // trimmed down to the registrable name so the card foot stays on one line.
+      const parts = h.split(".");
+      while(h.length > 26 && parts.length > 2){ parts.shift(); h = parts.join("."); }
+      return h;
+    }catch(e){ return ""; }
+  };
+  const linkCard = l => {
+    const isPdf = /\.pdf($|[?#])/i.test(l.url);
+    return `
+    <a class="lcard" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">
+      <span class="lmeta"><span class="lkind ${esc(l.kind)}">${esc(l.kind)}</span><span class="lorg">${esc(l.org)}</span></span>
+      <h3>${esc(l.title)}</h3>
+      <span class="desc">${esc(l.desc)}</span>
+      <span class="lfoot"><span class="lhost">${esc(hostOf(l.url))}${isPdf?" &middot; PDF":""}</span><span class="lgo" aria-hidden="true">Open &rarr;</span></span>
+    </a>`;
+  };
+  el("linklist").innerHTML =
+    `<h2 class="sec-h">Official Guidance, Support &amp; Training</h2>
+     <p class="sec-lead">Direct links to guidance, technical assistance, and training from NYSERDA, Westchester County, Pace Law, and federal research labs. Compiled with NYSERDA for the Westchester Energy Storage Summit. Each link opens in a new tab.</p>`
+    + LINKGROUPS.map(g =>
+        `<section class="cat"><h2 class="cat-h">${esc(g.label)}</h2><div class="links-grid">`
+        + g.items.map(linkCard).join("") + `</div></section>`
+      ).join("");
+
   el("footer").innerHTML =
     "Prepared for the BCW Clean Energy Action Coalition / EarthKind BESS Workgroup, with analysis provided by Sustainable Westchester. Documents open in your browser; use Download to save a copy.";
 
