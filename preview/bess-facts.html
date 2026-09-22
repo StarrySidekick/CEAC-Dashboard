@@ -1992,8 +1992,12 @@ window.toggleTheme = function(){
     if(anim) cancelAnimationFrame(anim);
     each(groups,function(g){g.setAttribute('hidden','');g.style.opacity='';});
     nw.removeAttribute('hidden');
-    if(reduce){vb(to);return;}
+    if(reduce||document.hidden){vb(to);return;}
     old.removeAttribute('hidden');
+    /* rAF pauses in background tabs, so a timer guarantees the transition always lands */
+    function finish(){ if(anim) cancelAnimationFrame(anim); anim=null; vb(to);
+      old.setAttribute('hidden',''); old.style.opacity=''; nw.style.opacity=''; }
+    clearTimeout(go.t); go.t=setTimeout(finish,700);
     var t0=null,dur=560,cx0=from[0]+from[2]/2,cy0=from[1]+from[3]/2,cx1=to[0]+to[2]/2,cy1=to[1]+to[3]/2;
     var lw0=Math.log(from[2]),lw1=Math.log(to[2]),r0=from[3]/from[2],r1=to[3]/to[2];
     function frame(ts){
@@ -2002,7 +2006,7 @@ window.toggleTheme = function(){
       var w=Math.exp(lerp(lw0,lw1,e)), h=w*lerp(r0,r1,e);
       vb([lerp(cx0,cx1,e)-w/2,lerp(cy0,cy1,e)-h/2,w,h]);
       old.style.opacity=String(Math.max(0,1-e*2)); nw.style.opacity=String(Math.min(1,e*2));
-      if(t<1){anim=requestAnimationFrame(frame);} else {old.setAttribute('hidden','');old.style.opacity='';nw.style.opacity='';}
+      if(t<1){anim=requestAnimationFrame(frame);} else {clearTimeout(go.t); finish();}
     }
     anim=requestAnimationFrame(frame);
   }
