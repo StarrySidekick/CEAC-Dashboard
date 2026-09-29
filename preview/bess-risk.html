@@ -1335,6 +1335,26 @@
     });
   })();
   </script>
+  <style>
+  /* When the lane holds more tabs than fit (the preview build, with its extra pages),
+     tighten the tabs. The live lane fits, so this never switches on there. */
+  .views.vfit .viewtab{font-size:16px !important;padding:12px 8px 14px !important;letter-spacing:-.2px !important}
+  </style>
+  <script>
+  (function(){
+    function fit(){
+      var l=document.getElementById("views"); if(!l) return;
+      l.classList.remove("vfit");
+      if(l.scrollWidth>l.clientWidth+1) l.classList.add("vfit");
+      var s=l.querySelector(".viewtab.sel");
+      if(s){ var lr=l.getBoundingClientRect(), sr=s.getBoundingClientRect();
+        if(sr.right>lr.right) l.scrollLeft+=sr.right-lr.right+8; }
+    }
+    if(document.readyState!=="loading") fit(); else document.addEventListener("DOMContentLoaded",fit);
+    window.addEventListener("resize",fit);
+    if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+  })();
+  </script>
   <!--/NAVBLOCK-->
 <div class="titlestrip"><h1>Risk in Context</h1></div><div class="subline">How battery safety has improved as storage has grown, how its record compares with gas lines, and New York's own experience.</div>
 <div class="mainrow">
