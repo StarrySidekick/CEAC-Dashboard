@@ -1706,7 +1706,7 @@ function renderAbout(){
       <div class="figbox"><div class="fnum"><span class="countup" data-target="6">0</span> <span class="u">GW</span></div><div class="flbl">NY storage target by 2030</div></div>
       <div class="figbox"><div class="fnum"><span class="countup" data-target="8">0</span> <span class="u">GW</span></div><div class="flbl">Solar already installed statewide</div></div>
       <div class="figbox"><div class="fnum"><span class="u">~</span><span class="countup" data-target="30">0</span><span class="u">%</span></div><div class="flbl">Con Edison rate rise since 2022</div></div>
-      <div class="figbox"><div class="fnum"><span class="countup" data-target="97">0</span><span class="u">%</span></div><div class="flbl">Drop in BESS failure rate as deployment scaled</div></div>
+      <div class="figbox"><div class="fnum"><span class="countup" data-target="97">0</span><span class="u">%</span></div><div class="flbl">Drop in BESS incident rate as deployment scaled</div></div>
     </div>
     <p class="srcnote">Sources: NYISO Power Trends / Gold Book 2026; EPA 2023 eGRID (NY Metro); NYSERDA. Solar saved New Yorkers about $90M in peak-hour costs last summer alone.</p>
 
@@ -1714,7 +1714,7 @@ function renderAbout(){
     <h2 style="margin-top:6px">The Technology Is Proven, and Safety Comes First</h2>
     <p>Modern BESS installations carry layered protections: battery management systems that catch thermal runaway 50 to 80 cycles early; smoke, heat, and gas detection with automatic shutoff and 24/7 monitoring; steel fire-rated enclosures with firewalls and spacing; and emergency procedures pre-planned with local fire departments. Only about <b>11%</b> of faults trace to the battery cell itself. Roughly <b>65%</b> stem from improper operation and integration, exactly what codes, training, and inspections address.</p>
     <div class="safety-chart" id="safetychart"></div>
-    <p class="imgcap">As deployment climbed, the failure-incident rate per GWh fell about 97%. Source: EPRI Failure Incident Database and Wood Mackenzie via EPA (as of 12/31/24).</p>
+    <p class="imgcap">As deployment climbed, the incident rate per GWh fell about 97%. Source: EPRI Failure Incident Database and Wood Mackenzie via EPA (as of 12/31/24).</p>
     <ul class="checklist">
       <li>UL 9540 certification and UL 9540A fire testing</li>
       <li>NFPA 855 installation standards</li>
@@ -1927,7 +1927,7 @@ function renderSafetyChart(){
   const host=document.getElementById("safetychart"); if(!host) return;
   const years=[2018,2019,2020,2021,2022,2023,2024];
   const deploy=[1,2,4,8,16,28,45];                 // cumulative deployment (illustrative, rising)
-  const rate=[9.2,5.5,3.0,1.5,0.9,0.4,0.2];        // failure incidents per GWh (falling ~97%)
+  const rate=[9.2,5.5,3.0,1.5,0.9,0.4,0.2];        // incidents per GWh (falling ~97%)
   const W=600,H=250,mL=8,mR=8,mT=16,mB=24,pw=W-mL-mR,ph=H-mT-mB;
   const maxD=Math.max(...deploy),maxR=Math.max(...rate),n=years.length,slot=pw/n,bw=slot*0.5;
   const x=i=>mL+slot*i+slot/2, yL=v=>mT+ph-(v/maxR)*ph;
@@ -1941,11 +1941,11 @@ function renderSafetyChart(){
   const path="M"+rate.map((v,i)=>`${x(i).toFixed(1)},${yL(v).toFixed(1)}`).join(" L");
   const v0=`<text class="sc-val" x="${x(0).toFixed(1)}" y="${(yL(rate[0])-9).toFixed(1)}" text-anchor="middle">9.2</text>`;
   const vN=`<text class="sc-val" x="${x(n-1).toFixed(1)}" y="${(yL(rate[n-1])-9).toFixed(1)}" text-anchor="end">0.2</text>`;
-  host.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="BESS deployment rising while failure incidents per GWh fall about 97%">
+  host.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="BESS deployment rising while incidents per GWh fall about 97%">
     <line class="sc-axis" x1="${mL}" y1="${mT+ph}" x2="${W-mR}" y2="${mT+ph}"/>
     ${bars}<path class="sc-line" d="${path}"/>${dots}${v0}${vN}${lbls}
   </svg>
-  <div class="sc-legend"><span><i style="background:var(--accent)"></i>Cumulative deployment</span><span><i style="background:var(--red)"></i>Failure incidents / GWh</span></div>`;
+  <div class="sc-legend"><span><i style="background:var(--accent)"></i>Cumulative deployment</span><span><i style="background:var(--red)"></i>Incidents / GWh</span></div>`;
   if(_reduceMotion()){ host.classList.add("on"); return; }
   if(!("IntersectionObserver" in window)){ host.classList.add("on"); return; }
   const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ host.classList.add("on"); io.disconnect(); } }),{threshold:.3});
