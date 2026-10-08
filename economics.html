@@ -1198,6 +1198,8 @@
     <a class="viewtab viewlink sel" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
     <a class="viewtab viewlink" href="fire-safety.html">Fire &amp; Safety<span class="vt-sub">The evidence on BESS risk</span></a>
     
+    
+    
   </div>
   <div class="views-m" id="viewsM">
     <button type="button" class="vm-arrow" aria-label="Previous section" onclick="cycleView(-1)">&#8249;</button>
@@ -1256,6 +1258,26 @@
       new MutationObserver(sync).observe(lane,
         {subtree:true, attributes:true, attributeFilter:["class"]});
     });
+  })();
+  </script>
+  <style>
+  /* When the lane holds more tabs than fit (the preview build, with its extra pages),
+     tighten the tabs. The live lane fits, so this never switches on there. */
+  .views.vfit .viewtab{font-size:16px !important;padding:12px 8px 14px !important;letter-spacing:-.2px !important}
+  </style>
+  <script>
+  (function(){
+    function fit(){
+      var l=document.getElementById("views"); if(!l) return;
+      l.classList.remove("vfit");
+      if(l.scrollWidth>l.clientWidth+1) l.classList.add("vfit");
+      var s=l.querySelector(".viewtab.sel");
+      if(s){ var lr=l.getBoundingClientRect(), sr=s.getBoundingClientRect();
+        if(sr.right>lr.right) l.scrollLeft+=sr.right-lr.right+8; }
+    }
+    if(document.readyState!=="loading") fit(); else document.addEventListener("DOMContentLoaded",fit);
+    window.addEventListener("resize",fit);
+    if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   })();
   </script>
   <!--/NAVBLOCK-->
