@@ -238,6 +238,7 @@ path.regdot.on{stroke:var(--ink);stroke-width:2.5;fill-opacity:1}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 .backlink{display:inline-block;margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:inherit;opacity:.75;text-decoration:none}.backlink:hover{opacity:1;text-decoration:underline}
+.osmtiles{filter:grayscale(1) contrast(.9)}
 .leaflet-control-attribution{font-size:10px;background:rgba(255,255,255,.8)}
 </style>
 
@@ -355,7 +356,7 @@ const fitAll = () => map.fitBounds(bounds,{paddingTopLeft:[16,34],paddingBottomR
 fitAll();
 map.setMaxBounds(bounds.pad(.6));
 map.attributionControl.setPrefix(false);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19,opacity:.9,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'}).addTo(map);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,opacity:.55,className:'osmtiles',attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
 
 const muniLayers = {};
 L.geoJSON(D.munis,{pane:'munis',style:f=>({className:`muni ${f.properties.kind} st-${f.properties.status}`}),
