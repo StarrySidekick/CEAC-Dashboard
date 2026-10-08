@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How Solar &amp; Storage Lower Your Electric Bill, Westchester BESS, BCW &amp; EarthKind</title>
-<meta name="description" content="What you are actually charged for on a Westchester electric bill, why those charges keep rising, and how local solar and battery energy storage push them back down.">
+<title>Life Cycle | CEAC Battery Storage</title>
+<meta name="description" content="What a grid battery is made of, how quickly it pays back its manufacturing carbon, whose air gets cleaner, and what happens when it retires.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2214%22 y=%2230%22 width=%2266%22 height=%2240%22 rx=%228%22 fill=%22none%22 stroke=%22%231F3864%22 stroke-width=%228%22/><rect x=%2282%22 y=%2242%22 width=%2210%22 height=%2216%22 rx=%223%22 fill=%22%231F3864%22/><rect x=%2226%22 y=%2242%22 width=%2236%22 height=%2216%22 rx=%223%22 fill=%22%231F8A4C%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1052,115 +1052,158 @@
   <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.js"></script>
 <style>
 
-    
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
-  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-  .pg-wrap{max-width:1000px;margin:0 auto;padding:24px 20px 70px}
 
-  header.pg-top{background:linear-gradient(135deg,#000000,#1A1818 58%,#3F4145);border-radius:0;box-shadow:var(--shadow);padding:26px 28px;margin-bottom:22px;position:relative;overflow:hidden}
-  header.pg-top::after{content:"";position:absolute;right:-40px;top:-40px;width:210px;height:210px;border-radius:0;background:radial-gradient(circle,rgba(255,255,255,.10),transparent 68%)}
-  .pg-eyebrow{font-size:12px;font-weight:700;color:#B9BABC;letter-spacing:1.4px;text-transform:uppercase}
-  header.pg-top h1{font-size:30px;line-height:1.1;letter-spacing:-.6px;margin:8px 0;color:#fff;font-weight:800;max-width:24ch}
-  header.pg-top p{margin:0;color:#C9CACC;font-size:15px;max-width:66ch}
+.bfwrap [hidden]{display:none !important}
+.bfwrap.bfwrap h3{text-transform:none;letter-spacing:0}
+.bfwrap{--shade:#F6F5F7;--track:#EDEAEE;--on:#FFFFFF;
+  --tint:color-mix(in srgb, var(--red) 10%, var(--card));
+  --tint2:color-mix(in srgb, var(--red) 30%, var(--card));
+  --tint3:color-mix(in srgb, var(--red) 62%, var(--card));
+  --plant:color-mix(in srgb, var(--green) 13%, var(--card));
+  --plant2:color-mix(in srgb, var(--green) 42%, var(--card))}
+.bfwrap.bfwrap .bf-open{padding-block:4px 6px;border:0}
+.bfwrap.bfwrap .bf-open + section{border-top:0}
 
-  .pg-sec-h{font-size:13px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);margin:38px 0 16px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-  h2.pg-big{font-size:23px;font-weight:800;letter-spacing:-.3px;color:var(--navy);margin:0 0 6px}
-  .pg-sub{color:var(--muted);font-size:14.5px;margin:0 0 18px;max-width:74ch}
+.bfwrap.bfwrap *{box-sizing:border-box}
+.bfwrap.bfwrap .bf1-eyebrow{font:500 12px/1.2 Roboto,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.3px;color:var(--red);margin:0 0 10px}
+.bfwrap.bfwrap h2{font:700 clamp(21px,2.9vw,27px)/1.18 Roboto,Arial,sans-serif;margin:0 0 8px;text-wrap:balance}
+.bfwrap.bfwrap h3{font:700 16px/1.3 Roboto,Arial,sans-serif;margin:0 0 6px}
+.bfwrap.bfwrap p{margin:0 0 14px;max-width:66ch}
+.bfwrap.bfwrap .bf1-lede{font-size:19px;line-height:1.5;color:var(--g700);max-width:62ch;margin:0}
+.bfwrap.bfwrap section{padding-block:36px}
+.bfwrap.bfwrap section + section{border-top:1px solid var(--g200)}
+.bfwrap.bfwrap .bf1-sub{font-size:15.5px;color:var(--g700);margin:0 0 20px;max-width:64ch}
+.bfwrap.bfwrap .bf1-card{border:1px solid var(--g200);background:var(--card);padding:20px}
+.bfwrap.bfwrap .bf1-note{font:400 13px/1.5 Roboto,Arial,sans-serif;color:var(--g500);margin:12px 0 0;max-width:72ch}
+.bfwrap.bfwrap .bf1-k{font:500 11px/1.25 Roboto,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.1px;color:var(--g500);margin:0 0 6px}
+.bfwrap.bfwrap .bf1-q{font:900 clamp(36px,6.6vw,70px)/1.0 Roboto,Arial,sans-serif;letter-spacing:-1.4px;margin:0 0 18px;color:var(--ink);text-wrap:balance;max-width:15ch}
+.bfwrap.bfwrap .bf1-q.bf1-md{font-size:clamp(27px,4.3vw,44px);line-height:1.04;letter-spacing:-.9px;margin:0 0 12px;max-width:22ch}
+.bfwrap.bfwrap .bf1-q .bf1-w{display:inline-block}
+.bfwrap.bfwrap .bf1-q .bf1-kw{color:var(--red)}
+@media (prefers-reduced-motion:no-preference){
+.bfwrap.bfwrap .bf1-q[data-anim="on"] .bf1-w{animation:qrise .7s cubic-bezier(.2,.75,.25,1) both;animation-delay:calc(var(--i) * 70ms)}
+.bfwrap.bfwrap .bf1-q[data-anim="on"] .bf1-kw{animation:qrise .7s cubic-bezier(.2,.75,.25,1) both,qpop .55s ease-out none;
+    animation-delay:calc(var(--i) * 70ms),calc(var(--i) * 70ms + 560ms)}
+}
+@keyframes qrise{from{opacity:0;transform:translateY(.45em)}to{opacity:1;transform:none}}
+@keyframes qpop{0%{transform:none}45%{transform:translateY(-.07em) scale(1.07)}100%{transform:none}}
+.bfwrap.bfwrap .bf1-seg{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.bfwrap.bfwrap .bf1-seg button{font:500 13.5px/1.2 Roboto,Arial,sans-serif;color:var(--ink);background:var(--card);
+  border:1px solid var(--g300);padding:9px 13px;cursor:pointer;border-radius:0;text-align:left}
+.bfwrap.bfwrap .bf1-seg button small{display:block;font:400 11.5px/1.25 Roboto,Arial,sans-serif;color:var(--g500);margin-top:2px}
+.bfwrap.bfwrap .bf1-seg button:hover{border-color:var(--ink)}
+.bfwrap.bfwrap .bf1-seg button[aria-pressed="true"]{background:var(--ink);color:var(--on);border-color:var(--ink)}
+.bfwrap.bfwrap .bf1-seg button[aria-pressed="true"] small{color:var(--g300)}
+.bfwrap.bfwrap .bf1-seg button:disabled{cursor:default;color:var(--g500);border-style:dashed;background:transparent}
+.bfwrap.bfwrap .bf1-seg button:focus-visible, .bfwrap.bfwrap .bf1-range:focus-visible, .bfwrap.bfwrap [tabindex]:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.bfwrap.bfwrap .bf1-seg.lbl{align-items:center}
+.bfwrap.bfwrap .bf1-seg .lbltxt{font:500 11px/1 Roboto,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.1px;color:var(--g500);margin-right:4px}
+.bfwrap.bfwrap .bf1-range{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;margin:4px 0 2px;cursor:pointer}
+.bfwrap.bfwrap .bf1-range::-webkit-slider-runnable-track{height:6px;background:var(--g300)}
+.bfwrap.bfwrap .bf1-range::-moz-range-track{height:6px;background:var(--g300)}
+.bfwrap.bfwrap .bf1-range::-moz-range-progress{height:6px;background:var(--red)}
+.bfwrap.bfwrap .bf1-range::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;margin-top:-9px;background:var(--red);border:3px solid var(--card);box-shadow:0 0 0 1px var(--red);border-radius:0}
+.bfwrap.bfwrap .bf1-range::-moz-range-thumb{width:18px;height:18px;background:var(--red);border:3px solid var(--card);box-shadow:0 0 0 1px var(--red);border-radius:0}
+.bfwrap.bfwrap .bf1-ticks{display:flex;justify-content:space-between;gap:4px;margin:0 0 6px}
+.bfwrap.bfwrap .bf1-ticks button{flex:1 1 0;background:none;border:0;padding:4px 0;cursor:pointer;
+  font:500 12px/1.25 Roboto,Arial,sans-serif;color:var(--g500);text-align:center}
+.bfwrap.bfwrap .bf1-ticks button:first-child{text-align:left}
+.bfwrap.bfwrap .bf1-ticks button:last-child{text-align:right}
+.bfwrap.bfwrap .bf1-ticks button[aria-pressed="true"]{color:var(--ink);font-weight:700}
+@media (max-width:560px){
+.bfwrap.bfwrap .bf1-ticks button{font-size:10.5px}}
+.bfwrap.bfwrap .bf1-figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));border-top:1px solid var(--g200);border-left:1px solid var(--g200);margin-top:16px}
+.bfwrap.bfwrap .bf1-fig{border-right:1px solid var(--g200);border-bottom:1px solid var(--g200);padding:14px 16px;background:var(--card);min-width:0}
+.bfwrap.bfwrap .bf1-fig .bf1-v{font:900 25px/1.1 Roboto,Arial,sans-serif;font-variant-numeric:tabular-nums;margin:0 0 4px;letter-spacing:-.3px}
+.bfwrap.bfwrap .bf1-fig .bf1-v.bf1-acc{color:var(--red)}
+.bfwrap.bfwrap .bf1-fig .bf1-n{font:400 13px/1.45 Roboto,Arial,sans-serif;color:var(--g700);margin:0}
+.bfwrap.bfwrap .bf1-draw{display:block;width:100%;height:auto;max-width:100%;background:var(--shade);border:1px solid var(--g200)}
+.bfwrap.bfwrap .bf1-legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:12px 0 0;padding:0;list-style:none;font:400 13px/1.3 Roboto,Arial,sans-serif;color:var(--g700)}
+.bfwrap.bfwrap .bf1-legend li{display:flex;align-items:center;gap:8px}
+.bfwrap.bfwrap .bf1-sw{width:14px;height:14px;flex:0 0 auto;display:inline-block}
+.bfwrap.bfwrap .bf1-sw.bf1-acc{background:var(--red)}
+.bfwrap.bfwrap .bf1-sw.bf1-ink{background:var(--ink)}
+.bfwrap.bfwrap .bf1-sw.bf1-ring{background:var(--tint);outline:2px solid var(--red);outline-offset:-2px}
+.bfwrap.bfwrap .bf1-sw.bf1-ref{background:transparent;outline:1.5px dashed var(--g500);outline-offset:-2px}
+.bfwrap.bfwrap .bf1-sw.lot{background:var(--card);outline:1px solid var(--g400);outline-offset:-1px}
+.bfwrap.bfwrap .bf1-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:1px solid var(--g200);border-left:1px solid var(--g200)}
+.bfwrap.bfwrap .bf1-cards > div{border-right:1px solid var(--g200);border-bottom:1px solid var(--g200);background:var(--card);padding:18px}
+.bfwrap.bfwrap .bf1-cards p{font-size:14.5px;line-height:1.55;color:var(--g700);margin:0 0 8px}
+.bfwrap.bfwrap .bf1-cards p:last-child{margin-bottom:0}
+.bfwrap.bfwrap .bf1-tag{display:inline-block;font:500 10px/1 Roboto,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.1px;padding:5px 8px;margin:0 0 10px;border:1px solid var(--g300);color:var(--g700)}
+.bfwrap.bfwrap .bf1-tag.bf1-dark{background:var(--ink);color:var(--on);border-color:var(--ink)}
+.bfwrap.bfwrap .bf1-tag.bf1-acc{background:var(--red);color:#fff;border-color:var(--red)}
+.bfwrap.bfwrap details.bf1-how{border:1px solid var(--g200);background:var(--card);margin-top:14px}
+.bfwrap.bfwrap details.bf1-how > summary{cursor:pointer;list-style:none;padding:13px 16px;font:500 12px/1.2 Roboto,Arial,sans-serif;
+  text-transform:uppercase;letter-spacing:1.1px;color:var(--red)}
+.bfwrap.bfwrap details.bf1-how > summary::-webkit-details-marker{display:none}
+.bfwrap.bfwrap details.bf1-how > summary::after{content:" +";font-weight:700}
+.bfwrap.bfwrap details.bf1-how[open] > summary::after{content:" \2212"}
+.bfwrap.bfwrap details.bf1-how > summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
+.bfwrap.bfwrap details.bf1-how > div{padding:0 16px 14px;font-size:14px;line-height:1.6;color:var(--g700)}
+.bfwrap.bfwrap details.bf1-how > div p{max-width:78ch}
+.bfwrap.bfwrap details.bf1-how ul{margin:0 0 10px;padding-left:18px}
+.bfwrap.bfwrap details.bf1-how li{margin-bottom:5px}
+.bfwrap.bfwrap .bf1-srcs{list-style:none;margin:0;padding:0;font:400 13px/1.55 Roboto,Arial,sans-serif;color:var(--g500)}
+.bfwrap.bfwrap .bf1-srcs li{margin-bottom:6px}
+.bfwrap.bfwrap .bf1-srcs a{color:var(--g700)}
+.bfwrap.bfwrap .qa details{border-top:1px solid var(--g200);background:var(--card);border-left:1px solid var(--g200);border-right:1px solid var(--g200)}
+.bfwrap.bfwrap .qa details:last-child{border-bottom:1px solid var(--g200)}
+.bfwrap.bfwrap .qa summary{cursor:pointer;list-style:none;padding:16px 18px;font:700 16px/1.35 Roboto,Arial,sans-serif;display:flex;justify-content:space-between;gap:12px}
+.bfwrap.bfwrap .qa summary::-webkit-details-marker{display:none}
+.bfwrap.bfwrap .qa summary::after{content:"+";color:var(--red);font-weight:900}
+.bfwrap.bfwrap .qa details[open] summary::after{content:"\2212"}
+.bfwrap.bfwrap .qa summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
+.bfwrap.bfwrap .qa .ans{padding:0 18px 16px;font-size:15px;line-height:1.6;color:var(--g700)}
+.bfwrap.bfwrap .qa .ans p{margin:0 0 10px}
+.bfwrap.bfwrap .qa .ans b{color:var(--ink)}
+.bfwrap.bfwrap .bf1-review{border:1px dashed var(--g400);background:transparent;margin-top:28px}
+.bfwrap.bfwrap .bf1-review > summary{color:var(--g500)}
+.bfwrap.bfwrap footer.bf1-pg{border-top:3px solid var(--ink);padding-block:22px 0;margin-top:8px;font-size:13px;color:var(--g500)}
+@media (prefers-reduced-motion:no-preference){
+.bfwrap.bfwrap .bf1-seg button{transition:background .12s ease,color .12s ease}}
+.bfwrap.bfwrap .bf1-fp-size{aspect-ratio:2/1}
+.bfwrap.bfwrap .bf1-fp-sbgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:760px){
+.bfwrap.bfwrap .bf1-fp-sbgrid{grid-template-columns:1fr}}
+.bfwrap.bfwrap .bf1-fp-sbsvg{aspect-ratio:1/1;max-width:560px}
+.bfwrap.bfwrap .bf1-fp-sbfigs{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.bfwrap.bfwrap .bf1-fp-sbfigs .bf1-n + .bf1-n{margin-top:4px}
+.bfwrap.bfwrap .bf1-fp-swgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:760px){
+.bfwrap.bfwrap .bf1-fp-swgrid{grid-template-columns:1fr}}
+.bfwrap.bfwrap .bf1-fp-swsvg{aspect-ratio:1/1;max-width:560px;background:var(--card)}
+.bfwrap.bfwrap .bf1-fp-swtext{font:500 16px/1.5 Roboto,Arial,sans-serif;color:var(--ink);margin:0 0 16px;min-height:4.5em}
+.bfwrap.bfwrap .bf1-fp-swlists{display:grid;gap:14px}
+.bfwrap.bfwrap .bf1-fp-swlists ul{margin:0;padding-left:18px;font-size:14.5px;line-height:1.55;color:var(--g700)}
+.bfwrap.bfwrap .bf1-fp-swlists li{margin-bottom:4px}
+.bfwrap.bfwrap .bf1-sw.bf1-fp-road{background:var(--g400)}
+.bfwrap.bfwrap .bf1-sw.bf1-fp-hatch{background:repeating-linear-gradient(45deg,var(--g200) 0 3px,var(--g300) 3px 5px)}
+.bfwrap.bfwrap .bf1-sw.bf1-fp-plant{background:var(--plant);outline:1px solid var(--plant2);outline-offset:-1px}
 
-  .pg-rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
-  .pg-rv.pg-in{opacity:1;transform:none}
+/* Item 3: life cycle */
+.bfwrap.bfwrap .bf1-seg.bf1-lbl{align-items:center}
+.bfwrap.bfwrap .bf1-seg .bf1-lbltxt{font:500 11px/1 Roboto,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.1px;color:var(--g500);margin-right:4px}
+.bfwrap.bfwrap .bf1-lc-yearrow{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center}
+@media (max-width:560px){.bfwrap.bfwrap .bf1-lc-yearrow{grid-template-columns:1fr;gap:4px}}
+.bfwrap.bfwrap .bf1-lc-year{font:900 30px/1 Roboto,Arial,sans-serif;margin:0;font-variant-numeric:tabular-nums;min-width:4.4em}
+.bfwrap.bfwrap .bf1-lc-stage{border-top:1px solid var(--g200);padding:14px 0 0;margin:14px 0 16px;min-height:74px}
+.bfwrap.bfwrap .bf1-lc-stage p{margin:0;max-width:70ch;font-size:15.5px;color:var(--g700)}
+.bfwrap.bfwrap .bf1-lc-stage .bf1-k{color:var(--red);margin-bottom:4px}
+.bfwrap.bfwrap .bf1-lc-charts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:700px){.bfwrap.bfwrap .bf1-lc-charts{grid-template-columns:1fr}}
+.bfwrap.bfwrap .bf1-lc-chart{display:block;width:100%;height:auto;background:var(--card)}
+.bfwrap.bfwrap .bf1-lc-carb{font-size:14.5px;color:var(--ink);font-weight:500}
+.bfwrap.bfwrap .bf1-lc-controls{display:grid;gap:4px;margin-top:18px;padding-top:16px;border-top:1px solid var(--g200)}
+.bfwrap.bfwrap .bf1-lc-tablewrap{overflow-x:auto;border:1px solid var(--g200);background:var(--card)}
+.bfwrap.bfwrap .bf1-lc-table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+.bfwrap.bfwrap .bf1-lc-table th,.bfwrap.bfwrap .bf1-lc-table td{padding:12px 16px;border-bottom:1px solid var(--g200);text-align:left;vertical-align:top}
+.bfwrap.bfwrap .bf1-lc-table thead th{font:500 11px/1.3 Roboto,Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;color:var(--g500);background:var(--shade)}
+.bfwrap.bfwrap .bf1-lc-table tbody th{font-weight:500;color:var(--g700);width:42%}
+.bfwrap.bfwrap .bf1-lc-table tbody tr:last-child th,.bfwrap.bfwrap .bf1-lc-table tbody tr:last-child td{border-bottom:0}
+.bfwrap.bfwrap .bf1-lc-good{color:var(--red);font-weight:700}
 
-  /* bill composition */
-  .pg-billbar{display:flex;height:64px;border-radius:0;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
-  .pg-seg{height:100%;width:0;transition:width 1.2s cubic-bezier(.22,.9,.3,1);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px}
-  .pg-seg.pg-d{background:linear-gradient(135deg,#3F4145,#1A1818)}
-  .pg-seg.pg-s{background:linear-gradient(135deg,#BE1E2D,#961826)}
-  .pg-seg.pg-t{background:linear-gradient(135deg,#C9CACC,#B9BABC)}
-  .pg-billkey{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:13px;margin-top:14px}
-  .pg-bk{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;box-shadow:var(--shadow)}
-  .pg-bk .pg-sw{width:11px;height:11px;border-radius:0;display:inline-block;margin-right:8px}
-  .pg-bk h4{margin:0 0 4px;font-size:14.5px;color:var(--navy);font-weight:700}
-  .pg-bk p{margin:0;font-size:13px;color:var(--muted)}
 
-  /* fuel mix */
-  .pg-fuel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px}
-  .pg-frow{display:flex;align-items:center;gap:12px;margin:9px 0}
-  .pg-flabel{flex:0 0 132px;font-size:13.5px;font-weight:600;color:var(--navy)}
-  .pg-ftrack{flex:1;background:var(--g200);border-radius:0;height:22px;position:relative}
-  .pg-ffill{height:100%;width:0;border-radius:0;transition:width 1.1s cubic-bezier(.22,.9,.3,1);position:relative}
-  .pg-ffill.pg-gas{background:linear-gradient(90deg,#BE1E2D,#961826)}
-  .pg-ffill.pg-oth{background:var(--g400)}
-  .pg-ffill.pg-cln{background:linear-gradient(90deg,#59936A,#3E7D57)}
-  .pg-fval{position:absolute;left:calc(100% + 9px);top:0;line-height:22px;font-size:12.5px;font-weight:700;color:var(--muted);white-space:nowrap;opacity:0;transition:opacity .4s ease .6s}
-  .pg-ffill.on .pg-fval{opacity:1}
-  .pg-fnote{margin-top:16px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:13px}
-
-  /* rate rise */
-  .pg-rate{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
-  .pg-rp{text-align:center}
-  .pg-rp .pg-yr{font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
-  .pg-rp .pg-v{font-size:38px;font-weight:800;letter-spacing:-1.4px;color:var(--navy);font-variant-numeric:tabular-nums;line-height:1.1}
-  .pg-rp.pg-up .pg-v{color:var(--warm)}
-  .pg-arrow{font-size:26px;color:var(--warm);font-weight:800}
-  .pg-ratefoot{text-align:center;margin-top:14px;font-size:14.5px;color:var(--muted)}
-  .pg-ratefoot b{color:var(--warm);font-size:19px;font-weight:800}
-
-  .pg-alert{background:var(--amber-soft);border:1px solid #E6D5AE;border-left:5px solid var(--amber);border-radius:var(--radius);padding:18px 20px;margin-top:18px}
-  .pg-alert h4{margin:0 0 6px;color:#7A5410;font-size:15px;font-weight:800}
-  .pg-alert p{margin:0;font-size:14px;color:#5F4410}
-  .pg-alert .pg-mw{font-size:27px;font-weight:800;color:var(--amber);letter-spacing:-.6px;display:block;margin:6px 0 2px;font-variant-numeric:tabular-nums}
-
-  /* mechanism cards */
-  .pg-mechs{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:14px}
-  .pg-mech{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;transition:transform .15s ease,box-shadow .15s ease}
-  .pg-mech:hover{transform:translateY(-2px);box-shadow:none}
-  .pg-mech .pg-num{width:29px;height:29px;border-radius:0;background:var(--accent-soft);color:var(--accent);font-weight:800;font-size:13.5px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
-  .pg-mech.pg-g .pg-num{background:var(--green-soft);color:var(--green)}
-  .pg-mech h4{margin:0 0 5px;font-size:15px;color:var(--navy);font-weight:700;line-height:1.25}
-  .pg-mech p{margin:0;font-size:13.3px;color:var(--muted)}
-
-  .pg-bignum{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:6px}
-  .pg-bn{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 16px;text-align:center}
-  .pg-bn .pg-n{font-size:31px;font-weight:800;letter-spacing:-1px;color:var(--green);font-variant-numeric:tabular-nums;line-height:1.05}
-  .pg-bn .pg-l{font-size:12.8px;color:var(--muted);margin-top:7px;line-height:1.35}
-
-  .pg-target{background:linear-gradient(135deg,#000000,#1A1818 60%,#3F4145);color:#fff;border-radius:0;padding:26px 28px;margin-top:22px;box-shadow:var(--shadow);text-align:center}
-  .pg-target .pg-lab{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#B9BABC}
-  .pg-target .pg-v{font-size:44px;font-weight:800;letter-spacing:-1.6px;margin:6px 0 2px}
-  .pg-target p{margin:6px auto 0;color:#C9CACC;font-size:14.8px;max-width:60ch}
-
-  .pg-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-  .pg-cta a{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:15px 18px;font-weight:700;color:var(--navy);font-size:14.5px;flex:1;min-width:230px}
-  .pg-cta a:hover{text-decoration:none;border-color:var(--accent);background:var(--accent-soft)}
-  .pg-cta a span{display:block;font-weight:400;font-size:13px;color:var(--muted);margin-top:3px}
-
-  footer{color:var(--muted);font-size:12.5px;margin-top:34px;text-align:center}
-  .pg-srcs{font-size:12.5px;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
-
-  @media (max-width:720px){
-    .pg-rate{grid-template-columns:1fr;gap:8px}
-    .pg-arrow{transform:rotate(90deg)}
-    header.pg-top h1{font-size:25px}
-    .pg-flabel{flex:0 0 96px;font-size:12.5px}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .pg-rv{opacity:1;transform:none;transition:none}
-    .pg-seg,.pg-ffill{transition:none}
-    .pg-fval{opacity:1;transition:none}
-    .pg-mech:hover{transform:none}
-  }
-
-  /* BCW header link row */
-  .pg-headrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-  .pg-headlink{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1;
-    min-height:44px;padding:0 14px;font-size:11.5px;font-weight:500;letter-spacing:1.3px;text-transform:uppercase;
-    color:#fff;background:var(--accent);border:1px solid var(--accent);transition:background .12s,border-color .12s}
-  .pg-headlink:hover{text-decoration:none;background:var(--red-dark);border-color:var(--red-dark)}
-  .pg-headlink.alt{background:transparent;border-color:#fff;color:#fff}
-  .pg-headlink.alt:hover{background:rgba(255,255,255,.14);border-color:#fff}
-  .pg-headlink .pg-ar{margin-left:9px;flex:0 0 auto}
-  @media (max-width:620px){ .pg-headrow{flex-direction:column} .pg-headlink{width:100%} }
 
 /* content-page footer: stay inside the column, no full-bleed overflow */
 .pgwrap footer{margin-left:0 !important;margin-right:0 !important;
@@ -1195,11 +1238,11 @@
     <a class="viewtab" href="index.html#projects">Successful Projects<span class="vt-sub">Storage working in Westchester</span></a>
     <a class="viewtab" href="index.html#modellaw">Model Law<span class="vt-sub">A common-sense code, not a ban</span></a>
     <a class="viewtab" href="index.html#considerations">Key Considerations<span class="vt-sub">Nine things boards should weigh</span></a>
-    <a class="viewtab viewlink sel" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
+    <a class="viewtab viewlink" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
     <a class="viewtab viewlink" href="fire-safety.html">Fire &amp; Safety<span class="vt-sub">The evidence on BESS risk</span></a>
     <a class="viewtab viewlink" href="bess-size.html">Size &amp; Setbacks<span class="vt-sub">How much room storage needs</span></a>
     <a class="viewtab viewlink" href="bess-risk.html">Risk in Context<span class="vt-sub">How battery risk compares</span></a>
-    <a class="viewtab viewlink" href="bess-life.html">Life Cycle<span class="vt-sub">From factory to recycler</span></a>
+    <a class="viewtab viewlink sel" href="bess-life.html">Life Cycle<span class="vt-sub">From factory to recycler</span></a>
   </div>
   <div class="views-m" id="viewsM">
     <button type="button" class="vm-arrow" aria-label="Previous section" onclick="cycleView(-1)">&#8249;</button>
@@ -1281,121 +1324,133 @@
   })();
   </script>
   <!--/NAVBLOCK-->
-<div class="titlestrip"><h1>How Solar &amp; Storage Lower Your Electric Bill</h1></div><div class="subline">What you are actually being charged for each month, why those charges keep climbing in Westchester, and the specific mechanisms by which local solar and battery storage push them back down.</div>
+<div class="titlestrip"><h1>Life Cycle</h1></div><div class="subline">What a grid battery is made of, how quickly it pays back its carbon, whose air gets cleaner, and what happens when it retires.</div>
 <div class="mainrow">
 <nav id="toc" class="toc" aria-label="On this page"></nav>
 <div class="viewcol">
 <section class="view sel info pgwrap">
 
 
-  
-
-  <div class="pg-sec-h">Start here</div>
-  <h2 class="pg-big">What are you being charged for?</h2>
-  <p class="pg-sub">A Westchester electric bill splits three ways. Most of it is not the electricity itself.</p>
-
-  <div class="pg-rv" id="billsec">
-    <div class="pg-billbar">
-      <div class="pg-seg pg-d" data-w="56">56%</div>
-      <div class="pg-seg pg-s" data-w="33">33%</div>
-      <div class="pg-seg pg-t" data-w="11">11%</div>
+<div class="bfwrap">
+<section class="bf-open">
+  <h2 class="bf1-q" data-anim="on"><span class="bf1-w" style="--i:0">How</span> <span class="bf1-w bf1-kw" style="--i:1">clean</span> <span class="bf1-w" style="--i:2">is</span> <span class="bf1-w" style="--i:3">battery</span> <span class="bf1-w" style="--i:4">storage?</span></h2>
+  <p class="bf1-lede">Cleaner from the start. A grid battery pays back the carbon from its manufacture in about 15 months on today's Westchester grid, then spends the rest of a twenty-year life keeping gas peaker plants switched off. Even the harshest assumptions put the payback under six years.</p></section>
+<div data-bfpage="lc">
+<section aria-labelledby="bf1-lc-h-life">
+  <h2 class="bf1-q bf1-md" data-anim="wait" id="bf1-lc-h-life"><span class="bf1-w" style="--i:0">What</span> <span class="bf1-w" style="--i:1">happens</span> <span class="bf1-w" style="--i:2">over</span> <span class="bf1-w bf1-kw" style="--i:3">twenty</span> <span class="bf1-w" style="--i:4">years?</span></h2>
+  <p class="bf1-sub">Follow a 20 MWh battery, the size of the one approved in Tarrytown, through its working life. Watch it run, drag the slider to any year, then change where its charging power comes from.</p>
+  <div class="bf1-card">
+    <div class="bf1-lc-yearrow">
+      <p class="bf1-lc-year" data-lc="year">Year 20</p>
+      <input class="bf1-range" type="range" min="0" max="20" step="1" value="20" data-lc="range" aria-label="Year of the battery's life" hidden>
     </div>
-    <div class="pg-billkey">
-      <div class="pg-bk"><h4><span class="pg-sw" style="background:#1A1818"></span>Delivery charges &middot; 56%</h4><p>What your provider pays to transport electricity from the source to your house, over poles, wires, substations and transformers.</p></div>
-      <div class="pg-bk"><h4><span class="pg-sw" style="background:#BE1E2D"></span>Supply charges &middot; 33%</h4><p>What your provider pays to purchase the electricity itself from generating sources.</p></div>
-      <div class="pg-bk"><h4><span class="pg-sw" style="background:#B9BABC"></span>Taxes &amp; surcharges &middot; 11%</h4><p>The remainder of the monthly bill.</p></div>
+    <div class="bf1-lc-stage"><p class="bf1-k" data-lc="stage-h">Retired and recycled</p><p data-lc="stage-t">The bond pays for removal, the site is restored, and the cells go to a recycler that recovers materials such as lithium and copper.</p></div>
+    <div class="bf1-lc-charts">
+      <div><p class="bf1-k">Capacity</p><svg class="bf1-lc-chart" viewBox="0 0 480 260" role="img" font-family="Roboto,Arial,sans-serif" aria-label="Battery capacity over 20 years. Without top-ups it fades from 100 percent to 70 percent. With top-ups every five years it stays between 92.5 and 100 percent."><line x1="50" y1="228.0" x2="380" y2="228.0" stroke="var(--g200)"/><text x="43" y="232.0" font-size="13" fill="var(--g500)" text-anchor="end">0%</text><line x1="50" y1="175.0" x2="380" y2="175.0" stroke="var(--g200)"/><text x="43" y="179.0" font-size="13" fill="var(--g500)" text-anchor="end">25%</text><line x1="50" y1="122.0" x2="380" y2="122.0" stroke="var(--g200)"/><text x="43" y="126.0" font-size="13" fill="var(--g500)" text-anchor="end">50%</text><line x1="50" y1="69.0" x2="380" y2="69.0" stroke="var(--g200)"/><text x="43" y="73.0" font-size="13" fill="var(--g500)" text-anchor="end">75%</text><line x1="50" y1="16.0" x2="380" y2="16.0" stroke="var(--g200)"/><text x="43" y="20.0" font-size="13" fill="var(--g500)" text-anchor="end">100%</text><text x="50.0" y="246" font-size="13" fill="var(--g500)" text-anchor="middle">Year 0</text><text x="132.5" y="246" font-size="13" fill="var(--g500)" text-anchor="middle">5</text><text x="215.0" y="246" font-size="13" fill="var(--g500)" text-anchor="middle">10</text><text x="297.5" y="246" font-size="13" fill="var(--g500)" text-anchor="middle">15</text><text x="380.0" y="246" font-size="13" fill="var(--g500)" text-anchor="middle">20</text><path d="M50.0,16.0 L380.0,79.6" fill="none" stroke="var(--ink)" stroke-width="2" stroke-dasharray="6 4"/><path d="M50.0,16.0 L132.5,31.9 L132.5,16.0 L215.0,31.9 L215.0,16.0 L297.5,31.9 L297.5,16.0 L380.0,31.9" fill="none" stroke="var(--red)" stroke-width="2.5"/><text x="388.0" y="35.9" font-size="13.5" font-weight="700" fill="var(--red)">With top-ups</text><text x="388.0" y="83.6" font-size="13.5" fill="var(--ink)">Without</text><line data-lc="cap-mark" x1="380.0" y1="16" x2="380.0" y2="228" stroke="var(--g500)" stroke-width="1.5"/><circle data-lc="cap-dot" cx="380.0" cy="31.9" r="5" fill="var(--red)" stroke="var(--card)" stroke-width="2"/></svg></div>
+      <div><p class="bf1-k">Net carbon, tons of CO2</p><svg class="bf1-lc-chart" viewBox="0 0 480 260" role="img" data-lc="c-svg" font-family="Roboto,Arial,sans-serif" aria-label="Net carbon over 20 years. It starts below zero from manufacturing, crosses zero when paid back, then climbs."><g data-lc="c-grid"><line x1="50" y1="213.4" x2="380" y2="213.4" stroke="var(--g200)"/><text x="43" y="217.4" font-size="13" fill="var(--g500)" text-anchor="end">0k</text><line x1="50" y1="190.3" x2="380" y2="190.3" stroke="var(--g200)"/><text x="43" y="194.3" font-size="13" fill="var(--g500)" text-anchor="end">2k</text><line x1="50" y1="167.2" x2="380" y2="167.2" stroke="var(--g200)"/><text x="43" y="171.2" font-size="13" fill="var(--g500)" text-anchor="end">4k</text><line x1="50" y1="144.2" x2="380" y2="144.2" stroke="var(--g200)"/><text x="43" y="148.2" font-size="13" fill="var(--g500)" text-anchor="end">6k</text><line x1="50" y1="121.1" x2="380" y2="121.1" stroke="var(--g200)"/><text x="43" y="125.1" font-size="13" fill="var(--g500)" text-anchor="end">8k</text><line x1="50" y1="98.0" x2="380" y2="98.0" stroke="var(--g200)"/><text x="43" y="102.0" font-size="13" fill="var(--g500)" text-anchor="end">10k</text><line x1="50" y1="74.9" x2="380" y2="74.9" stroke="var(--g200)"/><text x="43" y="78.9" font-size="13" fill="var(--g500)" text-anchor="end">12k</text><line x1="50" y1="51.8" x2="380" y2="51.8" stroke="var(--g200)"/><text x="43" y="55.8" font-size="13" fill="var(--g500)" text-anchor="end">14k</text><line x1="50" y1="28.7" x2="380" y2="28.7" stroke="var(--g200)"/><text x="43" y="32.7" font-size="13" fill="var(--g500)" text-anchor="end">16k</text></g><text x="50.0" y="246" font-size="13" fill="var(--g500)" text-anchor="middle">Year 0</text><text x="132.5" y="246" font-size="13" fill="var(--g500)" text-anchor="middle">5</text><text x="215.0" y="246" font-size="13" fill="var(--g500)" text-anchor="middle">10</text><text x="297.5" y="246" font-size="13" fill="var(--g500)" text-anchor="middle">15</text><text x="380.0" y="246" font-size="13" fill="var(--g500)" text-anchor="middle">20</text><line data-lc="c-zero" x1="50" y1="213.4" x2="380" y2="213.4" stroke="var(--ink)" stroke-width="1.2"/><path data-lc="c-line" d="M50.0,226.1 L50.7,225.7 L51.4,225.2 L52.1,224.8 L52.8,224.4 L53.4,224.0 L54.1,223.5 L54.8,223.1 L55.5,222.7 L56.2,222.2 L56.9,221.8 L57.6,221.4 L58.2,221.0 L58.9,220.5 L59.6,220.1 L60.3,219.7 L61.0,219.3 L61.7,218.8 L62.4,218.4 L63.1,218.0 L63.8,217.6 L64.4,217.1 L65.1,216.7 L65.8,216.3 L66.5,215.9 L67.2,215.4 L67.9,215.0 L68.6,214.6 L69.2,214.2 L69.9,213.8 L70.6,213.3 L71.3,212.9 L72.0,212.5 L72.7,212.1 L73.4,211.7 L74.1,211.2 L74.8,210.8 L75.4,210.4 L76.1,210.0 L76.8,209.6 L77.5,209.1 L78.2,208.7 L78.9,208.3 L79.6,207.9 L80.2,207.5 L80.9,207.0 L81.6,206.6 L82.3,206.2 L83.0,205.8 L83.7,205.4 L84.4,205.0 L85.1,204.6 L85.8,204.1 L86.4,203.7 L87.1,203.3 L87.8,202.9 L88.5,202.5 L89.2,202.1 L89.9,201.6 L90.6,201.2 L91.2,200.8 L91.9,200.4 L92.6,200.0 L93.3,199.6 L94.0,199.2 L94.7,198.8 L95.4,198.3 L96.1,197.9 L96.8,197.5 L97.4,197.1 L98.1,196.7 L98.8,196.3 L99.5,195.9 L100.2,195.5 L100.9,195.1 L101.6,194.7 L102.2,194.2 L102.9,193.8 L103.6,193.4 L104.3,193.0 L105.0,192.6 L105.7,192.2 L106.4,191.8 L107.1,191.4 L107.8,191.0 L108.4,190.6 L109.1,190.2 L109.8,189.8 L110.5,189.4 L111.2,189.0 L111.9,188.5 L112.6,188.1 L113.2,187.7 L113.9,187.3 L114.6,186.9 L115.3,186.5 L116.0,186.1 L116.7,185.7 L117.4,185.3 L118.1,184.9 L118.7,184.5 L119.4,184.1 L120.1,183.7 L120.8,183.3 L121.5,182.9 L122.2,182.5 L122.9,182.1 L123.6,181.7 L124.2,181.3 L124.9,180.9 L125.6,180.5 L126.3,180.1 L127.0,179.7 L127.7,179.3 L128.4,178.9 L129.1,178.5 L129.8,178.1 L130.4,177.7 L131.1,177.3 L131.8,176.9 L132.5,177.5 L133.2,177.0 L133.9,176.6 L134.6,176.2 L135.2,175.8 L135.9,175.3 L136.6,174.9 L137.3,174.5 L138.0,174.0 L138.7,173.6 L139.4,173.2 L140.1,172.8 L140.8,172.3 L141.4,171.9 L142.1,171.5 L142.8,171.1 L143.5,170.6 L144.2,170.2 L144.9,169.8 L145.6,169.4 L146.2,168.9 L146.9,168.5 L147.6,168.1 L148.3,167.7 L149.0,167.2 L149.7,166.8 L150.4,166.4 L151.1,166.0 L151.8,165.6 L152.4,165.1 L153.1,164.7 L153.8,164.3 L154.5,163.9 L155.2,163.4 L155.9,163.0 L156.6,162.6 L157.2,162.2 L157.9,161.8 L158.6,161.3 L159.3,160.9 L160.0,160.5 L160.7,160.1 L161.4,159.7 L162.1,159.3 L162.8,158.8 L163.4,158.4 L164.1,158.0 L164.8,157.6 L165.5,157.2 L166.2,156.8 L166.9,156.3 L167.6,155.9 L168.2,155.5 L168.9,155.1 L169.6,154.7 L170.3,154.3 L171.0,153.8 L171.7,153.4 L172.4,153.0 L173.1,152.6 L173.8,152.2 L174.4,151.8 L175.1,151.4 L175.8,151.0 L176.5,150.5 L177.2,150.1 L177.9,149.7 L178.6,149.3 L179.2,148.9 L179.9,148.5 L180.6,148.1 L181.3,147.7 L182.0,147.3 L182.7,146.8 L183.4,146.4 L184.1,146.0 L184.8,145.6 L185.4,145.2 L186.1,144.8 L186.8,144.4 L187.5,144.0 L188.2,143.6 L188.9,143.2 L189.6,142.8 L190.2,142.4 L190.9,141.9 L191.6,141.5 L192.3,141.1 L193.0,140.7 L193.7,140.3 L194.4,139.9 L195.1,139.5 L195.7,139.1 L196.4,138.7 L197.1,138.3 L197.8,137.9 L198.5,137.5 L199.2,137.1 L199.9,136.7 L200.6,136.3 L201.2,135.9 L201.9,135.5 L202.6,135.1 L203.3,134.7 L204.0,134.3 L204.7,133.9 L205.4,133.5 L206.1,133.1 L206.8,132.7 L207.4,132.3 L208.1,131.9 L208.8,131.5 L209.5,131.1 L210.2,130.7 L210.9,130.3 L211.6,129.9 L212.2,129.5 L212.9,129.1 L213.6,128.7 L214.3,128.3 L215.0,128.8 L215.7,128.4 L216.4,128.0 L217.1,127.5 L217.8,127.1 L218.4,126.7 L219.1,126.3 L219.8,125.8 L220.5,125.4 L221.2,125.0 L221.9,124.6 L222.6,124.1 L223.2,123.7 L223.9,123.3 L224.6,122.9 L225.3,122.4 L226.0,122.0 L226.7,121.6 L227.4,121.2 L228.1,120.7 L228.7,120.3 L229.4,119.9 L230.1,119.5 L230.8,119.0 L231.5,118.6 L232.2,118.2 L232.9,117.8 L233.6,117.3 L234.2,116.9 L234.9,116.5 L235.6,116.1 L236.3,115.7 L237.0,115.2 L237.7,114.8 L238.4,114.4 L239.1,114.0 L239.8,113.6 L240.4,113.1 L241.1,112.7 L241.8,112.3 L242.5,111.9 L243.2,111.5 L243.9,111.0 L244.6,110.6 L245.2,110.2 L245.9,109.8 L246.6,109.4 L247.3,109.0 L248.0,108.5 L248.7,108.1 L249.4,107.7 L250.1,107.3 L250.8,106.9 L251.4,106.5 L252.1,106.0 L252.8,105.6 L253.5,105.2 L254.2,104.8 L254.9,104.4 L255.6,104.0 L256.2,103.6 L256.9,103.1 L257.6,102.7 L258.3,102.3 L259.0,101.9 L259.7,101.5 L260.4,101.1 L261.1,100.7 L261.8,100.3 L262.4,99.9 L263.1,99.4 L263.8,99.0 L264.5,98.6 L265.2,98.2 L265.9,97.8 L266.6,97.4 L267.2,97.0 L267.9,96.6 L268.6,96.2 L269.3,95.8 L270.0,95.4 L270.7,94.9 L271.4,94.5 L272.1,94.1 L272.8,93.7 L273.4,93.3 L274.1,92.9 L274.8,92.5 L275.5,92.1 L276.2,91.7 L276.9,91.3 L277.6,90.9 L278.2,90.5 L278.9,90.1 L279.6,89.7 L280.3,89.3 L281.0,88.9 L281.7,88.5 L282.4,88.1 L283.1,87.7 L283.8,87.2 L284.4,86.8 L285.1,86.4 L285.8,86.0 L286.5,85.6 L287.2,85.2 L287.9,84.8 L288.6,84.4 L289.2,84.0 L289.9,83.6 L290.6,83.2 L291.3,82.8 L292.0,82.4 L292.7,82.0 L293.4,81.6 L294.1,81.2 L294.8,80.8 L295.4,80.4 L296.1,80.0 L296.8,79.6 L297.5,80.2 L298.2,79.8 L298.9,79.3 L299.6,78.9 L300.2,78.5 L300.9,78.1 L301.6,77.6 L302.3,77.2 L303.0,76.8 L303.7,76.4 L304.4,75.9 L305.1,75.5 L305.8,75.1 L306.4,74.6 L307.1,74.2 L307.8,73.8 L308.5,73.4 L309.2,72.9 L309.9,72.5 L310.6,72.1 L311.2,71.7 L311.9,71.2 L312.6,70.8 L313.3,70.4 L314.0,70.0 L314.7,69.6 L315.4,69.1 L316.1,68.7 L316.7,68.3 L317.4,67.9 L318.1,67.4 L318.8,67.0 L319.5,66.6 L320.2,66.2 L320.9,65.8 L321.6,65.3 L322.2,64.9 L322.9,64.5 L323.6,64.1 L324.3,63.7 L325.0,63.2 L325.7,62.8 L326.4,62.4 L327.1,62.0 L327.8,61.6 L328.4,61.2 L329.1,60.7 L329.8,60.3 L330.5,59.9 L331.2,59.5 L331.9,59.1 L332.6,58.7 L333.2,58.2 L333.9,57.8 L334.6,57.4 L335.3,57.0 L336.0,56.6 L336.7,56.2 L337.4,55.8 L338.1,55.3 L338.8,54.9 L339.4,54.5 L340.1,54.1 L340.8,53.7 L341.5,53.3 L342.2,52.9 L342.9,52.5 L343.6,52.0 L344.2,51.6 L344.9,51.2 L345.6,50.8 L346.3,50.4 L347.0,50.0 L347.7,49.6 L348.4,49.2 L349.1,48.8 L349.7,48.4 L350.4,47.9 L351.1,47.5 L351.8,47.1 L352.5,46.7 L353.2,46.3 L353.9,45.9 L354.6,45.5 L355.2,45.1 L355.9,44.7 L356.6,44.3 L357.3,43.9 L358.0,43.5 L358.7,43.1 L359.4,42.7 L360.1,42.3 L360.8,41.8 L361.4,41.4 L362.1,41.0 L362.8,40.6 L363.5,40.2 L364.2,39.8 L364.9,39.4 L365.6,39.0 L366.2,38.6 L366.9,38.2 L367.6,37.8 L368.3,37.4 L369.0,37.0 L369.7,36.6 L370.4,36.2 L371.1,35.8 L371.8,35.4 L372.4,35.0 L373.1,34.6 L373.8,34.2 L374.5,33.8 L375.2,33.4 L375.9,33.0 L376.6,32.6 L377.2,32.2 L377.9,31.8 L378.6,31.4 L379.3,31.0 L380.0,30.6 L380.0,30.6" fill="none" stroke="var(--red)" stroke-width="2.5"/><text data-lc="c-end" x="388.0" y="34.6" font-size="13.5" font-weight="700" fill="var(--red)">15,837 t</text><circle data-lc="c-pay" cx="70.6" cy="213.4" r="5" fill="var(--card)" stroke="var(--red)" stroke-width="2.5"/><text data-lc="c-paylab" x="79.6" y="229.4" font-size="13" fill="var(--ink)">Paid back</text><line data-lc="c-mark" x1="380.0" y1="16" x2="380.0" y2="228" stroke="var(--g500)" stroke-width="1.5"/><circle data-lc="c-dot" cx="380.0" cy="30.6" r="5" fill="var(--red)" stroke="var(--card)" stroke-width="2"/></svg></div>
+    </div>
+    <div class="bf1-figs">
+      <div class="bf1-fig"><p class="bf1-k">Pays back its manufacturing carbon in</p><p class="bf1-v bf1-acc" data-lc="pay">15 months</p><p class="bf1-n" data-lc="pay-n">Charged from today's NYC and Westchester grid</p></div>
+      <div class="bf1-fig"><p class="bf1-k">Capacity this year</p><p class="bf1-v" data-lc="cap">92.5%</p><p class="bf1-n">of its rated size, with top-ups</p></div>
+      <div class="bf1-fig"><p class="bf1-k">Delivered so far</p><p class="bf1-v" data-lc="mwh">140,536 MWh</p><p class="bf1-n" data-lc="homes">A year of electricity for about 20,500 New York homes</p></div>
+      <div class="bf1-fig"><p class="bf1-k">Carbon so far</p><p class="bf1-n bf1-lc-carb" data-lc="carbon">15,837 tons of CO2 avoided so far, after paying back its manufacturing</p></div>
+    </div>
+    <div class="bf1-lc-controls" data-lc="controls" hidden>
+      <div class="bf1-seg bf1-lbl" role="group" aria-label="Where the charging power comes from"><span class="bf1-lbltxt">Charged from</span><button type="button" data-lc-src="solar" aria-pressed="false">Solar</button><button type="button" data-lc-src="ny" aria-pressed="false">New York average</button><button type="button" data-lc-src="nycw" aria-pressed="true">NYC and Westchester grid</button><button type="button" data-lc-src="worst" aria-pressed="false">Worst case</button></div>
+      <div class="bf1-seg bf1-lbl" role="group" aria-label="Manufacturing estimate"><span class="bf1-lbltxt">Manufacturing</span><button type="button" data-lc-emb="recent" aria-pressed="true">Recent estimate<small>55 kg CO2 per kWh</small></button><button type="button" data-lc-emb="older" aria-pressed="false">Older, higher estimate<small>109 kg CO2 per kWh</small></button></div>
     </div>
   </div>
-
-  <div class="pg-sec-h">Why it keeps rising</div>
-  <h2 class="pg-big">Westchester runs on natural gas</h2>
-  <p class="pg-sub">The grid serving the metro New York area relies 99% on fossil fuel combustion, and 98% of that is natural gas. When gas prices move, your supply charge moves with them.</p>
-
-  <div class="pg-fuel pg-rv" id="fuelsec">
-    <div class="pg-frow"><div class="pg-flabel">Natural gas</div><div class="pg-ftrack"><div class="pg-ffill pg-gas" data-w="98.2"><span class="pg-fval">98.2%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Other fossil</div><div class="pg-ftrack"><div class="pg-ffill pg-oth" data-w="0.7"><span class="pg-fval">0.7%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Oil</div><div class="pg-ftrack"><div class="pg-ffill pg-oth" data-w="0.5"><span class="pg-fval">0.5%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Solar</div><div class="pg-ftrack"><div class="pg-ffill pg-cln" data-w="0.2"><span class="pg-fval">0.2%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Wind</div><div class="pg-ftrack"><div class="pg-ffill pg-cln" data-w="0.1"><span class="pg-fval">0.1%</span></div></div></div>
-    <div class="pg-fnote">Because utilities are allowed to pass through 100% of whatever electric supply costs each month, they have little incentive to hold supply rates down. They are always made whole by the consumer. <b>Source:</b> NYISO Gold Book 2025; EPA 2023 eGRID, New York Metro subregion.</div>
-  </div>
-
-  <h2 class="pg-big" style="margin-top:34px">Residential rates rose 30% in four years</h2>
-  <p class="pg-sub">What a typical Con Edison household paid per kilowatt-hour.</p>
-
-  <div class="pg-rv" id="ratesec">
-    <div class="pg-rate">
-      <div class="pg-rp"><div class="pg-yr">2021</div><div class="pg-v" data-count="30" data-suffix="&cent;">0</div></div>
-      <div class="pg-arrow">&rarr;</div>
-      <div class="pg-rp pg-up"><div class="pg-yr">2025</div><div class="pg-v" data-count="40" data-suffix="&cent;+">0</div></div>
+  <details class="bf1-how">
+    <summary>How we worked this out</summary>
+    <div>
+      <ul>
+        <li><b>The battery:</b> 20 MWh, one full charge and discharge a day, returning 85 percent of the power it takes in (NREL's standard assumption).</li>
+        <li><b>Fading and top-ups:</b> capacity falls about 1.5 percent a year, the figure EIA's cost study uses, and new modules restore it. We show a top-up every five years to keep the chart readable.</li>
+        <li><b>Manufacturing:</b> 55 kg of CO2 per kWh of LFP battery, from a 2023 peer-reviewed study that matches NREL's 2024 review (54 kg for batteries made in China). The higher option, 109 kg, is an older study that assumed a coal-heavy factory grid. Both cover the battery itself; the higher one also stands in for inverters and enclosures, which add to the total.</li>
+        <li><b>What it replaces:</b> each MWh it delivers is one a gas peaker plant does not have to make. A peaker emits about 584 kg of CO2 per MWh (EIA's 2024 heat rate for gas turbines, 10,999 Btu per kWh, times EPA's 53.06 kg of CO2 per million Btu). That counts only the smokestack, so it understates the benefit.</li>
+        <li><b>What charges it:</b> NYC and Westchester grid 864.5 lb of CO2 per MWh, New York average 465.1, and the worst case uses the grid's non-baseload rate of 976.9 (EPA eGRID 2023). Solar is 43 g per kWh over its full life (NREL). Because it takes in 1.18 MWh for every 1 MWh it gives back, charging emissions are scaled up by that amount.</li>
+        <li><b>Homes:</b> the average New York household uses 571 kWh a month (EIA, 2024).</li>
+      </ul>
     </div>
-    <div class="pg-ratefoot">A <b>30%</b> rise in four years, and it continued through the first five months of 2026 after a colder-than-usual winter and a spike in natural gas prices.</div>
+  </details>
+</section>
+
+<section aria-labelledby="bf1-lc-h-inside">
+  <h2 class="bf1-q bf1-md" data-anim="wait" id="bf1-lc-h-inside"><span class="bf1-w" style="--i:0">What</span> <span class="bf1-w" style="--i:1">is</span> <span class="bf1-w bf1-kw" style="--i:2">inside</span> <span class="bf1-w" style="--i:3">a</span> <span class="bf1-w" style="--i:4">grid</span> <span class="bf1-w" style="--i:5">battery?</span></h2>
+  <p class="bf1-sub">Almost every new grid battery now uses lithium iron phosphate, or LFP. It avoids the two metals behind the worst mining problems, and it is harder to set off.</p>
+  <div class="bf1-lc-tablewrap">
+  <table class="bf1-lc-table">
+    <thead><tr><th scope="col"></th><th scope="col">LFP, used in new grid batteries</th><th scope="col">NMC, the older type</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Cobalt or nickel</th><td class="bf1-lc-good">None</td><td>Both</td></tr>
+      <tr><th scope="row">Temperature where a cell can start to overheat, same lab test</th><td class="bf1-lc-good">437&deg;C</td><td>372&deg;C</td></tr>
+      <tr><th scope="row">Share of new grid storage worldwide, 2025</th><td class="bf1-lc-good">Over 90%</td><td>Under 10%</td></tr>
+      <tr><th scope="row">Used at Moss Landing, California</th><td>No</td><td>Yes</td></tr>
+    </tbody>
+  </table>
   </div>
+  <p class="bf1-note">Lithium itself still has to be mined, with real water and land impacts. LFP's advantage is avoiding the cobalt and nickel supply chains, where the most serious documented harms are concentrated.</p>
+</section>
 
-  <div class="pg-alert pg-rv">
-    <h4>The reliability warning behind the rates</h4>
-    <p>In April 2026 the New York Independent System Operator issued its annual Summer Reliability Report. If the state sees a heatwave averaging 95&deg;F for three or more days, the forecast capacity margin is:</p>
-    <span class="pg-mw">&minus;1,679 MW</span>
-    <p>A negative margin means New York would not have enough electricity on those days, raising the prospect of rolling brownouts. <b>Source:</b> NYISO Short-Term Assessment of Reliability, 2026 Q1.</p>
+<section aria-labelledby="bf1-lc-h-air">
+  <h2 class="bf1-q bf1-md" data-anim="wait" id="bf1-lc-h-air"><span class="bf1-w" style="--i:0">Whose</span> <span class="bf1-w" style="--i:1">air</span> <span class="bf1-w" style="--i:2">gets</span> <span class="bf1-w bf1-kw" style="--i:3">cleaner?</span></h2>
+  <p class="bf1-sub">The plants a battery replaces are peakers: gas units that switch on during the hottest, busiest hours, often in dense neighborhoods. A battery gives power back with nothing coming out of a smokestack.</p>
+  <div class="bf1-figs">
+    <div class="bf1-fig"><p class="bf1-k">NYC peakers, high-ozone days</p><p class="bf1-v bf1-acc">Up to 94%</p><p class="bf1-n">of the city's nitrogen oxide emissions on the worst smog days</p></div>
+    <div class="bf1-fig"><p class="bf1-k">New Yorkers within a mile</p><p class="bf1-v">750,000</p><p class="bf1-n">78 percent of them in low-income communities or communities of color</p></div>
+    <div class="bf1-fig"><p class="bf1-k">Average US peaker</p><p class="bf1-v">32.3 lb</p><p class="bf1-n">of nitrogen oxides and 1.4 lb of fine particles for every MWh it makes</p></div>
+    <div class="bf1-fig"><p class="bf1-k">A battery, where it sits</p><p class="bf1-v bf1-acc">0 lb</p><p class="bf1-n">It burns nothing on site. The emissions from its charging power are counted in the chart above.</p></div>
   </div>
+</section>
 
-  <div class="pg-sec-h">The solar side</div>
-  <h2 class="pg-big">Four ways local solar lowers bills</h2>
-  <p class="pg-sub">Community solar projects benefit Westchester in ways that reach well past the subscriber.</p>
-
-  <div class="pg-mechs pg-rv">
-    <div class="pg-mech"><div class="pg-num">1</div><h4>Free grid infrastructure</h4><p>When a developer applies for interconnection, the utility specifies the transformers and connection equipment the developer must buy and install, which the utility then owns. Every project strengthens the local grid at no cost to ratepayers.</p></div>
-    <div class="pg-mech"><div class="pg-num">2</div><h4>Less imported power</h4><p>Electricity injected locally reduces the need to import power from far-away upstate sources, which saves the utility on supply costs.</p></div>
-    <div class="pg-mech"><div class="pg-num">3</div><h4>A direct subscriber discount</h4><p>The utility compensates the developer for injected electricity, and the developer must pass a discount to enrolled subscribers, typically 5% to 10% savings.</p></div>
-    <div class="pg-mech"><div class="pg-num">4</div><h4>Lease income for site owners</h4><p>Projects pay the site owner a lease for 20 to 25 years, income the owner would not otherwise earn from that roof or ground space.</p></div>
+<section aria-labelledby="bf1-lc-h-end">
+  <h2 class="bf1-q bf1-md" data-anim="wait" id="bf1-lc-h-end"><span class="bf1-w" style="--i:0">What</span> <span class="bf1-w" style="--i:1">happens</span> <span class="bf1-w" style="--i:2">when</span> <span class="bf1-w" style="--i:3">it</span> <span class="bf1-w bf1-kw" style="--i:4">retires?</span></h2>
+  <div class="bf1-cards">
+    <div><span class="bf1-tag bf1-dark">Paid for up front</span><h3>Removal is funded before it is built</h3>
+      <p>New York's model law asks battery owners to keep a bond or fund, for the whole life of the site, that pays the town to remove the equipment. Fossil plants in many markets carry no such requirement.</p></div>
+    <div><span class="bf1-tag">Growing and changing hands</span><h3>Recycling plants are still running</h3>
+      <p>Redwood Materials says it takes in over 20 GWh of lithium batteries a year and recovers more than 95 percent of the key materials. When an early recycler, Ascend Elements, went bankrupt in 2026, its Georgia plant was bought and is now producing lithium again. Glencore bought Li-Cycle's plants and says it plans to finish the Rochester hub.</p></div>
+    <div><span class="bf1-tag bf1-acc">Still to fix</span><h3>The rules need to catch up</h3>
+      <p>New York's battery recycling law does not yet cover grid batteries. A national EPA rule for lithium battery recycling has not been proposed. In September 2026 the US House passed the BRACE Act, which would direct EPA to write one within 18 months; it now sits with a Senate committee. LFP holds less valuable metal than older batteries, so these rules matter.</p></div>
   </div>
+</section>
 
-  <div class="pg-alert pg-rv" style="background:var(--accent-soft);border-color:var(--line);border-left-color:var(--accent)">
-    <h4 style="color:var(--navy)">Behind-the-meter solar is prepaid electricity</h4>
-    <p style="color:var(--g700)">Installing solar or storage on your own property for your own consumption is effectively prepaying for 25 years of electricity. Once you recover the initial investment, the remaining years are free. Even a system covering only half your annual usage has cut your exposure to ever-escalating utility rates by half.</p>
-  </div>
+<details class="bf1-how">
+  <summary>Sources</summary>
+  <div><ul class="bf1-srcs">
+    <li>NREL, Annual Technology Baseline 2025, utility-scale battery storage (85% round-trip efficiency). <a href="https://atb.nlr.gov/electricity/2025/utility-scale_battery_storage">nlr.gov</a></li>
+    <li>EIA and Sargent &amp; Lundy, capital cost report for AEO2025 (1.5% yearly fade with augmentation, about 20-year life). <a href="https://www.eia.gov/analysis/studies/powerplants/capitalcost/pdf/capital_cost_AEO2025.pdf">eia.gov</a></li>
+    <li>Llamas-Orozco et al., PNAS Nexus, 2023 (LFP, 55 kg CO2e per kWh). <a href="https://academic.oup.com/pnasnexus/article/2/11/pgad361/7451193">oup.com</a></li>
+    <li>NREL/TP-5400-89174, December 2024, battery carbon intensity review. <a href="https://docs.nlr.gov/docs/fy25osti/89174.pdf">nlr.gov</a></li>
+    <li>Hao et al., Sustainability, 2017 (higher, China-grid estimate). <a href="https://www.mdpi.com/2071-1050/9/4/504">mdpi.com</a></li>
+    <li>EIA Electric Power Annual, Table 8.2 (gas turbine heat rate, 2024). <a href="https://www.eia.gov/electricity/annual/html/epa_08_02.html">eia.gov</a></li>
+    <li>EPA, GHG Emission Factors Hub, January 2025. <a href="https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf">epa.gov</a></li>
+    <li>EPA, eGRID2023 summary tables (June 2025). <a href="https://www.epa.gov/system/files/documents/2025-06/summary_tables_rev2.pdf">epa.gov</a></li>
+    <li>NREL, Life Cycle Greenhouse Gas Emissions from Electricity Generation, 2021 update. <a href="https://docs.nlr.gov/docs/fy21osti/80580.pdf">nlr.gov</a></li>
+    <li>ScienceDirect, thermal runaway in NMC-811 and LFP cells, 2023. <a href="https://www.sciencedirect.com/science/article/pii/S2590116823000802">sciencedirect.com</a></li>
+    <li>IEA, Global EV Outlook 2026: LFP was over 90% of stationary storage installed in 2025. <a href="https://www.iea.org/reports/global-ev-outlook-2026/electric-vehicle-batteries">iea.org</a></li>
+    <li>PEAK Coalition, "Dirty Energy, Big Money," May 2020. <a href="https://www.cleanegroup.org/publication/dirty-energy-big-money/">cleanegroup.org</a> · Clean Energy Group, peaker plant data. <a href="https://www.cleanegroup.org/new-power-plant-data-inequities/">cleanegroup.org</a></li>
+    <li>NYSERDA, Battery Energy Storage System Guidebook and Model Law, February 2026. <a href="https://www.nyserda.ny.gov/-/media/Project/Nyserda/Files/Programs/Clean-Energy-Siting/Energy-Storage-System-Guidebook.pdf">nyserda.ny.gov</a></li>
+    <li>Resources for the Future, "Decommissioning US Power Plants." <a href="https://media.rff.org/documents/RFF20Rpt20Decommissioning20Power20Plants.pdf">rff.org</a></li>
+    <li>Redwood Materials. <a href="https://www.redwoodmaterials.com/materials/">redwoodmaterials.com</a> · Battery-News on R3 Lithium, September 2026. <a href="https://battery-news.de/en/2026/09/14/r3-lithium-begins-lithium-carbonate-recovery-operations-in-georgia/">battery-news.de</a> · Glencore on Li-Cycle. <a href="https://www.glencore.com/what-we-do/recycling/li-cycle">glencore.com</a></li>
+    <li>NYSDEC, Rechargeable Battery Recycling. <a href="https://dec.ny.gov/environmental-protection/recycling-composting/rechargeable-battery-recycling">dec.ny.gov</a> · Waste Dive on the BRACE Act. <a href="https://www.wastedive.com/news/us-house-representatives-waste-battery-critical-minerals/830539/">wastedive.com</a> · Resource Recycling on the BRACE Act, 24 September 2026. <a href="https://resource-recycling.com/policy-now/2026/09/24/house-passes-bill-to-ease-lithium-ion-battery-storage-rules/">resource-recycling.com</a> · Energy-Storage.News on Redwood and Ascend, April 2026. <a href="https://www.energy-storage.news/us-battery-recycling-in-doldrums-updates-from-redwood-materials-ascend-elements/">energy-storage.news</a></li>
+  </ul></div>
+</details>
 
-  <div class="pg-sec-h">The storage side</div>
-  <h2 class="pg-big">Three ways BESS lowers bills</h2>
-  <p class="pg-sub">Storage stabilizes the Con Edison grid by shaving peak demand, deferring expensive upgrades, and making renewables usable around the clock.</p>
+<details class="bf1-how bf1-review">
+  <summary>Notes for reviewers</summary>
+  <div><ul>
+    <li><b>Correction to the first draft:</b> PNNL's "30 percent every 10 years" is a refurbishment of the power electronics, not a battery replacement. The fading and top-up figures now come from EIA's cost study.</li>
+    <li>The manufacturing figures cover the battery pack. Whole-system studies put inverters, enclosures and cooling at 32 to 58 percent of the total; the higher toggle roughly covers that. Even the harshest combination, the older estimate with worst-case charging, pays back in about five and a half years.</li>
+    <li>The peaker figure uses the full-load test heat rate. Real peakers often run at part load and burn more fuel per MWh, so the benefit shown is on the low side.</li>
+    <li>The solar figure (43 g) was confirmed through two citations of NREL's table; worth checking the PDF by eye.</li>
+    <li>Recycling news moves quickly. Rechecked 29 September 2026: Redwood reported about 20 GWh a year in April 2026; Ascend's Georgia plant is producing again under R3 Lithium; the BRACE Act passed the House on 15 September and was referred to the Senate Environment and Public Works Committee on 16 September.</li>
+    <li>eGRID2023 is still EPA's latest grid emissions release as of 29 September 2026. When eGRID2024 comes out, the charging figures need a rebuild.</li>
+    <li>PEAK Coalition's figures are from 2020 and cover New York City. We did not find Westchester-specific peaker data.</li>
+  </ul></div>
+</details>
 
-  <div class="pg-mechs pg-rv">
-    <div class="pg-mech pg-g"><div class="pg-num">1</div><h4>Peak shaving</h4><p>Systems charge overnight or midday when demand is low, then discharge in the late afternoon and evening when demand peaks. Shifting that load protects transformer substations from overloading and avoids local outages during extreme heat.</p></div>
-    <div class="pg-mech pg-g"><div class="pg-num">2</div><h4>Deferring costly upgrades</h4><p>Storage is a non-wires solution that removes the immediate need to build multi-million dollar substations, and relieves congestion where adding cable in dense underground conduit is physically very difficult.</p></div>
-    <div class="pg-mech pg-g"><div class="pg-num">3</div><h4>Integrating clean energy</h4><p>Storage harvests solar generated during the day and releases it when production drops, providing a reliable reserve that reduces reliance on older, high-polluting fossil fuel peaker plants sited in local neighborhoods.</p></div>
-  </div>
-
-  <p class="pg-sub" style="margin-top:16px">Utilities also pay customers directly for this flexibility. Con Edison demand-response programs such as Smart Usage and Grid Rewards&trade; pay customers to shed load during peak events and deliver those reductions reliably across the year.</p>
-
-  <div class="pg-sec-h">Westchester today</div>
-  <h2 class="pg-big">Don't we have enough solar already?</h2>
-  <p class="pg-sub">As of May 2026. The vast majority of systems are roof-mounted and serve behind the meter, reducing the owner's own bill.</p>
-
-  <div class="pg-bignum pg-rv">
-    <div class="pg-bn"><div class="pg-n" data-count="14300" data-suffix="+">0</div><div class="pg-l">Residential solar systems</div></div>
-    <div class="pg-bn"><div class="pg-n" data-count="550" data-suffix="+">0</div><div class="pg-l">Non-residential properties</div></div>
-    <div class="pg-bn"><div class="pg-n" data-count="150" data-suffix="+">0</div><div class="pg-l">Community solar projects online</div></div>
-    <div class="pg-bn"><div class="pg-n" data-count="262" data-suffix=" MW">0</div><div class="pg-l">Combined solar capacity</div></div>
-  </div>
-
-  <div class="pg-target pg-rv">
-    <div class="pg-lab">To meet Westchester's fair share of statewide clean energy targets</div>
-    <div class="pg-v"><span data-count="400" data-suffix="%">0</span></div>
-    <p>Installed solar capacity must increase roughly fourfold, from 262 MW today to <b style="color:#fff">1,000 MW</b>.</p>
-  </div>
-
-  <div class="pg-cta">
-    <a href="fire-safety.html">Aren't BESS dangerous?<span>Read the Energy Storage Fire &amp; Safety fact sheet</span></a>
-    <a href="index.html">Where does my town stand?<span>Open the BESS Policy Dashboard</span></a>
-  </div>
-
-  <div class="pg-srcs">
-    <b>Sources.</b> NYISO Gold Book 2025 &middot; NYISO Short-Term Assessment of Reliability, 2026 Q1 &middot; EPA 2023 eGRID, New York Metro subregion &middot; NY-Sun program data, May 2026 &middot; Con Edison rate filings. Adapted from the CEAC Solar/BESS economic considerations outline (D. Cooper, Zarin &amp; Steinmetz; L. Wiegman, Sustainable Westchester).
-  </div>
-
-  <footer>
-    BCW / EarthKind Clean Energy Action Coalition &middot; Westchester County, New York
-  </footer>
+</div>
 
 </section>
 </div>
@@ -1468,44 +1523,106 @@ window.toggleTheme = function(){
 })();
 
 
+
 (function(){
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function fmt(v, dec){ return dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US'); }
-
-  function runCount(el){
-    var target = parseFloat(el.getAttribute('data-count'));
-    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
-    var pre = el.getAttribute('data-prefix') || '';
-    var suf = el.getAttribute('data-suffix') || '';
-    function put(v){ el.innerHTML = pre + fmt(v, dec) + suf; }
-    if (reduce){ put(target); return; }
-    var dur = 1100, t0 = null;
-    function step(ts){
-      if (t0 === null) t0 = ts;
-      var p = Math.min((ts - t0) / dur, 1);
-      put(target * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) requestAnimationFrame(step); else put(target);
+  var root=document.querySelector('[data-bfpage="lc"]'); if(!root) return;
+  function q(k){return root.querySelector('[data-lc="'+k+'"]');}
+  function each(l,f){Array.prototype.forEach.call(l,f);}
+  function num(n){return Math.round(n).toLocaleString('en-US');}
+  var P={"dSrc": "nycw", "dEmb": "recent", "dYear": 20, "cw": 480, "ch": 260, "cl": 50, "cr": 100, "ct": 16, "cb": 32, "fade": 1.5, "rte": 0.85, "peaker": 583.60694, "kwh": 20000, "homeYr": 6.852, "src": {"solar": [43.0, "Solar", "Charged from solar"], "ny": [210.96606217851607, "New York average", "Charged from New York's average grid"], "nycw": [392.13107020711055, "NYC and Westchester grid", "Charged from today's NYC and Westchester grid"], "worst": [443.1149132276765, "Worst case", "Charged from the dirtiest part of today's NYC and Westchester grid"]}, "emb": {"recent": [55.0, "Recent estimate"], "older": [109.3, "Older, higher estimate"]}, "stages": [[0, 0, "Built and inspected", "Before it connects to the grid, the site is inspected under New York's 2025 Fire Code, and the owner posts a bond that will pay to remove it someday."], [1, 19, "Working every day", "It charges when power is cheap and plentiful, then gives it back in the late afternoon and evening, when demand peaks and the least efficient gas plants would otherwise switch on."], [20, 20, "Retired and recycled", "The bond pays for removal, the site is restored, and the cells go to a recycler that recovers materials such as lithium and copper."]], "topup": ["Topped up", "Batteries lose about 1.5 percent of their capacity a year. Every few years the operator adds new modules to bring the site back to full size, rather than replacing the whole battery."]};
+  var src=P.dSrc, emb=P.dEmb, year=P.dYear, S=null;
+  var CW=P.cw,CH=P.ch,CL=P.cl,CR=P.cr,CT=P.ct,CB=P.cb;
+  function xpx(t){return CL+(CW-CL-CR)*t/20;}
+  function capWith(t){var k=t<20?Math.min(Math.floor(t/5),3):3; return 100-P.fade*(t-k*5);}
+  function run(){
+    var net=P.peaker-P.src[src][0]/P.rte, e=P.emb[emb][0], dt=1/96, n=Math.round(20/dt);
+    var mwh=0, av=0, em=P.kwh*e/1000, pay=null, out=[[0,0,-em]];
+    for(var i=1;i<=n;i++){
+      var t0=(i-1)*dt, t=i*dt, m=P.kwh/1000*365*capWith(t0)/100*dt;
+      mwh+=m; av+=m*net/1000;
+      [5,10,15].forEach(function(ty){ if(t0<ty && ty<=t) em+=P.kwh*P.fade*5/100*e/1000; });
+      var v=av-em; if(pay===null && v>=0) pay=t; out.push([t,mwh,v]);
     }
-    requestAnimationFrame(step);
+    return {s:out,pay:pay};
   }
+  function at(t){return S.s[Math.round(t*96)];}
+  function drawCarbon(){
+    var s=S.s, lo=Infinity, hi=-Infinity;
+    s.forEach(function(r){lo=Math.min(lo,r[2]);hi=Math.max(hi,r[2]);}); lo*=1.15; hi*=1.08;
+    function y(v){return CT+(CH-CT-CB)*(hi-v)/(hi-lo);}
+    var d='M'; for(var i=0;i<s.length;i+=4){ d+=(i?' L':'')+xpx(s[i][0]).toFixed(1)+','+y(s[i][2]).toFixed(1); }
+    d+=' L'+xpx(20).toFixed(1)+','+y(s[s.length-1][2]).toFixed(1);
+    q('c-line').setAttribute('d',d);
+    var z=y(0).toFixed(1); ['y1','y2'].forEach(function(a){q('c-zero').setAttribute(a,z);});
+    var step=Math.pow(10,Math.floor(Math.log10(hi/2))); if(hi/step>6) step*=2;
+    var g=q('c-grid'), NS='http://www.w3.org/2000/svg'; while(g.firstChild) g.removeChild(g.firstChild);
+    for(var v=0; v<=hi; v+=step){
+      var ln=document.createElementNS(NS,'line'); ln.setAttribute('x1',CL); ln.setAttribute('x2',CW-CR);
+      ln.setAttribute('y1',y(v).toFixed(1)); ln.setAttribute('y2',y(v).toFixed(1)); ln.setAttribute('stroke','var(--g200)'); g.appendChild(ln);
+      var tx=document.createElementNS(NS,'text'); tx.setAttribute('x',CL-7); tx.setAttribute('y',(y(v)+4).toFixed(1));
+      tx.setAttribute('font-size','13'); tx.setAttribute('fill','var(--g500)'); tx.setAttribute('text-anchor','end');
+      tx.textContent=(v/1000)+'k'; g.appendChild(tx);
+    }
+    var last=s[s.length-1][2], end=q('c-end'); end.setAttribute('y',(y(last)+4).toFixed(1)); end.textContent=num(last)+' t';
+    q('c-pay').setAttribute('cx',xpx(S.pay).toFixed(1)); q('c-pay').setAttribute('cy',z);
+    q('c-paylab').setAttribute('x',(xpx(S.pay)+9).toFixed(1)); q('c-paylab').setAttribute('y',(y(0)+16).toFixed(1));
+    S.y=y;
+  }
+  function setYear(t){
+    year=t; var r=at(t), x=xpx(t).toFixed(1);
+    ['cap-mark','c-mark'].forEach(function(k){q(k).setAttribute('x1',x);q(k).setAttribute('x2',x);});
+    var cy=CT+(CH-CT-CB)*(1-capWith(t)/100);
+    q('cap-dot').setAttribute('cx',x); q('cap-dot').setAttribute('cy',cy.toFixed(1));
+    q('c-dot').setAttribute('cx',x); q('c-dot').setAttribute('cy',S.y(r[2]).toFixed(1));
+    q('year').textContent='Year '+t; q('range').value=t;
+    var st=P.stage(t); q('stage-h').textContent=st[0]; q('stage-t').textContent=st[1];
+    var c=capWith(t); q('cap').textContent=(Math.round(c*10)/10)+'%';
+    q('mwh').textContent=num(r[1])+' MWh';
+    var homes=r[1]/P.homeYr, rd=homes>1000?100:10;
+    q('homes').textContent=r[1]>0?'A year of electricity for about '+num(Math.round(homes/rd)*rd)+' New York homes':'Not yet running';
+    q('carbon').textContent=r[2]>=0?num(r[2])+' tons of CO2 avoided so far, after paying back its manufacturing':'Still paying back: '+num(-r[2])+' tons to go';
+  }
+  function refresh(){
+    S=run(); drawCarbon();
+    q('pay').textContent=Math.max(1,Math.round(S.pay*12))+' months';
+    q('pay-n').textContent=P.src[src][2];
+    each(root.querySelectorAll('[data-lc-src]'),function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-lc-src')===src));});
+    each(root.querySelectorAll('[data-lc-emb]'),function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-lc-emb')===emb));});
+    setYear(year);
+  }
+  P.stage=function(t){ if(t===5||t===10||t===15) return P.topup; for(var i=0;i<P.stages.length;i++){var s=P.stages[i]; if(t>=s[0]&&t<=s[1]) return [s[2],s[3]];} };
+  q('range').hidden=false; q('controls').hidden=false;
+  q('range').addEventListener('input',function(){setYear(+q('range').value);});
+  each(root.querySelectorAll('[data-lc-src]'),function(b){b.addEventListener('click',function(){src=b.getAttribute('data-lc-src');refresh();});});
+  each(root.querySelectorAll('[data-lc-emb]'),function(b){b.addEventListener('click',function(){emb=b.getAttribute('data-lc-emb');refresh();});});
+  refresh();
 
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (!e.isIntersecting) return;
-      var el = e.target;
-      el.classList.add('pg-in');
-      el.querySelectorAll('[data-count]').forEach(runCount);
-      el.querySelectorAll('.pg-seg').forEach(function(s){ s.style.width = s.getAttribute('data-w') + '%'; });
-      el.querySelectorAll('.pg-ffill').forEach(function(f){
-        f.style.width = f.getAttribute('data-w') + '%';
-        f.classList.add('on');
-      });
-      io.unobserve(el);
-    });
-  }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+  (function(){
+    var card=q('range'), touched=false, still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    card.addEventListener('input',function(){touched=true;});
+    each(root.querySelectorAll('[data-lc-src],[data-lc-emb]'),function(b){b.addEventListener('click',function(){touched=true;});});
+    if(still||!('IntersectionObserver' in window)) return;
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting) return; io.disconnect(); if(touched) return;
+      var t0=null, dur=3200;
+      function step(ts){ if(touched) return; if(t0===null) t0=ts; var k=Math.min(1,(ts-t0)/dur);
+        setYear(Math.round(k*20)); if(k<1) requestAnimationFrame(step); }
+      setYear(0); requestAnimationFrame(step);
+    });},{threshold:.45});
+    io.observe(q('c-svg'));
+  })();
 
-  document.querySelectorAll('.pg-rv').forEach(function(el){ io.observe(el); });
+  (function(){
+    var qs=root.querySelectorAll('[data-anim="wait"]');
+    var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!qs.length||still||!('IntersectionObserver' in window)) return;
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.setAttribute('data-anim','on');io.unobserve(e.target);}});},{threshold:.5});
+    Array.prototype.forEach.call(qs,function(q){io.observe(q);});
+  })();
+
 })();
+
 
 </script>
 </body>

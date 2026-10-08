@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How Solar &amp; Storage Lower Your Electric Bill, Westchester BESS, BCW &amp; EarthKind</title>
-<meta name="description" content="What you are actually charged for on a Westchester electric bill, why those charges keep rising, and how local solar and battery energy storage push them back down.">
+<title>Size and Setbacks | CEAC Battery Storage</title>
+<meta name="description" content="How much room battery storage needs, from a home battery to a utility project, and how much land setback rules keep clear around it.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2214%22 y=%2230%22 width=%2266%22 height=%2240%22 rx=%228%22 fill=%22none%22 stroke=%22%231F3864%22 stroke-width=%228%22/><rect x=%2282%22 y=%2242%22 width=%2210%22 height=%2216%22 rx=%223%22 fill=%22%231F3864%22/><rect x=%2226%22 y=%2242%22 width=%2236%22 height=%2216%22 rx=%223%22 fill=%22%231F8A4C%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1052,115 +1052,134 @@
   <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.js"></script>
 <style>
 
-    
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Roboto,Arial,"Helvetica Neue",Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
-  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-  .pg-wrap{max-width:1000px;margin:0 auto;padding:24px 20px 70px}
 
-  header.pg-top{background:linear-gradient(135deg,#000000,#1A1818 58%,#3F4145);border-radius:0;box-shadow:var(--shadow);padding:26px 28px;margin-bottom:22px;position:relative;overflow:hidden}
-  header.pg-top::after{content:"";position:absolute;right:-40px;top:-40px;width:210px;height:210px;border-radius:0;background:radial-gradient(circle,rgba(255,255,255,.10),transparent 68%)}
-  .pg-eyebrow{font-size:12px;font-weight:700;color:#B9BABC;letter-spacing:1.4px;text-transform:uppercase}
-  header.pg-top h1{font-size:30px;line-height:1.1;letter-spacing:-.6px;margin:8px 0;color:#fff;font-weight:800;max-width:24ch}
-  header.pg-top p{margin:0;color:#C9CACC;font-size:15px;max-width:66ch}
+.bfwrap [hidden]{display:none !important}
+.bfwrap.bfwrap h3{text-transform:none;letter-spacing:0}
+.bfwrap{--shade:#F6F5F7;--track:#EDEAEE;--on:#FFFFFF;
+  --tint:color-mix(in srgb, var(--red) 10%, var(--card));
+  --tint2:color-mix(in srgb, var(--red) 30%, var(--card));
+  --tint3:color-mix(in srgb, var(--red) 62%, var(--card));
+  --plant:color-mix(in srgb, var(--green) 13%, var(--card));
+  --plant2:color-mix(in srgb, var(--green) 42%, var(--card))}
+.bfwrap.bfwrap .bf-open{padding-block:4px 6px;border:0}
+.bfwrap.bfwrap .bf-open + section{border-top:0}
 
-  .pg-sec-h{font-size:13px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);margin:38px 0 16px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-  h2.pg-big{font-size:23px;font-weight:800;letter-spacing:-.3px;color:var(--navy);margin:0 0 6px}
-  .pg-sub{color:var(--muted);font-size:14.5px;margin:0 0 18px;max-width:74ch}
-
-  .pg-rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
-  .pg-rv.pg-in{opacity:1;transform:none}
-
-  /* bill composition */
-  .pg-billbar{display:flex;height:64px;border-radius:0;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
-  .pg-seg{height:100%;width:0;transition:width 1.2s cubic-bezier(.22,.9,.3,1);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px}
-  .pg-seg.pg-d{background:linear-gradient(135deg,#3F4145,#1A1818)}
-  .pg-seg.pg-s{background:linear-gradient(135deg,#BE1E2D,#961826)}
-  .pg-seg.pg-t{background:linear-gradient(135deg,#C9CACC,#B9BABC)}
-  .pg-billkey{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:13px;margin-top:14px}
-  .pg-bk{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;box-shadow:var(--shadow)}
-  .pg-bk .pg-sw{width:11px;height:11px;border-radius:0;display:inline-block;margin-right:8px}
-  .pg-bk h4{margin:0 0 4px;font-size:14.5px;color:var(--navy);font-weight:700}
-  .pg-bk p{margin:0;font-size:13px;color:var(--muted)}
-
-  /* fuel mix */
-  .pg-fuel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px}
-  .pg-frow{display:flex;align-items:center;gap:12px;margin:9px 0}
-  .pg-flabel{flex:0 0 132px;font-size:13.5px;font-weight:600;color:var(--navy)}
-  .pg-ftrack{flex:1;background:var(--g200);border-radius:0;height:22px;position:relative}
-  .pg-ffill{height:100%;width:0;border-radius:0;transition:width 1.1s cubic-bezier(.22,.9,.3,1);position:relative}
-  .pg-ffill.pg-gas{background:linear-gradient(90deg,#BE1E2D,#961826)}
-  .pg-ffill.pg-oth{background:var(--g400)}
-  .pg-ffill.pg-cln{background:linear-gradient(90deg,#59936A,#3E7D57)}
-  .pg-fval{position:absolute;left:calc(100% + 9px);top:0;line-height:22px;font-size:12.5px;font-weight:700;color:var(--muted);white-space:nowrap;opacity:0;transition:opacity .4s ease .6s}
-  .pg-ffill.on .pg-fval{opacity:1}
-  .pg-fnote{margin-top:16px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:13px}
-
-  /* rate rise */
-  .pg-rate{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
-  .pg-rp{text-align:center}
-  .pg-rp .pg-yr{font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
-  .pg-rp .pg-v{font-size:38px;font-weight:800;letter-spacing:-1.4px;color:var(--navy);font-variant-numeric:tabular-nums;line-height:1.1}
-  .pg-rp.pg-up .pg-v{color:var(--warm)}
-  .pg-arrow{font-size:26px;color:var(--warm);font-weight:800}
-  .pg-ratefoot{text-align:center;margin-top:14px;font-size:14.5px;color:var(--muted)}
-  .pg-ratefoot b{color:var(--warm);font-size:19px;font-weight:800}
-
-  .pg-alert{background:var(--amber-soft);border:1px solid #E6D5AE;border-left:5px solid var(--amber);border-radius:var(--radius);padding:18px 20px;margin-top:18px}
-  .pg-alert h4{margin:0 0 6px;color:#7A5410;font-size:15px;font-weight:800}
-  .pg-alert p{margin:0;font-size:14px;color:#5F4410}
-  .pg-alert .pg-mw{font-size:27px;font-weight:800;color:var(--amber);letter-spacing:-.6px;display:block;margin:6px 0 2px;font-variant-numeric:tabular-nums}
-
-  /* mechanism cards */
-  .pg-mechs{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:14px}
-  .pg-mech{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;transition:transform .15s ease,box-shadow .15s ease}
-  .pg-mech:hover{transform:translateY(-2px);box-shadow:none}
-  .pg-mech .pg-num{width:29px;height:29px;border-radius:0;background:var(--accent-soft);color:var(--accent);font-weight:800;font-size:13.5px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
-  .pg-mech.pg-g .pg-num{background:var(--green-soft);color:var(--green)}
-  .pg-mech h4{margin:0 0 5px;font-size:15px;color:var(--navy);font-weight:700;line-height:1.25}
-  .pg-mech p{margin:0;font-size:13.3px;color:var(--muted)}
-
-  .pg-bignum{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:6px}
-  .pg-bn{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 16px;text-align:center}
-  .pg-bn .pg-n{font-size:31px;font-weight:800;letter-spacing:-1px;color:var(--green);font-variant-numeric:tabular-nums;line-height:1.05}
-  .pg-bn .pg-l{font-size:12.8px;color:var(--muted);margin-top:7px;line-height:1.35}
-
-  .pg-target{background:linear-gradient(135deg,#000000,#1A1818 60%,#3F4145);color:#fff;border-radius:0;padding:26px 28px;margin-top:22px;box-shadow:var(--shadow);text-align:center}
-  .pg-target .pg-lab{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#B9BABC}
-  .pg-target .pg-v{font-size:44px;font-weight:800;letter-spacing:-1.6px;margin:6px 0 2px}
-  .pg-target p{margin:6px auto 0;color:#C9CACC;font-size:14.8px;max-width:60ch}
-
-  .pg-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-  .pg-cta a{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:15px 18px;font-weight:700;color:var(--navy);font-size:14.5px;flex:1;min-width:230px}
-  .pg-cta a:hover{text-decoration:none;border-color:var(--accent);background:var(--accent-soft)}
-  .pg-cta a span{display:block;font-weight:400;font-size:13px;color:var(--muted);margin-top:3px}
-
-  footer{color:var(--muted);font-size:12.5px;margin-top:34px;text-align:center}
-  .pg-srcs{font-size:12.5px;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
-
-  @media (max-width:720px){
-    .pg-rate{grid-template-columns:1fr;gap:8px}
-    .pg-arrow{transform:rotate(90deg)}
-    header.pg-top h1{font-size:25px}
-    .pg-flabel{flex:0 0 96px;font-size:12.5px}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .pg-rv{opacity:1;transform:none;transition:none}
-    .pg-seg,.pg-ffill{transition:none}
-    .pg-fval{opacity:1;transition:none}
-    .pg-mech:hover{transform:none}
-  }
-
-  /* BCW header link row */
-  .pg-headrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-  .pg-headlink{display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1;
-    min-height:44px;padding:0 14px;font-size:11.5px;font-weight:500;letter-spacing:1.3px;text-transform:uppercase;
-    color:#fff;background:var(--accent);border:1px solid var(--accent);transition:background .12s,border-color .12s}
-  .pg-headlink:hover{text-decoration:none;background:var(--red-dark);border-color:var(--red-dark)}
-  .pg-headlink.alt{background:transparent;border-color:#fff;color:#fff}
-  .pg-headlink.alt:hover{background:rgba(255,255,255,.14);border-color:#fff}
-  .pg-headlink .pg-ar{margin-left:9px;flex:0 0 auto}
-  @media (max-width:620px){ .pg-headrow{flex-direction:column} .pg-headlink{width:100%} }
+.bfwrap.bfwrap *{box-sizing:border-box}
+.bfwrap.bfwrap .bf1-eyebrow{font:500 12px/1.2 Roboto,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.3px;color:var(--red);margin:0 0 10px}
+.bfwrap.bfwrap h2{font:700 clamp(21px,2.9vw,27px)/1.18 Roboto,Arial,sans-serif;margin:0 0 8px;text-wrap:balance}
+.bfwrap.bfwrap h3{font:700 16px/1.3 Roboto,Arial,sans-serif;margin:0 0 6px}
+.bfwrap.bfwrap p{margin:0 0 14px;max-width:66ch}
+.bfwrap.bfwrap .bf1-lede{font-size:19px;line-height:1.5;color:var(--g700);max-width:62ch;margin:0}
+.bfwrap.bfwrap section{padding-block:36px}
+.bfwrap.bfwrap section + section{border-top:1px solid var(--g200)}
+.bfwrap.bfwrap .bf1-sub{font-size:15.5px;color:var(--g700);margin:0 0 20px;max-width:64ch}
+.bfwrap.bfwrap .bf1-card{border:1px solid var(--g200);background:var(--card);padding:20px}
+.bfwrap.bfwrap .bf1-note{font:400 13px/1.5 Roboto,Arial,sans-serif;color:var(--g500);margin:12px 0 0;max-width:72ch}
+.bfwrap.bfwrap .bf1-k{font:500 11px/1.25 Roboto,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.1px;color:var(--g500);margin:0 0 6px}
+.bfwrap.bfwrap .bf1-q{font:900 clamp(36px,6.6vw,70px)/1.0 Roboto,Arial,sans-serif;letter-spacing:-1.4px;margin:0 0 18px;color:var(--ink);text-wrap:balance;max-width:15ch}
+.bfwrap.bfwrap .bf1-q.bf1-md{font-size:clamp(27px,4.3vw,44px);line-height:1.04;letter-spacing:-.9px;margin:0 0 12px;max-width:22ch}
+.bfwrap.bfwrap .bf1-q .bf1-w{display:inline-block}
+.bfwrap.bfwrap .bf1-q .bf1-kw{color:var(--red)}
+@media (prefers-reduced-motion:no-preference){
+.bfwrap.bfwrap .bf1-q[data-anim="on"] .bf1-w{animation:qrise .7s cubic-bezier(.2,.75,.25,1) both;animation-delay:calc(var(--i) * 70ms)}
+.bfwrap.bfwrap .bf1-q[data-anim="on"] .bf1-kw{animation:qrise .7s cubic-bezier(.2,.75,.25,1) both,qpop .55s ease-out none;
+    animation-delay:calc(var(--i) * 70ms),calc(var(--i) * 70ms + 560ms)}
+}
+@keyframes qrise{from{opacity:0;transform:translateY(.45em)}to{opacity:1;transform:none}}
+@keyframes qpop{0%{transform:none}45%{transform:translateY(-.07em) scale(1.07)}100%{transform:none}}
+.bfwrap.bfwrap .bf1-seg{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.bfwrap.bfwrap .bf1-seg button{font:500 13.5px/1.2 Roboto,Arial,sans-serif;color:var(--ink);background:var(--card);
+  border:1px solid var(--g300);padding:9px 13px;cursor:pointer;border-radius:0;text-align:left}
+.bfwrap.bfwrap .bf1-seg button small{display:block;font:400 11.5px/1.25 Roboto,Arial,sans-serif;color:var(--g500);margin-top:2px}
+.bfwrap.bfwrap .bf1-seg button:hover{border-color:var(--ink)}
+.bfwrap.bfwrap .bf1-seg button[aria-pressed="true"]{background:var(--ink);color:var(--on);border-color:var(--ink)}
+.bfwrap.bfwrap .bf1-seg button[aria-pressed="true"] small{color:var(--g300)}
+.bfwrap.bfwrap .bf1-seg button:disabled{cursor:default;color:var(--g500);border-style:dashed;background:transparent}
+.bfwrap.bfwrap .bf1-seg button:focus-visible, .bfwrap.bfwrap .bf1-range:focus-visible, .bfwrap.bfwrap [tabindex]:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.bfwrap.bfwrap .bf1-seg.lbl{align-items:center}
+.bfwrap.bfwrap .bf1-seg .lbltxt{font:500 11px/1 Roboto,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.1px;color:var(--g500);margin-right:4px}
+.bfwrap.bfwrap .bf1-range{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;margin:4px 0 2px;cursor:pointer}
+.bfwrap.bfwrap .bf1-range::-webkit-slider-runnable-track{height:6px;background:var(--g300)}
+.bfwrap.bfwrap .bf1-range::-moz-range-track{height:6px;background:var(--g300)}
+.bfwrap.bfwrap .bf1-range::-moz-range-progress{height:6px;background:var(--red)}
+.bfwrap.bfwrap .bf1-range::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;margin-top:-9px;background:var(--red);border:3px solid var(--card);box-shadow:0 0 0 1px var(--red);border-radius:0}
+.bfwrap.bfwrap .bf1-range::-moz-range-thumb{width:18px;height:18px;background:var(--red);border:3px solid var(--card);box-shadow:0 0 0 1px var(--red);border-radius:0}
+.bfwrap.bfwrap .bf1-ticks{display:flex;justify-content:space-between;gap:4px;margin:0 0 6px}
+.bfwrap.bfwrap .bf1-ticks button{flex:1 1 0;background:none;border:0;padding:4px 0;cursor:pointer;
+  font:500 12px/1.25 Roboto,Arial,sans-serif;color:var(--g500);text-align:center}
+.bfwrap.bfwrap .bf1-ticks button:first-child{text-align:left}
+.bfwrap.bfwrap .bf1-ticks button:last-child{text-align:right}
+.bfwrap.bfwrap .bf1-ticks button[aria-pressed="true"]{color:var(--ink);font-weight:700}
+@media (max-width:560px){
+.bfwrap.bfwrap .bf1-ticks button{font-size:10.5px}}
+.bfwrap.bfwrap .bf1-figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));border-top:1px solid var(--g200);border-left:1px solid var(--g200);margin-top:16px}
+.bfwrap.bfwrap .bf1-fig{border-right:1px solid var(--g200);border-bottom:1px solid var(--g200);padding:14px 16px;background:var(--card);min-width:0}
+.bfwrap.bfwrap .bf1-fig .bf1-v{font:900 25px/1.1 Roboto,Arial,sans-serif;font-variant-numeric:tabular-nums;margin:0 0 4px;letter-spacing:-.3px}
+.bfwrap.bfwrap .bf1-fig .bf1-v.bf1-acc{color:var(--red)}
+.bfwrap.bfwrap .bf1-fig .bf1-n{font:400 13px/1.45 Roboto,Arial,sans-serif;color:var(--g700);margin:0}
+.bfwrap.bfwrap .bf1-draw{display:block;width:100%;height:auto;max-width:100%;background:var(--shade);border:1px solid var(--g200)}
+.bfwrap.bfwrap .bf1-legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:12px 0 0;padding:0;list-style:none;font:400 13px/1.3 Roboto,Arial,sans-serif;color:var(--g700)}
+.bfwrap.bfwrap .bf1-legend li{display:flex;align-items:center;gap:8px}
+.bfwrap.bfwrap .bf1-sw{width:14px;height:14px;flex:0 0 auto;display:inline-block}
+.bfwrap.bfwrap .bf1-sw.bf1-acc{background:var(--red)}
+.bfwrap.bfwrap .bf1-sw.bf1-ink{background:var(--ink)}
+.bfwrap.bfwrap .bf1-sw.bf1-ring{background:var(--tint);outline:2px solid var(--red);outline-offset:-2px}
+.bfwrap.bfwrap .bf1-sw.bf1-ref{background:transparent;outline:1.5px dashed var(--g500);outline-offset:-2px}
+.bfwrap.bfwrap .bf1-sw.lot{background:var(--card);outline:1px solid var(--g400);outline-offset:-1px}
+.bfwrap.bfwrap .bf1-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:1px solid var(--g200);border-left:1px solid var(--g200)}
+.bfwrap.bfwrap .bf1-cards > div{border-right:1px solid var(--g200);border-bottom:1px solid var(--g200);background:var(--card);padding:18px}
+.bfwrap.bfwrap .bf1-cards p{font-size:14.5px;line-height:1.55;color:var(--g700);margin:0 0 8px}
+.bfwrap.bfwrap .bf1-cards p:last-child{margin-bottom:0}
+.bfwrap.bfwrap .bf1-tag{display:inline-block;font:500 10px/1 Roboto,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.1px;padding:5px 8px;margin:0 0 10px;border:1px solid var(--g300);color:var(--g700)}
+.bfwrap.bfwrap .bf1-tag.bf1-dark{background:var(--ink);color:var(--on);border-color:var(--ink)}
+.bfwrap.bfwrap .bf1-tag.bf1-acc{background:var(--red);color:#fff;border-color:var(--red)}
+.bfwrap.bfwrap details.bf1-how{border:1px solid var(--g200);background:var(--card);margin-top:14px}
+.bfwrap.bfwrap details.bf1-how > summary{cursor:pointer;list-style:none;padding:13px 16px;font:500 12px/1.2 Roboto,Arial,sans-serif;
+  text-transform:uppercase;letter-spacing:1.1px;color:var(--red)}
+.bfwrap.bfwrap details.bf1-how > summary::-webkit-details-marker{display:none}
+.bfwrap.bfwrap details.bf1-how > summary::after{content:" +";font-weight:700}
+.bfwrap.bfwrap details.bf1-how[open] > summary::after{content:" \2212"}
+.bfwrap.bfwrap details.bf1-how > summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
+.bfwrap.bfwrap details.bf1-how > div{padding:0 16px 14px;font-size:14px;line-height:1.6;color:var(--g700)}
+.bfwrap.bfwrap details.bf1-how > div p{max-width:78ch}
+.bfwrap.bfwrap details.bf1-how ul{margin:0 0 10px;padding-left:18px}
+.bfwrap.bfwrap details.bf1-how li{margin-bottom:5px}
+.bfwrap.bfwrap .bf1-srcs{list-style:none;margin:0;padding:0;font:400 13px/1.55 Roboto,Arial,sans-serif;color:var(--g500)}
+.bfwrap.bfwrap .bf1-srcs li{margin-bottom:6px}
+.bfwrap.bfwrap .bf1-srcs a{color:var(--g700)}
+.bfwrap.bfwrap .qa details{border-top:1px solid var(--g200);background:var(--card);border-left:1px solid var(--g200);border-right:1px solid var(--g200)}
+.bfwrap.bfwrap .qa details:last-child{border-bottom:1px solid var(--g200)}
+.bfwrap.bfwrap .qa summary{cursor:pointer;list-style:none;padding:16px 18px;font:700 16px/1.35 Roboto,Arial,sans-serif;display:flex;justify-content:space-between;gap:12px}
+.bfwrap.bfwrap .qa summary::-webkit-details-marker{display:none}
+.bfwrap.bfwrap .qa summary::after{content:"+";color:var(--red);font-weight:900}
+.bfwrap.bfwrap .qa details[open] summary::after{content:"\2212"}
+.bfwrap.bfwrap .qa summary:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
+.bfwrap.bfwrap .qa .ans{padding:0 18px 16px;font-size:15px;line-height:1.6;color:var(--g700)}
+.bfwrap.bfwrap .qa .ans p{margin:0 0 10px}
+.bfwrap.bfwrap .qa .ans b{color:var(--ink)}
+.bfwrap.bfwrap .bf1-review{border:1px dashed var(--g400);background:transparent;margin-top:28px}
+.bfwrap.bfwrap .bf1-review > summary{color:var(--g500)}
+.bfwrap.bfwrap footer.bf1-pg{border-top:3px solid var(--ink);padding-block:22px 0;margin-top:8px;font-size:13px;color:var(--g500)}
+@media (prefers-reduced-motion:no-preference){
+.bfwrap.bfwrap .bf1-seg button{transition:background .12s ease,color .12s ease}}
+.bfwrap.bfwrap .bf1-fp-size{aspect-ratio:2/1}
+.bfwrap.bfwrap .bf1-fp-sbgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:760px){
+.bfwrap.bfwrap .bf1-fp-sbgrid{grid-template-columns:1fr}}
+.bfwrap.bfwrap .bf1-fp-sbsvg{aspect-ratio:1/1;max-width:560px}
+.bfwrap.bfwrap .bf1-fp-sbfigs{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.bfwrap.bfwrap .bf1-fp-sbfigs .bf1-n + .bf1-n{margin-top:4px}
+.bfwrap.bfwrap .bf1-fp-swgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:760px){
+.bfwrap.bfwrap .bf1-fp-swgrid{grid-template-columns:1fr}}
+.bfwrap.bfwrap .bf1-fp-swsvg{aspect-ratio:1/1;max-width:560px;background:var(--card)}
+.bfwrap.bfwrap .bf1-fp-swtext{font:500 16px/1.5 Roboto,Arial,sans-serif;color:var(--ink);margin:0 0 16px;min-height:4.5em}
+.bfwrap.bfwrap .bf1-fp-swlists{display:grid;gap:14px}
+.bfwrap.bfwrap .bf1-fp-swlists ul{margin:0;padding-left:18px;font-size:14.5px;line-height:1.55;color:var(--g700)}
+.bfwrap.bfwrap .bf1-fp-swlists li{margin-bottom:4px}
+.bfwrap.bfwrap .bf1-sw.bf1-fp-road{background:var(--g400)}
+.bfwrap.bfwrap .bf1-sw.bf1-fp-hatch{background:repeating-linear-gradient(45deg,var(--g200) 0 3px,var(--g300) 3px 5px)}
+.bfwrap.bfwrap .bf1-sw.bf1-fp-plant{background:var(--plant);outline:1px solid var(--plant2);outline-offset:-1px}
 
 /* content-page footer: stay inside the column, no full-bleed overflow */
 .pgwrap footer{margin-left:0 !important;margin-right:0 !important;
@@ -1195,9 +1214,9 @@
     <a class="viewtab" href="index.html#projects">Successful Projects<span class="vt-sub">Storage working in Westchester</span></a>
     <a class="viewtab" href="index.html#modellaw">Model Law<span class="vt-sub">A common-sense code, not a ban</span></a>
     <a class="viewtab" href="index.html#considerations">Key Considerations<span class="vt-sub">Nine things boards should weigh</span></a>
-    <a class="viewtab viewlink sel" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
+    <a class="viewtab viewlink" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
     <a class="viewtab viewlink" href="fire-safety.html">Fire &amp; Safety<span class="vt-sub">The evidence on BESS risk</span></a>
-    <a class="viewtab viewlink" href="bess-size.html">Size &amp; Setbacks<span class="vt-sub">How much room storage needs</span></a>
+    <a class="viewtab viewlink sel" href="bess-size.html">Size &amp; Setbacks<span class="vt-sub">How much room storage needs</span></a>
     <a class="viewtab viewlink" href="bess-risk.html">Risk in Context<span class="vt-sub">How battery risk compares</span></a>
     <a class="viewtab viewlink" href="bess-life.html">Life Cycle<span class="vt-sub">From factory to recycler</span></a>
   </div>
@@ -1281,121 +1300,194 @@
   })();
   </script>
   <!--/NAVBLOCK-->
-<div class="titlestrip"><h1>How Solar &amp; Storage Lower Your Electric Bill</h1></div><div class="subline">What you are actually being charged for each month, why those charges keep climbing in Westchester, and the specific mechanisms by which local solar and battery storage push them back down.</div>
+<div class="titlestrip"><h1>Size &amp; Setbacks</h1></div><div class="subline">From a single home battery to a utility project, drawn to scale, and the land that distance rules keep clear around it.</div>
 <div class="mainrow">
 <nav id="toc" class="toc" aria-label="On this page"></nav>
 <div class="viewcol">
 <section class="view sel info pgwrap">
 
 
-  
+<div class="bfwrap">
+<section class="bf-open">
+  <h2 class="bf1-q" data-anim="on"><span class="bf1-w" style="--i:0">How</span> <span class="bf1-w" style="--i:1">much</span> <span class="bf1-w bf1-kw" style="--i:2">room</span> <span class="bf1-w" style="--i:3">does</span> <span class="bf1-w" style="--i:4">battery</span> <span class="bf1-w" style="--i:5">storage</span> <span class="bf1-w" style="--i:6">need?</span></h2>
+  <p class="bf1-lede">Less than most people picture. One Tesla Megapack holds enough electricity to run about 200 New York homes for a day, and it fits in a single parking space. The bigger question for land is how far a town asks the equipment to sit from its neighbors.</p></section>
+<div data-bfpage="fp">
 
-  <div class="pg-sec-h">Start here</div>
-  <h2 class="pg-big">What are you being charged for?</h2>
-  <p class="pg-sub">A Westchester electric bill splits three ways. Most of it is not the electricity itself.</p>
 
-  <div class="pg-rv" id="billsec">
-    <div class="pg-billbar">
-      <div class="pg-seg pg-d" data-w="56">56%</div>
-      <div class="pg-seg pg-s" data-w="33">33%</div>
-      <div class="pg-seg pg-t" data-w="11">11%</div>
+<section aria-labelledby="bf1-fp-h-size">
+  <h2 class="bf1-q bf1-md" data-anim="wait" id="bf1-fp-h-size"><span class="bf1-w" style="--i:0">How</span> <span class="bf1-w bf1-kw" style="--i:1">big</span> <span class="bf1-w" style="--i:2">is</span> <span class="bf1-w" style="--i:3">a</span> <span class="bf1-w" style="--i:4">battery?</span></h2>
+  <p class="bf1-sub">Move the slider from a single home battery up to a large utility project. Each view is drawn to scale next to something familiar.</p>
+  <div class="bf1-card">
+    <input class="bf1-range" type="range" min="0" max="5" step="1" value="3" data-fp="size-range" aria-label="Battery size" aria-valuetext="3.9 MWh" hidden>
+    <div class="bf1-ticks" data-fp="size-ticks" hidden><button type="button" data-fp-tick="0" aria-pressed="false">Home</button><button type="button" data-fp-tick="1" aria-pressed="false">Small business</button><button type="button" data-fp-tick="2" aria-pressed="false">600 kWh</button><button type="button" data-fp-tick="3" aria-pressed="true">One Megapack</button><button type="button" data-fp-tick="4" aria-pressed="false">Tarrytown site</button><button type="button" data-fp-tick="5" aria-pressed="false">Large project</button></div>
+    <p class="bf1-k" data-fp="size-view">Seen from above</p>
+    <svg class="bf1-draw bf1-fp-size" data-fp="size-svg" viewBox="-3 -6 60 30" role="img" aria-label="One Tesla Megapack 2 XL, 28.9 by 5.4 feet, beside a 40 foot shipping container and a parking space. Seen from above." preserveAspectRatio="xMidYMid meet">
+<g data-fp-step="0" hidden><line x1="-1.2" y1="0" x2="12.8" y2="0" stroke="var(--g400)" stroke-width="0.06"/><rect x="0.30" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><text x="0.30" y="-4.38" font-size="0.44" font-weight="700" fill="var(--ink)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Powerwall 3</text><text x="0.30" y="-3.88" font-size="0.44" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">13.5 kWh</text><rect x="4.00" y="-5.83" width="3.00" height="5.83" fill="none" stroke="var(--g500)" stroke-width="0.06" stroke-dasharray="0.18 0.12"/><text x="4.00" y="-6.08" font-size="0.44" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Refrigerator</text><g fill="none" stroke="var(--g500)" stroke-width="0.12" stroke-linecap="square"><circle cx="9.60" cy="-5.45" r="0.38" fill="var(--g500)" stroke="none"/><line x1="9.60" y1="-5.07" x2="9.60" y2="-2.68"/><line x1="9.60" y1="-4.43" x2="8.84" y2="-3.21"/><line x1="9.60" y1="-4.43" x2="10.36" y2="-3.21"/><line x1="9.60" y1="-2.68" x2="9.07" y2="0.00"/><line x1="9.60" y1="-2.68" x2="10.12" y2="0.00"/></g><text x="8.70" y="-6.13" font-size="0.44" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Person, 5 ft 10 in</text></g>
+<g data-fp-step="1" hidden><line x1="-1.5" y1="0" x2="36.5" y2="0" stroke="var(--g400)" stroke-width="0.12"/><rect x="0.30" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><rect x="2.63" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><rect x="4.97" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><rect x="7.30" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><rect x="9.63" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><rect x="11.97" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><rect x="14.30" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><rect x="16.63" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><rect x="18.97" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><rect x="21.30" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><rect x="23.63" y="-3.62" width="2.00" height="3.62" fill="var(--red)"/><text x="0.30" y="-5.53" font-size="1.05" font-weight="700" fill="var(--ink)" text-anchor="start" font-family="Roboto,Arial,sans-serif">11 Powerwall 3 units</text><text x="0.30" y="-4.33" font-size="1.05" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">148.5 kWh together</text><rect x="27.60" y="-5.83" width="3.00" height="5.83" fill="none" stroke="var(--g500)" stroke-width="0.12" stroke-dasharray="0.36 0.24"/><text x="27.60" y="-6.43" font-size="1.05" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Refrigerator</text><g fill="none" stroke="var(--g500)" stroke-width="0.2" stroke-linecap="square"><circle cx="33.60" cy="-5.45" r="0.38" fill="var(--g500)" stroke="none"/><line x1="33.60" y1="-5.07" x2="33.60" y2="-2.68"/><line x1="33.60" y1="-4.43" x2="32.84" y2="-3.21"/><line x1="33.60" y1="-4.43" x2="34.36" y2="-3.21"/><line x1="33.60" y1="-2.68" x2="33.08" y2="0.00"/><line x1="33.60" y1="-2.68" x2="34.12" y2="0.00"/></g><line x1="0.3" y1="1.6" x2="25.63" y2="1.6" stroke="var(--ink)" stroke-width="0.12"/><line x1="0.3" y1="1.1" x2="0.3" y2="2.1" stroke="var(--ink)" stroke-width="0.12"/><line x1="25.63" y1="1.1" x2="25.63" y2="2.1" stroke="var(--ink)" stroke-width="0.12"/><text x="0.30" y="3.30" font-size="1.05" font-weight="500" fill="var(--ink)" text-anchor="start" font-family="Roboto,Arial,sans-serif">25 ft of wall</text></g>
+<g data-fp-step="2" hidden><rect x="0.00" y="0.00" width="3.61" height="3.05" fill="var(--red)"/><rect x="6.61" y="0.00" width="3.61" height="3.05" fill="var(--red)"/><rect x="13.22" y="0.00" width="3.61" height="3.05" fill="var(--red)"/><rect x="19.83" y="0.00" width="3.61" height="3.05" fill="var(--red)"/><rect x="26.44" y="0.00" width="3.61" height="3.05" fill="var(--red)"/><rect x="33.04" y="0.00" width="3.61" height="3.05" fill="var(--red)"/><text x="0.00" y="-1.30" font-size="1.25" font-weight="700" fill="var(--ink)" text-anchor="start" font-family="Roboto,Arial,sans-serif">6 outdoor cabinets, about 600 kWh</text><text x="0.00" y="4.65" font-size="1.0625" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">3 ft between cabinets, as fire code expects</text><rect x="0.00" y="8.50" width="18.00" height="9.00" fill="none" stroke="var(--g500)" stroke-width="0.14" stroke-dasharray="0.42 0.28"/><text x="0.00" y="19.10" font-size="1.0625" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Parking space, 9 × 18 ft</text></g>
+<g data-fp-step="3"><rect x="0.00" y="0.00" width="28.87" height="5.41" fill="var(--red)"/><text x="0.00" y="-1.50" font-size="1.55" font-weight="700" fill="var(--ink)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Tesla Megapack 2 XL · 3.9 MWh</text><rect x="0.00" y="10.00" width="40.00" height="8.00" fill="none" stroke="var(--g500)" stroke-width="0.16" stroke-dasharray="0.48 0.32"/><text x="0.00" y="9.00" font-size="1.3175" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">40 ft shipping container</text><rect x="44.00" y="0.00" width="9.00" height="18.00" fill="none" stroke="var(--g500)" stroke-width="0.16" stroke-dasharray="0.48 0.32"/><text x="44.00" y="-1.50" font-size="1.3175" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Parking space</text></g>
+<g data-fp-step="4" hidden><rect x="0.00" y="0.00" width="110.00" height="46.00" fill="var(--tint)" stroke="var(--ink)" stroke-width="0.6"/><rect x="12.00" y="8.00" width="28.87" height="5.41" fill="var(--red)"/><rect x="12.00" y="13.91" width="28.87" height="5.41" fill="var(--red)"/><rect x="12.00" y="19.83" width="28.87" height="5.41" fill="var(--red)"/><rect x="12.00" y="25.74" width="28.87" height="5.41" fill="var(--red)"/><rect x="12.00" y="31.65" width="28.87" height="5.41" fill="var(--red)"/><text x="0.00" y="-6.00" font-size="5.6" font-weight="700" fill="var(--ink)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Approved 20 MWh site, Tarrytown</text><text x="0.00" y="54.00" font-size="4.592" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Fence line, about 110 × 46 ft</text><rect x="125.00" y="5.00" width="78.00" height="36.00" fill="none" stroke="var(--g500)" stroke-width="0.6" stroke-dasharray="1.80 1.20"/><text x="125.00" y="-1.00" font-size="4.592" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Tennis court</text></g>
+<g data-fp-step="5" hidden><rect x="0.00" y="0.00" width="532.11" height="532.11" fill="var(--tint)" stroke="var(--red)" stroke-width="2.2" stroke-dasharray="9 6"/><rect x="207.56" y="192.75" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="192.75" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="192.75" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="192.75" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="198.66" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="198.66" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="198.66" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="198.66" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="212.07" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="212.07" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="212.07" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="212.07" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="217.99" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="217.99" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="217.99" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="217.99" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="231.40" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="231.40" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="231.40" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="231.40" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="237.31" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="237.31" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="237.31" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="237.31" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="250.73" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="250.73" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="250.73" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="250.73" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="256.64" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="256.64" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="256.64" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="256.64" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="270.05" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="270.05" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="270.05" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="270.05" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="275.97" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="275.97" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="275.97" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="275.97" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="289.38" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="289.38" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="289.38" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="289.38" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="295.29" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="295.29" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="295.29" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="295.29" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="308.71" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="308.71" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="308.71" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="308.71" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="314.62" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="314.62" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="314.62" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="314.62" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="328.03" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="328.03" width="28.87" height="5.41" fill="var(--red)"/><rect x="266.30" y="328.03" width="28.87" height="5.41" fill="var(--red)"/><rect x="295.68" y="328.03" width="28.87" height="5.41" fill="var(--red)"/><rect x="207.56" y="333.95" width="28.87" height="5.41" fill="var(--red)"/><rect x="236.93" y="333.95" width="28.87" height="5.41" fill="var(--red)"/><text x="0.00" y="-16.00" font-size="20" font-weight="700" fill="var(--ink)" text-anchor="start" font-family="Roboto,Arial,sans-serif">240 MWh project, Huntington, Suffolk County</text><text x="10.00" y="518.11" font-size="16.0" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">6.5 acres of site work (explained below)</text><text x="207.56" y="182.75" font-size="16.0" font-weight="700" fill="var(--ink)" text-anchor="start" font-family="Roboto,Arial,sans-serif">The batteries: about 0.2 acres</text><rect x="590.00" y="186.00" width="360.00" height="160.00" fill="none" stroke="var(--g500)" stroke-width="2.2" stroke-dasharray="6.60 4.40"/><text x="590.00" y="176.00" font-size="16.0" font-weight="500" fill="var(--g700)" text-anchor="start" font-family="Roboto,Arial,sans-serif">Football field with end zones</text></g>
+    </svg>
+    <ul class="bf1-legend">
+      <li><span class="bf1-sw bf1-acc" aria-hidden="true"></span>Battery equipment, to scale</li>
+      <li><span class="bf1-sw bf1-ref" aria-hidden="true"></span>Familiar object, same scale</li>
+    </ul>
+    <div class="bf1-figs">
+      <div class="bf1-fig"><p class="bf1-k">Stores</p><p class="bf1-v bf1-acc" data-fp="size-cap">3.9 MWh</p><p class="bf1-n" data-fp="size-capn">One Tesla Megapack 2 XL</p></div>
+      <div class="bf1-fig"><p class="bf1-k">Takes up</p><p class="bf1-n" data-fp="size-area">156 sq ft (28.9 × 5.4 ft)</p></div>
+      <div class="bf1-fig"><p class="bf1-k">About the size of</p><p class="bf1-n" data-fp="size-like">About one parking space, and shorter than a 40 ft shipping container</p></div>
+      <div class="bf1-fig"><p class="bf1-k">Could supply</p><p class="bf1-n" data-fp="size-supply">About 209 average New York homes for a day</p></div>
     </div>
-    <div class="pg-billkey">
-      <div class="pg-bk"><h4><span class="pg-sw" style="background:#1A1818"></span>Delivery charges &middot; 56%</h4><p>What your provider pays to transport electricity from the source to your house, over poles, wires, substations and transformers.</p></div>
-      <div class="pg-bk"><h4><span class="pg-sw" style="background:#BE1E2D"></span>Supply charges &middot; 33%</h4><p>What your provider pays to purchase the electricity itself from generating sources.</p></div>
-      <div class="pg-bk"><h4><span class="pg-sw" style="background:#B9BABC"></span>Taxes &amp; surcharges &middot; 11%</h4><p>The remainder of the monthly bill.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="bf1-fp-h-sw">
+  <h2 class="bf1-q bf1-md" data-anim="wait" id="bf1-fp-h-sw"><span class="bf1-w" style="--i:0">What</span> <span class="bf1-w" style="--i:1">is</span> <span class="bf1-w" style="--i:2">the</span> <span class="bf1-w bf1-kw" style="--i:3">rest</span> <span class="bf1-w" style="--i:4">of</span> <span class="bf1-w" style="--i:5">the</span> <span class="bf1-w" style="--i:6">site</span> <span class="bf1-w" style="--i:7">for?</span></h2>
+  <p class="bf1-sub">Project filings list a number called the disturbance area: all the land cleared or graded during construction. On a large project the batteries are a small part of it. At the 240 MWh Long Island project, the battery units would cover about 0.2 of its 6.5 acres.</p>
+  <div class="bf1-card">
+    <div class="bf1-seg" role="group" aria-label="Stage of the project" data-fp="sw-seg" hidden>
+      <button type="button" data-fp-sw="build" aria-pressed="true">While it is being built</button>
+      <button type="button" data-fp-sw="run" aria-pressed="false">Once it is running</button>
+    </div>
+    <div class="bf1-fp-swgrid">
+      <div>
+        <svg class="bf1-draw bf1-fp-swsvg" viewBox="-14 -36 560.1 582.1" role="img" data-fp="sw-svg" aria-label="Illustrative layout of a 240 megawatt-hour battery project on a 6.5-acre work area: a fenced battery yard with fire lanes, a grid connection, firefighting water tanks, a stormwater basin, an access road, and a staging yard used during construction."><defs><pattern id="bf1-fphatch" patternUnits="userSpaceOnUse" width="14" height="14"><rect width="14" height="14" fill="var(--g200)"/><path d="M-2 16 16 -2" stroke="var(--g300)" stroke-width="3"/></pattern><pattern id="bf1-fphatch2" patternUnits="userSpaceOnUse" width="10" height="10"><rect width="10" height="10" fill="var(--g300)"/><path d="M-2 12 12 -2" stroke="var(--g400)" stroke-width="2.5"/></pattern><pattern id="bf1-fpplant" patternUnits="userSpaceOnUse" width="16" height="16"><rect width="16" height="16" fill="var(--plant)"/><circle cx="8" cy="8" r="2.4" fill="var(--plant2)"/></pattern></defs><g data-fp-swv="build"><rect x="0" y="0" width="532.1" height="532.1" fill="url(#bf1-fphatch)"/><rect x="40" y="340" width="260" height="160" fill="url(#bf1-fphatch2)" stroke="var(--g500)" stroke-width="1.5" stroke-dasharray="6 4"/><text x="52.0" y="404.0" font-size="15" font-weight="700" fill="var(--ink)" font-family="Roboto,Arial,sans-serif">Staging for cranes,</text><text x="52.0" y="423.0" font-size="15" font-weight="700" fill="var(--ink)" font-family="Roboto,Arial,sans-serif">deliveries and materials</text></g><g data-fp-swv="run" hidden><rect x="0" y="0" width="532.1" height="532.1" fill="url(#bf1-fpplant)"/><text x="52.0" y="404.0" font-size="15" font-weight="700" fill="var(--ink)" font-family="Roboto,Arial,sans-serif">Staging yard,</text><text x="52.0" y="423.0" font-size="15" font-weight="700" fill="var(--ink)" font-family="Roboto,Arial,sans-serif">replanted after construction</text></g><rect x="318" y="170" width="20" height="362.1" fill="var(--g400)"/><rect x="300" y="160" width="38" height="20" fill="var(--g400)"/><rect x="338" y="100" width="22" height="20" fill="var(--g400)"/><rect x="87.5" y="72.7" width="165.0" height="194.6" fill="var(--g400)"/><rect x="109.5" y="94.7" width="121.0" height="150.6" fill="var(--card)"/><rect x="111.51" y="96.69" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="96.69" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="96.69" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="96.69" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="102.61" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="102.61" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="102.61" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="102.61" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="116.02" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="116.02" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="116.02" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="116.02" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="121.93" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="121.93" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="121.93" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="121.93" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="135.35" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="135.35" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="135.35" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="135.35" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="141.26" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="141.26" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="141.26" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="141.26" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="154.67" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="154.67" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="154.67" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="154.67" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="160.59" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="160.59" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="160.59" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="160.59" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="174.00" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="174.00" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="174.00" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="174.00" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="179.91" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="179.91" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="179.91" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="179.91" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="193.33" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="193.33" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="193.33" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="193.33" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="199.24" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="199.24" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="199.24" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="199.24" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="212.65" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="212.65" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="212.65" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="212.65" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="218.57" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="218.57" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="218.57" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="218.57" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="231.98" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="231.98" width="28.87" height="5.41" fill="var(--red)"/><rect x="170.25" y="231.98" width="28.87" height="5.41" fill="var(--red)"/><rect x="199.62" y="231.98" width="28.87" height="5.41" fill="var(--red)"/><rect x="111.51" y="237.89" width="28.87" height="5.41" fill="var(--red)"/><rect x="140.88" y="237.89" width="28.87" height="5.41" fill="var(--red)"/><rect x="40" y="40" width="260" height="260" fill="none" stroke="var(--ink)" stroke-width="3"/><text x="48.0" y="60.0" font-size="15" font-weight="700" fill="var(--ink)" font-family="Roboto,Arial,sans-serif">Fenced battery yard</text><text x="89.5" y="285.3" font-size="15" font-weight="500" fill="var(--g700)" font-family="Roboto,Arial,sans-serif">20 ft fire lanes</text><rect x="360" y="40" width="145" height="110" fill="var(--card)" stroke="var(--ink)" stroke-width="2"/><rect x="372" y="96" width="26" height="26" fill="var(--ink)"/><rect x="414" y="96" width="26" height="26" fill="var(--ink)"/><rect x="456" y="96" width="26" height="26" fill="var(--ink)"/><text x="368.0" y="62.0" font-size="15" font-weight="700" fill="var(--ink)" font-family="Roboto,Arial,sans-serif">Grid connection</text><text x="368.0" y="80.0" font-size="15" font-weight="500" fill="var(--g700)" font-family="Roboto,Arial,sans-serif">and transformers</text><circle cx="387" cy="200" r="17" fill="var(--card)" stroke="var(--ink)" stroke-width="2"/><circle cx="437" cy="200" r="17" fill="var(--card)" stroke="var(--ink)" stroke-width="2"/><text x="362.0" y="240.0" font-size="15" font-weight="500" fill="var(--g700)" font-family="Roboto,Arial,sans-serif">Firefighting water</text><rect x="360" y="300" width="145" height="120" rx="34" ry="34" fill="var(--g200)" stroke="var(--g500)" stroke-width="2"/><text x="378.0" y="358.0" font-size="15" font-weight="700" fill="var(--ink)" font-family="Roboto,Arial,sans-serif">Stormwater</text><text x="378.0" y="377.0" font-size="15" font-weight="700" fill="var(--ink)" font-family="Roboto,Arial,sans-serif">basin</text><text x="333.0" y="518.1" font-size="15" font-weight="500" fill="var(--ink)" font-family="Roboto,Arial,sans-serif" text-anchor="start" transform="rotate(-90 333 518.1)">Access road</text><rect x="0" y="0" width="532.1" height="532.1" fill="none" stroke="var(--g500)" stroke-width="2" stroke-dasharray="8 5"/><text x="0.0" y="-12.0" font-size="15" font-weight="700" fill="var(--ink)" font-family="Roboto,Arial,sans-serif">6.5-acre work area</text></svg>
+        <ul class="bf1-legend">
+          <li><span class="bf1-sw bf1-acc" aria-hidden="true"></span>Battery units</li>
+          <li><span class="bf1-sw bf1-fp-road" aria-hidden="true"></span>Roads and fire lanes</li>
+          <li><span class="bf1-sw bf1-fp-hatch" aria-hidden="true"></span>Cleared for construction</li>
+          <li><span class="bf1-sw bf1-fp-plant" aria-hidden="true"></span>Replanted</li>
+        </ul>
+        <p class="bf1-note">Illustrative layout, roughly to scale. The parts are the ones listed in the Aria project filing in East Fishkill. Real layouts vary by site.</p>
+      </div>
+      <div>
+        <p class="bf1-fp-swtext" data-fp="sw-text">During construction the whole work area is cleared or graded. Besides the batteries, it needs space for cranes, deliveries and materials.</p>
+        <div class="bf1-fp-swlists">
+          <div><p class="bf1-k">Stays while the project runs</p>
+            <ul>
+              <li>The fenced battery yard, with the spacing between units set by fire testing</li>
+              <li>Fire lanes wide enough for a fire truck, at least 20 feet under the fire code</li>
+              <li>The switchyard and transformers that connect to the grid</li>
+              <li>Water tanks for firefighting, stormwater basins, fencing and planted screening</li>
+            </ul></div>
+          <div><p class="bf1-k">Goes away after construction</p>
+            <ul>
+              <li>Staging yards for cranes, deliveries and materials</li>
+              <li>Temporary roads and graded slopes</li>
+              <li>New York's construction stormwater permit requires every disturbed area to be stabilized, usually by replanting, before the permit can close</li>
+            </ul></div>
+        </div>
+        <p class="bf1-note">And at the end of its life, the decommissioning plan and bond that towns require pay to remove the equipment and restore the site. The Huntington project's 6.5 acres sit on an 11-acre industrial property, a precast concrete business at the time of its filing.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="pg-sec-h">Why it keeps rising</div>
-  <h2 class="pg-big">Westchester runs on natural gas</h2>
-  <p class="pg-sub">The grid serving the metro New York area relies 99% on fossil fuel combustion, and 98% of that is natural gas. When gas prices move, your supply charge moves with them.</p>
-
-  <div class="pg-fuel pg-rv" id="fuelsec">
-    <div class="pg-frow"><div class="pg-flabel">Natural gas</div><div class="pg-ftrack"><div class="pg-ffill pg-gas" data-w="98.2"><span class="pg-fval">98.2%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Other fossil</div><div class="pg-ftrack"><div class="pg-ffill pg-oth" data-w="0.7"><span class="pg-fval">0.7%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Oil</div><div class="pg-ftrack"><div class="pg-ffill pg-oth" data-w="0.5"><span class="pg-fval">0.5%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Solar</div><div class="pg-ftrack"><div class="pg-ffill pg-cln" data-w="0.2"><span class="pg-fval">0.2%</span></div></div></div>
-    <div class="pg-frow"><div class="pg-flabel">Wind</div><div class="pg-ftrack"><div class="pg-ffill pg-cln" data-w="0.1"><span class="pg-fval">0.1%</span></div></div></div>
-    <div class="pg-fnote">Because utilities are allowed to pass through 100% of whatever electric supply costs each month, they have little incentive to hold supply rates down. They are always made whole by the consumer. <b>Source:</b> NYISO Gold Book 2025; EPA 2023 eGRID, New York Metro subregion.</div>
-  </div>
-
-  <h2 class="pg-big" style="margin-top:34px">Residential rates rose 30% in four years</h2>
-  <p class="pg-sub">What a typical Con Edison household paid per kilowatt-hour.</p>
-
-  <div class="pg-rv" id="ratesec">
-    <div class="pg-rate">
-      <div class="pg-rp"><div class="pg-yr">2021</div><div class="pg-v" data-count="30" data-suffix="&cent;">0</div></div>
-      <div class="pg-arrow">&rarr;</div>
-      <div class="pg-rp pg-up"><div class="pg-yr">2025</div><div class="pg-v" data-count="40" data-suffix="&cent;+">0</div></div>
+<section aria-labelledby="bf1-fp-h-sb">
+  <h2 class="bf1-q bf1-md" data-anim="wait" id="bf1-fp-h-sb"><span class="bf1-w" style="--i:0">How</span> <span class="bf1-w" style="--i:1">much</span> <span class="bf1-w bf1-kw" style="--i:2">land</span> <span class="bf1-w" style="--i:3">does</span> <span class="bf1-w" style="--i:4">a</span> <span class="bf1-w" style="--i:5">setback</span> <span class="bf1-w" style="--i:6">take?</span></h2>
+  <p class="bf1-sub">A setback is the minimum distance between the equipment and a property line or a nearby home. Pick a rule used in or near Westchester, or drag the slider, to see how much land it keeps clear around a 20 MWh site like Tarrytown's.</p>
+  <div class="bf1-card bf1-fp-sbgrid">
+    <div>
+      <svg class="bf1-draw bf1-fp-sbsvg" viewBox="-420.0 -420.0 840.0 840.0" role="img" data-fp="sb-svg" aria-label="Map view of a 110 by 46 foot battery site among homes on quarter-acre lots, with the land inside a 100 foot setback shaded and clear of homes.">
+        <defs>
+          <pattern id="bf1-fplots" patternUnits="userSpaceOnUse" x="-52.18" y="-52.18" width="104.36" height="104.36">
+            <rect x="2" y="2" width="100.36" height="100.36" fill="var(--card)" stroke="var(--g200)" stroke-width="2"/>
+          </pattern>
+          <g id="bf1-fphouse">
+            <path d="M-23,2 L0,-22 L23,2 Z" fill="var(--g400)"/>
+            <rect x="-17" y="1" width="34" height="27" fill="var(--g400)"/>
+            <rect x="-4.5" y="14" width="9" height="14" fill="var(--card)"/>
+          </g>
+        </defs>
+        <rect x="-1400" y="-1400" width="2800" height="2800" fill="url(#bf1-fplots)"/>
+        <g data-fp="houses"><use href="#bf1-fphouse" x="-1252.3" y="-1252.3" data-fp-hd="1679.9"/><use href="#bf1-fphouse" x="-1147.9" y="-1252.3" data-fp-hd="1608.6"/><use href="#bf1-fphouse" x="-1043.6" y="-1252.3" data-fp-hd="1541.2"/><use href="#bf1-fphouse" x="-939.2" y="-1252.3" data-fp-hd="1478.1"/><use href="#bf1-fphouse" x="-834.8" y="-1252.3" data-fp-hd="1419.8"/><use href="#bf1-fphouse" x="-730.5" y="-1252.3" data-fp-hd="1367.0"/><use href="#bf1-fphouse" x="-626.1" y="-1252.3" data-fp-hd="1320.4"/><use href="#bf1-fphouse" x="-521.8" y="-1252.3" data-fp-hd="1280.6"/><use href="#bf1-fphouse" x="-417.4" y="-1252.3" data-fp-hd="1248.3"/><use href="#bf1-fphouse" x="-313.1" y="-1252.3" data-fp-hd="1224.0"/><use href="#bf1-fphouse" x="-208.7" y="-1252.3" data-fp-hd="1208.4"/><use href="#bf1-fphouse" x="-104.4" y="-1252.3" data-fp-hd="1201.6"/><use href="#bf1-fphouse" x="0.0" y="-1252.3" data-fp-hd="1201.3"/><use href="#bf1-fphouse" x="104.4" y="-1252.3" data-fp-hd="1201.6"/><use href="#bf1-fphouse" x="208.7" y="-1252.3" data-fp-hd="1208.4"/><use href="#bf1-fphouse" x="313.1" y="-1252.3" data-fp-hd="1224.0"/><use href="#bf1-fphouse" x="417.4" y="-1252.3" data-fp-hd="1248.3"/><use href="#bf1-fphouse" x="521.8" y="-1252.3" data-fp-hd="1280.6"/><use href="#bf1-fphouse" x="626.1" y="-1252.3" data-fp-hd="1320.4"/><use href="#bf1-fphouse" x="730.5" y="-1252.3" data-fp-hd="1367.0"/><use href="#bf1-fphouse" x="834.8" y="-1252.3" data-fp-hd="1419.8"/><use href="#bf1-fphouse" x="939.2" y="-1252.3" data-fp-hd="1478.1"/><use href="#bf1-fphouse" x="1043.6" y="-1252.3" data-fp-hd="1541.2"/><use href="#bf1-fphouse" x="1147.9" y="-1252.3" data-fp-hd="1608.6"/><use href="#bf1-fphouse" x="1252.3" y="-1252.3" data-fp-hd="1679.9"/><use href="#bf1-fphouse" x="-1252.3" y="-1147.9" data-fp-hd="1606.9"/><use href="#bf1-fphouse" x="-1147.9" y="-1147.9" data-fp-hd="1532.3"/><use href="#bf1-fphouse" x="-1043.6" y="-1147.9" data-fp-hd="1461.3"/><use href="#bf1-fphouse" x="-939.2" y="-1147.9" data-fp-hd="1394.6"/><use href="#bf1-fphouse" x="-834.8" y="-1147.9" data-fp-hd="1332.7"/><use href="#bf1-fphouse" x="-730.5" y="-1147.9" data-fp-hd="1276.3"/><use href="#bf1-fphouse" x="-626.1" y="-1147.9" data-fp-hd="1226.2"/><use href="#bf1-fphouse" x="-521.8" y="-1147.9" data-fp-hd="1183.3"/><use href="#bf1-fphouse" x="-417.4" y="-1147.9" data-fp-hd="1148.2"/><use href="#bf1-fphouse" x="-313.1" y="-1147.9" data-fp-hd="1121.8"/><use href="#bf1-fphouse" x="-208.7" y="-1147.9" data-fp-hd="1104.7"/><use href="#bf1-fphouse" x="-104.4" y="-1147.9" data-fp-hd="1097.2"/><use href="#bf1-fphouse" x="0.0" y="-1147.9" data-fp-hd="1096.9"/><use href="#bf1-fphouse" x="104.4" y="-1147.9" data-fp-hd="1097.2"/><use href="#bf1-fphouse" x="208.7" y="-1147.9" data-fp-hd="1104.7"/><use href="#bf1-fphouse" x="313.1" y="-1147.9" data-fp-hd="1121.8"/><use href="#bf1-fphouse" x="417.4" y="-1147.9" data-fp-hd="1148.2"/><use href="#bf1-fphouse" x="521.8" y="-1147.9" data-fp-hd="1183.3"/><use href="#bf1-fphouse" x="626.1" y="-1147.9" data-fp-hd="1226.2"/><use href="#bf1-fphouse" x="730.5" y="-1147.9" data-fp-hd="1276.3"/><use href="#bf1-fphouse" x="834.8" y="-1147.9" data-fp-hd="1332.7"/><use href="#bf1-fphouse" x="939.2" y="-1147.9" data-fp-hd="1394.6"/><use href="#bf1-fphouse" x="1043.6" y="-1147.9" data-fp-hd="1461.3"/><use href="#bf1-fphouse" x="1147.9" y="-1147.9" data-fp-hd="1532.3"/><use href="#bf1-fphouse" x="1252.3" y="-1147.9" data-fp-hd="1606.9"/><use href="#bf1-fphouse" x="-1252.3" y="-1043.6" data-fp-hd="1537.5"/><use href="#bf1-fphouse" x="-1147.9" y="-1043.6" data-fp-hd="1459.4"/><use href="#bf1-fphouse" x="-1043.6" y="-1043.6" data-fp-hd="1384.7"/><use href="#bf1-fphouse" x="-939.2" y="-1043.6" data-fp-hd="1314.1"/><use href="#bf1-fphouse" x="-834.8" y="-1043.6" data-fp-hd="1248.2"/><use href="#bf1-fphouse" x="-730.5" y="-1043.6" data-fp-hd="1187.8"/><use href="#bf1-fphouse" x="-626.1" y="-1043.6" data-fp-hd="1133.8"/><use href="#bf1-fphouse" x="-521.8" y="-1043.6" data-fp-hd="1087.2"/><use href="#bf1-fphouse" x="-417.4" y="-1043.6" data-fp-hd="1049.0"/><use href="#bf1-fphouse" x="-313.1" y="-1043.6" data-fp-hd="1020.0"/><use href="#bf1-fphouse" x="-208.7" y="-1043.6" data-fp-hd="1001.1"/><use href="#bf1-fphouse" x="-104.4" y="-1043.6" data-fp-hd="992.9"/><use href="#bf1-fphouse" x="0.0" y="-1043.6" data-fp-hd="992.6"/><use href="#bf1-fphouse" x="104.4" y="-1043.6" data-fp-hd="992.9"/><use href="#bf1-fphouse" x="208.7" y="-1043.6" data-fp-hd="1001.1"/><use href="#bf1-fphouse" x="313.1" y="-1043.6" data-fp-hd="1020.0"/><use href="#bf1-fphouse" x="417.4" y="-1043.6" data-fp-hd="1049.0"/><use href="#bf1-fphouse" x="521.8" y="-1043.6" data-fp-hd="1087.2"/><use href="#bf1-fphouse" x="626.1" y="-1043.6" data-fp-hd="1133.8"/><use href="#bf1-fphouse" x="730.5" y="-1043.6" data-fp-hd="1187.8"/><use href="#bf1-fphouse" x="834.8" y="-1043.6" data-fp-hd="1248.2"/><use href="#bf1-fphouse" x="939.2" y="-1043.6" data-fp-hd="1314.1"/><use href="#bf1-fphouse" x="1043.6" y="-1043.6" data-fp-hd="1384.7"/><use href="#bf1-fphouse" x="1147.9" y="-1043.6" data-fp-hd="1459.4"/><use href="#bf1-fphouse" x="1252.3" y="-1043.6" data-fp-hd="1537.5"/><use href="#bf1-fphouse" x="-1252.3" y="-939.2" data-fp-hd="1472.3"/><use href="#bf1-fphouse" x="-1147.9" y="-939.2" data-fp-hd="1390.5"/><use href="#bf1-fphouse" x="-1043.6" y="-939.2" data-fp-hd="1311.9"/><use href="#bf1-fphouse" x="-939.2" y="-939.2" data-fp-hd="1237.2"/><use href="#bf1-fphouse" x="-834.8" y="-939.2" data-fp-hd="1166.9"/><use href="#bf1-fphouse" x="-730.5" y="-939.2" data-fp-hd="1102.1"/><use href="#bf1-fphouse" x="-626.1" y="-939.2" data-fp-hd="1043.7"/><use href="#bf1-fphouse" x="-521.8" y="-939.2" data-fp-hd="992.9"/><use href="#bf1-fphouse" x="-417.4" y="-939.2" data-fp-hd="950.8"/><use href="#bf1-fphouse" x="-313.1" y="-939.2" data-fp-hd="918.8"/><use href="#bf1-fphouse" x="-208.7" y="-939.2" data-fp-hd="897.8"/><use href="#bf1-fphouse" x="-104.4" y="-939.2" data-fp-hd="888.6"/><use href="#bf1-fphouse" x="0.0" y="-939.2" data-fp-hd="888.2"/><use href="#bf1-fphouse" x="104.4" y="-939.2" data-fp-hd="888.6"/><use href="#bf1-fphouse" x="208.7" y="-939.2" data-fp-hd="897.8"/><use href="#bf1-fphouse" x="313.1" y="-939.2" data-fp-hd="918.8"/><use href="#bf1-fphouse" x="417.4" y="-939.2" data-fp-hd="950.8"/><use href="#bf1-fphouse" x="521.8" y="-939.2" data-fp-hd="992.9"/><use href="#bf1-fphouse" x="626.1" y="-939.2" data-fp-hd="1043.7"/><use href="#bf1-fphouse" x="730.5" y="-939.2" data-fp-hd="1102.1"/><use href="#bf1-fphouse" x="834.8" y="-939.2" data-fp-hd="1166.9"/><use href="#bf1-fphouse" x="939.2" y="-939.2" data-fp-hd="1237.2"/><use href="#bf1-fphouse" x="1043.6" y="-939.2" data-fp-hd="1311.9"/><use href="#bf1-fphouse" x="1147.9" y="-939.2" data-fp-hd="1390.5"/><use href="#bf1-fphouse" x="1252.3" y="-939.2" data-fp-hd="1472.3"/><use href="#bf1-fphouse" x="-1252.3" y="-834.8" data-fp-hd="1411.8"/><use href="#bf1-fphouse" x="-1147.9" y="-834.8" data-fp-hd="1326.3"/><use href="#bf1-fphouse" x="-1043.6" y="-834.8" data-fp-hd="1243.7"/><use href="#bf1-fphouse" x="-939.2" y="-834.8" data-fp-hd="1164.5"/><use href="#bf1-fphouse" x="-834.8" y="-834.8" data-fp-hd="1089.6"/><use href="#bf1-fphouse" x="-730.5" y="-834.8" data-fp-hd="1019.9"/><use href="#bf1-fphouse" x="-626.1" y="-834.8" data-fp-hd="956.5"/><use href="#bf1-fphouse" x="-521.8" y="-834.8" data-fp-hd="900.7"/><use href="#bf1-fphouse" x="-417.4" y="-834.8" data-fp-hd="854.2"/><use href="#bf1-fphouse" x="-313.1" y="-834.8" data-fp-hd="818.3"/><use href="#bf1-fphouse" x="-208.7" y="-834.8" data-fp-hd="794.7"/><use href="#bf1-fphouse" x="-104.4" y="-834.8" data-fp-hd="784.3"/><use href="#bf1-fphouse" x="0.0" y="-834.8" data-fp-hd="783.8"/><use href="#bf1-fphouse" x="104.4" y="-834.8" data-fp-hd="784.3"/><use href="#bf1-fphouse" x="208.7" y="-834.8" data-fp-hd="794.7"/><use href="#bf1-fphouse" x="313.1" y="-834.8" data-fp-hd="818.3"/><use href="#bf1-fphouse" x="417.4" y="-834.8" data-fp-hd="854.2"/><use href="#bf1-fphouse" x="521.8" y="-834.8" data-fp-hd="900.7"/><use href="#bf1-fphouse" x="626.1" y="-834.8" data-fp-hd="956.5"/><use href="#bf1-fphouse" x="730.5" y="-834.8" data-fp-hd="1019.9"/><use href="#bf1-fphouse" x="834.8" y="-834.8" data-fp-hd="1089.6"/><use href="#bf1-fphouse" x="939.2" y="-834.8" data-fp-hd="1164.5"/><use href="#bf1-fphouse" x="1043.6" y="-834.8" data-fp-hd="1243.7"/><use href="#bf1-fphouse" x="1147.9" y="-834.8" data-fp-hd="1326.3"/><use href="#bf1-fphouse" x="1252.3" y="-834.8" data-fp-hd="1411.8"/><use href="#bf1-fphouse" x="-1252.3" y="-730.5" data-fp-hd="1356.7"/><use href="#bf1-fphouse" x="-1147.9" y="-730.5" data-fp-hd="1267.4"/><use href="#bf1-fphouse" x="-1043.6" y="-730.5" data-fp-hd="1180.7"/><use href="#bf1-fphouse" x="-939.2" y="-730.5" data-fp-hd="1097.0"/><use href="#bf1-fphouse" x="-834.8" y="-730.5" data-fp-hd="1017.1"/><use href="#bf1-fphouse" x="-730.5" y="-730.5" data-fp-hd="942.0"/><use href="#bf1-fphouse" x="-626.1" y="-730.5" data-fp-hd="873.0"/><use href="#bf1-fphouse" x="-521.8" y="-730.5" data-fp-hd="811.6"/><use href="#bf1-fphouse" x="-417.4" y="-730.5" data-fp-hd="759.5"/><use href="#bf1-fphouse" x="-313.1" y="-730.5" data-fp-hd="719.0"/><use href="#bf1-fphouse" x="-208.7" y="-730.5" data-fp-hd="691.9"/><use href="#bf1-fphouse" x="-104.4" y="-730.5" data-fp-hd="680.0"/><use href="#bf1-fphouse" x="0.0" y="-730.5" data-fp-hd="679.5"/><use href="#bf1-fphouse" x="104.4" y="-730.5" data-fp-hd="680.0"/><use href="#bf1-fphouse" x="208.7" y="-730.5" data-fp-hd="691.9"/><use href="#bf1-fphouse" x="313.1" y="-730.5" data-fp-hd="719.0"/><use href="#bf1-fphouse" x="417.4" y="-730.5" data-fp-hd="759.5"/><use href="#bf1-fphouse" x="521.8" y="-730.5" data-fp-hd="811.6"/><use href="#bf1-fphouse" x="626.1" y="-730.5" data-fp-hd="873.0"/><use href="#bf1-fphouse" x="730.5" y="-730.5" data-fp-hd="942.0"/><use href="#bf1-fphouse" x="834.8" y="-730.5" data-fp-hd="1017.1"/><use href="#bf1-fphouse" x="939.2" y="-730.5" data-fp-hd="1097.0"/><use href="#bf1-fphouse" x="1043.6" y="-730.5" data-fp-hd="1180.7"/><use href="#bf1-fphouse" x="1147.9" y="-730.5" data-fp-hd="1267.4"/><use href="#bf1-fphouse" x="1252.3" y="-730.5" data-fp-hd="1356.7"/><use href="#bf1-fphouse" x="-1252.3" y="-626.1" data-fp-hd="1307.5"/><use href="#bf1-fphouse" x="-1147.9" y="-626.1" data-fp-hd="1214.7"/><use href="#bf1-fphouse" x="-1043.6" y="-626.1" data-fp-hd="1123.9"/><use href="#bf1-fphouse" x="-939.2" y="-626.1" data-fp-hd="1035.6"/><use href="#bf1-fphouse" x="-834.8" y="-626.1" data-fp-hd="950.6"/><use href="#bf1-fphouse" x="-730.5" y="-626.1" data-fp-hd="869.8"/><use href="#bf1-fphouse" x="-626.1" y="-626.1" data-fp-hd="794.5"/><use href="#bf1-fphouse" x="-521.8" y="-626.1" data-fp-hd="726.4"/><use href="#bf1-fphouse" x="-417.4" y="-626.1" data-fp-hd="667.8"/><use href="#bf1-fphouse" x="-313.1" y="-626.1" data-fp-hd="621.3"/><use href="#bf1-fphouse" x="-208.7" y="-626.1" data-fp-hd="589.8"/><use href="#bf1-fphouse" x="-104.4" y="-626.1" data-fp-hd="575.7"/><use href="#bf1-fphouse" x="0.0" y="-626.1" data-fp-hd="575.1"/><use href="#bf1-fphouse" x="104.4" y="-626.1" data-fp-hd="575.7"/><use href="#bf1-fphouse" x="208.7" y="-626.1" data-fp-hd="589.8"/><use href="#bf1-fphouse" x="313.1" y="-626.1" data-fp-hd="621.3"/><use href="#bf1-fphouse" x="417.4" y="-626.1" data-fp-hd="667.8"/><use href="#bf1-fphouse" x="521.8" y="-626.1" data-fp-hd="726.4"/><use href="#bf1-fphouse" x="626.1" y="-626.1" data-fp-hd="794.5"/><use href="#bf1-fphouse" x="730.5" y="-626.1" data-fp-hd="869.8"/><use href="#bf1-fphouse" x="834.8" y="-626.1" data-fp-hd="950.6"/><use href="#bf1-fphouse" x="939.2" y="-626.1" data-fp-hd="1035.6"/><use href="#bf1-fphouse" x="1043.6" y="-626.1" data-fp-hd="1123.9"/><use href="#bf1-fphouse" x="1147.9" y="-626.1" data-fp-hd="1214.7"/><use href="#bf1-fphouse" x="1252.3" y="-626.1" data-fp-hd="1307.5"/><use href="#bf1-fphouse" x="-1252.3" y="-521.8" data-fp-hd="1265.1"/><use href="#bf1-fphouse" x="-1147.9" y="-521.8" data-fp-hd="1168.9"/><use href="#bf1-fphouse" x="-1043.6" y="-521.8" data-fp-hd="1074.2"/><use href="#bf1-fphouse" x="-939.2" y="-521.8" data-fp-hd="981.5"/><use href="#bf1-fphouse" x="-834.8" y="-521.8" data-fp-hd="891.3"/><use href="#bf1-fphouse" x="-730.5" y="-521.8" data-fp-hd="804.6"/><use href="#bf1-fphouse" x="-626.1" y="-521.8" data-fp-hd="722.5"/><use href="#bf1-fphouse" x="-521.8" y="-521.8" data-fp-hd="647.0"/><use href="#bf1-fphouse" x="-417.4" y="-521.8" data-fp-hd="580.4"/><use href="#bf1-fphouse" x="-313.1" y="-521.8" data-fp-hd="526.2"/><use href="#bf1-fphouse" x="-208.7" y="-521.8" data-fp-hd="488.6"/><use href="#bf1-fphouse" x="-104.4" y="-521.8" data-fp-hd="471.5"/><use href="#bf1-fphouse" x="0.0" y="-521.8" data-fp-hd="470.8"/><use href="#bf1-fphouse" x="104.4" y="-521.8" data-fp-hd="471.5"/><use href="#bf1-fphouse" x="208.7" y="-521.8" data-fp-hd="488.6"/><use href="#bf1-fphouse" x="313.1" y="-521.8" data-fp-hd="526.2"/><use href="#bf1-fphouse" x="417.4" y="-521.8" data-fp-hd="580.4"/><use href="#bf1-fphouse" x="521.8" y="-521.8" data-fp-hd="647.0"/><use href="#bf1-fphouse" x="626.1" y="-521.8" data-fp-hd="722.5"/><use href="#bf1-fphouse" x="730.5" y="-521.8" data-fp-hd="804.6"/><use href="#bf1-fphouse" x="834.8" y="-521.8" data-fp-hd="891.3"/><use href="#bf1-fphouse" x="939.2" y="-521.8" data-fp-hd="981.5"/><use href="#bf1-fphouse" x="1043.6" y="-521.8" data-fp-hd="1074.2"/><use href="#bf1-fphouse" x="1147.9" y="-521.8" data-fp-hd="1168.9"/><use href="#bf1-fphouse" x="1252.3" y="-521.8" data-fp-hd="1265.1"/><use href="#bf1-fphouse" x="-1252.3" y="-417.4" data-fp-hd="1230.1"/><use href="#bf1-fphouse" x="-1147.9" y="-417.4" data-fp-hd="1130.9"/><use href="#bf1-fphouse" x="-1043.6" y="-417.4" data-fp-hd="1032.7"/><use href="#bf1-fphouse" x="-939.2" y="-417.4" data-fp-hd="935.9"/><use href="#bf1-fphouse" x="-834.8" y="-417.4" data-fp-hd="840.9"/><use href="#bf1-fphouse" x="-730.5" y="-417.4" data-fp-hd="748.3"/><use href="#bf1-fphouse" x="-626.1" y="-417.4" data-fp-hd="659.3"/><use href="#bf1-fphouse" x="-521.8" y="-417.4" data-fp-hd="575.5"/><use href="#bf1-fphouse" x="-417.4" y="-417.4" data-fp-hd="499.5"/><use href="#bf1-fphouse" x="-313.1" y="-417.4" data-fp-hd="435.3"/><use href="#bf1-fphouse" x="-208.7" y="-417.4" data-fp-hd="389.0"/><use href="#bf1-fphouse" x="-104.4" y="-417.4" data-fp-hd="367.4"/><use href="#bf1-fphouse" x="0.0" y="-417.4" data-fp-hd="366.4"/><use href="#bf1-fphouse" x="104.4" y="-417.4" data-fp-hd="367.4"/><use href="#bf1-fphouse" x="208.7" y="-417.4" data-fp-hd="389.0"/><use href="#bf1-fphouse" x="313.1" y="-417.4" data-fp-hd="435.3"/><use href="#bf1-fphouse" x="417.4" y="-417.4" data-fp-hd="499.5"/><use href="#bf1-fphouse" x="521.8" y="-417.4" data-fp-hd="575.5"/><use href="#bf1-fphouse" x="626.1" y="-417.4" data-fp-hd="659.3"/><use href="#bf1-fphouse" x="730.5" y="-417.4" data-fp-hd="748.3"/><use href="#bf1-fphouse" x="834.8" y="-417.4" data-fp-hd="840.9"/><use href="#bf1-fphouse" x="939.2" y="-417.4" data-fp-hd="935.9"/><use href="#bf1-fphouse" x="1043.6" y="-417.4" data-fp-hd="1032.7"/><use href="#bf1-fphouse" x="1147.9" y="-417.4" data-fp-hd="1130.9"/><use href="#bf1-fphouse" x="1252.3" y="-417.4" data-fp-hd="1230.1"/><use href="#bf1-fphouse" x="-1252.3" y="-313.1" data-fp-hd="1203.1"/><use href="#bf1-fphouse" x="-1147.9" y="-313.1" data-fp-hd="1101.5"/><use href="#bf1-fphouse" x="-1043.6" y="-313.1" data-fp-hd="1000.5"/><use href="#bf1-fphouse" x="-939.2" y="-313.1" data-fp-hd="900.2"/><use href="#bf1-fphouse" x="-834.8" y="-313.1" data-fp-hd="800.9"/><use href="#bf1-fphouse" x="-730.5" y="-313.1" data-fp-hd="703.1"/><use href="#bf1-fphouse" x="-626.1" y="-313.1" data-fp-hd="607.6"/><use href="#bf1-fphouse" x="-521.8" y="-313.1" data-fp-hd="515.4"/><use href="#bf1-fphouse" x="-417.4" y="-313.1" data-fp-hd="428.8"/><use href="#bf1-fphouse" x="-313.1" y="-313.1" data-fp-hd="352.0"/><use href="#bf1-fphouse" x="-208.7" y="-313.1" data-fp-hd="292.9"/><use href="#bf1-fphouse" x="-104.4" y="-313.1" data-fp-hd="263.4"/><use href="#bf1-fphouse" x="0.0" y="-313.1" data-fp-hd="262.1"/><use href="#bf1-fphouse" x="104.4" y="-313.1" data-fp-hd="263.4"/><use href="#bf1-fphouse" x="208.7" y="-313.1" data-fp-hd="292.9"/><use href="#bf1-fphouse" x="313.1" y="-313.1" data-fp-hd="352.0"/><use href="#bf1-fphouse" x="417.4" y="-313.1" data-fp-hd="428.8"/><use href="#bf1-fphouse" x="521.8" y="-313.1" data-fp-hd="515.4"/><use href="#bf1-fphouse" x="626.1" y="-313.1" data-fp-hd="607.6"/><use href="#bf1-fphouse" x="730.5" y="-313.1" data-fp-hd="703.1"/><use href="#bf1-fphouse" x="834.8" y="-313.1" data-fp-hd="800.9"/><use href="#bf1-fphouse" x="939.2" y="-313.1" data-fp-hd="900.2"/><use href="#bf1-fphouse" x="1043.6" y="-313.1" data-fp-hd="1000.5"/><use href="#bf1-fphouse" x="1147.9" y="-313.1" data-fp-hd="1101.5"/><use href="#bf1-fphouse" x="1252.3" y="-313.1" data-fp-hd="1203.1"/><use href="#bf1-fphouse" x="-1252.3" y="-208.7" data-fp-hd="1184.8"/><use href="#bf1-fphouse" x="-1147.9" y="-208.7" data-fp-hd="1081.5"/><use href="#bf1-fphouse" x="-1043.6" y="-208.7" data-fp-hd="978.3"/><use href="#bf1-fphouse" x="-939.2" y="-208.7" data-fp-hd="875.5"/><use href="#bf1-fphouse" x="-834.8" y="-208.7" data-fp-hd="773.1"/><use href="#bf1-fphouse" x="-730.5" y="-208.7" data-fp-hd="671.3"/><use href="#bf1-fphouse" x="-626.1" y="-208.7" data-fp-hd="570.4"/><use href="#bf1-fphouse" x="-521.8" y="-208.7" data-fp-hd="471.0"/><use href="#bf1-fphouse" x="-417.4" y="-208.7" data-fp-hd="374.3"/><use href="#bf1-fphouse" x="-313.1" y="-208.7" data-fp-hd="283.1"/><use href="#bf1-fphouse" x="-208.7" y="-208.7" data-fp-hd="204.8"/><use href="#bf1-fphouse" x="-104.4" y="-208.7" data-fp-hd="159.9"/><use href="#bf1-fphouse" x="0.0" y="-208.7" data-fp-hd="157.7"/><use href="#bf1-fphouse" x="104.4" y="-208.7" data-fp-hd="159.9"/><use href="#bf1-fphouse" x="208.7" y="-208.7" data-fp-hd="204.8"/><use href="#bf1-fphouse" x="313.1" y="-208.7" data-fp-hd="283.1"/><use href="#bf1-fphouse" x="417.4" y="-208.7" data-fp-hd="374.3"/><use href="#bf1-fphouse" x="521.8" y="-208.7" data-fp-hd="471.0"/><use href="#bf1-fphouse" x="626.1" y="-208.7" data-fp-hd="570.4"/><use href="#bf1-fphouse" x="730.5" y="-208.7" data-fp-hd="671.3"/><use href="#bf1-fphouse" x="834.8" y="-208.7" data-fp-hd="773.1"/><use href="#bf1-fphouse" x="939.2" y="-208.7" data-fp-hd="875.5"/><use href="#bf1-fphouse" x="1043.6" y="-208.7" data-fp-hd="978.3"/><use href="#bf1-fphouse" x="1147.9" y="-208.7" data-fp-hd="1081.5"/><use href="#bf1-fphouse" x="1252.3" y="-208.7" data-fp-hd="1184.8"/><use href="#bf1-fphouse" x="-1252.3" y="-104.4" data-fp-hd="1175.5"/><use href="#bf1-fphouse" x="-1147.9" y="-104.4" data-fp-hd="1071.2"/><use href="#bf1-fphouse" x="-1043.6" y="-104.4" data-fp-hd="967.0"/><use href="#bf1-fphouse" x="-939.2" y="-104.4" data-fp-hd="862.8"/><use href="#bf1-fphouse" x="-834.8" y="-104.4" data-fp-hd="758.7"/><use href="#bf1-fphouse" x="-730.5" y="-104.4" data-fp-hd="654.7"/><use href="#bf1-fphouse" x="-626.1" y="-104.4" data-fp-hd="550.7"/><use href="#bf1-fphouse" x="-521.8" y="-104.4" data-fp-hd="447.0"/><use href="#bf1-fphouse" x="-417.4" y="-104.4" data-fp-hd="343.6"/><use href="#bf1-fphouse" x="-313.1" y="-104.4" data-fp-hd="241.0"/><use href="#bf1-fphouse" x="-208.7" y="-104.4" data-fp-hd="141.2"/><use href="#bf1-fphouse" x="-104.4" y="-104.4" data-fp-hd="59.5" hidden/><use href="#bf1-fphouse" x="0.0" y="-104.4" data-fp-hd="53.4" hidden/><use href="#bf1-fphouse" x="104.4" y="-104.4" data-fp-hd="59.5" hidden/><use href="#bf1-fphouse" x="208.7" y="-104.4" data-fp-hd="141.2"/><use href="#bf1-fphouse" x="313.1" y="-104.4" data-fp-hd="241.0"/><use href="#bf1-fphouse" x="417.4" y="-104.4" data-fp-hd="343.6"/><use href="#bf1-fphouse" x="521.8" y="-104.4" data-fp-hd="447.0"/><use href="#bf1-fphouse" x="626.1" y="-104.4" data-fp-hd="550.7"/><use href="#bf1-fphouse" x="730.5" y="-104.4" data-fp-hd="654.7"/><use href="#bf1-fphouse" x="834.8" y="-104.4" data-fp-hd="758.7"/><use href="#bf1-fphouse" x="939.2" y="-104.4" data-fp-hd="862.8"/><use href="#bf1-fphouse" x="1043.6" y="-104.4" data-fp-hd="967.0"/><use href="#bf1-fphouse" x="1147.9" y="-104.4" data-fp-hd="1071.2"/><use href="#bf1-fphouse" x="1252.3" y="-104.4" data-fp-hd="1175.5"/><use href="#bf1-fphouse" x="-1252.3" y="0.0" data-fp-hd="1174.3"/><use href="#bf1-fphouse" x="-1147.9" y="0.0" data-fp-hd="1069.9"/><use href="#bf1-fphouse" x="-1043.6" y="0.0" data-fp-hd="965.6"/><use href="#bf1-fphouse" x="-939.2" y="0.0" data-fp-hd="861.2"/><use href="#bf1-fphouse" x="-834.8" y="0.0" data-fp-hd="756.8"/><use href="#bf1-fphouse" x="-730.5" y="0.0" data-fp-hd="652.5"/><use href="#bf1-fphouse" x="-626.1" y="0.0" data-fp-hd="548.1"/><use href="#bf1-fphouse" x="-521.8" y="0.0" data-fp-hd="443.8"/><use href="#bf1-fphouse" x="-417.4" y="0.0" data-fp-hd="339.4"/><use href="#bf1-fphouse" x="-313.1" y="0.0" data-fp-hd="235.1"/><use href="#bf1-fphouse" x="-208.7" y="0.0" data-fp-hd="130.7"/><use href="#bf1-fphouse" x="208.7" y="0.0" data-fp-hd="130.7"/><use href="#bf1-fphouse" x="313.1" y="0.0" data-fp-hd="235.1"/><use href="#bf1-fphouse" x="417.4" y="0.0" data-fp-hd="339.4"/><use href="#bf1-fphouse" x="521.8" y="0.0" data-fp-hd="443.8"/><use href="#bf1-fphouse" x="626.1" y="0.0" data-fp-hd="548.1"/><use href="#bf1-fphouse" x="730.5" y="0.0" data-fp-hd="652.5"/><use href="#bf1-fphouse" x="834.8" y="0.0" data-fp-hd="756.8"/><use href="#bf1-fphouse" x="939.2" y="0.0" data-fp-hd="861.2"/><use href="#bf1-fphouse" x="1043.6" y="0.0" data-fp-hd="965.6"/><use href="#bf1-fphouse" x="1147.9" y="0.0" data-fp-hd="1069.9"/><use href="#bf1-fphouse" x="1252.3" y="0.0" data-fp-hd="1174.3"/><use href="#bf1-fphouse" x="-1252.3" y="104.4" data-fp-hd="1175.8"/><use href="#bf1-fphouse" x="-1147.9" y="104.4" data-fp-hd="1071.6"/><use href="#bf1-fphouse" x="-1043.6" y="104.4" data-fp-hd="967.4"/><use href="#bf1-fphouse" x="-939.2" y="104.4" data-fp-hd="863.2"/><use href="#bf1-fphouse" x="-834.8" y="104.4" data-fp-hd="759.2"/><use href="#bf1-fphouse" x="-730.5" y="104.4" data-fp-hd="655.2"/><use href="#bf1-fphouse" x="-626.1" y="104.4" data-fp-hd="551.3"/><use href="#bf1-fphouse" x="-521.8" y="104.4" data-fp-hd="447.7"/><use href="#bf1-fphouse" x="-417.4" y="104.4" data-fp-hd="344.6"/><use href="#bf1-fphouse" x="-313.1" y="104.4" data-fp-hd="242.4"/><use href="#bf1-fphouse" x="-208.7" y="104.4" data-fp-hd="143.6"/><use href="#bf1-fphouse" x="-104.4" y="104.4" data-fp-hd="64.9" hidden/><use href="#bf1-fphouse" x="0.0" y="104.4" data-fp-hd="59.4" hidden/><use href="#bf1-fphouse" x="104.4" y="104.4" data-fp-hd="64.9" hidden/><use href="#bf1-fphouse" x="208.7" y="104.4" data-fp-hd="143.6"/><use href="#bf1-fphouse" x="313.1" y="104.4" data-fp-hd="242.4"/><use href="#bf1-fphouse" x="417.4" y="104.4" data-fp-hd="344.6"/><use href="#bf1-fphouse" x="521.8" y="104.4" data-fp-hd="447.7"/><use href="#bf1-fphouse" x="626.1" y="104.4" data-fp-hd="551.3"/><use href="#bf1-fphouse" x="730.5" y="104.4" data-fp-hd="655.2"/><use href="#bf1-fphouse" x="834.8" y="104.4" data-fp-hd="759.2"/><use href="#bf1-fphouse" x="939.2" y="104.4" data-fp-hd="863.2"/><use href="#bf1-fphouse" x="1043.6" y="104.4" data-fp-hd="967.4"/><use href="#bf1-fphouse" x="1147.9" y="104.4" data-fp-hd="1071.6"/><use href="#bf1-fphouse" x="1252.3" y="104.4" data-fp-hd="1175.8"/><use href="#bf1-fphouse" x="-1252.3" y="208.7" data-fp-hd="1185.6"/><use href="#bf1-fphouse" x="-1147.9" y="208.7" data-fp-hd="1082.4"/><use href="#bf1-fphouse" x="-1043.6" y="208.7" data-fp-hd="979.3"/><use href="#bf1-fphouse" x="-939.2" y="208.7" data-fp-hd="876.6"/><use href="#bf1-fphouse" x="-834.8" y="208.7" data-fp-hd="774.3"/><use href="#bf1-fphouse" x="-730.5" y="208.7" data-fp-hd="672.7"/><use href="#bf1-fphouse" x="-626.1" y="208.7" data-fp-hd="572.1"/><use href="#bf1-fphouse" x="-521.8" y="208.7" data-fp-hd="473.0"/><use href="#bf1-fphouse" x="-417.4" y="208.7" data-fp-hd="376.8"/><use href="#bf1-fphouse" x="-313.1" y="208.7" data-fp-hd="286.5"/><use href="#bf1-fphouse" x="-208.7" y="208.7" data-fp-hd="209.5"/><use href="#bf1-fphouse" x="-104.4" y="208.7" data-fp-hd="165.8"/><use href="#bf1-fphouse" x="0.0" y="208.7" data-fp-hd="163.7"/><use href="#bf1-fphouse" x="104.4" y="208.7" data-fp-hd="165.8"/><use href="#bf1-fphouse" x="208.7" y="208.7" data-fp-hd="209.5"/><use href="#bf1-fphouse" x="313.1" y="208.7" data-fp-hd="286.5"/><use href="#bf1-fphouse" x="417.4" y="208.7" data-fp-hd="376.8"/><use href="#bf1-fphouse" x="521.8" y="208.7" data-fp-hd="473.0"/><use href="#bf1-fphouse" x="626.1" y="208.7" data-fp-hd="572.1"/><use href="#bf1-fphouse" x="730.5" y="208.7" data-fp-hd="672.7"/><use href="#bf1-fphouse" x="834.8" y="208.7" data-fp-hd="774.3"/><use href="#bf1-fphouse" x="939.2" y="208.7" data-fp-hd="876.6"/><use href="#bf1-fphouse" x="1043.6" y="208.7" data-fp-hd="979.3"/><use href="#bf1-fphouse" x="1147.9" y="208.7" data-fp-hd="1082.4"/><use href="#bf1-fphouse" x="1252.3" y="208.7" data-fp-hd="1185.6"/><use href="#bf1-fphouse" x="-1252.3" y="313.1" data-fp-hd="1204.5"/><use href="#bf1-fphouse" x="-1147.9" y="313.1" data-fp-hd="1103.0"/><use href="#bf1-fphouse" x="-1043.6" y="313.1" data-fp-hd="1002.1"/><use href="#bf1-fphouse" x="-939.2" y="313.1" data-fp-hd="902.0"/><use href="#bf1-fphouse" x="-834.8" y="313.1" data-fp-hd="802.9"/><use href="#bf1-fphouse" x="-730.5" y="313.1" data-fp-hd="705.4"/><use href="#bf1-fphouse" x="-626.1" y="313.1" data-fp-hd="610.2"/><use href="#bf1-fphouse" x="-521.8" y="313.1" data-fp-hd="518.5"/><use href="#bf1-fphouse" x="-417.4" y="313.1" data-fp-hd="432.5"/><use href="#bf1-fphouse" x="-313.1" y="313.1" data-fp-hd="356.5"/><use href="#bf1-fphouse" x="-208.7" y="313.1" data-fp-hd="298.2"/><use href="#bf1-fphouse" x="-104.4" y="313.1" data-fp-hd="269.4"/><use href="#bf1-fphouse" x="0.0" y="313.1" data-fp-hd="268.1"/><use href="#bf1-fphouse" x="104.4" y="313.1" data-fp-hd="269.4"/><use href="#bf1-fphouse" x="208.7" y="313.1" data-fp-hd="298.2"/><use href="#bf1-fphouse" x="313.1" y="313.1" data-fp-hd="356.5"/><use href="#bf1-fphouse" x="417.4" y="313.1" data-fp-hd="432.5"/><use href="#bf1-fphouse" x="521.8" y="313.1" data-fp-hd="518.5"/><use href="#bf1-fphouse" x="626.1" y="313.1" data-fp-hd="610.2"/><use href="#bf1-fphouse" x="730.5" y="313.1" data-fp-hd="705.4"/><use href="#bf1-fphouse" x="834.8" y="313.1" data-fp-hd="802.9"/><use href="#bf1-fphouse" x="939.2" y="313.1" data-fp-hd="902.0"/><use href="#bf1-fphouse" x="1043.6" y="313.1" data-fp-hd="1002.1"/><use href="#bf1-fphouse" x="1147.9" y="313.1" data-fp-hd="1103.0"/><use href="#bf1-fphouse" x="1252.3" y="313.1" data-fp-hd="1204.5"/><use href="#bf1-fphouse" x="-1252.3" y="417.4" data-fp-hd="1231.9"/><use href="#bf1-fphouse" x="-1147.9" y="417.4" data-fp-hd="1132.9"/><use href="#bf1-fphouse" x="-1043.6" y="417.4" data-fp-hd="1034.9"/><use href="#bf1-fphouse" x="-939.2" y="417.4" data-fp-hd="938.3"/><use href="#bf1-fphouse" x="-834.8" y="417.4" data-fp-hd="843.5"/><use href="#bf1-fphouse" x="-730.5" y="417.4" data-fp-hd="751.3"/><use href="#bf1-fphouse" x="-626.1" y="417.4" data-fp-hd="662.7"/><use href="#bf1-fphouse" x="-521.8" y="417.4" data-fp-hd="579.3"/><use href="#bf1-fphouse" x="-417.4" y="417.4" data-fp-hd="503.9"/><use href="#bf1-fphouse" x="-313.1" y="417.4" data-fp-hd="440.4"/><use href="#bf1-fphouse" x="-208.7" y="417.4" data-fp-hd="394.7"/><use href="#bf1-fphouse" x="-104.4" y="417.4" data-fp-hd="373.4"/><use href="#bf1-fphouse" x="0.0" y="417.4" data-fp-hd="372.4"/><use href="#bf1-fphouse" x="104.4" y="417.4" data-fp-hd="373.4"/><use href="#bf1-fphouse" x="208.7" y="417.4" data-fp-hd="394.7"/><use href="#bf1-fphouse" x="313.1" y="417.4" data-fp-hd="440.4"/><use href="#bf1-fphouse" x="417.4" y="417.4" data-fp-hd="503.9"/><use href="#bf1-fphouse" x="521.8" y="417.4" data-fp-hd="579.3"/><use href="#bf1-fphouse" x="626.1" y="417.4" data-fp-hd="662.7"/><use href="#bf1-fphouse" x="730.5" y="417.4" data-fp-hd="751.3"/><use href="#bf1-fphouse" x="834.8" y="417.4" data-fp-hd="843.5"/><use href="#bf1-fphouse" x="939.2" y="417.4" data-fp-hd="938.3"/><use href="#bf1-fphouse" x="1043.6" y="417.4" data-fp-hd="1034.9"/><use href="#bf1-fphouse" x="1147.9" y="417.4" data-fp-hd="1132.9"/><use href="#bf1-fphouse" x="1252.3" y="417.4" data-fp-hd="1231.9"/><use href="#bf1-fphouse" x="-1252.3" y="521.8" data-fp-hd="1267.4"/><use href="#bf1-fphouse" x="-1147.9" y="521.8" data-fp-hd="1171.3"/><use href="#bf1-fphouse" x="-1043.6" y="521.8" data-fp-hd="1076.8"/><use href="#bf1-fphouse" x="-939.2" y="521.8" data-fp-hd="984.4"/><use href="#bf1-fphouse" x="-834.8" y="521.8" data-fp-hd="894.5"/><use href="#bf1-fphouse" x="-730.5" y="521.8" data-fp-hd="808.1"/><use href="#bf1-fphouse" x="-626.1" y="521.8" data-fp-hd="726.5"/><use href="#bf1-fphouse" x="-521.8" y="521.8" data-fp-hd="651.3"/><use href="#bf1-fphouse" x="-417.4" y="521.8" data-fp-hd="585.3"/><use href="#bf1-fphouse" x="-313.1" y="521.8" data-fp-hd="531.6"/><use href="#bf1-fphouse" x="-208.7" y="521.8" data-fp-hd="494.4"/><use href="#bf1-fphouse" x="-104.4" y="521.8" data-fp-hd="477.5"/><use href="#bf1-fphouse" x="0.0" y="521.8" data-fp-hd="476.8"/><use href="#bf1-fphouse" x="104.4" y="521.8" data-fp-hd="477.5"/><use href="#bf1-fphouse" x="208.7" y="521.8" data-fp-hd="494.4"/><use href="#bf1-fphouse" x="313.1" y="521.8" data-fp-hd="531.6"/><use href="#bf1-fphouse" x="417.4" y="521.8" data-fp-hd="585.3"/><use href="#bf1-fphouse" x="521.8" y="521.8" data-fp-hd="651.3"/><use href="#bf1-fphouse" x="626.1" y="521.8" data-fp-hd="726.5"/><use href="#bf1-fphouse" x="730.5" y="521.8" data-fp-hd="808.1"/><use href="#bf1-fphouse" x="834.8" y="521.8" data-fp-hd="894.5"/><use href="#bf1-fphouse" x="939.2" y="521.8" data-fp-hd="984.4"/><use href="#bf1-fphouse" x="1043.6" y="521.8" data-fp-hd="1076.8"/><use href="#bf1-fphouse" x="1147.9" y="521.8" data-fp-hd="1171.3"/><use href="#bf1-fphouse" x="1252.3" y="521.8" data-fp-hd="1267.4"/><use href="#bf1-fphouse" x="-1252.3" y="626.1" data-fp-hd="1310.2"/><use href="#bf1-fphouse" x="-1147.9" y="626.1" data-fp-hd="1217.5"/><use href="#bf1-fphouse" x="-1043.6" y="626.1" data-fp-hd="1126.9"/><use href="#bf1-fphouse" x="-939.2" y="626.1" data-fp-hd="1038.9"/><use href="#bf1-fphouse" x="-834.8" y="626.1" data-fp-hd="954.2"/><use href="#bf1-fphouse" x="-730.5" y="626.1" data-fp-hd="873.8"/><use href="#bf1-fphouse" x="-626.1" y="626.1" data-fp-hd="798.8"/><use href="#bf1-fphouse" x="-521.8" y="626.1" data-fp-hd="731.2"/><use href="#bf1-fphouse" x="-417.4" y="626.1" data-fp-hd="673.0"/><use href="#bf1-fphouse" x="-313.1" y="626.1" data-fp-hd="626.9"/><use href="#bf1-fphouse" x="-208.7" y="626.1" data-fp-hd="595.6"/><use href="#bf1-fphouse" x="-104.4" y="626.1" data-fp-hd="581.7"/><use href="#bf1-fphouse" x="0.0" y="626.1" data-fp-hd="581.1"/><use href="#bf1-fphouse" x="104.4" y="626.1" data-fp-hd="581.7"/><use href="#bf1-fphouse" x="208.7" y="626.1" data-fp-hd="595.6"/><use href="#bf1-fphouse" x="313.1" y="626.1" data-fp-hd="626.9"/><use href="#bf1-fphouse" x="417.4" y="626.1" data-fp-hd="673.0"/><use href="#bf1-fphouse" x="521.8" y="626.1" data-fp-hd="731.2"/><use href="#bf1-fphouse" x="626.1" y="626.1" data-fp-hd="798.8"/><use href="#bf1-fphouse" x="730.5" y="626.1" data-fp-hd="873.8"/><use href="#bf1-fphouse" x="834.8" y="626.1" data-fp-hd="954.2"/><use href="#bf1-fphouse" x="939.2" y="626.1" data-fp-hd="1038.9"/><use href="#bf1-fphouse" x="1043.6" y="626.1" data-fp-hd="1126.9"/><use href="#bf1-fphouse" x="1147.9" y="626.1" data-fp-hd="1217.5"/><use href="#bf1-fphouse" x="1252.3" y="626.1" data-fp-hd="1310.2"/><use href="#bf1-fphouse" x="-1252.3" y="730.5" data-fp-hd="1359.7"/><use href="#bf1-fphouse" x="-1147.9" y="730.5" data-fp-hd="1270.7"/><use href="#bf1-fphouse" x="-1043.6" y="730.5" data-fp-hd="1184.1"/><use href="#bf1-fphouse" x="-939.2" y="730.5" data-fp-hd="1100.7"/><use href="#bf1-fphouse" x="-834.8" y="730.5" data-fp-hd="1021.1"/><use href="#bf1-fphouse" x="-730.5" y="730.5" data-fp-hd="946.4"/><use href="#bf1-fphouse" x="-626.1" y="730.5" data-fp-hd="877.7"/><use href="#bf1-fphouse" x="-521.8" y="730.5" data-fp-hd="816.6"/><use href="#bf1-fphouse" x="-417.4" y="730.5" data-fp-hd="764.9"/><use href="#bf1-fphouse" x="-313.1" y="730.5" data-fp-hd="724.7"/><use href="#bf1-fphouse" x="-208.7" y="730.5" data-fp-hd="697.8"/><use href="#bf1-fphouse" x="-104.4" y="730.5" data-fp-hd="686.0"/><use href="#bf1-fphouse" x="0.0" y="730.5" data-fp-hd="685.5"/><use href="#bf1-fphouse" x="104.4" y="730.5" data-fp-hd="686.0"/><use href="#bf1-fphouse" x="208.7" y="730.5" data-fp-hd="697.8"/><use href="#bf1-fphouse" x="313.1" y="730.5" data-fp-hd="724.7"/><use href="#bf1-fphouse" x="417.4" y="730.5" data-fp-hd="764.9"/><use href="#bf1-fphouse" x="521.8" y="730.5" data-fp-hd="816.6"/><use href="#bf1-fphouse" x="626.1" y="730.5" data-fp-hd="877.7"/><use href="#bf1-fphouse" x="730.5" y="730.5" data-fp-hd="946.4"/><use href="#bf1-fphouse" x="834.8" y="730.5" data-fp-hd="1021.1"/><use href="#bf1-fphouse" x="939.2" y="730.5" data-fp-hd="1100.7"/><use href="#bf1-fphouse" x="1043.6" y="730.5" data-fp-hd="1184.1"/><use href="#bf1-fphouse" x="1147.9" y="730.5" data-fp-hd="1270.7"/><use href="#bf1-fphouse" x="1252.3" y="730.5" data-fp-hd="1359.7"/><use href="#bf1-fphouse" x="-1252.3" y="834.8" data-fp-hd="1415.2"/><use href="#bf1-fphouse" x="-1147.9" y="834.8" data-fp-hd="1329.9"/><use href="#bf1-fphouse" x="-1043.6" y="834.8" data-fp-hd="1247.5"/><use href="#bf1-fphouse" x="-939.2" y="834.8" data-fp-hd="1168.5"/><use href="#bf1-fphouse" x="-834.8" y="834.8" data-fp-hd="1093.9"/><use href="#bf1-fphouse" x="-730.5" y="834.8" data-fp-hd="1024.5"/><use href="#bf1-fphouse" x="-626.1" y="834.8" data-fp-hd="961.4"/><use href="#bf1-fphouse" x="-521.8" y="834.8" data-fp-hd="906.0"/><use href="#bf1-fphouse" x="-417.4" y="834.8" data-fp-hd="859.7"/><use href="#bf1-fphouse" x="-313.1" y="834.8" data-fp-hd="824.1"/><use href="#bf1-fphouse" x="-208.7" y="834.8" data-fp-hd="800.6"/><use href="#bf1-fphouse" x="-104.4" y="834.8" data-fp-hd="790.3"/><use href="#bf1-fphouse" x="0.0" y="834.8" data-fp-hd="789.8"/><use href="#bf1-fphouse" x="104.4" y="834.8" data-fp-hd="790.3"/><use href="#bf1-fphouse" x="208.7" y="834.8" data-fp-hd="800.6"/><use href="#bf1-fphouse" x="313.1" y="834.8" data-fp-hd="824.1"/><use href="#bf1-fphouse" x="417.4" y="834.8" data-fp-hd="859.7"/><use href="#bf1-fphouse" x="521.8" y="834.8" data-fp-hd="906.0"/><use href="#bf1-fphouse" x="626.1" y="834.8" data-fp-hd="961.4"/><use href="#bf1-fphouse" x="730.5" y="834.8" data-fp-hd="1024.5"/><use href="#bf1-fphouse" x="834.8" y="834.8" data-fp-hd="1093.9"/><use href="#bf1-fphouse" x="939.2" y="834.8" data-fp-hd="1168.5"/><use href="#bf1-fphouse" x="1043.6" y="834.8" data-fp-hd="1247.5"/><use href="#bf1-fphouse" x="1147.9" y="834.8" data-fp-hd="1329.9"/><use href="#bf1-fphouse" x="1252.3" y="834.8" data-fp-hd="1415.2"/><use href="#bf1-fphouse" x="-1252.3" y="939.2" data-fp-hd="1476.0"/><use href="#bf1-fphouse" x="-1147.9" y="939.2" data-fp-hd="1394.4"/><use href="#bf1-fphouse" x="-1043.6" y="939.2" data-fp-hd="1316.0"/><use href="#bf1-fphouse" x="-939.2" y="939.2" data-fp-hd="1241.5"/><use href="#bf1-fphouse" x="-834.8" y="939.2" data-fp-hd="1171.5"/><use href="#bf1-fphouse" x="-730.5" y="939.2" data-fp-hd="1106.9"/><use href="#bf1-fphouse" x="-626.1" y="939.2" data-fp-hd="1048.8"/><use href="#bf1-fphouse" x="-521.8" y="939.2" data-fp-hd="998.3"/><use href="#bf1-fphouse" x="-417.4" y="939.2" data-fp-hd="956.4"/><use href="#bf1-fphouse" x="-313.1" y="939.2" data-fp-hd="924.6"/><use href="#bf1-fphouse" x="-208.7" y="939.2" data-fp-hd="903.7"/><use href="#bf1-fphouse" x="-104.4" y="939.2" data-fp-hd="894.6"/><use href="#bf1-fphouse" x="0.0" y="939.2" data-fp-hd="894.2"/><use href="#bf1-fphouse" x="104.4" y="939.2" data-fp-hd="894.6"/><use href="#bf1-fphouse" x="208.7" y="939.2" data-fp-hd="903.7"/><use href="#bf1-fphouse" x="313.1" y="939.2" data-fp-hd="924.6"/><use href="#bf1-fphouse" x="417.4" y="939.2" data-fp-hd="956.4"/><use href="#bf1-fphouse" x="521.8" y="939.2" data-fp-hd="998.3"/><use href="#bf1-fphouse" x="626.1" y="939.2" data-fp-hd="1048.8"/><use href="#bf1-fphouse" x="730.5" y="939.2" data-fp-hd="1106.9"/><use href="#bf1-fphouse" x="834.8" y="939.2" data-fp-hd="1171.5"/><use href="#bf1-fphouse" x="939.2" y="939.2" data-fp-hd="1241.5"/><use href="#bf1-fphouse" x="1043.6" y="939.2" data-fp-hd="1316.0"/><use href="#bf1-fphouse" x="1147.9" y="939.2" data-fp-hd="1394.4"/><use href="#bf1-fphouse" x="1252.3" y="939.2" data-fp-hd="1476.0"/><use href="#bf1-fphouse" x="-1252.3" y="1043.6" data-fp-hd="1541.4"/><use href="#bf1-fphouse" x="-1147.9" y="1043.6" data-fp-hd="1463.5"/><use href="#bf1-fphouse" x="-1043.6" y="1043.6" data-fp-hd="1389.0"/><use href="#bf1-fphouse" x="-939.2" y="1043.6" data-fp-hd="1318.6"/><use href="#bf1-fphouse" x="-834.8" y="1043.6" data-fp-hd="1253.0"/><use href="#bf1-fphouse" x="-730.5" y="1043.6" data-fp-hd="1192.8"/><use href="#bf1-fphouse" x="-626.1" y="1043.6" data-fp-hd="1139.1"/><use href="#bf1-fphouse" x="-521.8" y="1043.6" data-fp-hd="1092.7"/><use href="#bf1-fphouse" x="-417.4" y="1043.6" data-fp-hd="1054.7"/><use href="#bf1-fphouse" x="-313.1" y="1043.6" data-fp-hd="1025.8"/><use href="#bf1-fphouse" x="-208.7" y="1043.6" data-fp-hd="1007.1"/><use href="#bf1-fphouse" x="-104.4" y="1043.6" data-fp-hd="998.9"/><use href="#bf1-fphouse" x="0.0" y="1043.6" data-fp-hd="998.6"/><use href="#bf1-fphouse" x="104.4" y="1043.6" data-fp-hd="998.9"/><use href="#bf1-fphouse" x="208.7" y="1043.6" data-fp-hd="1007.1"/><use href="#bf1-fphouse" x="313.1" y="1043.6" data-fp-hd="1025.8"/><use href="#bf1-fphouse" x="417.4" y="1043.6" data-fp-hd="1054.7"/><use href="#bf1-fphouse" x="521.8" y="1043.6" data-fp-hd="1092.7"/><use href="#bf1-fphouse" x="626.1" y="1043.6" data-fp-hd="1139.1"/><use href="#bf1-fphouse" x="730.5" y="1043.6" data-fp-hd="1192.8"/><use href="#bf1-fphouse" x="834.8" y="1043.6" data-fp-hd="1253.0"/><use href="#bf1-fphouse" x="939.2" y="1043.6" data-fp-hd="1318.6"/><use href="#bf1-fphouse" x="1043.6" y="1043.6" data-fp-hd="1389.0"/><use href="#bf1-fphouse" x="1147.9" y="1043.6" data-fp-hd="1463.5"/><use href="#bf1-fphouse" x="1252.3" y="1043.6" data-fp-hd="1541.4"/><use href="#bf1-fphouse" x="-1252.3" y="1147.9" data-fp-hd="1611.0"/><use href="#bf1-fphouse" x="-1147.9" y="1147.9" data-fp-hd="1536.6"/><use href="#bf1-fphouse" x="-1043.6" y="1147.9" data-fp-hd="1465.8"/><use href="#bf1-fphouse" x="-939.2" y="1147.9" data-fp-hd="1399.3"/><use href="#bf1-fphouse" x="-834.8" y="1147.9" data-fp-hd="1337.6"/><use href="#bf1-fphouse" x="-730.5" y="1147.9" data-fp-hd="1281.5"/><use href="#bf1-fphouse" x="-626.1" y="1147.9" data-fp-hd="1231.6"/><use href="#bf1-fphouse" x="-521.8" y="1147.9" data-fp-hd="1188.8"/><use href="#bf1-fphouse" x="-417.4" y="1147.9" data-fp-hd="1154.0"/><use href="#bf1-fphouse" x="-313.1" y="1147.9" data-fp-hd="1127.7"/><use href="#bf1-fphouse" x="-208.7" y="1147.9" data-fp-hd="1110.6"/><use href="#bf1-fphouse" x="-104.4" y="1147.9" data-fp-hd="1103.2"/><use href="#bf1-fphouse" x="0.0" y="1147.9" data-fp-hd="1102.9"/><use href="#bf1-fphouse" x="104.4" y="1147.9" data-fp-hd="1103.2"/><use href="#bf1-fphouse" x="208.7" y="1147.9" data-fp-hd="1110.6"/><use href="#bf1-fphouse" x="313.1" y="1147.9" data-fp-hd="1127.7"/><use href="#bf1-fphouse" x="417.4" y="1147.9" data-fp-hd="1154.0"/><use href="#bf1-fphouse" x="521.8" y="1147.9" data-fp-hd="1188.8"/><use href="#bf1-fphouse" x="626.1" y="1147.9" data-fp-hd="1231.6"/><use href="#bf1-fphouse" x="730.5" y="1147.9" data-fp-hd="1281.5"/><use href="#bf1-fphouse" x="834.8" y="1147.9" data-fp-hd="1337.6"/><use href="#bf1-fphouse" x="939.2" y="1147.9" data-fp-hd="1399.3"/><use href="#bf1-fphouse" x="1043.6" y="1147.9" data-fp-hd="1465.8"/><use href="#bf1-fphouse" x="1147.9" y="1147.9" data-fp-hd="1536.6"/><use href="#bf1-fphouse" x="1252.3" y="1147.9" data-fp-hd="1611.0"/><use href="#bf1-fphouse" x="-1252.3" y="1252.3" data-fp-hd="1684.2"/><use href="#bf1-fphouse" x="-1147.9" y="1252.3" data-fp-hd="1613.1"/><use href="#bf1-fphouse" x="-1043.6" y="1252.3" data-fp-hd="1545.9"/><use href="#bf1-fphouse" x="-939.2" y="1252.3" data-fp-hd="1483.0"/><use href="#bf1-fphouse" x="-834.8" y="1252.3" data-fp-hd="1424.9"/><use href="#bf1-fphouse" x="-730.5" y="1252.3" data-fp-hd="1372.3"/><use href="#bf1-fphouse" x="-626.1" y="1252.3" data-fp-hd="1325.9"/><use href="#bf1-fphouse" x="-521.8" y="1252.3" data-fp-hd="1286.2"/><use href="#bf1-fphouse" x="-417.4" y="1252.3" data-fp-hd="1254.1"/><use href="#bf1-fphouse" x="-313.1" y="1252.3" data-fp-hd="1229.9"/><use href="#bf1-fphouse" x="-208.7" y="1252.3" data-fp-hd="1214.3"/><use href="#bf1-fphouse" x="-104.4" y="1252.3" data-fp-hd="1207.5"/><use href="#bf1-fphouse" x="0.0" y="1252.3" data-fp-hd="1207.3"/><use href="#bf1-fphouse" x="104.4" y="1252.3" data-fp-hd="1207.5"/><use href="#bf1-fphouse" x="208.7" y="1252.3" data-fp-hd="1214.3"/><use href="#bf1-fphouse" x="313.1" y="1252.3" data-fp-hd="1229.9"/><use href="#bf1-fphouse" x="417.4" y="1252.3" data-fp-hd="1254.1"/><use href="#bf1-fphouse" x="521.8" y="1252.3" data-fp-hd="1286.2"/><use href="#bf1-fphouse" x="626.1" y="1252.3" data-fp-hd="1325.9"/><use href="#bf1-fphouse" x="730.5" y="1252.3" data-fp-hd="1372.3"/><use href="#bf1-fphouse" x="834.8" y="1252.3" data-fp-hd="1424.9"/><use href="#bf1-fphouse" x="939.2" y="1252.3" data-fp-hd="1483.0"/><use href="#bf1-fphouse" x="1043.6" y="1252.3" data-fp-hd="1545.9"/><use href="#bf1-fphouse" x="1147.9" y="1252.3" data-fp-hd="1613.1"/><use href="#bf1-fphouse" x="1252.3" y="1252.3" data-fp-hd="1684.2"/></g>
+        <rect x="-156.53" y="-52.18" width="313.07" height="104.36" fill="var(--shade)"/>
+        <rect data-fp="ring" x="-155.0" y="-123.0" width="310.0" height="246.0" rx="100.0" ry="100.0" fill="var(--tint)" stroke="var(--red)" stroke-width="2.9"/>
+        <rect x="-55" y="-23" width="110" height="46" fill="var(--ink)"/>
+        <text data-fp="ring-label" x="0" y="-133.5" font-size="23.1" font-weight="900" fill="var(--red)" text-anchor="middle" font-family="Roboto,Arial,sans-serif">100 ft</text>
+        <g data-fp="bar" stroke="var(--ink)" stroke-width="2.5"><line data-fp="bar-l" x1="-386.4" y1="378.0" x2="-286.4" y2="378.0"/></g><text data-fp="bar-t" x="-386.4" y="365.4" font-size="18.9" font-weight="500" fill="var(--ink)" font-family="Roboto,Arial,sans-serif">100 ft</text>
+      </svg>
+      <ul class="bf1-legend">
+        <li><span class="bf1-sw bf1-ink" aria-hidden="true"></span>Battery site, 110 × 46 ft</li>
+        <li><span class="bf1-sw bf1-ring" aria-hidden="true"></span>Setback: no homes this close</li>
+        <li><svg class="bf1-sw" viewBox="0 0 14 14" aria-hidden="true"><path d="M0.5 7 7 1 13.5 7Z" fill="var(--g400)"/><rect x="2.5" y="6.5" width="9" height="7" fill="var(--g400)"/></svg>Homes on quarter-acre lots</li>
+      </ul>
     </div>
-    <div class="pg-ratefoot">A <b>30%</b> rise in four years, and it continued through the first five months of 2026 after a colder-than-usual winter and a spike in natural gas prices.</div>
+    <div>
+      <div class="bf1-seg" role="group" aria-label="Setback rules" data-fp="sb-chips" hidden><button type="button" data-fp-d="10" data-fp-rule="Fire code default" aria-pressed="false">10 ft<small>Fire code default</small></button><button type="button" data-fp-d="100" data-fp-rule="Tarrytown, Ossining, Greenburgh" aria-pressed="true">100 ft<small>Tarrytown, Ossining, Greenburgh</small></button><button type="button" data-fp-d="200" data-fp-rule="Tarrytown, from any home" aria-pressed="false">200 ft<small>Tarrytown, from any home</small></button><button type="button" data-fp-d="500" data-fp-rule="Greenburgh, largest systems" aria-pressed="false">500 ft<small>Greenburgh, largest systems</small></button><button type="button" data-fp-d="1000" data-fp-rule="Warwick proposal" aria-pressed="false">1,000 ft<small>Warwick proposal</small></button><button type="button" disabled>Westchester draft<small>Coming soon</small></button></div>
+      <input class="bf1-range" type="range" min="0" max="1000" step="5" value="100" data-fp="sb-range" aria-label="Setback distance in feet" hidden>
+      <div class="bf1-figs bf1-fp-sbfigs">
+        <div class="bf1-fig"><p class="bf1-k">Setback</p><p class="bf1-v bf1-acc" data-fp="sb-d">100 ft</p><p class="bf1-n" data-fp="sb-rule">Tarrytown, Ossining, Greenburgh</p></div>
+        <div class="bf1-fig"><p class="bf1-k">Land kept clear</p><p class="bf1-v" data-fp="sb-acres">1.55 acres</p><p class="bf1-n" data-fp="sb-mult">13 times the fenced site</p></div>
+        <div class="bf1-fig"><p class="bf1-k">About the same as</p><p class="bf1-n" data-fp="sb-lots">Room for about 6 homes on quarter-acre lots</p><p class="bf1-n" data-fp="sb-fields">About 1.2 football fields</p></div>
+      </div>
+      <p class="bf1-note">That land can stay as lawn, woods or parking. What the distance really decides is which properties are big enough to host a project at all. Tarrytown's approved site sits on a 7.9-acre parcel.</p>
+    </div>
   </div>
+</section>
 
-  <div class="pg-alert pg-rv">
-    <h4>The reliability warning behind the rates</h4>
-    <p>In April 2026 the New York Independent System Operator issued its annual Summer Reliability Report. If the state sees a heatwave averaging 95&deg;F for three or more days, the forecast capacity margin is:</p>
-    <span class="pg-mw">&minus;1,679 MW</span>
-    <p>A negative margin means New York would not have enough electricity on those days, raising the prospect of rolling brownouts. <b>Source:</b> NYISO Short-Term Assessment of Reliability, 2026 Q1.</p>
+<section aria-labelledby="bf1-fp-h-rules">
+  <h2 class="bf1-q bf1-md" data-anim="wait" id="bf1-fp-h-rules"><span class="bf1-w" style="--i:0">What</span> <span class="bf1-w" style="--i:1">do</span> <span class="bf1-w" style="--i:2">the</span> <span class="bf1-w bf1-kw" style="--i:3">rules</span> <span class="bf1-w" style="--i:4">say</span> <span class="bf1-w" style="--i:5">today?</span></h2>
+  <div class="bf1-cards">
+    <div><span class="bf1-tag bf1-dark">New York State</span>
+      <h3>One fire code for every battery</h3>
+      <p>The 2025 New York Fire Code took effect on December 31, 2025. Its battery rules are based on NFPA 855, the national standard, which spaces equipment according to large-scale fire tests and sets a default of 10 feet from property lines and buildings.</p></div>
+    <div><span class="bf1-tag">State model law</span>
+      <h3>Towns set the distance</h3>
+      <p>NYSERDA's model law, updated in its February 2026 guidebook, treats systems above 600 kWh as a larger class. It asks them to meet the same setbacks the zoning district already sets for buildings, with 10 feet cleared of brush.</p></div>
+    <div><span class="bf1-tag bf1-acc">Westchester</span>
+      <h3>100 feet is common</h3>
+      <p>Tarrytown (2025), the Town of Ossining (2021) and Greenburgh (2021) each require 100 feet. Tarrytown also keeps projects 200 feet from homes, and Greenburgh keeps its largest systems 500 feet from the nearest house. Several other towns have paused new projects while they write rules.</p></div>
   </div>
+</section>
 
-  <div class="pg-sec-h">The solar side</div>
-  <h2 class="pg-big">Four ways local solar lowers bills</h2>
-  <p class="pg-sub">Community solar projects benefit Westchester in ways that reach well past the subscriber.</p>
-
-  <div class="pg-mechs pg-rv">
-    <div class="pg-mech"><div class="pg-num">1</div><h4>Free grid infrastructure</h4><p>When a developer applies for interconnection, the utility specifies the transformers and connection equipment the developer must buy and install, which the utility then owns. Every project strengthens the local grid at no cost to ratepayers.</p></div>
-    <div class="pg-mech"><div class="pg-num">2</div><h4>Less imported power</h4><p>Electricity injected locally reduces the need to import power from far-away upstate sources, which saves the utility on supply costs.</p></div>
-    <div class="pg-mech"><div class="pg-num">3</div><h4>A direct subscriber discount</h4><p>The utility compensates the developer for injected electricity, and the developer must pass a discount to enrolled subscribers, typically 5% to 10% savings.</p></div>
-    <div class="pg-mech"><div class="pg-num">4</div><h4>Lease income for site owners</h4><p>Projects pay the site owner a lease for 20 to 25 years, income the owner would not otherwise earn from that roof or ground space.</p></div>
+<section aria-labelledby="bf1-fp-h-near">
+  <h2 class="bf1-q bf1-md" data-anim="wait" id="bf1-fp-h-near"><span class="bf1-w" style="--i:0">What</span> <span class="bf1-w" style="--i:1">is</span> <span class="bf1-w" style="--i:2">already</span> <span class="bf1-w bf1-kw" style="--i:3">built</span> <span class="bf1-w" style="--i:4">nearby?</span></h2>
+  <div class="bf1-figs">
+    <div class="bf1-fig"><p class="bf1-k">Tarrytown</p><p class="bf1-v">20 MWh</p><p class="bf1-n">Approved by the Planning Board 4 to 0 in September 2025. About 110 × 46 ft inside the fence, on a 7.9-acre parcel, 200 ft from homes.</p></div>
+    <div class="bf1-fig"><p class="bf1-k">Hawthorne, Yorktown, Ossining</p><p class="bf1-v">55.7 MWh</p><p class="bf1-n">Three Tesla Megapack sites totaling 13.5 MW, completed in early 2025.</p></div>
+    <div class="bf1-fig"><p class="bf1-k">Huntington, Long Island</p><p class="bf1-v">240 MWh</p><p class="bf1-n">A 60 MW project using 6.5 acres of site work inside an 11.2-acre parcel.</p></div>
   </div>
+</section>
 
-  <div class="pg-alert pg-rv" style="background:var(--accent-soft);border-color:var(--line);border-left-color:var(--accent)">
-    <h4 style="color:var(--navy)">Behind-the-meter solar is prepaid electricity</h4>
-    <p style="color:var(--g700)">Installing solar or storage on your own property for your own consumption is effectively prepaying for 25 years of electricity. Once you recover the initial investment, the remaining years are free. Even a system covering only half your annual usage has cut your exposure to ever-escalating utility rates by half.</p>
+<details class="bf1-how">
+  <summary>How we know this</summary>
+  <div>
+    <p><b>Sizes</b> come from manufacturer datasheets: Tesla Powerwall 3 (2025), Tesla Megapack 2 XL (Rev 1.6, 2023: 8,800 × 1,650 mm), SolarEdge CSS-OD cabinet (April 2026: 1,100 × 930 mm, 97.3 kWh usable). Familiar objects: Maersk container specifications, ITF tennis rules, the NFL rulebook (360 × 160 ft), and a standard 9 × 18 ft parking space from the Town of Southeast code.</p>
+    <p><b>Homes for a day</b> uses the average New York household: 571 kWh a month in 2024 (EIA), or about 18.8 kWh a day. A battery shifts power rather than making it, so this is a way to picture how much it holds.</p>
+    <p><b>Land kept clear</b> is the fenced area pushed outward by the setback distance on every side, with rounded corners, which is what a minimum distance produces. A quarter-acre lot is 10,890 sq ft.</p>
+    <ul class="bf1-srcs">
+      <li>Tesla, Powerwall 3 and Megapack 2 XL datasheets. <a href="https://energylibrary.tesla.com/docs/Public/EnergyStorage/Powerwall/3/Datasheet/en-us/Powerwall-3-Datasheet.pdf">tesla.com</a></li>
+      <li>SolarEdge, CSS-OD battery cabinet datasheet, April 2026. <a href="https://knowledge-center.solaredge.com/sites/kc/files/se-css-od-battery-cabinet-and-battery-inverter-datasheet-eng.pdf">solaredge.com</a></li>
+      <li>EIA, 2024 Average Monthly Bill, Residential (Table 5A). <a href="https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf">eia.gov</a></li>
+      <li>NY Department of State, 2025 code adoption notice. <a href="https://dos.ny.gov/notice-adoption">dos.ny.gov</a></li>
+      <li>NYSERDA, Battery Energy Storage System Guidebook, February 2026. <a href="https://www.nyserda.ny.gov/-/media/Project/Nyserda/Files/Programs/Clean-Energy-Siting/Energy-Storage-System-Guidebook.pdf">nyserda.ny.gov</a></li>
+      <li>Village of Tarrytown code §305-68 (2025) and Planning Board minutes, 25 September 2025. <a href="https://ecode360.com/12284543">ecode360.com</a></li>
+      <li>Town of Ossining code §200-31.4 (2021). <a href="https://ecode360.com/37313987">ecode360.com</a> · Town of Greenburgh, reported by the Scarsdale Inquirer, August 2021. <a href="https://www.scarsdalenews.com/news/edgemont_hartsdale/greenburgh-passes-new-law-to-regulate-battery-storage-sites/article_84beabea-fc4b-11eb-b1ff-03efb5573ece.html">scarsdalenews.com</a></li>
+      <li>Town of Warwick, proposed Local Law 5 of 2026 (hearing closed, not adopted). <a href="https://townofwarwickny.gov/t-warwick-bess-law-260610_final-draft-1/">townofwarwickny.gov</a></li>
+      <li>Calibrant Energy and CS Energy, three Westchester projects, 2025. <a href="https://www.calibrantenergy.com/resources/westchester-new-york-bess">calibrantenergy.com</a></li>
+      <li>NYSERDA Bulk Storage Incentives, KCE-NY-21 public project summary. <a href="https://www.nyserda.ny.gov/-/media/Project/Nyserda/Files/Programs/Energy-Storage/Bulk-Storage-Incentives/KCE-NY-21_Att_B_Public_Project_Summary.pdf">nyserda.ny.gov</a></li>
+    </ul>
   </div>
+</details>
 
-  <div class="pg-sec-h">The storage side</div>
-  <h2 class="pg-big">Three ways BESS lowers bills</h2>
-  <p class="pg-sub">Storage stabilizes the Con Edison grid by shaving peak demand, deferring expensive upgrades, and making renewables usable around the clock.</p>
-
-  <div class="pg-mechs pg-rv">
-    <div class="pg-mech pg-g"><div class="pg-num">1</div><h4>Peak shaving</h4><p>Systems charge overnight or midday when demand is low, then discharge in the late afternoon and evening when demand peaks. Shifting that load protects transformer substations from overloading and avoids local outages during extreme heat.</p></div>
-    <div class="pg-mech pg-g"><div class="pg-num">2</div><h4>Deferring costly upgrades</h4><p>Storage is a non-wires solution that removes the immediate need to build multi-million dollar substations, and relieves congestion where adding cable in dense underground conduit is physically very difficult.</p></div>
-    <div class="pg-mech pg-g"><div class="pg-num">3</div><h4>Integrating clean energy</h4><p>Storage harvests solar generated during the day and releases it when production drops, providing a reliable reserve that reduces reliance on older, high-polluting fossil fuel peaker plants sited in local neighborhoods.</p></div>
+<details class="bf1-how bf1-review">
+  <summary>Notes for reviewers</summary>
+  <div>
+    <ul>
+      <li>The Westchester draft code is still to come from Leo Wiegman. Its distance drops in as one more preset button.</li>
+      <li>The 10 ft fire code figure is NFPA 855 §4.4.3. We could not read the New York text of Fire Code §1207 to confirm New York kept it unchanged.</li>
+      <li>Greenburgh's numbers come from 2021 news coverage, and its code is being revised (County Planning, April 2026). The two published copies of Ossining's law disagree on height and brush clearance, not on the 100 ft setback.</li>
+      <li>Tarrytown's minutes describe the layout ambiguously, so the five-unit arrangement inside the fence is illustrative. The fence size is from the minutes.</li>
+      <li>The 240 MWh drawing is a square of the right area, and its unit count assumes Megapack 2 XL.</li>
+      <li>EIA's 2025 household figures are due in October 2026.</li>
+    </ul>
   </div>
+</details>
 
-  <p class="pg-sub" style="margin-top:16px">Utilities also pay customers directly for this flexibility. Con Edison demand-response programs such as Smart Usage and Grid Rewards&trade; pay customers to shed load during peak events and deliver those reductions reliably across the year.</p>
-
-  <div class="pg-sec-h">Westchester today</div>
-  <h2 class="pg-big">Don't we have enough solar already?</h2>
-  <p class="pg-sub">As of May 2026. The vast majority of systems are roof-mounted and serve behind the meter, reducing the owner's own bill.</p>
-
-  <div class="pg-bignum pg-rv">
-    <div class="pg-bn"><div class="pg-n" data-count="14300" data-suffix="+">0</div><div class="pg-l">Residential solar systems</div></div>
-    <div class="pg-bn"><div class="pg-n" data-count="550" data-suffix="+">0</div><div class="pg-l">Non-residential properties</div></div>
-    <div class="pg-bn"><div class="pg-n" data-count="150" data-suffix="+">0</div><div class="pg-l">Community solar projects online</div></div>
-    <div class="pg-bn"><div class="pg-n" data-count="262" data-suffix=" MW">0</div><div class="pg-l">Combined solar capacity</div></div>
-  </div>
-
-  <div class="pg-target pg-rv">
-    <div class="pg-lab">To meet Westchester's fair share of statewide clean energy targets</div>
-    <div class="pg-v"><span data-count="400" data-suffix="%">0</span></div>
-    <p>Installed solar capacity must increase roughly fourfold, from 262 MW today to <b style="color:#fff">1,000 MW</b>.</p>
-  </div>
-
-  <div class="pg-cta">
-    <a href="fire-safety.html">Aren't BESS dangerous?<span>Read the Energy Storage Fire &amp; Safety fact sheet</span></a>
-    <a href="index.html">Where does my town stand?<span>Open the BESS Policy Dashboard</span></a>
-  </div>
-
-  <div class="pg-srcs">
-    <b>Sources.</b> NYISO Gold Book 2025 &middot; NYISO Short-Term Assessment of Reliability, 2026 Q1 &middot; EPA 2023 eGRID, New York Metro subregion &middot; NY-Sun program data, May 2026 &middot; Con Edison rate filings. Adapted from the CEAC Solar/BESS economic considerations outline (D. Cooper, Zarin &amp; Steinmetz; L. Wiegman, Sustainable Westchester).
-  </div>
-
-  <footer>
-    BCW / EarthKind Clean Energy Action Coalition &middot; Westchester County, New York
-  </footer>
+</div>
+</div>
 
 </section>
 </div>
@@ -1469,42 +1561,106 @@ window.toggleTheme = function(){
 
 
 (function(){
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function fmt(v, dec){ return dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US'); }
+  var root=document.querySelector('[data-bfpage="fp"]'); if(!root) return;
+  function q(k){return root.querySelector('[data-fp="'+k+'"]');}
+  function each(list,fn){Array.prototype.forEach.call(list,fn);}
+  function num(n){return Math.round(n).toLocaleString('en-US');}
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function runCount(el){
-    var target = parseFloat(el.getAttribute('data-count'));
-    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
-    var pre = el.getAttribute('data-prefix') || '';
-    var suf = el.getAttribute('data-suffix') || '';
-    function put(v){ el.innerHTML = pre + fmt(v, dec) + suf; }
-    if (reduce){ put(target); return; }
-    var dur = 1100, t0 = null;
-    function step(ts){
-      if (t0 === null) t0 = ts;
-      var p = Math.min((ts - t0) / dur, 1);
-      put(target * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) requestAnimationFrame(step); else put(target);
+  /* size explorer: one SVG, one group per size, viewBox zooms between them */
+  var STEPS=[{"vb": [-1.2, -6.8, 14, 7], "cap": "13.5 kWh", "capn": "One Tesla Powerwall 3", "area": "2 ft wide, mounted on a wall", "like": "Narrower than a refrigerator", "supply": "About 17 hours of an average New York home's electricity", "view": "Seen from the front", "aria": "One Tesla Powerwall 3 home battery, 2 feet wide and 3.6 feet tall, beside a refrigerator and a person."}, {"vb": [-1.5, -15, 38, 19], "cap": "148.5 kWh", "capn": "11 Powerwall 3 units", "area": "About 25 ft of wall", "like": "One side of a garage", "supply": "About 8 average New York homes for a day", "view": "Seen from the front", "aria": "Eleven Powerwall 3 units side by side along 25 feet of wall, beside a refrigerator and a person."}, {"vb": [-2, -5, 48, 24], "cap": "About 600 kWh", "capn": "6 SolarEdge cabinets, 584 kWh usable", "area": "66 sq ft of cabinets in a 37 ft row", "like": "Less than half a parking space of equipment", "supply": "About 31 average New York homes for a day", "view": "Seen from above", "aria": "Six SolarEdge commercial battery cabinets in a 37 foot row with 3 foot gaps, beside a parking space. Seen from above."}, {"vb": [-3, -6, 60, 30], "cap": "3.9 MWh", "capn": "One Tesla Megapack 2 XL", "area": "156 sq ft (28.9 \u00d7 5.4 ft)", "like": "About one parking space, and shorter than a 40 ft shipping container", "supply": "About 209 average New York homes for a day", "view": "Seen from above", "aria": "One Tesla Megapack 2 XL, 28.9 by 5.4 feet, beside a 40 foot shipping container and a parking space. Seen from above."}, {"vb": [-8, -32, 220, 110], "cap": "About 20 MWh", "capn": "Approved in Tarrytown, 2025", "area": "About 5,060 sq ft inside the fence (110 \u00d7 46 ft)", "like": "Less than two tennis courts", "supply": "About 1,070 average New York homes for a day", "view": "Seen from above", "aria": "The approved 20 megawatt-hour Tarrytown battery site, a fenced area of about 110 by 46 feet, beside a tennis court. Seen from above."}, {"vb": [-120, -50, 1180, 590], "cap": "240 MWh", "capn": "A 60 MW project on Long Island", "area": "6.5 acres of site work; the battery units themselves cover about 0.2 acres", "like": "About five football fields, most of it fire lanes, grid equipment and construction space", "supply": "About 12,800 average New York homes for a day", "view": "Seen from above", "aria": "A 240 megawatt-hour project on 6.5 acres, with 62 battery units covering about 0.2 acres in the middle, beside a football field. Seen from above."}], cur=3, anim=null;
+  var svg=q('size-svg'), range=q('size-range');
+  var groups=svg.querySelectorAll('[data-fp-step]'), ticks=root.querySelectorAll('[data-fp-tick]');
+  range.hidden=false; q('size-ticks').hidden=false;
+  function vb(v){svg.setAttribute('viewBox',v.map(function(n){return n.toFixed(3);}).join(' '));}
+  function lerp(a,b,t){return a+(b-a)*t;}
+  function go(i){
+    if(i===cur) return;
+    var from=STEPS[cur].vb, to=STEPS[i].vb, old=groups[cur], nw=groups[i]; cur=i;
+    each(ticks,function(b){b.setAttribute('aria-pressed',String(+b.getAttribute('data-fp-tick')===i));});
+    range.value=i; range.setAttribute('aria-valuetext',STEPS[i].cap);
+    ['cap','capn','area','like','supply','view'].forEach(function(k){q('size-'+k).textContent=STEPS[i][k];});
+    svg.setAttribute('aria-label',STEPS[i].aria);
+    if(anim) cancelAnimationFrame(anim);
+    each(groups,function(g){g.setAttribute('hidden','');g.style.opacity='';});
+    nw.removeAttribute('hidden');
+    if(reduce||document.hidden){vb(to);return;}
+    old.removeAttribute('hidden');
+    /* rAF pauses in background tabs, so a timer guarantees the transition always lands */
+    function finish(){ if(anim) cancelAnimationFrame(anim); anim=null; vb(to);
+      old.setAttribute('hidden',''); old.style.opacity=''; nw.style.opacity=''; }
+    clearTimeout(go.t); go.t=setTimeout(finish,700);
+    var t0=null,dur=560,cx0=from[0]+from[2]/2,cy0=from[1]+from[3]/2,cx1=to[0]+to[2]/2,cy1=to[1]+to[3]/2;
+    var lw0=Math.log(from[2]),lw1=Math.log(to[2]),r0=from[3]/from[2],r1=to[3]/to[2];
+    function frame(ts){
+      if(!t0) t0=ts;
+      var t=Math.min(1,(ts-t0)/dur), e=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+      var w=Math.exp(lerp(lw0,lw1,e)), h=w*lerp(r0,r1,e);
+      vb([lerp(cx0,cx1,e)-w/2,lerp(cy0,cy1,e)-h/2,w,h]);
+      old.style.opacity=String(Math.max(0,1-e*2)); nw.style.opacity=String(Math.min(1,e*2));
+      if(t<1){anim=requestAnimationFrame(frame);} else {clearTimeout(go.t); finish();}
     }
-    requestAnimationFrame(step);
+    anim=requestAnimationFrame(frame);
   }
+  range.addEventListener('input',function(){go(+range.value);});
+  each(ticks,function(b){b.addEventListener('click',function(){go(+b.getAttribute('data-fp-tick'));});});
 
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (!e.isIntersecting) return;
-      var el = e.target;
-      el.classList.add('pg-in');
-      el.querySelectorAll('[data-count]').forEach(runCount);
-      el.querySelectorAll('.pg-seg').forEach(function(s){ s.style.width = s.getAttribute('data-w') + '%'; });
-      el.querySelectorAll('.pg-ffill').forEach(function(f){
-        f.style.width = f.getAttribute('data-w') + '%';
-        f.classList.add('on');
-      });
-      io.unobserve(el);
+  /* setback explorer */
+  var FW=110,FH=46,ring=q('ring'),lab=q('ring-label'),sr=q('sb-range');
+  var houses=q('houses').querySelectorAll('[data-fp-hd]'), HD=[];
+  each(houses,function(el,i){HD[i]=+el.getAttribute('data-fp-hd');});
+  var chips=root.querySelectorAll('[data-fp-d]');
+  q('sb-chips').hidden=false; sr.hidden=false;
+  function setD(d,rule){
+    d=Math.max(0,Math.min(1000,d));
+    [ring].forEach(function(r){
+      r.setAttribute('x',-FW/2-d); r.setAttribute('y',-FH/2-d);
+      r.setAttribute('width',FW+2*d); r.setAttribute('height',FH+2*d);
+      r.setAttribute('rx',d); r.setAttribute('ry',d);
     });
-  }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+    /* a house is inside the setback when any part of it is within d of the fence */
+    each(houses,function(el,i){var hide=HD[i]<=d+3, now=el.hasAttribute('hidden');
+      if(hide&&!now) el.setAttribute('hidden',''); else if(!hide&&now) el.removeAttribute('hidden');});
+    var h=Math.max(420,d*1.12+110), L=h<520?100:(h<1000?200:500), bl=q('bar-l'), bt=q('bar-t');
+    q('sb-svg').setAttribute('viewBox',[-h,-h,2*h,2*h].map(function(n){return n.toFixed(1);}).join(' '));
+    ring.setAttribute('stroke-width',(h*.007).toFixed(1));
+    lab.setAttribute('y',(-FH/2-d-h*.025).toFixed(1)); lab.setAttribute('font-size',(h*.055).toFixed(1)); lab.textContent=num(d)+' ft';
+    bl.setAttribute('x1',(-h*.92).toFixed(1)); bl.setAttribute('x2',(-h*.92+L).toFixed(1));
+    bl.setAttribute('y1',(h*.9).toFixed(1)); bl.setAttribute('y2',(h*.9).toFixed(1));
+    q('bar').setAttribute('stroke-width',(h*.006).toFixed(1));
+    bt.setAttribute('x',(-h*.92).toFixed(1)); bt.setAttribute('y',(h*.9-h*.03).toFixed(1));
+    bt.setAttribute('font-size',(h*.045).toFixed(1)); bt.textContent=L+' ft';
+    var a=FW*FH+2*(FW+FH)*d+Math.PI*d*d, ac=a/43560, match=null;
+    each(chips,function(c){var on=+c.getAttribute('data-fp-d')===d; c.setAttribute('aria-pressed',String(on)); if(on) match=c.getAttribute('data-fp-rule');});
+    q('sb-d').textContent=num(d)+' ft';
+    q('sb-rule').textContent=rule||match||'Your own distance';
+    q('sb-acres').textContent=(ac<10?ac.toFixed(2):ac.toFixed(1))+' acres';
+    q('sb-mult').textContent=num(a/(FW*FH))+' times the fenced site';
+    var nh=Math.round(a/10890); q('sb-lots').textContent='Room for about '+num(nh)+(nh===1?' home':' homes')+' on quarter-acre lots';
+    q('sb-fields').textContent='About '+(a/57600).toFixed(1)+' football fields';
+    sr.value=d;
+  }
+  sr.addEventListener('input',function(){setD(+sr.value);});
+  each(chips,function(c){c.addEventListener('click',function(){setD(+c.getAttribute('data-fp-d'),c.getAttribute('data-fp-rule'));});});
 
-  document.querySelectorAll('.pg-rv').forEach(function(el){ io.observe(el); });
+  /* site work: while it is being built vs once it is running */
+  var SWT={"build": "During construction the whole work area is cleared or graded. Besides the batteries, it needs space for cranes, deliveries and materials.", "run": "Once it is running, staging areas and graded slopes are replanted. The battery yard, fire lanes, grid connection, water tanks and stormwater basin stay until the project is retired."}, swSeg=q('sw-seg'); swSeg.hidden=false;
+  function setSW(k){
+    each(swSeg.querySelectorAll('button'),function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-fp-sw')===k));});
+    each(root.querySelectorAll('[data-fp-swv]'),function(g){ if(g.getAttribute('data-fp-swv')===k) g.removeAttribute('hidden'); else g.setAttribute('hidden',''); });
+    q('sw-text').textContent=SWT[k];
+  }
+  each(swSeg.querySelectorAll('button'),function(b){b.addEventListener('click',function(){setSW(b.getAttribute('data-fp-sw'));});});
+
+  (function(){
+    var qs=root.querySelectorAll('[data-anim="wait"]');
+    var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!qs.length||still||!('IntersectionObserver' in window)) return;
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.setAttribute('data-anim','on');io.unobserve(e.target);}});},{threshold:.5});
+    Array.prototype.forEach.call(qs,function(q){io.observe(q);});
+  })();
+
 })();
 
 </script>

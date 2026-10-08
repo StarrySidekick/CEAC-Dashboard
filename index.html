@@ -1080,9 +1080,9 @@
     <button type="button" class="viewtab" data-view="considerations" onclick="setView('considerations')">Key Considerations<span class="vt-sub">Nine things boards should weigh</span></button>
     <a class="viewtab viewlink" href="economics.html">Your Electric Bill<span class="vt-sub">How solar &amp; storage cut costs</span></a>
     <a class="viewtab viewlink" href="fire-safety.html">Fire &amp; Safety<span class="vt-sub">The evidence on BESS risk</span></a>
-    
-    
-    
+    <a class="viewtab viewlink" href="bess-size.html">Size &amp; Setbacks<span class="vt-sub">How much room storage needs</span></a>
+    <a class="viewtab viewlink" href="bess-risk.html">Risk in Context<span class="vt-sub">How battery risk compares</span></a>
+    <a class="viewtab viewlink" href="bess-life.html">Life Cycle<span class="vt-sub">From factory to recycler</span></a>
   </div>
   <div class="views-m" id="viewsM">
     <button type="button" class="vm-arrow" aria-label="Previous section" onclick="cycleView(-1)">&#8249;</button>
@@ -1736,7 +1736,7 @@ function renderProjects(){
       <figure class="gfig"><img src="${IMG.muralClose}" alt="Art-wrapped battery at GMC Bedford Hills"><figcaption>The GMC Bedford Hills microgrid, with its battery wrapped in community artwork.</figcaption></figure>
       <figure class="gfig"><img src="${IMG.canopy}" alt="Solar carport canopies over a parking lot"><figcaption>Solar canopies pair generation with storage and EV charging over existing parking.</figcaption></figure>
       <figure class="gfig"><img src="${IMG.containers}" alt="Utility-scale battery storage containers"><figcaption>Standalone, grid-serving storage: the front-of-the-meter capacity the county needs most.</figcaption></figure>
-      <figure class="gfig"><img src="${IMG.bess5mwC}" alt="A 5 MW battery energy storage system in Westchester"><figcaption>One of three 5 MW systems now operating in Westchester, sited behind existing buildings.</figcaption></figure>
+      <figure class="gfig"><img src="${IMG.bess5mwC}" alt="A community battery energy storage system in Westchester"><figcaption>One of three community batteries of about 4 to 5 MW each now operating in Westchester, sited behind existing buildings.</figcaption></figure>
     </div>
 
     <div class="projgrid">
@@ -1744,19 +1744,19 @@ function renderProjects(){
         <figure class="projshot"><img src="${IMG.crotonAutoPark}" alt="Solar carport with EV charging at Croton AutoPark"></figure>
         <h3>Croton AutoPark</h3>
         <div class="projstat">10 kW solar · 125 kW / 250 kWh BESS · 220 kW EV charging</div>
-        <p>At 1 Municipal Place in Croton-on-Hudson, a municipal lot carries a solar carport, a battery, and high-power EV charging on one site. It is a compact, behind-the-meter example of the whole package working together at the scale a village or a small business can actually build, rather than a utility-scale installation.</p>
+        <p>At its dealership at 1 Municipal Place in Croton-on-Hudson, Croton AutoPark runs a solar carport, a battery, and high-power EV charging as one microgrid, built with Sprocket Power. It is a compact, behind-the-meter example of the whole package working together at the scale a small business can actually build, rather than a utility-scale installation.</p>
       </div>
       <div class="proj">
-        <figure class="projshot"><img src="${IMG.bess5mwA}" alt="Aerial view of a 5 MW battery energy storage system"></figure>
-        <h3>Three 5 MW Systems: Ossining, Hawthorne &amp; Yorktown</h3>
-        <div class="projstat">5 MW each · 15 MW combined</div>
-        <p>Three separate 5 MW battery systems are already operating in the county, two sited behind churches in Hawthorne and Ossining and one behind an automotive repair shop in Yorktown. They sit on land that is already developed, beside buildings people use every day, which is the clearest evidence that grid-serving storage fits into ordinary Westchester neighborhoods without disruption.</p>
+        <figure class="projshot"><img src="${IMG.bess5mwA}" alt="Aerial view of a community battery energy storage system"></figure>
+        <h3>Three Community Batteries: Ossining, Hawthorne &amp; Yorktown</h3>
+        <div class="projstat">4.2, 5.0 &amp; 4.3 MW · about 13.5 MW combined</div>
+        <p>Three separate battery systems of about 4 to 5 MW each have been operating in the county since 2025, two on church land (St. Augustine in Ossining and Hawthorne Reformed Church) and one behind a mechanic&rsquo;s garage in Yorktown. They sit on land that is already developed, beside buildings people use every day, which is the clearest evidence that grid-serving storage fits into ordinary Westchester neighborhoods without disruption.</p>
       </div>
       <div class="proj">
         <div class="logo-wrap"><img src="${IMG.logoCroton}" alt="Croton-Harmon"></div>
         <h3>Croton-Harmon Train Station</h3>
-        <div class="projstat">4.2 MW solar · 3.5 MW BESS · ~$480K/yr lease</div>
-        <p>Solar canopies over the Metro-North commuter lot pair 4.2 MW of generation with a 3.5 MW battery and 24 EV chargers. The system offsets the equivalent of about 400 homes and earns roughly $480,000 a year in lease income, all on land that was already parking. It is the flagship example of turning a transit lot into a clean-energy asset.</p>
+        <div class="projstat">4.2 MW solar · 3.5 MW BESS · yearly lease income</div>
+        <p>Solar canopies over the Metro-North commuter lot pair 4.2 MW of generation with a 3.5 MW battery and EV charging. The system offsets the equivalent of about 400 homes, and the Village earns lease payments it describes as hundreds of thousands of dollars a year, all on land that was already parking. It is the flagship example of turning a transit lot into a clean-energy asset.</p>
       </div>
       <div class="proj">
         <div class="logo-wrap"><img src="${IMG.logoVail}" alt="GMC Bedford Hills"></div>
@@ -1767,8 +1767,8 @@ function renderProjects(){
       <div class="proj">
         <div class="logo-wrap"><img src="${IMG.logoWhitePlains}" alt="White Plains"></div>
         <h3>White Plains Community Solar</h3>
-        <div class="projstat">6.8 MW solar · ~7,056 kWh · ~$1M/yr</div>
-        <p>A 6.8 MW solar array paired with about 7,056 kWh of storage generates roughly $1M in annual revenue through a lease-based model with NYPA. Community-solar subscribers, including residents who cannot host their own panels, share in the bill savings, and the paired battery makes that clean power more valuable by delivering it into the evening peak.</p>
+        <div class="projstat">6.8 MW solar · ~7,000 kWh storage · $20M+ lease over 25 yrs</div>
+        <p>A 6.8 MW community solar portfolio is spread across nine city-owned sites, with batteries at two of them (Gedney Way and the Shapham Place garage) holding about 7,000 kWh. DSD Renewables built, owns and operates it under a 25-year lease, with NYPA advising the city, and the city expects more than $20 million in lease revenue over the term. Community-solar subscribers, including residents who cannot host their own panels, share in the bill savings, and the paired batteries make that clean power more valuable by delivering it into the evening peak.</p>
       </div>
       <div class="proj">
         <div class="logo-wrap"><img src="${IMG.logoGHP}" alt="GHP Office Realty"></div>
@@ -1780,7 +1780,7 @@ function renderProjects(){
         <div class="logo-wrap"><img src="${IMG.logoIBM}" alt="IBM"></div>
         <h3>IBM Watson Research Center, Yorktown</h3>
         <div class="projstat">5.5 MW carport · 6.5M kWh/yr · 85 EV chargers</div>
-        <p>A 5.5 MW solar carport generates about 6.5 million kWh a year and supports 85 EV chargers. Subscribed employees save roughly 10% a month on their electricity. It shows how a large employer can host clean generation and storage at scale while passing real savings on to the people who work there.</p>
+        <p>A 5.5 MW solar carport generates about 6.5 million kWh a year and supports 85 EV chargers. Subscribed employees save roughly 10% a month on their electricity. It shows how a large employer can host clean generation at scale while passing real savings on to the people who work there.</p>
       </div>
       <div class="proj">
         <div class="logo-wrap"><img src="${IMG.logoRegeneron}" alt="Regeneron"></div>
@@ -1791,7 +1791,7 @@ function renderProjects(){
     </div>
 
     <div class="callout"><b>Demand response works here too.</b> Sustainable Westchester's GridRewards program has about 1,000 MW of peak reduction pledged and more than 100,000 Con Edison customers enrolled. The average residential participant earned about $80, and New Rochelle earned over $100,000, all by easing demand when the grid is most stressed.</div>
-    <p class="srcnote">Sources: CEAC Local Leaders briefing; project sponsors and Sustainable Westchester GridRewards.</p>`;
+    <p class="srcnote">Sources: CEAC Local Leaders briefing; project sponsors and Sustainable Westchester GridRewards; NYSERDA energy storage data (Oct 2026); Calibrant Energy; Village of Croton-on-Hudson; City of White Plains and POWER Magazine; Sprocket Power.</p>`;
 }
 
 function renderConsiderations(){
