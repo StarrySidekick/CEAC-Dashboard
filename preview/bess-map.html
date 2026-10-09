@@ -23,16 +23,6 @@
   --f-mono:"Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
   --side:400px;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#141313; --panel:#1C1B1C; --ink:#EDEAEE; --muted:#B9BABC; --faint:#9A9CA0; --line:#2F2E31; --line2:#454448;
-  --red:#E25864; --red-ink:#141313; --green:#6DB088;
-  --hdr:#2B2A2C; --hdr-ink:#FFFFFF; --hdr-sub:#C9CACC;
-  --land:#262527; --void:#151415; --muni-line:#4C4B50; --void-ink:#6E7074;
-  --s-moratorium:#E25864; --s-ban:#E6E4E9; --s-healthy:#6DB088; --s-overstrict:#D9A04A; --s-silent:#5E5D62;
-  --muni-op:.24;
-  --t-bess:#5AA5DA; --t-solar:#E3AE45; --t-solar_storage:#45B3B0; --t-geothermal:#CC8A5E; --t-thermal_network:#EA7A5C;
-  --t-microgrid:#A090E6; --t-fuel_cell:#AEB0B4; --t-other:#AEB0B4; --t-wind:#6BB8DE;
-  --glyph:#141313; --stall-bg:#3A2124; --focus:#5AA5DA; color-scheme:dark }}
 :root[data-theme="dark"]{
   --bg:#141313; --panel:#1C1B1C; --ink:#EDEAEE; --muted:#B9BABC; --faint:#9A9CA0; --line:#2F2E31; --line2:#454448;
   --red:#E25864; --red-ink:#141313; --green:#6DB088;
@@ -45,7 +35,7 @@
   --glyph:#141313; --stall-bg:#3A2124; --focus:#5AA5DA; color-scheme:dark }
 
 html,body{height:100%}
-body{background:var(--bg);color:var(--ink);font:400 15px/1.5 var(--f-body);-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--f-body);-webkit-font-smoothing:antialiased}
 *{box-sizing:border-box;border-radius:0}
 button,input{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
@@ -61,13 +51,13 @@ a{color:var(--red)}
 .hdr{background:var(--hdr);color:var(--hdr-ink);padding:18px 20px 16px}
 .eyebrow{font-size:11px;font-weight:500;letter-spacing:1.3px;text-transform:uppercase;color:var(--hdr-sub)}
 .hdr h1{margin:4px 0 6px;font-size:24px;line-height:1.15;font-weight:900;letter-spacing:-.2px;text-wrap:balance}
-.hdr p{margin:0;font-size:13.5px;color:var(--hdr-sub);max-width:46ch}
+.hdr p{margin:0;font-size:15px;color:var(--hdr-sub)}
 
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}
 .stat{padding:10px 12px 11px 20px;border-right:1px solid var(--line);text-align:left;background:none;border-top:0;border-bottom:0;border-left:0;cursor:pointer}
 .stat:last-child{border-right:0}
-.stat b{display:block;font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1}
-.stat span{display:block;font-size:11.5px;color:var(--muted);line-height:1.3;margin-top:2px}
+.stat b{display:block;font-size:23px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1}
+.stat span{display:block;font-size:13px;color:var(--muted);line-height:1.3;margin-top:2px}
 .stat.stall b{color:var(--red)}
 .stat:hover span{color:var(--ink)}
 
@@ -77,21 +67,21 @@ a{color:var(--red)}
 .search input:focus{border-color:var(--ink);outline:none}
 .search svg{position:absolute;left:12px;top:14px;color:var(--faint)}
 .search .clear{position:absolute;right:2px;top:2px;width:40px;height:40px;border:0;background:none;cursor:pointer;color:var(--faint);font-size:20px;line-height:1}
-.lab{font-size:11px;font-weight:500;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.lab{font-size:12.5px;font-weight:500;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:4px 10px 4px 6px;border:1px solid var(--line2);background:var(--panel);cursor:pointer;font-size:13px;line-height:1.2}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:4px 12px 4px 8px;border:1px solid var(--line2);background:var(--panel);cursor:pointer;font-size:14.5px;line-height:1.2}
 .chip .n{color:var(--faint);font-variant-numeric:tabular-nums}
 .chip[aria-pressed="false"]{color:var(--faint);background:transparent;border-style:dashed}
 .chip[aria-pressed="false"] .sw{opacity:.35}
 .chip[disabled]{cursor:default}
 .seg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line2)}
-.seg button{min-height:40px;border:0;border-right:1px solid var(--line2);background:var(--panel);cursor:pointer;font-size:12.5px;line-height:1.15;padding:4px 4px;font-weight:500}
+.seg button{min-height:46px;border:0;border-right:1px solid var(--line2);background:var(--panel);cursor:pointer;font-size:14px;line-height:1.15;padding:4px 4px;font-weight:500}
 .seg button:last-child{border-right:0}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--panel)}
 .seg button.stl[aria-pressed="true"]{background:var(--red);color:var(--red-ink)}
 .toggles{display:grid;gap:4px}
-.tog{display:flex;align-items:center;gap:10px;font-size:13.5px;cursor:pointer;min-height:32px}
-.tog input{width:18px;height:18px;accent-color:var(--ink);margin:0}
+.tog{display:flex;align-items:center;gap:10px;font-size:15px;line-height:1.3;cursor:pointer;min-height:38px}
+.tog input{width:20px;height:20px;flex:none;accent-color:var(--ink);margin:0}
 
 /* type swatch + glyph */
 .sw{display:inline-grid;place-items:center;width:20px;height:20px;flex:none;background:var(--tc);color:var(--glyph)}
@@ -105,31 +95,31 @@ a{color:var(--red)}
 .body{flex:1 0 auto}
 .lhead{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:12px 20px 6px}
 .lhead .lab{margin:0}
-.sort{border:0;background:none;color:var(--muted);font-size:12.5px;cursor:pointer;padding:6px 0;text-decoration:underline;text-underline-offset:3px}
+.sort{border:0;background:none;color:var(--muted);font-size:14px;cursor:pointer;padding:6px 0;text-decoration:underline;text-underline-offset:3px}
 .list{list-style:none;margin:0;padding:0 0 8px}
 .row{display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:10px;align-items:start;width:100%;text-align:left;padding:10px 20px;border:0;border-top:1px solid var(--line);background:none;cursor:pointer}
 .row:hover,.row.hl{background:color-mix(in srgb,var(--line) 55%,transparent)}
-.row .nm{font-weight:500;line-height:1.3;display:block}
-.row .sub{display:block;font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:2px}
-.row .sz{font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--muted);text-align:right;white-space:nowrap;padding-top:1px}
+.row .nm{font-weight:500;line-height:1.3;display:block;font-size:16px}
+.row .sub{display:block;font-size:14px;color:var(--muted);line-height:1.35;margin-top:2px}
+.row .sz{font-size:14px;font-variant-numeric:tabular-nums;color:var(--muted);text-align:right;white-space:nowrap;padding-top:1px}
 .pill{display:inline-block;font-size:10.5px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;padding:2px 6px;border:1px solid currentColor;line-height:1.3;white-space:nowrap}
 .pill.op{color:var(--green)} .pill.dev{color:var(--muted)} .pill.stop{color:var(--red)}
 .row .pill{margin-top:5px}
 .townrow .sw{background:var(--panel);box-shadow:inset 0 0 0 2px var(--line2)}
 .empty{padding:18px 20px;color:var(--muted)}
 details.reg{border-top:1px solid var(--line)}
-details.reg>summary{list-style:none;cursor:pointer;padding:12px 20px;font-size:13.5px;color:var(--muted);display:flex;gap:10px;align-items:center}
+details.reg>summary{list-style:none;cursor:pointer;padding:12px 20px;font-size:15px;color:var(--muted);display:flex;gap:10px;align-items:center}
 details.reg>summary::-webkit-details-marker{display:none}
 details.reg>summary::after{content:"+";margin-left:auto;font-size:18px;line-height:1}
 details.reg[open]>summary::after{content:"\2212"}
 details.reg .row{grid-template-columns:10px minmax(0,1fr) auto;padding-block:8px}
 details.reg .row .sw{margin-top:5px}
-.more{display:block;margin:6px 20px 12px;border:1px solid var(--line2);background:none;padding:8px 12px;cursor:pointer;font-size:13px}
+.more{display:block;margin:6px 20px 12px;border:1px solid var(--line2);background:none;padding:10px 14px;cursor:pointer;font-size:14.5px}
 
 /* detail */
 .detail{position:fixed;left:0;top:0;bottom:0;width:var(--side);overflow:auto;overscroll-behavior:contain;background:var(--panel);border-right:1px solid var(--line);z-index:1100;padding:env(safe-area-inset-top,0px) 0 24px}
 .dtop{position:sticky;top:0;background:var(--panel);display:flex;justify-content:space-between;align-items:center;padding:8px 12px 8px 12px;border-bottom:1px solid var(--line);z-index:1}
-.back{display:inline-flex;align-items:center;gap:6px;border:0;background:none;cursor:pointer;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;min-height:40px;padding:0 8px}
+.back{display:inline-flex;align-items:center;gap:6px;border:0;background:none;cursor:pointer;font-size:14px;font-weight:500;letter-spacing:1px;text-transform:uppercase;min-height:40px;padding:0 8px}
 .linkbtn{border:1px solid var(--line2);background:none;cursor:pointer;font-size:12.5px;padding:6px 10px;min-height:34px}
 .dmain{padding:16px 20px 0}
 .dkick{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12px;font-weight:500;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted)}
@@ -140,42 +130,43 @@ details.reg .row .sw{margin-top:5px}
 .facts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:16px 0}
 .fact{background:var(--panel);padding:9px 11px}
 .fact.w{grid-column:1/-1}
-.fact dt{font-size:10.5px;font-weight:500;letter-spacing:1.1px;text-transform:uppercase;color:var(--faint)}
-.fact dd{margin:2px 0 0;font-size:14px;line-height:1.35;overflow-wrap:anywhere}
+.fact dt{font-size:11.5px;font-weight:500;letter-spacing:1.1px;text-transform:uppercase;color:var(--faint)}
+.fact dd{margin:2px 0 0;font-size:15px;line-height:1.35;overflow-wrap:anywhere}
 .fact dd.num{font-variant-numeric:tabular-nums;font-weight:500;font-size:16px}
 .dsum{margin:0 0 14px;max-width:62ch}
 .stallbox{background:var(--stall-bg);border:1px solid var(--red);padding:12px 14px;margin:0 0 16px}
 .stallbox h3{margin:0 0 4px;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--red)}
-.stallbox p{margin:0;font-size:14px}
+.stallbox p{margin:0;font-size:15px}
 .stallbox .cat{display:inline-block;margin-top:8px;font-size:12px;color:var(--muted)}
 .townbox{border:1px solid var(--line);padding:12px 14px;margin:0 0 16px}
 .townbox h3{margin:0 0 6px;font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
-.townbox p{margin:4px 0 0;font-size:13.5px}
+.townbox p{margin:4px 0 0;font-size:15px}
 .tstatus{display:flex;align-items:center;gap:8px;font-weight:700}
 .tsw{width:14px;height:14px;flex:none;background:var(--sc)}
 .cta{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500;font-size:13px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--red)}
 .srcs h3{margin:0 0 6px;font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
-.srcs ol{margin:0;padding-left:20px;font-size:13px;display:grid;gap:4px}
+.srcs ol{margin:0;padding-left:20px;font-size:14px;display:grid;gap:4px}
 .srcs a{overflow-wrap:anywhere}
 .upd{font-size:12px;color:var(--faint);margin-top:12px}
-.note{font-size:12.5px;color:var(--muted);border-left:3px solid var(--line2);padding:2px 0 2px 10px;margin:0 0 14px}
+.note{font-size:14px;color:var(--muted);border-left:3px solid var(--line2);padding:2px 0 2px 10px;margin:0 0 14px}
 .tlist{list-style:none;padding:0;margin:8px 0 0;border-top:1px solid var(--line)}
 .tlist .row{padding-inline:0}
 
-.foot{padding:14px 20px 20px;font-size:12px;color:var(--faint);border-top:1px solid var(--line)}
+.foot{padding:14px 20px 20px;font-size:13.5px;color:var(--faint);border-top:1px solid var(--line)}
 .foot p{margin:0 0 6px}
 
 /* map furniture */
-.legend{position:absolute;left:12px;bottom:12px;z-index:500;background:var(--panel);border:1px solid var(--line2);max-width:min(290px,calc(100% - 24px));font-size:12.5px}
-.legend>button{display:flex;width:100%;justify-content:space-between;align-items:center;border:0;background:none;cursor:pointer;padding:8px 12px;font-size:11px;font-weight:500;letter-spacing:1.3px;text-transform:uppercase}
+.legend{position:absolute;left:12px;top:12px;z-index:500;background:var(--panel);border:1px solid var(--line2);max-width:min(300px,calc(100% - 90px));max-height:calc(100% - 24px);overflow:auto;font-size:14px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.legend>button{display:flex;width:100%;gap:14px;justify-content:space-between;align-items:center;border:0;background:none;cursor:pointer;padding:10px 12px;font-size:12.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;min-height:42px}
 .legend .lg{padding:0 12px 10px;display:grid;gap:10px}
 .lgrp{display:grid;gap:5px}
-.lgrp .t{font-size:10.5px;font-weight:500;letter-spacing:1.1px;text-transform:uppercase;color:var(--faint)}
+.lgrp .t{font-size:11.5px;font-weight:500;letter-spacing:1.1px;text-transform:uppercase;color:var(--faint)}
 .li{display:flex;align-items:center;gap:8px;line-height:1.2}
 .li .tsw{width:14px;height:10px;opacity:.75}
-.zoombar{position:absolute;right:12px;top:12px;z-index:500;display:grid;border:1px solid var(--line2);background:var(--panel)}
-.zoombar button{width:40px;height:40px;border:0;border-bottom:1px solid var(--line2);background:none;cursor:pointer;font-size:20px;line-height:1}
-.zoombar button:last-child{border-bottom:0;font-size:12px}
+.zoombar{position:absolute;right:12px;top:12px;z-index:500;display:flex;flex-direction:column;align-items:flex-end}
+.zoombar button{width:46px;height:46px;border:1px solid var(--line2);border-top:0;background:var(--panel);cursor:pointer;font-size:24px;line-height:1;box-shadow:0 2px 10px rgba(0,0,0,.10)}
+.zoombar button:first-child{border-top:1px solid var(--line2)}
+.zoombar button:last-child{width:auto;padding:0 12px;margin-top:8px;border-top:1px solid var(--line2);font-size:14px;font-weight:500}
 
 /* leaflet skin */
 .leaflet-container{font-family:var(--f-body);background:var(--void)}
@@ -195,26 +186,26 @@ path.regdot{fill:var(--t-solar);fill-opacity:.55;stroke:var(--land);stroke-width
 path.regdot.pipe{fill:var(--land);fill-opacity:1;stroke:var(--t-solar);stroke-width:1.6}
 path.regdot.on{stroke:var(--ink);stroke-width:2.5;fill-opacity:1}
 .mlabel{width:0!important;height:0!important;overflow:visible}
-.mlabel>span{display:block;white-space:nowrap;font-size:11px;font-weight:500;color:var(--muted);text-shadow:0 0 3px var(--land),0 0 3px var(--land),0 0 2px var(--land);pointer-events:none;transform:translate(-50%,-50%);width:max-content;line-height:1.1;letter-spacing:.2px}
-.mlabel.village>span{font-size:10px;font-weight:400;color:var(--faint)}
+.mlabel>span{display:block;white-space:nowrap;font-size:12.5px;font-weight:500;color:var(--muted);text-shadow:0 0 3px var(--land),0 0 3px var(--land),0 0 2px var(--land);pointer-events:none;transform:translate(-50%,-50%);width:max-content;line-height:1.1;letter-spacing:.2px}
+.mlabel.village>span{font-size:11.5px;font-weight:400;color:var(--faint)}
 .mlabel.water>span{font-style:italic;font-weight:400;color:var(--void-ink);text-shadow:none;letter-spacing:1.5px;font-size:11px}
 .mlabel.edge>span{font-weight:500;color:var(--void-ink);text-shadow:none;text-transform:uppercase;letter-spacing:2px;font-size:10px}
 .lo .mlabel.village>span{display:none}
 .mkw{width:0!important;height:0!important;margin:0!important;background:none;border:0}
-.mk{position:absolute;left:-12px;top:-12px;display:grid;place-items:center;width:24px;height:24px;background:var(--tc);color:var(--glyph);box-shadow:0 0 0 1.5px var(--land);cursor:pointer;transition:transform .12s}
-.mk svg{width:14px;height:14px}
+.mk{position:absolute;left:-14px;top:-14px;display:grid;place-items:center;width:28px;height:28px;background:var(--tc);color:var(--glyph);box-shadow:0 0 0 1.5px var(--land);cursor:pointer;transition:transform .12s}
+.mk svg{width:16px;height:16px}
 .mk.dev{background:var(--land);color:var(--tc);box-shadow:inset 0 0 0 2.5px var(--tc),0 0 0 1.5px var(--land)}
 .mk.stop{background:var(--stall-bg);color:var(--tc);box-shadow:inset 0 0 0 2.5px var(--red),0 0 0 1.5px var(--land)}
 .mk.stop::after{content:"";position:absolute;right:-4px;top:-4px;width:9px;height:9px;background:var(--red);box-shadow:0 0 0 1.5px var(--land)}
-.mk.big{width:30px;height:30px;left:-15px;top:-15px}
-.mk.big svg{width:17px;height:17px}
-.lo .mk{width:18px;height:18px;left:-9px;top:-9px} .lo .mk svg{width:11px;height:11px}
-.lo .mk.big{width:22px;height:22px;left:-11px;top:-11px} .lo .mk.big svg{width:13px;height:13px}
+.mk.big{width:34px;height:34px;left:-17px;top:-17px}
+.mk.big svg{width:19px;height:19px}
+.lo .mk{width:22px;height:22px;left:-11px;top:-11px} .lo .mk svg{width:13px;height:13px}
+.lo .mk.big{width:26px;height:26px;left:-13px;top:-13px} .lo .mk.big svg{width:15px;height:15px}
 .lo .mk.stop::after{width:7px;height:7px;right:-3px;top:-3px}
 .mk:hover,.mk.on{transform:scale(1.25)}
 .mkw:has(.on){z-index:2000!important}
 .mk.on{outline:2.5px solid var(--ink);outline-offset:2px}
-.leaflet-tooltip.tt{background:var(--ink);color:var(--panel);border:0;border-radius:0;box-shadow:none;font-size:12.5px;padding:5px 8px;max-width:240px;white-space:normal}
+.leaflet-tooltip.tt{background:var(--ink);color:var(--panel);border:0;border-radius:0;box-shadow:none;font-size:14px;padding:5px 8px;max-width:240px;white-space:normal}
 .leaflet-tooltip.tt::before{display:none}
 
 .sheetclose{display:none}
@@ -236,8 +227,21 @@ path.regdot.on{stroke:var(--ink);stroke-width:2.5;fill-opacity:1}
   .dmain{padding-inline:16px}
   .legend{font-size:12px}
 }
+
+/* plain-language guide, first-visit tip, start-over */
+.howto{padding:14px 20px 14px;border-bottom:1px solid var(--line);background:#F6F5F8}
+.howto h2{margin:0 0 8px;font-size:12.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}
+.howto ol{margin:0;padding-left:22px;display:grid;gap:5px;font-size:15px;line-height:1.4}
+.howto li::marker{font-weight:700;color:var(--red)}
+.maphint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:600;background:var(--ink);color:#fff;padding:8px 8px 8px 16px;font-size:15px;font-weight:500;display:flex;gap:10px;align-items:center;width:max-content;max-width:calc(100% - 24px);box-shadow:0 4px 16px rgba(0,0,0,.25)}
+.maphint button{border:0;background:none;color:#fff;font-size:22px;line-height:1;width:36px;height:36px;cursor:pointer;flex:none}
+.startover{justify-self:start;border:1px solid var(--red);background:var(--panel);color:var(--red);font-weight:700;font-size:14.5px;min-height:42px;padding:0 14px;cursor:pointer}
+.startover:hover{background:var(--red);color:#fff}
+@media (max-width:860px){ .howto{order:2;padding-inline:16px} .legend{max-height:calc(100% - 80px)}
+  .lo .mk{width:18px;height:18px;left:-9px;top:-9px} .lo .mk svg{width:11px;height:11px}
+  .lo .mk.big{width:22px;height:22px;left:-11px;top:-11px} .lo .mk.big svg{width:13px;height:13px} }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-.backlink{display:inline-block;margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:inherit;opacity:.75;text-decoration:none}.backlink:hover{opacity:1;text-decoration:underline}
+.backlink{display:inline-block;margin:0 0 12px;font-size:14px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:inherit;opacity:.9;text-decoration:none}.backlink:hover{opacity:1;text-decoration:underline}
 .osmtiles{filter:grayscale(1) contrast(.9)}
 .leaflet-control-attribution{font-size:10px;background:rgba(255,255,255,.8)}
 </style>
@@ -245,17 +249,25 @@ path.regdot.on{stroke:var(--ink);stroke-width:2.5;fill-opacity:1}
 <div class="app" id="app">
   <aside class="side" aria-label="Projects and filters">
     <header class="hdr">
-      <a class="backlink" href="index.html">&larr; BESS Policy Dashboard</a>
+      <a class="backlink" href="index.html">&larr; Back to the BESS Dashboard</a>
       <div class="eyebrow">Clean Energy Action Coalition</div>
       <h1>Westchester Clean Energy Map</h1>
-      <p>Battery storage, solar, geothermal and thermal networks across the county, who runs them, and the projects held up by local moratoria, bans and lawsuits.</p>
+      <p>Every major clean energy project in Westchester, who runs it, and which ones are held up by local rules or lawsuits.</p>
     </header>
     <div class="stats" id="stats"></div>
+    <section class="howto" aria-labelledby="howto-h">
+      <h2 id="howto-h">How to use this map</h2>
+      <ol>
+        <li>Click any colored square on the map to read about that project.</li>
+        <li>Click a town to see its battery storage rules.</li>
+        <li>Use the search box and buttons below to narrow things down. <b>Start over</b> brings everything back.</li>
+      </ol>
+    </section>
     <div class="controls">
       <div class="search">
         <label class="sr" for="q">Search projects, companies, towns or ZIP codes</label>
         <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.8" cy="6.8" r="5.3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.8 10.8 15 15" stroke="currentColor" stroke-width="1.6"/></svg>
-        <input id="q" type="search" autocomplete="off" placeholder="Search a project, company, town or ZIP">
+        <input id="q" type="search" autocomplete="off" placeholder="Search a town, project or company">
         <button class="clear" id="qclear" type="button" aria-label="Clear search" hidden>&times;</button>
       </div>
       <div>
@@ -272,9 +284,10 @@ path.regdot.on{stroke:var(--ink);stroke-width:2.5;fill-opacity:1}
         </div>
       </div>
       <div class="toggles">
-        <label class="tog"><input type="checkbox" id="policy" checked> Shade towns by battery storage policy</label>
-        <label class="tog"><input type="checkbox" id="reg" checked> <span>Show <span id="regn"></span> smaller solar sites from state records</span></label>
+        <label class="tog"><input type="checkbox" id="policy" checked> Color towns by their battery storage rules</label>
+        <label class="tog"><input type="checkbox" id="reg"> <span>Also show <span id="regn"></span> smaller solar sites from state records</span></label>
       </div>
+      <button type="button" class="startover" id="startover" hidden>&#8634; Start over: show everything</button>
     </div>
     <div class="body" id="body">
       <div id="results">
@@ -288,7 +301,8 @@ path.regdot.on{stroke:var(--ink);stroke-width:2.5;fill-opacity:1}
   </aside>
   <div class="mapwrap">
     <div id="map" role="application" aria-label="Map of Westchester County projects"></div>
-    <div class="zoombar"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">&minus;</button><button type="button" id="zall" aria-label="Show whole county">ALL</button></div>
+    <div class="zoombar"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">&minus;</button><button type="button" id="zall" aria-label="Show the whole county">Whole county</button></div>
+    <div class="maphint" id="maphint" hidden><span>Tip: click a square or a town for details</span><button type="button" id="hintx" aria-label="Hide tip">&times;</button></div>
     <div class="legend" id="legend"><button type="button" id="legbtn" aria-expanded="true" aria-controls="lg">Legend <span aria-hidden="true" id="legsym">&minus;</span></button><div class="lg" id="lg"></div></div>
   </div>
 </div>
@@ -343,7 +357,7 @@ const P = D.projects, R = D.registry;
 const byId = Object.fromEntries(P.concat(R).map(p=>[p.id,p]));
 const counts = {}; P.forEach(p=>counts[p.type]=(counts[p.type]||0)+1);
 
-const S = {q:'', types:new Set(TYPES.map(t=>t[0])), g:'all', policy:true, reg:true, sort:'name', sel:null, town:null, regShow:40};
+const S = {q:'', types:new Set(TYPES.map(t=>t[0])), g:'all', policy:true, reg:false, sort:'name', sel:null, town:null, regShow:40};
 
 /* ---------- map ---------- */
 const map = L.map('map',{zoomControl:false, attributionControl:true, zoomSnap:.25, zoomDelta:.5, minZoom:9.5, maxZoom:17, preferCanvas:false});
@@ -352,7 +366,9 @@ map.createPane('labels').style.zIndex=420; map.getPane('labels').style.pointerEv
 map.createPane('reg').style.zIndex=450;
 const county = L.geoJSON(D.county,{pane:'munis',interactive:false,style:{className:'county'}}).addTo(map);
 const bounds = county.getBounds();
-const fitAll = () => map.fitBounds(bounds,{paddingTopLeft:[16,34],paddingBottomRight:[16,16]});
+const fitAll = () => { const wide = window.matchMedia('(min-width:861px)').matches && legOpenNow();
+  map.fitBounds(bounds,{paddingTopLeft:[wide?300:16,34],paddingBottomRight:[wide?120:16,16]}); };
+function legOpenNow(){ const lg=document.getElementById('lg'); return !lg || !lg.hidden; }
 fitAll();
 map.setMaxBounds(bounds.pad(.6));
 map.attributionControl.setPrefix(false);
@@ -418,9 +434,9 @@ function render(){
   const towns = S.q.length>1 ? munis.filter(m=>qmatch(norm(m.name+' '+m.statusShort))) : [];
   let h = towns.map(m=>`<li><button type="button" class="row townrow" data-town="${esc(m.name)}"><span class="tsw" style="--sc:var(--s-${m.status});width:20px;height:20px;opacity:.8"></span><span><span class="nm">${esc(m.name)}</span><span class="sub">Town policy: ${esc(m.statusShort)}</span></span><span class="sz">Town</span></button></li>`).join('');
   h += sorted.map(rowHTML).join('');
-  $('#list').innerHTML = h || `<li class="empty">No profiled projects match. Try clearing the search or turning a project type back on.</li>`;
+  $('#list').innerHTML = h || `<li class="empty">No projects match. Click Start over to bring everything back.</li>`;
   const tn = S.town ? ` in ${shortMuni(S.town)}` : '';
-  $('#count').textContent = `${ps.length} profiled project${ps.length===1?'':'s'}${tn}`;
+  $('#count').textContent = `${ps.length} project${ps.length===1?'':'s'}${tn}`;
   // registry group
   if(rs.length){
     const rsort = rs.slice().sort((a,b)=>b.kw-a.kw);
@@ -429,6 +445,8 @@ function render(){
     const mr=$('#moreReg'); if(mr) mr.onclick=()=>{S.regShow+=60; render(); $('#regd').open=true;};
   } else $('#regwrap').innerHTML='';
   $('#qclear').hidden = !S.q;
+  const nTypes = TYPES.filter(([k])=>counts[k]).length;
+  $('#startover').hidden = !(S.q || S.g!=='all' || S.town || S.types.size<nTypes || S.reg || !S.policy || !$('#detail').hidden);
 }
 function rowHTML(p){
   const g=group(p), sz=[fmtKW(p.kw),fmtKWh(p.kwh)].filter(Boolean).join(' / ');
@@ -481,7 +499,7 @@ function openProject(id, fly=true){
 function curatedHTML(p){
   const g=group(p);
   const where = [p.addr || p.loc, p.addr?null:shortMuni(p.muni)].filter(Boolean).join(', ');
-  return `<div class="dtop"><button type="button" class="back"><span aria-hidden="true">&larr;</span> All projects</button><button type="button" class="linkbtn copylink" data-hash="p-${p.id}">Copy link</button></div>
+  return `<div class="dtop"><button type="button" class="back"><span aria-hidden="true">&larr;</span> Back to the list</button><button type="button" class="linkbtn copylink" data-hash="p-${p.id}">Copy link</button></div>
   <div class="dmain">
     <div class="dkick"><span class="sw ${g==='op'?'':g}" style="--tc:var(--t-${p.type})">${svg(p.type)}</span>${esc(TLABEL[p.type])}<span class="pill ${g}">${esc(statusText(p))}</span></div>
     <h2>${esc(p.name)}</h2>
@@ -506,7 +524,7 @@ function curatedHTML(p){
 }
 function registryHTML(r){
   const pipe = r.status==='pipeline';
-  return `<div class="dtop"><button type="button" class="back"><span aria-hidden="true">&larr;</span> All projects</button></div>
+  return `<div class="dtop"><button type="button" class="back"><span aria-hidden="true">&larr;</span> Back to the list</button></div>
   <div class="dmain">
     <div class="dkick"><span class="sw ${pipe?'ring':'dot'}"></span>Solar, state records<span class="pill ${pipe?'dev':'op'}">${pipe?'Applied, not built':'Operating'}</span></div>
     <h2>${esc(fmtKW(r.kw,r.dc))} solar array in ${esc(r.city)}</h2>
@@ -537,14 +555,14 @@ function openTown(name, fly=true){
   const ps = P.filter(p=>p.muni===name).sort((a,b)=>({stop:0,dev:1,op:2}[group(a)]-{stop:0,dev:1,op:2}[group(b)]));
   const rs = R.filter(r=>r.muni===name);
   const regKW = rs.filter(r=>r.status==='operating').reduce((s,r)=>s+r.kw,0);
-  showDetail(`<div class="dtop"><button type="button" class="back"><span aria-hidden="true">&larr;</span> All projects</button><button type="button" class="linkbtn copylink" data-hash="t-${m.slug}">Copy link</button></div>
+  showDetail(`<div class="dtop"><button type="button" class="back"><span aria-hidden="true">&larr;</span> Back to the list</button><button type="button" class="linkbtn copylink" data-hash="t-${m.slug}">Copy link</button></div>
   <div class="dmain">
     <div class="dkick">${m.kind==='village'?'Village':m.kind==='city'?'City':'Town'}</div>
     <h2>${esc(name)}</h2>
     ${townBox(name)}
     ${m.law?`<p class="dsum"><b>Governing law.</b> ${esc(m.law)}</p>`:''}
     ${m.why && m.status!=='healthy'?`<p class="dsum"><b>Why.</b> ${esc(m.why)}</p>`:''}
-    <div class="lab" style="margin-top:18px">${ps.length} profiled project${ps.length===1?'':'s'} here</div>
+    <div class="lab" style="margin-top:18px">${ps.length} project${ps.length===1?'':'s'} here</div>
     ${ps.length?`<ul class="tlist">${ps.map(rowHTML).join('')}</ul>`:'<p class="dwhere">None documented yet.</p>'}
     ${rs.length?`<p class="dwhere" style="margin-top:14px">Plus ${rs.length} smaller solar site${rs.length===1?'':'s'} in state records${regKW?`, about ${fmtKW(regKW)} AC operating`:''}. They are listed under All projects while this town is selected.</p>`:''}
   </div>`);
@@ -566,7 +584,7 @@ function bindRows(root){
 const obs = new MutationObserver(()=>bindRows($('#results'))); obs.observe($('#results'),{childList:true,subtree:true});
 
 /* ---------- controls ---------- */
-$('#types').innerHTML = TYPES.map(([k,l])=>{const n=counts[k]||0;
+$('#types').innerHTML = TYPES.filter(([k])=>counts[k]).map(([k,l])=>{const n=counts[k]||0;
   return `<button type="button" class="chip" data-t="${k}" aria-pressed="${n?'true':'false'}" ${n?'':'disabled title="No projects of this type found in Westchester"'}><span class="sw" style="--tc:var(--t-${k})">${svg(k)}</span>${l} <span class="n">${n}</span></button>`;}).join('');
 $('#types').addEventListener('click',e=>{const b=e.target.closest('.chip'); if(!b||b.disabled) return;
   const t=b.dataset.t, on=b.getAttribute('aria-pressed')==='true';
@@ -595,6 +613,7 @@ $('#stats').innerHTML = `<button type="button" class="stat" data-act="bess"><b>$
 $('#stats').addEventListener('click',e=>{const b=e.target.closest('.stat'); if(!b) return; const a=b.dataset.act;
   if(a==='stop'){ setGroup('stop'); return; }
   const keep = a==='bess'?['bess','solar_storage','microgrid']:['solar','solar_storage'];
+  if(a==='solar'){ S.reg=true; $('#reg').checked=true; }
   S.types=new Set(keep); document.querySelectorAll('.chip:not([disabled])').forEach(c=>c.setAttribute('aria-pressed',keep.includes(c.dataset.t)?'true':'false'));
   setGroup('all'); });
 
@@ -616,6 +635,20 @@ $('#legbtn').onclick=()=>{legOpen=!legOpen; setLeg();}; setLeg();
 
 $('#foot').innerHTML = `<p>Project profiles researched October 2026 from utility, NYSERDA and town records and local reporting; each profile lists its sources. Smaller solar comes from state records of systems 25 kW and up (connected systems through Aug 31, 2026; incentive pipeline through Sep 30, 2026). Town policy comes from the CEAC Live Policy Tracker, last updated ${esc(new Date(D.trackerUpdated+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}))}.</p><p>See a project that is missing or out of date? Tell the CEAC team.</p>`;
 
+function startOver(){
+  $('#q').value=''; S.q=''; S.regShow=40;
+  S.types=new Set(TYPES.map(t=>t[0])); document.querySelectorAll('.chip:not([disabled])').forEach(c=>c.setAttribute('aria-pressed','true'));
+  S.reg=false; $('#reg').checked=false; S.policy=true; $('#policy').checked=true; drawLegend();
+  S.g='all'; document.querySelectorAll('#seg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.g==='all'?'true':'false'));
+  setTown(null,false); if(!$('#detail').hidden) closeDetail(); else render();
+  map.closePopup&&map.closePopup(); fitAll();
+}
+$('#startover').onclick=startOver;
+const hint=$('#maphint'); let hintSeen=false; try{ hintSeen=localStorage.getItem('ceacMapHint')==='1'; }catch(e){}
+const hideHint=()=>{ if(hint.hidden) return; hint.hidden=true; try{ localStorage.setItem('ceacMapHint','1'); }catch(e){} };
+if(!hintSeen){ hint.hidden=false; }
+$('#hintx').onclick=hideHint;
+['#detail'].forEach(sel=>new MutationObserver(()=>{ if(!$(sel).hidden) hideHint(); }).observe($(sel),{attributes:true,attributeFilter:['hidden']}));
 render();
 setTimeout(()=>map.invalidateSize(),50);
 window.addEventListener('resize',()=>map.invalidateSize());
